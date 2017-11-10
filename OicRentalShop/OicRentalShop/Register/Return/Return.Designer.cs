@@ -287,7 +287,7 @@
             this.lbl_money.Name = "lbl_money";
             this.lbl_money.Size = new System.Drawing.Size(97, 40);
             this.lbl_money.TabIndex = 200;
-            this.lbl_money.Text = "値段";
+            this.lbl_money.Text = "金額";
             // 
             // txt_money
             // 
