@@ -81,10 +81,16 @@
       <DependentUpon>ItemInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage\Item\ItemList.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manage\Item\ItemList.Designer.cs">
       <DependentUpon>ItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Item\ItemList1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage\Item\ItemList1.Designer.cs">
+      <DependentUpon>ItemList1.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage\Member\MemberAdd.cs">
       <SubType>Form</SubType>
@@ -117,10 +123,16 @@
       <DependentUpon>ManageHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage\Member\MemberList.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manage\Member\MemberList.Designer.cs">
       <DependentUpon>MemberList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Member\MemberList1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage\Member\MemberList1.Designer.cs">
+      <DependentUpon>MemberList1.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage\Staff\StaffAd.cs">
       <SubType>Form</SubType>
@@ -141,10 +153,16 @@
       <DependentUpon>StaffEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage\Staff\StaffList.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manage\Staff\StaffList.Designer.cs">
       <DependentUpon>StaffList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Staff\StaffList1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage\Staff\StaffList1.Designer.cs">
+      <DependentUpon>StaffList1.cs</DependentUpon>
     </Compile>
     <Compile Include="Register\ItemAdd\ItemAdd.cs">
       <SubType>UserControl</SubType>
@@ -235,11 +253,20 @@
     <EmbeddedResource Include="Manage\Item\ItemList.resx">
       <DependentUpon>ItemList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manage\Item\ItemList1.resx">
+      <DependentUpon>ItemList1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manage\Member\MemberList.resx">
       <DependentUpon>MemberList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manage\Member\MemberList1.resx">
+      <DependentUpon>MemberList1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manage\Staff\StaffList.resx">
       <DependentUpon>StaffList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage\Staff\StaffList1.resx">
+      <DependentUpon>StaffList1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
