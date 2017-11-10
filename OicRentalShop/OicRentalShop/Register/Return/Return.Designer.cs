@@ -28,186 +28,186 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
+            this.txt_late = new System.Windows.Forms.TextBox();
+            this.txt_ReturnDay = new System.Windows.Forms.TextBox();
+            this.lbl_late = new System.Windows.Forms.Label();
+            this.txt_MemberName = new System.Windows.Forms.TextBox();
+            this.txt_MemberPoint = new System.Windows.Forms.TextBox();
+            this.txt_MemberID = new System.Windows.Forms.TextBox();
+            this.txt_OLDNEW = new System.Windows.Forms.TextBox();
+            this.txt_type = new System.Windows.Forms.TextBox();
+            this.txt_ProductID = new System.Windows.Forms.TextBox();
+            this.txt_title = new System.Windows.Forms.TextBox();
+            this.lbl_ReturnDay = new System.Windows.Forms.Label();
+            this.lbl_OLDNEW = new System.Windows.Forms.Label();
+            this.lbl_type = new System.Windows.Forms.Label();
+            this.lbl_title = new System.Windows.Forms.Label();
+            this.lbl_ProductID = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbl_UsePoint = new System.Windows.Forms.Label();
+            this.txt_UsePoint = new System.Windows.Forms.TextBox();
+            this.lbl_money = new System.Windows.Forms.Label();
+            this.txt_money = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lbl_ProductInfo = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_MemberName = new System.Windows.Forms.Label();
+            this.lbl_MemberPoint = new System.Windows.Forms.Label();
+            this.label4lbl_MemberID = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.dgv_ReturnItem = new System.Windows.Forms.DataGridView();
+            this.lbl_TopTitle = new System.Windows.Forms.Label();
+            this.lbl_MemberInfo = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btn_ok = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ReturnItem)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox11
+            // txt_late
             // 
-            this.textBox11.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox11.Location = new System.Drawing.Point(120, 466);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(110, 23);
-            this.textBox11.TabIndex = 225;
+            this.txt_late.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_late.Location = new System.Drawing.Point(120, 466);
+            this.txt_late.Name = "txt_late";
+            this.txt_late.Size = new System.Drawing.Size(110, 23);
+            this.txt_late.TabIndex = 225;
             // 
-            // textBox10
+            // txt_ReturnDay
             // 
-            this.textBox10.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox10.Location = new System.Drawing.Point(121, 426);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(169, 23);
-            this.textBox10.TabIndex = 224;
+            this.txt_ReturnDay.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_ReturnDay.Location = new System.Drawing.Point(121, 426);
+            this.txt_ReturnDay.Name = "txt_ReturnDay";
+            this.txt_ReturnDay.Size = new System.Drawing.Size(169, 23);
+            this.txt_ReturnDay.TabIndex = 224;
             // 
-            // label5
+            // lbl_late
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(22, 471);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 16);
-            this.label5.TabIndex = 223;
-            this.label5.Text = "延滞料金：";
+            this.lbl_late.AutoSize = true;
+            this.lbl_late.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_late.Location = new System.Drawing.Point(22, 471);
+            this.lbl_late.Name = "lbl_late";
+            this.lbl_late.Size = new System.Drawing.Size(85, 16);
+            this.lbl_late.TabIndex = 223;
+            this.lbl_late.Text = "延滞料金：";
             // 
-            // textBox9
+            // txt_MemberName
             // 
-            this.textBox9.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox9.Location = new System.Drawing.Point(141, 158);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(513, 23);
-            this.textBox9.TabIndex = 222;
+            this.txt_MemberName.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_MemberName.Location = new System.Drawing.Point(141, 158);
+            this.txt_MemberName.Name = "txt_MemberName";
+            this.txt_MemberName.Size = new System.Drawing.Size(513, 23);
+            this.txt_MemberName.TabIndex = 222;
             // 
-            // textBox8
+            // txt_MemberPoint
             // 
-            this.textBox8.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox8.Location = new System.Drawing.Point(498, 129);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(156, 23);
-            this.textBox8.TabIndex = 221;
+            this.txt_MemberPoint.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_MemberPoint.Location = new System.Drawing.Point(498, 129);
+            this.txt_MemberPoint.Name = "txt_MemberPoint";
+            this.txt_MemberPoint.Size = new System.Drawing.Size(156, 23);
+            this.txt_MemberPoint.TabIndex = 221;
             // 
-            // textBox7
+            // txt_MemberID
             // 
-            this.textBox7.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox7.Location = new System.Drawing.Point(141, 128);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(148, 23);
-            this.textBox7.TabIndex = 220;
+            this.txt_MemberID.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_MemberID.Location = new System.Drawing.Point(141, 128);
+            this.txt_MemberID.Name = "txt_MemberID";
+            this.txt_MemberID.Size = new System.Drawing.Size(148, 23);
+            this.txt_MemberID.TabIndex = 220;
             // 
-            // textBox6
+            // txt_OLDNEW
             // 
-            this.textBox6.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox6.Location = new System.Drawing.Point(120, 384);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(67, 23);
-            this.textBox6.TabIndex = 219;
+            this.txt_OLDNEW.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_OLDNEW.Location = new System.Drawing.Point(120, 384);
+            this.txt_OLDNEW.Name = "txt_OLDNEW";
+            this.txt_OLDNEW.Size = new System.Drawing.Size(67, 23);
+            this.txt_OLDNEW.TabIndex = 219;
             // 
-            // textBox5
+            // txt_type
             // 
-            this.textBox5.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox5.Location = new System.Drawing.Point(120, 342);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(89, 23);
-            this.textBox5.TabIndex = 218;
+            this.txt_type.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_type.Location = new System.Drawing.Point(120, 342);
+            this.txt_type.Name = "txt_type";
+            this.txt_type.Size = new System.Drawing.Size(89, 23);
+            this.txt_type.TabIndex = 218;
             // 
-            // textBox4
+            // txt_ProductID
             // 
-            this.textBox4.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox4.Location = new System.Drawing.Point(120, 233);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(140, 23);
-            this.textBox4.TabIndex = 217;
+            this.txt_ProductID.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_ProductID.Location = new System.Drawing.Point(120, 233);
+            this.txt_ProductID.Name = "txt_ProductID";
+            this.txt_ProductID.Size = new System.Drawing.Size(140, 23);
+            this.txt_ProductID.TabIndex = 217;
             // 
-            // textBox3
+            // txt_title
             // 
-            this.textBox3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox3.Location = new System.Drawing.Point(120, 283);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(237, 46);
-            this.textBox3.TabIndex = 216;
-            this.textBox3.Text = "あああああああああああああああああああああああああああああああああああああああああああ";
+            this.txt_title.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_title.Location = new System.Drawing.Point(120, 283);
+            this.txt_title.Multiline = true;
+            this.txt_title.Name = "txt_title";
+            this.txt_title.Size = new System.Drawing.Size(237, 46);
+            this.txt_title.TabIndex = 216;
+            this.txt_title.Text = "あああああああああああああああああああああああああああああああああああああああああああ";
             // 
-            // label35
+            // lbl_ReturnDay
             // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label35.Location = new System.Drawing.Point(13, 429);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(102, 16);
-            this.label35.TabIndex = 215;
-            this.label35.Text = "返却予定日：";
+            this.lbl_ReturnDay.AutoSize = true;
+            this.lbl_ReturnDay.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_ReturnDay.Location = new System.Drawing.Point(13, 429);
+            this.lbl_ReturnDay.Name = "lbl_ReturnDay";
+            this.lbl_ReturnDay.Size = new System.Drawing.Size(102, 16);
+            this.lbl_ReturnDay.TabIndex = 215;
+            this.lbl_ReturnDay.Text = "返却予定日：";
             // 
-            // label34
+            // lbl_OLDNEW
             // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label34.Location = new System.Drawing.Point(22, 387);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(94, 16);
-            this.label34.TabIndex = 214;
-            this.label34.Text = "新作/旧作：";
+            this.lbl_OLDNEW.AutoSize = true;
+            this.lbl_OLDNEW.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_OLDNEW.Location = new System.Drawing.Point(22, 387);
+            this.lbl_OLDNEW.Name = "lbl_OLDNEW";
+            this.lbl_OLDNEW.Size = new System.Drawing.Size(94, 16);
+            this.lbl_OLDNEW.TabIndex = 214;
+            this.lbl_OLDNEW.Text = "新作/旧作：";
             // 
-            // label33
+            // lbl_type
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label33.Location = new System.Drawing.Point(10, 345);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(105, 16);
-            this.label33.TabIndex = 213;
-            this.label33.Text = "CD/アルバム：";
+            this.lbl_type.AutoSize = true;
+            this.lbl_type.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_type.Location = new System.Drawing.Point(10, 345);
+            this.lbl_type.Name = "lbl_type";
+            this.lbl_type.Size = new System.Drawing.Size(105, 16);
+            this.lbl_type.TabIndex = 213;
+            this.lbl_type.Text = "CD/アルバム：";
             // 
-            // label32
+            // lbl_title
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label32.Location = new System.Drawing.Point(29, 283);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(85, 16);
-            this.label32.TabIndex = 212;
-            this.label32.Text = "タイトル名：";
+            this.lbl_title.AutoSize = true;
+            this.lbl_title.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_title.Location = new System.Drawing.Point(29, 283);
+            this.lbl_title.Name = "lbl_title";
+            this.lbl_title.Size = new System.Drawing.Size(85, 16);
+            this.lbl_title.TabIndex = 212;
+            this.lbl_title.Text = "タイトル名：";
             // 
-            // label31
+            // lbl_ProductID
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label31.Location = new System.Drawing.Point(47, 236);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(67, 16);
-            this.label31.TabIndex = 211;
-            this.label31.Text = "商品ID：";
+            this.lbl_ProductID.AutoSize = true;
+            this.lbl_ProductID.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_ProductID.Location = new System.Drawing.Point(47, 236);
+            this.lbl_ProductID.Name = "lbl_ProductID";
+            this.lbl_ProductID.Size = new System.Drawing.Size(67, 16);
+            this.lbl_ProductID.TabIndex = 211;
+            this.lbl_ProductID.Text = "商品ID：";
             // 
             // label30
             // 
@@ -257,47 +257,47 @@
             this.label25.Size = new System.Drawing.Size(284, 1);
             this.label25.TabIndex = 205;
             // 
-            // label22
+            // lbl_UsePoint
             // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label22.Font = new System.Drawing.Font("MS UI Gothic", 30F);
-            this.label22.Location = new System.Drawing.Point(834, 131);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(122, 40);
-            this.label22.TabIndex = 202;
-            this.label22.Text = "使用P";
+            this.lbl_UsePoint.AutoSize = true;
+            this.lbl_UsePoint.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_UsePoint.Font = new System.Drawing.Font("MS UI Gothic", 30F);
+            this.lbl_UsePoint.Location = new System.Drawing.Point(834, 131);
+            this.lbl_UsePoint.Name = "lbl_UsePoint";
+            this.lbl_UsePoint.Size = new System.Drawing.Size(122, 40);
+            this.lbl_UsePoint.TabIndex = 202;
+            this.lbl_UsePoint.Text = "使用P";
             // 
-            // textBox2
+            // txt_UsePoint
             // 
-            this.textBox2.Font = new System.Drawing.Font("MS UI Gothic", 30F);
-            this.textBox2.Location = new System.Drawing.Point(674, 128);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 47);
-            this.textBox2.TabIndex = 201;
-            this.textBox2.Text = "07211";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_UsePoint.Font = new System.Drawing.Font("MS UI Gothic", 30F);
+            this.txt_UsePoint.Location = new System.Drawing.Point(674, 128);
+            this.txt_UsePoint.Name = "txt_UsePoint";
+            this.txt_UsePoint.Size = new System.Drawing.Size(154, 47);
+            this.txt_UsePoint.TabIndex = 201;
+            this.txt_UsePoint.Text = "07211";
+            this.txt_UsePoint.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label21
+            // lbl_money
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label21.Font = new System.Drawing.Font("MS UI Gothic", 30F);
-            this.label21.Location = new System.Drawing.Point(834, 51);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(97, 40);
-            this.label21.TabIndex = 200;
-            this.label21.Text = "値段";
+            this.lbl_money.AutoSize = true;
+            this.lbl_money.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl_money.Font = new System.Drawing.Font("MS UI Gothic", 30F);
+            this.lbl_money.Location = new System.Drawing.Point(834, 51);
+            this.lbl_money.Name = "lbl_money";
+            this.lbl_money.Size = new System.Drawing.Size(97, 40);
+            this.lbl_money.TabIndex = 200;
+            this.lbl_money.Text = "値段";
             // 
-            // textBox1
+            // txt_money
             // 
-            this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 30F);
-            this.textBox1.Location = new System.Drawing.Point(674, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(154, 47);
-            this.textBox1.TabIndex = 199;
-            this.textBox1.Text = "07211";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txt_money.Font = new System.Drawing.Font("MS UI Gothic", 30F);
+            this.txt_money.Location = new System.Drawing.Point(674, 48);
+            this.txt_money.Name = "txt_money";
+            this.txt_money.Size = new System.Drawing.Size(154, 47);
+            this.txt_money.TabIndex = 199;
+            this.txt_money.Text = "07211";
+            this.txt_money.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label20
             // 
@@ -323,15 +323,15 @@
             this.label16.Size = new System.Drawing.Size(1, 446);
             this.label16.TabIndex = 196;
             // 
-            // label15
+            // lbl_ProductInfo
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("MS UI Gothic", 10.25F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(348, 193);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 14);
-            this.label15.TabIndex = 195;
-            this.label15.Text = "商品情報";
+            this.lbl_ProductInfo.AutoSize = true;
+            this.lbl_ProductInfo.Font = new System.Drawing.Font("MS UI Gothic", 10.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_ProductInfo.Location = new System.Drawing.Point(348, 193);
+            this.lbl_ProductInfo.Name = "lbl_ProductInfo";
+            this.lbl_ProductInfo.Size = new System.Drawing.Size(67, 14);
+            this.lbl_ProductInfo.TabIndex = 195;
+            this.lbl_ProductInfo.Text = "商品情報";
             // 
             // label14
             // 
@@ -349,35 +349,35 @@
             this.label13.Size = new System.Drawing.Size(1, 198);
             this.label13.TabIndex = 193;
             // 
-            // label8
+            // lbl_MemberName
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label8.Location = new System.Drawing.Point(10, 158);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 19);
-            this.label8.TabIndex = 192;
-            this.label8.Text = "会員名(カナ)：";
+            this.lbl_MemberName.AutoSize = true;
+            this.lbl_MemberName.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_MemberName.Location = new System.Drawing.Point(10, 158);
+            this.lbl_MemberName.Name = "lbl_MemberName";
+            this.lbl_MemberName.Size = new System.Drawing.Size(125, 19);
+            this.lbl_MemberName.TabIndex = 192;
+            this.lbl_MemberName.Text = "会員名(カナ)：";
             // 
-            // label6
+            // lbl_MemberPoint
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.Location = new System.Drawing.Point(371, 128);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 19);
-            this.label6.TabIndex = 191;
-            this.label6.Text = "保有ポイント：";
+            this.lbl_MemberPoint.AutoSize = true;
+            this.lbl_MemberPoint.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_MemberPoint.Location = new System.Drawing.Point(371, 128);
+            this.lbl_MemberPoint.Name = "lbl_MemberPoint";
+            this.lbl_MemberPoint.Size = new System.Drawing.Size(121, 19);
+            this.lbl_MemberPoint.TabIndex = 191;
+            this.lbl_MemberPoint.Text = "保有ポイント：";
             // 
-            // label4
+            // label4lbl_MemberID
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(56, 128);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 19);
-            this.label4.TabIndex = 190;
-            this.label4.Text = "会員ID：";
+            this.label4lbl_MemberID.AutoSize = true;
+            this.label4lbl_MemberID.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4lbl_MemberID.Location = new System.Drawing.Point(56, 128);
+            this.label4lbl_MemberID.Name = "label4lbl_MemberID";
+            this.label4lbl_MemberID.Size = new System.Drawing.Size(79, 19);
+            this.label4lbl_MemberID.TabIndex = 190;
+            this.label4lbl_MemberID.Text = "会員ID：";
             // 
             // label3
             // 
@@ -395,34 +395,34 @@
             this.label2.Size = new System.Drawing.Size(673, 1);
             this.label2.TabIndex = 188;
             // 
-            // dataGridView2
+            // dgv_ReturnItem
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(370, 218);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 21;
-            this.dataGridView2.Size = new System.Drawing.Size(420, 373);
-            this.dataGridView2.TabIndex = 187;
+            this.dgv_ReturnItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ReturnItem.Location = new System.Drawing.Point(370, 218);
+            this.dgv_ReturnItem.Name = "dgv_ReturnItem";
+            this.dgv_ReturnItem.RowTemplate.Height = 21;
+            this.dgv_ReturnItem.Size = new System.Drawing.Size(420, 373);
+            this.dgv_ReturnItem.TabIndex = 187;
             // 
-            // label11
+            // lbl_TopTitle
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label11.Location = new System.Drawing.Point(256, 5);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(158, 64);
-            this.label11.TabIndex = 186;
-            this.label11.Text = "返却";
+            this.lbl_TopTitle.AutoSize = true;
+            this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_TopTitle.Location = new System.Drawing.Point(256, 5);
+            this.lbl_TopTitle.Name = "lbl_TopTitle";
+            this.lbl_TopTitle.Size = new System.Drawing.Size(158, 64);
+            this.lbl_TopTitle.TabIndex = 186;
+            this.lbl_TopTitle.Text = "返却";
             // 
-            // label10
+            // lbl_MemberInfo
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("MS UI Gothic", 10.25F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(303, 95);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 14);
-            this.label10.TabIndex = 185;
-            this.label10.Text = "会員情報";
+            this.lbl_MemberInfo.AutoSize = true;
+            this.lbl_MemberInfo.Font = new System.Drawing.Font("MS UI Gothic", 10.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_MemberInfo.Location = new System.Drawing.Point(303, 95);
+            this.lbl_MemberInfo.Name = "lbl_MemberInfo";
+            this.lbl_MemberInfo.Size = new System.Drawing.Size(67, 14);
+            this.lbl_MemberInfo.TabIndex = 185;
+            this.lbl_MemberInfo.Text = "会員情報";
             // 
             // label9
             // 
@@ -432,25 +432,25 @@
             this.label9.Size = new System.Drawing.Size(673, 1);
             this.label9.TabIndex = 184;
             // 
-            // button12
+            // btn_ok
             // 
-            this.button12.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.button12.Location = new System.Drawing.Point(810, 447);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(120, 50);
-            this.button12.TabIndex = 183;
-            this.button12.Text = "決定";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btn_ok.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.btn_ok.Location = new System.Drawing.Point(810, 447);
+            this.btn_ok.Name = "btn_ok";
+            this.btn_ok.Size = new System.Drawing.Size(120, 50);
+            this.btn_ok.TabIndex = 183;
+            this.btn_ok.Text = "決定";
+            this.btn_ok.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // btn_clear
             // 
-            this.button11.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.button11.Location = new System.Drawing.Point(810, 527);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(120, 50);
-            this.button11.TabIndex = 182;
-            this.button11.Text = "クリア";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btn_clear.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.btn_clear.Location = new System.Drawing.Point(810, 527);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(120, 50);
+            this.btn_clear.TabIndex = 182;
+            this.btn_clear.Text = "クリア";
+            this.btn_clear.UseVisualStyleBackColor = true;
             // 
             // label23
             // 
@@ -468,57 +468,57 @@
             this.label24.Size = new System.Drawing.Size(153, 47);
             this.label24.TabIndex = 204;
             // 
-            // Return2
+            // Return
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label35);
-            this.Controls.Add(this.label34);
-            this.Controls.Add(this.label33);
-            this.Controls.Add(this.label32);
-            this.Controls.Add(this.label31);
+            this.Controls.Add(this.txt_late);
+            this.Controls.Add(this.txt_ReturnDay);
+            this.Controls.Add(this.lbl_late);
+            this.Controls.Add(this.txt_MemberName);
+            this.Controls.Add(this.txt_MemberPoint);
+            this.Controls.Add(this.txt_MemberID);
+            this.Controls.Add(this.txt_OLDNEW);
+            this.Controls.Add(this.txt_type);
+            this.Controls.Add(this.txt_ProductID);
+            this.Controls.Add(this.txt_title);
+            this.Controls.Add(this.lbl_ReturnDay);
+            this.Controls.Add(this.lbl_OLDNEW);
+            this.Controls.Add(this.lbl_type);
+            this.Controls.Add(this.lbl_title);
+            this.Controls.Add(this.lbl_ProductID);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lbl_UsePoint);
+            this.Controls.Add(this.txt_UsePoint);
+            this.Controls.Add(this.lbl_money);
+            this.Controls.Add(this.txt_money);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
+            this.Controls.Add(this.lbl_ProductInfo);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbl_MemberName);
+            this.Controls.Add(this.lbl_MemberPoint);
+            this.Controls.Add(this.label4lbl_MemberID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.dgv_ReturnItem);
+            this.Controls.Add(this.lbl_TopTitle);
+            this.Controls.Add(this.lbl_MemberInfo);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
+            this.Controls.Add(this.btn_ok);
+            this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label24);
-            this.Name = "Return2";
+            this.Name = "Return";
             this.Size = new System.Drawing.Size(948, 591);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ReturnItem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -526,48 +526,48 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox txt_late;
+        private System.Windows.Forms.TextBox txt_ReturnDay;
+        private System.Windows.Forms.Label lbl_late;
+        private System.Windows.Forms.TextBox txt_MemberName;
+        private System.Windows.Forms.TextBox txt_MemberPoint;
+        private System.Windows.Forms.TextBox txt_MemberID;
+        private System.Windows.Forms.TextBox txt_OLDNEW;
+        private System.Windows.Forms.TextBox txt_type;
+        private System.Windows.Forms.TextBox txt_ProductID;
+        private System.Windows.Forms.TextBox txt_title;
+        private System.Windows.Forms.Label lbl_ReturnDay;
+        private System.Windows.Forms.Label lbl_OLDNEW;
+        private System.Windows.Forms.Label lbl_type;
+        private System.Windows.Forms.Label lbl_title;
+        private System.Windows.Forms.Label lbl_ProductID;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lbl_UsePoint;
+        private System.Windows.Forms.TextBox txt_UsePoint;
+        private System.Windows.Forms.Label lbl_money;
+        private System.Windows.Forms.TextBox txt_money;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lbl_ProductInfo;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_MemberName;
+        private System.Windows.Forms.Label lbl_MemberPoint;
+        private System.Windows.Forms.Label label4lbl_MemberID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView dgv_ReturnItem;
+        private System.Windows.Forms.Label lbl_TopTitle;
+        private System.Windows.Forms.Label lbl_MemberInfo;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btn_ok;
+        private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
     }
