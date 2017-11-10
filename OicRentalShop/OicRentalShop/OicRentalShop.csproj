@@ -134,6 +134,18 @@
     <Compile Include="Manage\Member\MemberList1.Designer.cs">
       <DependentUpon>MemberList1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage\Price\PriceList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manage\Price\PriceList.Designer.cs">
+      <DependentUpon>PriceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Profit\ProfitList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manage\Profit\ProfitList.Designer.cs">
+      <DependentUpon>ProfitList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manage\Staff\StaffAd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +224,18 @@
     <Compile Include="Register\Lend\Lend.Designer.cs">
       <DependentUpon>Lend.cs</DependentUpon>
     </Compile>
+    <Compile Include="Register\MemberAdd\MemberAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Register\MemberAdd\MemberAdd.Designer.cs">
+      <DependentUpon>MemberAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register\MemberAdd\MemberAddConfirmation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Register\MemberAdd\MemberAddConfirmation.Designer.cs">
+      <DependentUpon>MemberAddConfirmation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Register\PriceList\PriceList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -262,6 +286,12 @@
     <EmbeddedResource Include="Manage\Member\MemberList1.resx">
       <DependentUpon>MemberList1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manage\Price\PriceList.resx">
+      <DependentUpon>PriceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage\Profit\ProfitList.resx">
+      <DependentUpon>ProfitList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manage\Staff\StaffList.resx">
       <DependentUpon>StaffList.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +330,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register\Lend\Lend.resx">
       <DependentUpon>Lend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\MemberAdd\MemberAdd.resx">
+      <DependentUpon>MemberAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\MemberAdd\MemberAddConfirmation.resx">
+      <DependentUpon>MemberAddConfirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Register\PriceList\PriceList.resx">
       <DependentUpon>PriceList.cs</DependentUpon>
