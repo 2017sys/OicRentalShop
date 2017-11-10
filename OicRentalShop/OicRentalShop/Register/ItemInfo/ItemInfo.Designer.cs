@@ -28,52 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.cmb_Order = new System.Windows.Forms.ComboBox();
+            this.lbl_Order = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.txt_ArtistName = new System.Windows.Forms.TextBox();
+            this.lbl_ArtistName = new System.Windows.Forms.Label();
+            this.txt_ItemID = new System.Windows.Forms.TextBox();
+            this.lbl_ItemID = new System.Windows.Forms.Label();
+            this.cmb_Genre = new System.Windows.Forms.ComboBox();
+            this.cmb_State = new System.Windows.Forms.ComboBox();
+            this.cmb_OLDNEW = new System.Windows.Forms.ComboBox();
+            this.txt_TitleID = new System.Windows.Forms.TextBox();
+            this.txt_TitleName = new System.Windows.Forms.TextBox();
+            this.lbl_Genre = new System.Windows.Forms.Label();
+            this.lbl_State = new System.Windows.Forms.Label();
+            this.lbl_OLDNEW = new System.Windows.Forms.Label();
+            this.lbl_TitleID = new System.Windows.Forms.Label();
+            this.lbl_TitleName = new System.Windows.Forms.Label();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.lbl_TopTitle = new System.Windows.Forms.Label();
+            this.lbl_SearchC = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgv_ItemInfo = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemInfo)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox4
+            // cmb_Order
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.cmb_Order.FormattingEnabled = true;
+            this.cmb_Order.Items.AddRange(new object[] {
             "CD",
             "DVD"});
-            this.comboBox4.Location = new System.Drawing.Point(537, 176);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(60, 20);
-            this.comboBox4.TabIndex = 102;
+            this.cmb_Order.Location = new System.Drawing.Point(537, 176);
+            this.cmb_Order.Name = "cmb_Order";
+            this.cmb_Order.Size = new System.Drawing.Size(60, 20);
+            this.cmb_Order.TabIndex = 102;
             // 
-            // label14
+            // lbl_Order
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label14.Location = new System.Drawing.Point(474, 178);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(63, 13);
-            this.label14.TabIndex = 101;
-            this.label14.Text = "昇順降順";
+            this.lbl_Order.AutoSize = true;
+            this.lbl_Order.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_Order.Location = new System.Drawing.Point(474, 178);
+            this.lbl_Order.Name = "lbl_Order";
+            this.lbl_Order.Size = new System.Drawing.Size(63, 13);
+            this.lbl_Order.TabIndex = 101;
+            this.lbl_Order.Text = "昇順降順";
             // 
             // label8
             // 
@@ -83,163 +83,163 @@
             this.label8.Size = new System.Drawing.Size(950, 1);
             this.label8.TabIndex = 100;
             // 
-            // textBox4
+            // txt_ArtistName
             // 
-            this.textBox4.Location = new System.Drawing.Point(249, 176);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(76, 19);
-            this.textBox4.TabIndex = 99;
+            this.txt_ArtistName.Location = new System.Drawing.Point(249, 176);
+            this.txt_ArtistName.Name = "txt_ArtistName";
+            this.txt_ArtistName.Size = new System.Drawing.Size(76, 19);
+            this.txt_ArtistName.TabIndex = 99;
             // 
-            // label13
+            // lbl_ArtistName
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label13.Location = new System.Drawing.Point(159, 177);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(84, 13);
-            this.label13.TabIndex = 98;
-            this.label13.Text = "アーティスト名";
+            this.lbl_ArtistName.AutoSize = true;
+            this.lbl_ArtistName.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_ArtistName.Location = new System.Drawing.Point(159, 177);
+            this.lbl_ArtistName.Name = "lbl_ArtistName";
+            this.lbl_ArtistName.Size = new System.Drawing.Size(84, 13);
+            this.lbl_ArtistName.TabIndex = 98;
+            this.lbl_ArtistName.Text = "アーティスト名";
             // 
-            // textBox3
+            // txt_ItemID
             // 
-            this.textBox3.Location = new System.Drawing.Point(388, 136);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(76, 19);
-            this.textBox3.TabIndex = 97;
+            this.txt_ItemID.Location = new System.Drawing.Point(388, 136);
+            this.txt_ItemID.Name = "txt_ItemID";
+            this.txt_ItemID.Size = new System.Drawing.Size(76, 19);
+            this.txt_ItemID.TabIndex = 97;
             // 
-            // label12
+            // lbl_ItemID
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label12.Location = new System.Drawing.Point(341, 142);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 12);
-            this.label12.TabIndex = 96;
-            this.label12.Text = "商品ＩＤ";
+            this.lbl_ItemID.AutoSize = true;
+            this.lbl_ItemID.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_ItemID.Location = new System.Drawing.Point(341, 142);
+            this.lbl_ItemID.Name = "lbl_ItemID";
+            this.lbl_ItemID.Size = new System.Drawing.Size(45, 12);
+            this.lbl_ItemID.TabIndex = 96;
+            this.lbl_ItemID.Text = "商品ＩＤ";
             // 
-            // comboBox3
+            // cmb_Genre
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(388, 175);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(80, 20);
-            this.comboBox3.TabIndex = 95;
+            this.cmb_Genre.FormattingEnabled = true;
+            this.cmb_Genre.Location = new System.Drawing.Point(388, 175);
+            this.cmb_Genre.Name = "cmb_Genre";
+            this.cmb_Genre.Size = new System.Drawing.Size(80, 20);
+            this.cmb_Genre.TabIndex = 95;
             // 
-            // comboBox2
+            // cmb_State
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmb_State.FormattingEnabled = true;
+            this.cmb_State.Items.AddRange(new object[] {
             "新作",
             "旧作"});
-            this.comboBox2.Location = new System.Drawing.Point(98, 175);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(40, 20);
-            this.comboBox2.TabIndex = 94;
+            this.cmb_State.Location = new System.Drawing.Point(98, 175);
+            this.cmb_State.Name = "cmb_State";
+            this.cmb_State.Size = new System.Drawing.Size(40, 20);
+            this.cmb_State.TabIndex = 94;
             // 
-            // comboBox1
+            // cmb_OLDNEW
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmb_OLDNEW.FormattingEnabled = true;
+            this.cmb_OLDNEW.Items.AddRange(new object[] {
             "CD",
             "DVD"});
-            this.comboBox1.Location = new System.Drawing.Point(537, 136);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(60, 20);
-            this.comboBox1.TabIndex = 93;
+            this.cmb_OLDNEW.Location = new System.Drawing.Point(537, 136);
+            this.cmb_OLDNEW.Name = "cmb_OLDNEW";
+            this.cmb_OLDNEW.Size = new System.Drawing.Size(60, 20);
+            this.cmb_OLDNEW.TabIndex = 93;
             // 
-            // textBox2
+            // txt_TitleID
             // 
-            this.textBox2.Location = new System.Drawing.Point(249, 136);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(76, 19);
-            this.textBox2.TabIndex = 92;
+            this.txt_TitleID.Location = new System.Drawing.Point(249, 136);
+            this.txt_TitleID.Name = "txt_TitleID";
+            this.txt_TitleID.Size = new System.Drawing.Size(76, 19);
+            this.txt_TitleID.TabIndex = 92;
             // 
-            // textBox1
+            // txt_TitleName
             // 
-            this.textBox1.Location = new System.Drawing.Point(98, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(76, 19);
-            this.textBox1.TabIndex = 91;
+            this.txt_TitleName.Location = new System.Drawing.Point(98, 135);
+            this.txt_TitleName.Name = "txt_TitleName";
+            this.txt_TitleName.Size = new System.Drawing.Size(76, 19);
+            this.txt_TitleName.TabIndex = 91;
             // 
-            // label6
+            // lbl_Genre
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label6.Location = new System.Drawing.Point(331, 177);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
-            this.label6.TabIndex = 90;
-            this.label6.Text = "ジャンル";
+            this.lbl_Genre.AutoSize = true;
+            this.lbl_Genre.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_Genre.Location = new System.Drawing.Point(331, 177);
+            this.lbl_Genre.Name = "lbl_Genre";
+            this.lbl_Genre.Size = new System.Drawing.Size(52, 13);
+            this.lbl_Genre.TabIndex = 90;
+            this.lbl_Genre.Text = "ジャンル";
             // 
-            // label5
+            // lbl_State
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label5.Location = new System.Drawing.Point(21, 177);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 13);
-            this.label5.TabIndex = 89;
-            this.label5.Text = "旧作/新作";
+            this.lbl_State.AutoSize = true;
+            this.lbl_State.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_State.Location = new System.Drawing.Point(21, 177);
+            this.lbl_State.Name = "lbl_State";
+            this.lbl_State.Size = new System.Drawing.Size(71, 13);
+            this.lbl_State.TabIndex = 89;
+            this.lbl_State.Text = "旧作/新作";
             // 
-            // label4
+            // lbl_OLDNEW
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label4.Location = new System.Drawing.Point(470, 141);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 88;
-            this.label4.Text = "CD/DVD";
+            this.lbl_OLDNEW.AutoSize = true;
+            this.lbl_OLDNEW.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_OLDNEW.Location = new System.Drawing.Point(470, 141);
+            this.lbl_OLDNEW.Name = "lbl_OLDNEW";
+            this.lbl_OLDNEW.Size = new System.Drawing.Size(61, 13);
+            this.lbl_OLDNEW.TabIndex = 88;
+            this.lbl_OLDNEW.Text = "CD/DVD";
             // 
-            // label3
+            // lbl_TitleID
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label3.Location = new System.Drawing.Point(181, 142);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 87;
-            this.label3.Text = "タイトルID";
+            this.lbl_TitleID.AutoSize = true;
+            this.lbl_TitleID.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_TitleID.Location = new System.Drawing.Point(181, 142);
+            this.lbl_TitleID.Name = "lbl_TitleID";
+            this.lbl_TitleID.Size = new System.Drawing.Size(62, 13);
+            this.lbl_TitleID.TabIndex = 87;
+            this.lbl_TitleID.Text = "タイトルID";
             // 
-            // label2
+            // lbl_TitleName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label2.Location = new System.Drawing.Point(21, 142);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 86;
-            this.label2.Text = "タイトル名";
+            this.lbl_TitleName.AutoSize = true;
+            this.lbl_TitleName.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.lbl_TitleName.Location = new System.Drawing.Point(21, 142);
+            this.lbl_TitleName.Name = "lbl_TitleName";
+            this.lbl_TitleName.Size = new System.Drawing.Size(63, 13);
+            this.lbl_TitleName.TabIndex = 86;
+            this.lbl_TitleName.Text = "タイトル名";
             // 
-            // button9
+            // btn_Search
             // 
-            this.button9.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.button9.Location = new System.Drawing.Point(711, 126);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(113, 86);
-            this.button9.TabIndex = 85;
-            this.button9.Text = "検索";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_Search.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.btn_Search.Location = new System.Drawing.Point(711, 126);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(113, 86);
+            this.btn_Search.TabIndex = 85;
+            this.btn_Search.Text = "検索";
+            this.btn_Search.UseVisualStyleBackColor = true;
             // 
-            // label11
+            // lbl_TopTitle
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label11.Location = new System.Drawing.Point(251, 5);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(288, 64);
-            this.label11.TabIndex = 84;
-            this.label11.Text = "商品情報";
+            this.lbl_TopTitle.AutoSize = true;
+            this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_TopTitle.Location = new System.Drawing.Point(251, 5);
+            this.lbl_TopTitle.Name = "lbl_TopTitle";
+            this.lbl_TopTitle.Size = new System.Drawing.Size(288, 64);
+            this.lbl_TopTitle.TabIndex = 84;
+            this.lbl_TopTitle.Text = "商品情報";
             // 
-            // label10
+            // lbl_SearchC
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label10.Location = new System.Drawing.Point(5, 95);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(89, 19);
-            this.label10.TabIndex = 83;
-            this.label10.Text = "検索条件";
+            this.lbl_SearchC.AutoSize = true;
+            this.lbl_SearchC.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_SearchC.Location = new System.Drawing.Point(5, 95);
+            this.lbl_SearchC.Name = "lbl_SearchC";
+            this.lbl_SearchC.Size = new System.Drawing.Size(89, 19);
+            this.lbl_SearchC.TabIndex = 83;
+            this.lbl_SearchC.Text = "検索条件";
             // 
             // label9
             // 
@@ -257,45 +257,45 @@
             this.label7.Size = new System.Drawing.Size(950, 1);
             this.label7.TabIndex = 81;
             // 
-            // dataGridView1
+            // dgv_ItemInfo
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 214);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(948, 377);
-            this.dataGridView1.TabIndex = 80;
+            this.dgv_ItemInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ItemInfo.Location = new System.Drawing.Point(0, 214);
+            this.dgv_ItemInfo.Name = "dgv_ItemInfo";
+            this.dgv_ItemInfo.RowTemplate.Height = 21;
+            this.dgv_ItemInfo.Size = new System.Drawing.Size(948, 377);
+            this.dgv_ItemInfo.TabIndex = 80;
             // 
             // ItemInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.cmb_Order);
+            this.Controls.Add(this.lbl_Order);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txt_ArtistName);
+            this.Controls.Add(this.lbl_ArtistName);
+            this.Controls.Add(this.txt_ItemID);
+            this.Controls.Add(this.lbl_ItemID);
+            this.Controls.Add(this.cmb_Genre);
+            this.Controls.Add(this.cmb_State);
+            this.Controls.Add(this.cmb_OLDNEW);
+            this.Controls.Add(this.txt_TitleID);
+            this.Controls.Add(this.txt_TitleName);
+            this.Controls.Add(this.lbl_Genre);
+            this.Controls.Add(this.lbl_State);
+            this.Controls.Add(this.lbl_OLDNEW);
+            this.Controls.Add(this.lbl_TitleID);
+            this.Controls.Add(this.lbl_TitleName);
+            this.Controls.Add(this.btn_Search);
+            this.Controls.Add(this.lbl_TopTitle);
+            this.Controls.Add(this.lbl_SearchC);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_ItemInfo);
             this.Name = "ItemInfo";
             this.Size = new System.Drawing.Size(948, 591);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,28 +303,28 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cmb_Order;
+        private System.Windows.Forms.Label lbl_Order;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txt_ArtistName;
+        private System.Windows.Forms.Label lbl_ArtistName;
+        private System.Windows.Forms.TextBox txt_ItemID;
+        private System.Windows.Forms.Label lbl_ItemID;
+        private System.Windows.Forms.ComboBox cmb_Genre;
+        private System.Windows.Forms.ComboBox cmb_State;
+        private System.Windows.Forms.ComboBox cmb_OLDNEW;
+        private System.Windows.Forms.TextBox txt_TitleID;
+        private System.Windows.Forms.TextBox txt_TitleName;
+        private System.Windows.Forms.Label lbl_Genre;
+        private System.Windows.Forms.Label lbl_State;
+        private System.Windows.Forms.Label lbl_OLDNEW;
+        private System.Windows.Forms.Label lbl_TitleID;
+        private System.Windows.Forms.Label lbl_TitleName;
+        private System.Windows.Forms.Button btn_Search;
+        private System.Windows.Forms.Label lbl_TopTitle;
+        private System.Windows.Forms.Label lbl_SearchC;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_ItemInfo;
     }
 }
