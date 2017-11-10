@@ -81,7 +81,7 @@
             // 
             this.lbl_TopTitle.AutoSize = true;
             this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_TopTitle.Location = new System.Drawing.Point(252, 13);
+            this.lbl_TopTitle.Location = new System.Drawing.Point(330, 13);
             this.lbl_TopTitle.Name = "lbl_TopTitle";
             this.lbl_TopTitle.Size = new System.Drawing.Size(288, 64);
             this.lbl_TopTitle.TabIndex = 123;
