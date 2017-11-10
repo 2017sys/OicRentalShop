@@ -146,3 +146,15 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
+
+
+
+
+*ii/aaaa.txt
+*entalShop/obj
+*RentalShop/bin
+
+
+/OicRentalShop/obj
+*.suo
+/OicRentalShop/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
