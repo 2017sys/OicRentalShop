@@ -295,6 +295,7 @@
             this.Controls.Add(this.dgv_ItemInfo);
             this.Name = "ItemInfo";
             this.Size = new System.Drawing.Size(948, 591);
+            this.Load += new System.EventHandler(this.ItemInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
