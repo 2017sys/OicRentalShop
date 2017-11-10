@@ -92,6 +92,12 @@
     <Compile Include="Manage\Item\ItemList1.Designer.cs">
       <DependentUpon>ItemList1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage\Log\LogList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manage\Log\LogList.Designer.cs">
+      <DependentUpon>LogList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manage\Member\MemberAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\Item\ItemList1.resx">
       <DependentUpon>ItemList1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage\Log\LogList.resx">
+      <DependentUpon>LogList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\Member\MemberList.resx">
       <DependentUpon>MemberList.cs</DependentUpon>

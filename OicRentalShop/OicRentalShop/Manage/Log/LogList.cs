@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OicRentalShop.Register.ItemInfo
+namespace OicRentalShop.Manage.Log
 {
-    public partial class ItemInfo : UserControl
+    public partial class LogList : UserControl
     {
-        public ItemInfo()
+        public LogList()
         {
             InitializeComponent();
-        }
-
-        private void ItemInfo_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
