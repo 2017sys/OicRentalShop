@@ -28,52 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_Add = new System.Windows.Forms.Button();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.dgv_ItemRe = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lbl_ReleaseDate = new System.Windows.Forms.Label();
+            this.lbl_Genre = new System.Windows.Forms.Label();
+            this.lbl_Artist = new System.Windows.Forms.Label();
+            this.lbl_Title = new System.Windows.Forms.Label();
+            this.lbl_UniqueID = new System.Windows.Forms.Label();
+            this.lbl_TopTitle = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemRe)).BeginInit();
             this.SuspendLayout();
             // 
-            // button10
+            // btn_Add
             // 
-            this.button10.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button10.Location = new System.Drawing.Point(788, 509);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(97, 70);
-            this.button10.TabIndex = 121;
-            this.button10.Text = "登録";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Add.Location = new System.Drawing.Point(788, 509);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(97, 70);
+            this.btn_Add.TabIndex = 121;
+            this.btn_Add.Text = "登録";
+            this.btn_Add.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btn_clear
             // 
-            this.button9.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button9.Location = new System.Drawing.Point(648, 509);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(97, 70);
-            this.button9.TabIndex = 120;
-            this.button9.Text = "クリア";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_clear.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_clear.Location = new System.Drawing.Point(648, 509);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(97, 70);
+            this.btn_clear.TabIndex = 120;
+            this.btn_clear.Text = "クリア";
+            this.btn_clear.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgv_ItemRe
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(630, 123);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(288, 362);
-            this.dataGridView1.TabIndex = 119;
+            this.dgv_ItemRe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ItemRe.Location = new System.Drawing.Point(630, 123);
+            this.dgv_ItemRe.Name = "dgv_ItemRe";
+            this.dgv_ItemRe.RowTemplate.Height = 21;
+            this.dgv_ItemRe.Size = new System.Drawing.Size(288, 362);
+            this.dgv_ItemRe.TabIndex = 119;
             // 
             // label7
             // 
@@ -124,65 +124,65 @@
             this.label13.TabIndex = 114;
             this.label13.Text = "666666666";
             // 
-            // label6
+            // lbl_ReleaseDate
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.Location = new System.Drawing.Point(83, 464);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 21);
-            this.label6.TabIndex = 113;
-            this.label6.Text = "発売日：";
+            this.lbl_ReleaseDate.AutoSize = true;
+            this.lbl_ReleaseDate.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_ReleaseDate.Location = new System.Drawing.Point(83, 464);
+            this.lbl_ReleaseDate.Name = "lbl_ReleaseDate";
+            this.lbl_ReleaseDate.Size = new System.Drawing.Size(88, 21);
+            this.lbl_ReleaseDate.TabIndex = 113;
+            this.lbl_ReleaseDate.Text = "発売日：";
             // 
-            // label5
+            // lbl_Genre
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(59, 412);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 21);
-            this.label5.TabIndex = 112;
-            this.label5.Text = "ジャンル名：";
+            this.lbl_Genre.AutoSize = true;
+            this.lbl_Genre.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Genre.Location = new System.Drawing.Point(59, 412);
+            this.lbl_Genre.Name = "lbl_Genre";
+            this.lbl_Genre.Size = new System.Drawing.Size(112, 21);
+            this.lbl_Genre.TabIndex = 112;
+            this.lbl_Genre.Text = "ジャンル名：";
             // 
-            // label4
+            // lbl_Artist
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(29, 360);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 21);
-            this.label4.TabIndex = 111;
-            this.label4.Text = "アーティスト名：";
+            this.lbl_Artist.AutoSize = true;
+            this.lbl_Artist.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Artist.Location = new System.Drawing.Point(29, 360);
+            this.lbl_Artist.Name = "lbl_Artist";
+            this.lbl_Artist.Size = new System.Drawing.Size(142, 21);
+            this.lbl_Artist.TabIndex = 111;
+            this.lbl_Artist.Text = "アーティスト名：";
             // 
-            // label3
+            // lbl_Title
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(62, 270);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 21);
-            this.label3.TabIndex = 110;
-            this.label3.Text = "タイトルID：";
+            this.lbl_Title.AutoSize = true;
+            this.lbl_Title.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Title.Location = new System.Drawing.Point(62, 270);
+            this.lbl_Title.Name = "lbl_Title";
+            this.lbl_Title.Size = new System.Drawing.Size(109, 21);
+            this.lbl_Title.TabIndex = 110;
+            this.lbl_Title.Text = "タイトルID：";
             // 
-            // label2
+            // lbl_UniqueID
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(84, 218);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 21);
-            this.label2.TabIndex = 109;
-            this.label2.Text = "固有ID：";
+            this.lbl_UniqueID.AutoSize = true;
+            this.lbl_UniqueID.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_UniqueID.Location = new System.Drawing.Point(84, 218);
+            this.lbl_UniqueID.Name = "lbl_UniqueID";
+            this.lbl_UniqueID.Size = new System.Drawing.Size(87, 21);
+            this.lbl_UniqueID.TabIndex = 109;
+            this.lbl_UniqueID.Text = "固有ID：";
             // 
-            // label11
+            // lbl_TopTitle
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label11.Location = new System.Drawing.Point(252, 11);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(288, 64);
-            this.label11.TabIndex = 108;
-            this.label11.Text = "商品登録";
+            this.lbl_TopTitle.AutoSize = true;
+            this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_TopTitle.Location = new System.Drawing.Point(252, 11);
+            this.lbl_TopTitle.Name = "lbl_TopTitle";
+            this.lbl_TopTitle.Size = new System.Drawing.Size(288, 64);
+            this.lbl_TopTitle.TabIndex = 108;
+            this.lbl_TopTitle.Text = "商品登録";
             // 
             // label9
             // 
@@ -196,24 +196,24 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btn_Add);
+            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.dgv_ItemRe);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lbl_ReleaseDate);
+            this.Controls.Add(this.lbl_Genre);
+            this.Controls.Add(this.lbl_Artist);
+            this.Controls.Add(this.lbl_Title);
+            this.Controls.Add(this.lbl_UniqueID);
+            this.Controls.Add(this.lbl_TopTitle);
             this.Controls.Add(this.label9);
             this.Name = "ItemAdd";
             this.Size = new System.Drawing.Size(948, 591);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemRe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,20 +221,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btn_Add;
+        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.DataGridView dgv_ItemRe;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lbl_ReleaseDate;
+        private System.Windows.Forms.Label lbl_Genre;
+        private System.Windows.Forms.Label lbl_Artist;
+        private System.Windows.Forms.Label lbl_Title;
+        private System.Windows.Forms.Label lbl_UniqueID;
+        private System.Windows.Forms.Label lbl_TopTitle;
         private System.Windows.Forms.Label label9;
     }
 }

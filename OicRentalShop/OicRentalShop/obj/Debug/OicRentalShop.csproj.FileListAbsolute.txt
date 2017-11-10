@@ -33,3 +33,6 @@ D:\C#\OicRentalShop\OicRentalShop\obj\Debug\OicRentalShop.Manage.Item.ItemList.r
 \\stusrv\システム開発演習\NM2\OicRentalShop\OicRentalShop\obj\Debug\OicRentalShop.Register.ItemInfo.ItemInfo.resources
 \\stusrv\システム開発演習\NM2\OicRentalShop\OicRentalShop\obj\Debug\OicRentalShop.Register.ItemAdd.ItemAdd1.resources
 \\stusrv\システム開発演習\NM2\OicRentalShop\OicRentalShop\obj\Debug\OicRentalShop.Register.ItemAdd.ItemAddConfirmation1.resources
+C:\Users\B6147\Desktop\OicRentalShop\OicRentalShop\OicRentalShop\bin\Debug\OicRentalShop.exe.config
+C:\Users\B6147\Desktop\OicRentalShop\OicRentalShop\OicRentalShop\obj\Debug\OicRentalShop.exe
+C:\Users\B6147\Desktop\OicRentalShop\OicRentalShop\OicRentalShop\obj\Debug\OicRentalShop.pdb

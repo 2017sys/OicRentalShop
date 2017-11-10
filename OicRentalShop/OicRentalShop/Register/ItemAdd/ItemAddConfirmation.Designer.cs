@@ -28,64 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
+            this.btn_Cancel = new System.Windows.Forms.Button();
+            this.btn_ok = new System.Windows.Forms.Button();
+            this.dgv_ItemCon = new System.Windows.Forms.DataGridView();
+            this.lbl_TopTitle = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemCon)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(60, 125);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(260, 16);
-            this.label2.TabIndex = 127;
-            this.label2.Text = "以下の情報で登録してもよろしですか";
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label.ForeColor = System.Drawing.Color.Red;
+            this.label.Location = new System.Drawing.Point(60, 125);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(260, 16);
+            this.label.TabIndex = 127;
+            this.label.Text = "以下の情報で登録してもよろしですか";
             // 
-            // button10
+            // btn_Cancel
             // 
-            this.button10.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button10.Location = new System.Drawing.Point(645, 521);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(109, 56);
-            this.button10.TabIndex = 126;
-            this.button10.Text = "キャンセル";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Cancel.Location = new System.Drawing.Point(645, 521);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(109, 56);
+            this.btn_Cancel.TabIndex = 126;
+            this.btn_Cancel.Text = "キャンセル";
+            this.btn_Cancel.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btn_ok
             // 
-            this.button9.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button9.Location = new System.Drawing.Point(773, 521);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(109, 56);
-            this.button9.TabIndex = 125;
-            this.button9.Text = "決定";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_ok.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_ok.Location = new System.Drawing.Point(773, 521);
+            this.btn_ok.Name = "btn_ok";
+            this.btn_ok.Size = new System.Drawing.Size(109, 56);
+            this.btn_ok.TabIndex = 125;
+            this.btn_ok.Text = "決定";
+            this.btn_ok.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgv_ItemCon
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(63, 160);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(819, 338);
-            this.dataGridView1.TabIndex = 124;
+            this.dgv_ItemCon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ItemCon.Location = new System.Drawing.Point(63, 160);
+            this.dgv_ItemCon.Name = "dgv_ItemCon";
+            this.dgv_ItemCon.RowTemplate.Height = 21;
+            this.dgv_ItemCon.Size = new System.Drawing.Size(819, 338);
+            this.dgv_ItemCon.TabIndex = 124;
             // 
-            // label11
+            // lbl_TopTitle
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label11.Location = new System.Drawing.Point(252, 13);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(288, 64);
-            this.label11.TabIndex = 123;
-            this.label11.Text = "商品登録";
+            this.lbl_TopTitle.AutoSize = true;
+            this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_TopTitle.Location = new System.Drawing.Point(252, 13);
+            this.lbl_TopTitle.Name = "lbl_TopTitle";
+            this.lbl_TopTitle.Size = new System.Drawing.Size(288, 64);
+            this.lbl_TopTitle.TabIndex = 123;
+            this.lbl_TopTitle.Text = "商品登録";
             // 
             // label9
             // 
@@ -99,15 +99,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.btn_Cancel);
+            this.Controls.Add(this.btn_ok);
+            this.Controls.Add(this.dgv_ItemCon);
+            this.Controls.Add(this.lbl_TopTitle);
             this.Controls.Add(this.label9);
             this.Name = "ItemAddConfirmation";
             this.Size = new System.Drawing.Size(948, 591);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemCon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,11 +115,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Button btn_Cancel;
+        private System.Windows.Forms.Button btn_ok;
+        private System.Windows.Forms.DataGridView dgv_ItemCon;
+        private System.Windows.Forms.Label lbl_TopTitle;
         private System.Windows.Forms.Label label9;
     }
 }
