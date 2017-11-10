@@ -61,11 +61,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(363, 26);
+            this.label4.Location = new System.Drawing.Point(319, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(223, 64);
+            this.label4.Size = new System.Drawing.Size(288, 64);
             this.label4.TabIndex = 226;
-            this.label4.Text = "料金表";
+            this.label4.Text = "会員登録";
             // 
             // label9
             // 
