@@ -1,9 +1,0 @@
-C:\Users\b6098\Desktop\CS-11\CS-11\bin\Debug\CS-11.exe.config
-C:\Users\b6098\Desktop\CS-11\CS-11\bin\Debug\myplayer.exe.config
-C:\Users\b6098\Desktop\CS-11\CS-11\obj\Debug\Interop.WMPLib.dll
-C:\Users\b6098\Desktop\CS-11\CS-11\obj\Debug\AxInterop.WMPLib.dll
-C:\Users\b6098\Desktop\CS-11\CS-11\obj\Debug\CS-11.csproj.ResolveComReference.cache
-\\stusrv\作業\B6\B6098\Windowsアプリ開発\CS-11\CS-11\bin\Debug\myplayer.exe.config
-\\stusrv\作業\B6\B6098\Windowsアプリ開発\CS-11\CS-11\obj\Debug\Interop.WMPLib.dll
-\\stusrv\作業\B6\B6098\Windowsアプリ開発\CS-11\CS-11\obj\Debug\AxInterop.WMPLib.dll
-\\stusrv\作業\B6\B6098\Windowsアプリ開発\CS-11\CS-11\obj\Debug\CS-11.csproj.ResolveComReference.cache

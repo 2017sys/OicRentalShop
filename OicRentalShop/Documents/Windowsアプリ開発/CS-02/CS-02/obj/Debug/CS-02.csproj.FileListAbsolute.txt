@@ -1,9 +1,0 @@
-D:\Chsarp\CS-02\CS-02\bin\Debug\CS-02.exe.config
-D:\Chsarp\CS-02\CS-02\bin\Debug\CS-02.exe
-D:\Chsarp\CS-02\CS-02\bin\Debug\CS-02.pdb
-D:\Chsarp\CS-02\CS-02\obj\Debug\CS-02.csprojResolveAssemblyReference.cache
-D:\Chsarp\CS-02\CS-02\obj\Debug\CS_02.Form1.resources
-D:\Chsarp\CS-02\CS-02\obj\Debug\CS_02.Properties.Resources.resources
-D:\Chsarp\CS-02\CS-02\obj\Debug\CS-02.csproj.GenerateResource.Cache
-D:\Chsarp\CS-02\CS-02\obj\Debug\CS-02.exe
-D:\Chsarp\CS-02\CS-02\obj\Debug\CS-02.pdb
