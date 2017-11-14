@@ -237,6 +237,7 @@
             this.btn_Add.TabIndex = 83;
             this.btn_Add.Text = "追加";
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Delete
             // 
@@ -247,6 +248,7 @@
             this.btn_Delete.TabIndex = 82;
             this.btn_Delete.Text = "削除";
             this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Edit
             // 
@@ -257,6 +259,7 @@
             this.btn_Edit.TabIndex = 81;
             this.btn_Edit.Text = "編集";
             this.btn_Edit.UseVisualStyleBackColor = true;
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // btn_Search
             // 
@@ -267,6 +270,7 @@
             this.btn_Search.TabIndex = 84;
             this.btn_Search.Text = "検索";
             this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // label8
             // 

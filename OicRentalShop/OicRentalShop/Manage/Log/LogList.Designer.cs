@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_LogList = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_LogList)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_LogList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 147);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(948, 444);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_LogList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_LogList.Location = new System.Drawing.Point(0, 147);
+            this.dgv_LogList.Name = "dgv_LogList";
+            this.dgv_LogList.RowTemplate.Height = 21;
+            this.dgv_LogList.Size = new System.Drawing.Size(948, 444);
+            this.dgv_LogList.TabIndex = 0;
             // 
             // label1
             // 
@@ -79,10 +79,11 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_LogList);
             this.Name = "LogList";
             this.Size = new System.Drawing.Size(948, 591);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.LogList_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_LogList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,7 +91,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_LogList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;

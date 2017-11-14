@@ -98,7 +98,7 @@ namespace OicRentalShop.Register
             iinfo.Visible = false;
             ll.Visible = false;
             mm.Visible = false;
-            pp.Visible = true;
+            pp.Visible = false;
             rr.Visible = false;
         }
 
@@ -108,7 +108,7 @@ namespace OicRentalShop.Register
             iinfo.Visible = false;
             ll.Visible = false;
             mm.Visible = true;
-            pp.Visible = true;
+            pp.Visible = false;
             rr.Visible = false;
         }
 

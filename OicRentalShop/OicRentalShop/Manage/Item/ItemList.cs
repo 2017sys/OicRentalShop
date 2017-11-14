@@ -7,17 +7,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace OicRentalShop.Manage.Item
 {
     public partial class ItemList : UserControl
     {
+        OleDbConnection cn = new OleDbConnection();
+        OleDbDataAdapter da = new OleDbDataAdapter();
+        DataTable dt = new DataTable();
+
         public ItemList()
         {
             InitializeComponent();
         }
 
         private void ItemList_Load(object sender, EventArgs e)
+        {
+            cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\DB\Database1.accdb;");
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            dt.Clear();
+            dt = new DataTable();
+            dgv_ItemInfo.DataSource = null;
+            da = new OleDbDataAdapter("SELECT * FROM TBL_DVDTITLE", cn);
+            da.Fill(dt);
+            dgv_ItemInfo.DataSource = dt;
+            dgv_ItemInfo.AutoResizeColumns();
+        }
+
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
         {
 
         }
