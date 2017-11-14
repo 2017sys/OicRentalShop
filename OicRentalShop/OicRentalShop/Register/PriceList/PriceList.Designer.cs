@@ -716,6 +716,7 @@
             this.Controls.Add(this.txt_NewSingle1d2n);
             this.Name = "PriceList";
             this.Size = new System.Drawing.Size(948, 591);
+            this.Load += new System.EventHandler(this.PriceList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_EventInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

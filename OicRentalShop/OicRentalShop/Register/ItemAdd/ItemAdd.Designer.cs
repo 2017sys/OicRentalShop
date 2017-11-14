@@ -213,6 +213,7 @@
             this.Controls.Add(this.label9);
             this.Name = "ItemAdd";
             this.Size = new System.Drawing.Size(948, 591);
+            this.Load += new System.EventHandler(this.ItemAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemRe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
