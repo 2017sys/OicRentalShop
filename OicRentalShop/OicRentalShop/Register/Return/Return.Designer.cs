@@ -518,6 +518,7 @@
             this.Controls.Add(this.label24);
             this.Name = "Return";
             this.Size = new System.Drawing.Size(948, 591);
+            this.Load += new System.EventHandler(this.Return_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ReturnItem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -722,6 +722,7 @@
             this.Controls.Add(this.label46);
             this.Name = "Lend";
             this.Size = new System.Drawing.Size(948, 591);
+            this.Load += new System.EventHandler(this.Lend_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NEW)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_OLDInfo)).EndInit();
             this.ResumeLayout(false);
