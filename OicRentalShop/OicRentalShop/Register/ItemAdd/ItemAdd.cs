@@ -27,5 +27,11 @@ namespace OicRentalShop.Register.ItemAdd
         {
             cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\DB\Database1.accdb;");
         }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            int flag = 0;
+            TestForm tstfm = new TestForm(flag);
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace OicRentalShop.Register.ItemInfo
 
         private void ItemInfo_Load(object sender, EventArgs e)
         {
-            
+            cmb_OLDNEW.SelectedIndex = 0;
              cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\DB\Database1.accdb;");
         }
 
@@ -50,7 +50,7 @@ namespace OicRentalShop.Register.ItemInfo
             }
             else
             {
-                selectfunc("SELECT ct.CDTITLE AS タイトル名,ct.CDTITLE_ID AS タイトルID,ci.CDITEM_ID AS 商品ID,ty.TYPE_NAME AS 商品タイプ,cg.CDGENRE_NAME AS ジャンル FROM TBL_CDTITLE ct,TBL_CDITEM ci,TBL_TYPE ty,TBL_CDGENRE cg WHERE ct.TYPE_ID=ty.TYPE_ID AND ci.CDITEM_ID=ct.CDTITLE_ID AND ct.CDGENRE_ID = cg.CDGENRE_ID");
+                selectfunc("SELECT ct.CDTITLE_NAME AS タイトル名,ct.CDTITLE_ID AS タイトルID,ci.CDITEM_ID AS 商品ID,ty.TYPE_NAME AS 商品タイプ,cg.CDGENRE_NAME AS ジャンル,art.ARTIST_NAME AS アーティスト FROM TBL_CDTITLE ct,TBL_CDITEM ci,TBL_TYPE ty,TBL_CDGENRE cg,TBL_ARTIST art WHERE ct.TYPE_ID=ty.TYPE_ID AND ci.CDITEM_ID=ct.CDTITLE_ID AND ct.CDGENRE_ID = cg.CDGENRE_ID AND art.ARTIST_ID=ct.ARTIST_ID");
             }
         }
 
@@ -72,8 +72,5 @@ namespace OicRentalShop.Register.ItemInfo
                 
             }
         }
-
-        
-
     }
 }

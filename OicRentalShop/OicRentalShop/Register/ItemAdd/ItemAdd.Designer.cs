@@ -55,6 +55,7 @@
             this.btn_Add.TabIndex = 121;
             this.btn_Add.Text = "登録";
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_clear
             // 
