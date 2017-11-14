@@ -298,6 +298,9 @@
     <EmbeddedResource Include="Manage\Log\LogList.resx">
       <DependentUpon>LogList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manage\ManageHome.resx">
+      <DependentUpon>ManageHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manage\Member\MemberList.resx">
       <DependentUpon>MemberList.cs</DependentUpon>
     </EmbeddedResource>

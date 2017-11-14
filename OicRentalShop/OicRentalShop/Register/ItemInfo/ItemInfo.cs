@@ -25,8 +25,9 @@ namespace OicRentalShop.Register.ItemInfo
 
         private void ItemInfo_Load(object sender, EventArgs e)
         {
-            
-             cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\DB\Database1.accdb;");
+
+            cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\DB\Database1.accdb;");
+
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
@@ -38,6 +39,7 @@ namespace OicRentalShop.Register.ItemInfo
             da.Fill(dt);
             dgv_ItemInfo.DataSource = dt;
             dgv_ItemInfo.AutoResizeColumns();
+
         }
 
         
