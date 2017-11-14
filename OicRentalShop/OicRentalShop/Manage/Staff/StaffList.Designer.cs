@@ -34,8 +34,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,33 +93,35 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 424);
             this.dataGridView1.TabIndex = 63;
             // 
-            // button12
+            // btn_Add
             // 
-            this.button12.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.button12.Location = new System.Drawing.Point(818, 419);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(120, 50);
-            this.button12.TabIndex = 65;
-            this.button12.Text = "追加";
-            this.button12.UseVisualStyleBackColor = true;
+            this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.btn_Add.Location = new System.Drawing.Point(818, 419);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(120, 50);
+            this.btn_Add.TabIndex = 65;
+            this.btn_Add.Text = "追加";
+            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.button12_Click);
             // 
-            // button11
+            // btn_Delete
             // 
-            this.button11.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.button11.Location = new System.Drawing.Point(819, 499);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(120, 50);
-            this.button11.TabIndex = 64;
-            this.button11.Text = "削除";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btn_Delete.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.btn_Delete.Location = new System.Drawing.Point(819, 499);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(120, 50);
+            this.btn_Delete.TabIndex = 64;
+            this.btn_Delete.Text = "削除";
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.button11_Click);
             // 
             // StaffList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
+            this.Controls.Add(this.btn_Add);
+            this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -128,6 +130,7 @@
             this.Controls.Add(this.label11);
             this.Name = "StaffList";
             this.Size = new System.Drawing.Size(948, 591);
+            this.Load += new System.EventHandler(this.StaffList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -142,7 +145,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btn_Add;
+        private System.Windows.Forms.Button btn_Delete;
     }
 }

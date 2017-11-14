@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Top = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -162,10 +163,9 @@
             this.btn_ItemInfo.UseVisualStyleBackColor = true;
             this.btn_ItemInfo.Click += new System.EventHandler(this.btn_ItemInfo_Click);
             // 
-            // ManageHome
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
+
+
             this.ClientSize = new System.Drawing.Size(1104, 592);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -173,12 +173,14 @@
             this.Text = "ManageHome";
             this.Load += new System.EventHandler(this.ManageHome_Load);
             this.panel1.ResumeLayout(false);
+
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+<<<<<<< HEAD
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_Top;
         private System.Windows.Forms.Panel panel1;
@@ -190,5 +192,6 @@
         private System.Windows.Forms.Button btn_Return;
         private System.Windows.Forms.Button btn_PriceList;
         private System.Windows.Forms.Button btn_ItemInfo;
+
     }
 }

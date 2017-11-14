@@ -105,6 +105,7 @@
             this.btn_Add.TabIndex = 11;
             this.btn_Add.Text = "追加";
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Delete
             // 
@@ -115,6 +116,7 @@
             this.btn_Delete.TabIndex = 12;
             this.btn_Delete.Text = "削除";
             this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Edit
             // 
@@ -125,6 +127,7 @@
             this.btn_Edit.TabIndex = 13;
             this.btn_Edit.Text = "編集";
             this.btn_Edit.UseVisualStyleBackColor = true;
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // dgv_IventInfo
             // 
@@ -151,6 +154,7 @@
             this.Controls.Add(this.lbl_TopTitle);
             this.Name = "EventList";
             this.Size = new System.Drawing.Size(948, 591);
+            this.Load += new System.EventHandler(this.EventList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_IventInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

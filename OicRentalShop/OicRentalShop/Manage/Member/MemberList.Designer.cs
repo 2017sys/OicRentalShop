@@ -139,6 +139,7 @@
             this.btn_Search.TabIndex = 92;
             this.btn_Search.Text = "検索";
             this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // dgv_MemberInfo
             // 
@@ -168,6 +169,7 @@
             this.Controls.Add(this.lbl_MemberName);
             this.Name = "MemberList";
             this.Size = new System.Drawing.Size(948, 591);
+            this.Load += new System.EventHandler(this.MemberList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MemberInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

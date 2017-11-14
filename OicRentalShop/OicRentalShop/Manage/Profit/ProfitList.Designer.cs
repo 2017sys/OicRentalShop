@@ -30,16 +30,16 @@
         {
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_ProfitList1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btn_Ok = new System.Windows.Forms.Button();
+            this.dgv_ProfitList2 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ProfitList1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ProfitList2)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -58,14 +58,14 @@
             this.label1.Size = new System.Drawing.Size(950, 1);
             this.label1.TabIndex = 201;
             // 
-            // dataGridView1
+            // dgv_ProfitList1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(260, 147);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(429, 95);
-            this.dataGridView1.TabIndex = 202;
+            this.dgv_ProfitList1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ProfitList1.Location = new System.Drawing.Point(260, 147);
+            this.dgv_ProfitList1.Name = "dgv_ProfitList1";
+            this.dgv_ProfitList1.RowTemplate.Height = 21;
+            this.dgv_ProfitList1.Size = new System.Drawing.Size(429, 95);
+            this.dgv_ProfitList1.TabIndex = 202;
             // 
             // textBox1
             // 
@@ -101,24 +101,25 @@
             this.label3.Size = new System.Drawing.Size(1, 63);
             this.label3.TabIndex = 207;
             // 
-            // button1
+            // btn_Ok
             // 
-            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(775, 88);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 56);
-            this.button1.TabIndex = 208;
-            this.button1.Text = "決定";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Ok.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Ok.Location = new System.Drawing.Point(775, 88);
+            this.btn_Ok.Name = "btn_Ok";
+            this.btn_Ok.Size = new System.Drawing.Size(92, 56);
+            this.btn_Ok.TabIndex = 208;
+            this.btn_Ok.Text = "決定";
+            this.btn_Ok.UseVisualStyleBackColor = true;
+            this.btn_Ok.Click += new System.EventHandler(this.btn_Ok_Click);
             // 
-            // dataGridView2
+            // dgv_ProfitList2
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(288, 277);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 21;
-            this.dataGridView2.Size = new System.Drawing.Size(376, 314);
-            this.dataGridView2.TabIndex = 209;
+            this.dgv_ProfitList2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ProfitList2.Location = new System.Drawing.Point(288, 277);
+            this.dgv_ProfitList2.Name = "dgv_ProfitList2";
+            this.dgv_ProfitList2.RowTemplate.Height = 21;
+            this.dgv_ProfitList2.Size = new System.Drawing.Size(376, 314);
+            this.dgv_ProfitList2.TabIndex = 209;
             // 
             // label4
             // 
@@ -135,19 +136,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dgv_ProfitList2);
+            this.Controls.Add(this.btn_Ok);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_ProfitList1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label9);
             this.Name = "ProfitList";
             this.Size = new System.Drawing.Size(948, 591);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.Load += new System.EventHandler(this.ProfitList_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ProfitList1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ProfitList2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,13 +159,13 @@
 
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_ProfitList1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button btn_Ok;
+        private System.Windows.Forms.DataGridView dgv_ProfitList2;
         private System.Windows.Forms.Label label4;
     }
 }
