@@ -220,6 +220,7 @@
             this.btn_Search.TabIndex = 85;
             this.btn_Search.Text = "検索";
             this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // lbl_TopTitle
             // 
