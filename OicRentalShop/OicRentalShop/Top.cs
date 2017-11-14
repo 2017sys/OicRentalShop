@@ -1,4 +1,5 @@
-﻿using OicRentalShop.Register;
+﻿using OicRentalShop.Manage;
+using OicRentalShop.Register;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,14 @@ namespace OicRentalShop
             TestForm tstfm = new TestForm();
             this.Hide();
             tstfm.ShowDialog();
+            this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ManageHome mngfm = new ManageHome();
+            this.Hide();
+            mngfm.ShowDialog();
             this.Show();
         }
     }
