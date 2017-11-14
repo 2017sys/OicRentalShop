@@ -23,6 +23,17 @@ namespace OicRentalShop.Register.ItemInfo
             InitializeComponent();
         }
 
+        private void selectfunc(string cmdstr)
+        {
+            dt.Clear();
+            dt = new DataTable();
+            dgv_ItemInfo.DataSource = null;
+            da = new OleDbDataAdapter(cmdstr, cn);
+            da.Fill(dt);
+            dgv_ItemInfo.DataSource = dt;
+            dgv_ItemInfo.AutoResizeColumns();
+        }
+
         private void ItemInfo_Load(object sender, EventArgs e)
         {
             
@@ -31,13 +42,35 @@ namespace OicRentalShop.Register.ItemInfo
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
-            dt.Clear();
-            dt = new DataTable();
-            dgv_ItemInfo.DataSource = null;
-            da = new OleDbDataAdapter("SELECT * FROM TBL_DVDTITLE", cn);
-            da.Fill(dt);
-            dgv_ItemInfo.DataSource = dt;
-            dgv_ItemInfo.AutoResizeColumns();
+            int index = cmb_OLDNEW.SelectedIndex;
+            string CheckDVD = cmb_OLDNEW.Items[index].ToString();
+            if (CheckDVD == "DVD")
+            {
+                selectfunc("SELECT dt.DVDTITLE AS タイトル名,dt.DVDTITLE_ID AS タイトルID,di.DVDITEM_ID AS 商品ID,ty.TYPE_NAME AS 商品タイプ,dg.DVDGENRE_NAME AS ジャンル FROM TBL_DVDTITLE dt,TBL_DVDITEM di,TBL_TYPE ty,TBL_DVDGENRE dg WHERE dt.TYPE_ID=ty.TYPE_ID AND di.TITLE_ID=dt.DVDTITLE_ID AND dt.DVDGENRE_ID = dg.DVDGENRE_ID");
+            }
+            else
+            {
+                selectfunc("SELECT ct.CDTITLE AS タイトル名,ct.CDTITLE_ID AS タイトルID,ci.CDITEM_ID AS 商品ID,ty.TYPE_NAME AS 商品タイプ,cg.CDGENRE_NAME AS ジャンル FROM TBL_CDTITLE ct,TBL_CDITEM ci,TBL_TYPE ty,TBL_CDGENRE cg WHERE ct.TYPE_ID=ty.TYPE_ID AND ci.CDITEM_ID=ct.CDTITLE_ID AND ct.CDGENRE_ID = cg.CDGENRE_ID");
+            }
+        }
+
+
+
+
+        private void cmb_OLDNEW_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = cmb_OLDNEW.SelectedIndex;
+            string CheckDVD = cmb_OLDNEW.Items[index].ToString();
+            if(CheckDVD=="DVD")
+            {
+                txt_ArtistName.ReadOnly = true;
+                txt_ArtistName.Clear();
+            }
+            else
+            {
+                txt_ArtistName.ReadOnly = false;
+                
+            }
         }
 
         

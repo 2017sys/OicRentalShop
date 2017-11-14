@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label45 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
@@ -90,8 +91,18 @@
             this.txt_2d3n = new System.Windows.Forms.TextBox();
             this.txt_1d2n = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
+            this.database1DataSet = new OicRentalShop.Database1DataSet();
+            this.tBLCDITEMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBL_CDITEMTableAdapter = new OicRentalShop.Database1DataSetTableAdapters.TBL_CDITEMTableAdapter();
+            this.tBLLENDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBL_LENDTableAdapter = new OicRentalShop.Database1DataSetTableAdapters.TBL_LENDTableAdapter();
+            this.lENDIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lENDPRERIODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NEW)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_OLDInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLCDITEMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLLENDBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label45
@@ -547,7 +558,12 @@
             // 
             // dgv_OLDInfo
             // 
+            this.dgv_OLDInfo.AutoGenerateColumns = false;
             this.dgv_OLDInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_OLDInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.lENDIDDataGridViewTextBoxColumn,
+            this.lENDPRERIODDataGridViewTextBoxColumn});
+            this.dgv_OLDInfo.DataSource = this.tBLLENDBindingSource;
             this.dgv_OLDInfo.Location = new System.Drawing.Point(365, 218);
             this.dgv_OLDInfo.Name = "dgv_OLDInfo";
             this.dgv_OLDInfo.RowTemplate.Height = 21;
@@ -654,6 +670,41 @@
             this.label46.Size = new System.Drawing.Size(215, 70);
             this.label46.TabIndex = 184;
             // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tBLCDITEMBindingSource
+            // 
+            this.tBLCDITEMBindingSource.DataMember = "TBL_CDITEM";
+            this.tBLCDITEMBindingSource.DataSource = this.database1DataSet;
+            // 
+            // tBL_CDITEMTableAdapter
+            // 
+            this.tBL_CDITEMTableAdapter.ClearBeforeFill = true;
+            // 
+            // tBLLENDBindingSource
+            // 
+            this.tBLLENDBindingSource.DataMember = "TBL_LEND";
+            this.tBLLENDBindingSource.DataSource = this.database1DataSet;
+            // 
+            // tBL_LENDTableAdapter
+            // 
+            this.tBL_LENDTableAdapter.ClearBeforeFill = true;
+            // 
+            // lENDIDDataGridViewTextBoxColumn
+            // 
+            this.lENDIDDataGridViewTextBoxColumn.DataPropertyName = "LEND_ID";
+            this.lENDIDDataGridViewTextBoxColumn.HeaderText = "LEND_ID";
+            this.lENDIDDataGridViewTextBoxColumn.Name = "lENDIDDataGridViewTextBoxColumn";
+            // 
+            // lENDPRERIODDataGridViewTextBoxColumn
+            // 
+            this.lENDPRERIODDataGridViewTextBoxColumn.DataPropertyName = "LEND_PRERIOD";
+            this.lENDPRERIODDataGridViewTextBoxColumn.HeaderText = "LEND_PRERIOD";
+            this.lENDPRERIODDataGridViewTextBoxColumn.Name = "lENDPRERIODDataGridViewTextBoxColumn";
+            // 
             // Lend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -725,6 +776,9 @@
             this.Load += new System.EventHandler(this.Lend_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NEW)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_OLDInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLCDITEMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLLENDBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -794,5 +848,12 @@
         private System.Windows.Forms.TextBox txt_2d3n;
         private System.Windows.Forms.TextBox txt_1d2n;
         private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lENDIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lENDPRERIODDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource tBLLENDBindingSource;
+        private Database1DataSet database1DataSet;
+        private System.Windows.Forms.BindingSource tBLCDITEMBindingSource;
+        private Database1DataSetTableAdapters.TBL_CDITEMTableAdapter tBL_CDITEMTableAdapter;
+        private Database1DataSetTableAdapters.TBL_LENDTableAdapter tBL_LENDTableAdapter;
     }
 }
