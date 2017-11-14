@@ -29,112 +29,32 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_Top = new System.Windows.Forms.Button();
+            this.btn_MemberAdd = new System.Windows.Forms.Button();
+            this.btn_Lend = new System.Windows.Forms.Button();
+            this.btn_ItemAdd = new System.Windows.Forms.Button();
+            this.btn_Return = new System.Windows.Forms.Button();
+            this.btn_PriceList = new System.Windows.Forms.Button();
+            this.btn_ItemInfo = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
+            this.panel1.Controls.Add(this.btn_Top);
+            this.panel1.Controls.Add(this.btn_MemberAdd);
+            this.panel1.Controls.Add(this.btn_Lend);
+            this.panel1.Controls.Add(this.btn_ItemAdd);
+            this.panel1.Controls.Add(this.btn_Return);
+            this.panel1.Controls.Add(this.btn_PriceList);
+            this.panel1.Controls.Add(this.btn_ItemInfo);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(154, 591);
             this.panel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(8, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 109);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "TOP";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button7.Location = new System.Drawing.Point(8, 512);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(140, 60);
-            this.button7.TabIndex = 57;
-            this.button7.Text = "会員登録";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.Location = new System.Drawing.Point(8, 182);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 60);
-            this.button2.TabIndex = 52;
-            this.button2.Text = "貸出処理";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button6.Location = new System.Drawing.Point(8, 446);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(140, 60);
-            this.button6.TabIndex = 56;
-            this.button6.Text = "商品登録";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button3.Location = new System.Drawing.Point(8, 248);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 60);
-            this.button3.TabIndex = 53;
-            this.button3.Text = "返却処理";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button5.Location = new System.Drawing.Point(8, 380);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(140, 60);
-            this.button5.TabIndex = 55;
-            this.button5.Text = "料金表";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button4.Location = new System.Drawing.Point(8, 314);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 60);
-            this.button4.TabIndex = 54;
-            this.button4.Text = "商品情報";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(154, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(948, 591);
-            this.panel2.TabIndex = 1;
             // 
             // label1
             // 
@@ -144,6 +64,90 @@
             this.label1.Size = new System.Drawing.Size(1, 600);
             this.label1.TabIndex = 261;
             this.label1.Text = "label1";
+            // 
+            // btn_Top
+            // 
+            this.btn_Top.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Top.Location = new System.Drawing.Point(8, 12);
+            this.btn_Top.Name = "btn_Top";
+            this.btn_Top.Size = new System.Drawing.Size(140, 109);
+            this.btn_Top.TabIndex = 51;
+            this.btn_Top.Text = "TOP";
+            this.btn_Top.UseVisualStyleBackColor = true;
+            this.btn_Top.Click += new System.EventHandler(this.btn_Top_Click);
+            // 
+            // btn_MemberAdd
+            // 
+            this.btn_MemberAdd.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_MemberAdd.Location = new System.Drawing.Point(8, 512);
+            this.btn_MemberAdd.Name = "btn_MemberAdd";
+            this.btn_MemberAdd.Size = new System.Drawing.Size(140, 60);
+            this.btn_MemberAdd.TabIndex = 57;
+            this.btn_MemberAdd.Text = "会員登録";
+            this.btn_MemberAdd.UseVisualStyleBackColor = true;
+            this.btn_MemberAdd.Click += new System.EventHandler(this.btn_MemberAdd_Click);
+            // 
+            // btn_Lend
+            // 
+            this.btn_Lend.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Lend.Location = new System.Drawing.Point(8, 182);
+            this.btn_Lend.Name = "btn_Lend";
+            this.btn_Lend.Size = new System.Drawing.Size(140, 60);
+            this.btn_Lend.TabIndex = 52;
+            this.btn_Lend.Text = "貸出処理";
+            this.btn_Lend.UseVisualStyleBackColor = true;
+            this.btn_Lend.Click += new System.EventHandler(this.btn_Lend_Click);
+            // 
+            // btn_ItemAdd
+            // 
+            this.btn_ItemAdd.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_ItemAdd.Location = new System.Drawing.Point(8, 446);
+            this.btn_ItemAdd.Name = "btn_ItemAdd";
+            this.btn_ItemAdd.Size = new System.Drawing.Size(140, 60);
+            this.btn_ItemAdd.TabIndex = 56;
+            this.btn_ItemAdd.Text = "商品登録";
+            this.btn_ItemAdd.UseVisualStyleBackColor = true;
+            this.btn_ItemAdd.Click += new System.EventHandler(this.btn_ItemAdd_Click);
+            // 
+            // btn_Return
+            // 
+            this.btn_Return.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Return.Location = new System.Drawing.Point(8, 248);
+            this.btn_Return.Name = "btn_Return";
+            this.btn_Return.Size = new System.Drawing.Size(140, 60);
+            this.btn_Return.TabIndex = 53;
+            this.btn_Return.Text = "返却処理";
+            this.btn_Return.UseVisualStyleBackColor = true;
+            this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
+            // 
+            // btn_PriceList
+            // 
+            this.btn_PriceList.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_PriceList.Location = new System.Drawing.Point(8, 380);
+            this.btn_PriceList.Name = "btn_PriceList";
+            this.btn_PriceList.Size = new System.Drawing.Size(140, 60);
+            this.btn_PriceList.TabIndex = 55;
+            this.btn_PriceList.Text = "料金表";
+            this.btn_PriceList.UseVisualStyleBackColor = true;
+            this.btn_PriceList.Click += new System.EventHandler(this.btn_PriceList_Click);
+            // 
+            // btn_ItemInfo
+            // 
+            this.btn_ItemInfo.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_ItemInfo.Location = new System.Drawing.Point(8, 314);
+            this.btn_ItemInfo.Name = "btn_ItemInfo";
+            this.btn_ItemInfo.Size = new System.Drawing.Size(140, 60);
+            this.btn_ItemInfo.TabIndex = 54;
+            this.btn_ItemInfo.Text = "商品情報";
+            this.btn_ItemInfo.UseVisualStyleBackColor = true;
+            this.btn_ItemInfo.Click += new System.EventHandler(this.btn_ItemInfo_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(154, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(948, 591);
+            this.panel2.TabIndex = 1;
             // 
             // TestForm
             // 
@@ -163,13 +167,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_Top;
+        private System.Windows.Forms.Button btn_MemberAdd;
+        private System.Windows.Forms.Button btn_Lend;
+        private System.Windows.Forms.Button btn_ItemAdd;
+        private System.Windows.Forms.Button btn_Return;
+        private System.Windows.Forms.Button btn_PriceList;
+        private System.Windows.Forms.Button btn_ItemInfo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
     }
