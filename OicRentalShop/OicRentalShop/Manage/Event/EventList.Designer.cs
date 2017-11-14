@@ -74,7 +74,7 @@
             this.label4.BackColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(3, 86);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(887, 1);
+            this.label4.Size = new System.Drawing.Size(945, 1);
             this.label4.TabIndex = 3;
             this.label4.Text = "label4";
             // 
@@ -83,7 +83,7 @@
             this.label5.BackColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(-2, 134);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(887, 1);
+            this.label5.Size = new System.Drawing.Size(950, 1);
             this.label5.TabIndex = 4;
             this.label5.Text = "label5";
             // 

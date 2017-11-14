@@ -44,12 +44,7 @@ namespace OicRentalShop.Register
 
         private void btn_Top_Click(object sender, EventArgs e)
         {
-            iadd.Visible = false;
-            iinfo.Visible = false;
-            ll.Visible = false;
-            mm.Visible = false;
-            pp.Visible = false;
-            rr.Visible = false;
+            this.Close();
         }
 
         private void btn_Lend_Click(object sender, EventArgs e)
