@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cmb_Order = new System.Windows.Forms.ComboBox();
             this.lbl_Order = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,7 +51,14 @@
             this.lbl_SearchC = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.database1DataSet = new OicRentalShop.Database1DataSet();
+            this.database1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLARTISTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBL_ARTISTTableAdapter = new OicRentalShop.Database1DataSetTableAdapters.TBL_ARTISTTableAdapter();
             this.dgv_ItemInfo = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLARTISTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,6 +154,7 @@
             this.cmb_OLDNEW.Name = "cmb_OLDNEW";
             this.cmb_OLDNEW.Size = new System.Drawing.Size(60, 20);
             this.cmb_OLDNEW.TabIndex = 93;
+            this.cmb_OLDNEW.SelectedIndexChanged += new System.EventHandler(this.cmb_OLDNEW_SelectedIndexChanged);
             // 
             // txt_TitleID
             // 
@@ -258,19 +267,39 @@
             this.label7.Size = new System.Drawing.Size(950, 1);
             this.label7.TabIndex = 81;
             // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // database1DataSetBindingSource
+            // 
+            this.database1DataSetBindingSource.DataSource = this.database1DataSet;
+            this.database1DataSetBindingSource.Position = 0;
+            // 
+            // tBLARTISTBindingSource
+            // 
+            this.tBLARTISTBindingSource.DataMember = "TBL_ARTIST";
+            this.tBLARTISTBindingSource.DataSource = this.database1DataSetBindingSource;
+            // 
+            // tBL_ARTISTTableAdapter
+            // 
+            this.tBL_ARTISTTableAdapter.ClearBeforeFill = true;
+            // 
             // dgv_ItemInfo
             // 
             this.dgv_ItemInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ItemInfo.Location = new System.Drawing.Point(0, 214);
+            this.dgv_ItemInfo.Location = new System.Drawing.Point(3, 214);
             this.dgv_ItemInfo.Name = "dgv_ItemInfo";
             this.dgv_ItemInfo.RowTemplate.Height = 21;
             this.dgv_ItemInfo.Size = new System.Drawing.Size(948, 377);
-            this.dgv_ItemInfo.TabIndex = 80;
+            this.dgv_ItemInfo.TabIndex = 103;
             // 
             // ItemInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dgv_ItemInfo);
             this.Controls.Add(this.cmb_Order);
             this.Controls.Add(this.lbl_Order);
             this.Controls.Add(this.label8);
@@ -293,10 +322,12 @@
             this.Controls.Add(this.lbl_SearchC);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dgv_ItemInfo);
             this.Name = "ItemInfo";
             this.Size = new System.Drawing.Size(948, 591);
             this.Load += new System.EventHandler(this.ItemInfo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database1DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLARTISTBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -327,6 +358,10 @@
         private System.Windows.Forms.Label lbl_SearchC;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
+        private Database1DataSet database1DataSet;
+        private System.Windows.Forms.BindingSource database1DataSetBindingSource;
+        private System.Windows.Forms.BindingSource tBLARTISTBindingSource;
+        private Database1DataSetTableAdapters.TBL_ARTISTTableAdapter tBL_ARTISTTableAdapter;
         private System.Windows.Forms.DataGridView dgv_ItemInfo;
     }
 }
