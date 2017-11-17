@@ -37,7 +37,7 @@ namespace OicRentalShop.Register.ItemInfo
         private void ItemInfo_Load(object sender, EventArgs e)
         {
             cmb_OLDNEW.SelectedIndex = 0;
-             cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\DB\Database1.accdb;");
+             cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\..\..\DB\Database1.accdb;");
         }
 
         private void btn_Search_Click(object sender, EventArgs e)
