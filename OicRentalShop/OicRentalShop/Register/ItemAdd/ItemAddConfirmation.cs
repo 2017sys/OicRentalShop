@@ -16,5 +16,9 @@ namespace OicRentalShop.Register.ItemAdd
         {
             InitializeComponent();
         }
+
+        private void btn_ok_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

@@ -55,6 +55,7 @@
             this.btn_Add.TabIndex = 121;
             this.btn_Add.Text = "登録";
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_clear
             // 
@@ -213,6 +214,7 @@
             this.Controls.Add(this.label9);
             this.Name = "ItemAdd";
             this.Size = new System.Drawing.Size(948, 591);
+            this.Load += new System.EventHandler(this.ItemAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemRe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
