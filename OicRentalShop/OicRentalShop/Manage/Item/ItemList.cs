@@ -61,6 +61,7 @@ namespace OicRentalShop.Manage.Item
         {
             cmb_Genre.Text = "全ジャンル";
             cmb_Genre.Items.Clear();
+            cmb_Genre.Items.Add("全ジャンル");
             genreLoad();
         }
 
@@ -98,6 +99,6 @@ namespace OicRentalShop.Manage.Item
             oleCmd.Dispose();
         }
 
-        
+        private void serch() { }
     }
 }
