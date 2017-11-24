@@ -17,13 +17,13 @@ namespace OicRentalShop.Manage
             InitializeComponent();
         }
 
-        public static Event.EventList ee;
         public static Item.ItemList ii;
-        public static Log.LogList ll;
         public static Member.MemberList mm;
+        public static Staff.StaffList ss;
         public static Price.PriceList pp;
         public static Profit.ProfitList pr;
-        public static Staff.StaffList ss;
+        public static Event.EventList ee;
+        public static Log.LogList ll;
 
         private void ManageHome_Load(object sender, EventArgs e)
         {
@@ -35,95 +35,96 @@ namespace OicRentalShop.Manage
             pr = new Profit.ProfitList();
             ss = new Staff.StaffList();
 
-            panel2.Controls.Add(ee);
             panel2.Controls.Add(ii);
-            panel2.Controls.Add(ll);
             panel2.Controls.Add(mm);
+            panel2.Controls.Add(ss);
             panel2.Controls.Add(pp);
             panel2.Controls.Add(pr);
-            panel2.Controls.Add(ss);
+            panel2.Controls.Add(ee);
+            panel2.Controls.Add(ll);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ee.Visible = true;
-            ii.Visible = false;
-            ll.Visible = false;
-            mm.Visible = false;
-            pp.Visible = false;
-            pr.Visible = false;
-            ss.Visible = false;
-        }
-
-        private void btn_Lend_Click(object sender, EventArgs e)
-        {
-            ee.Visible = false;
-            ii.Visible = true;
-            ll.Visible = false;
-            mm.Visible = false;
-            pp.Visible = false;
-            pr.Visible = false;
-            ss.Visible = false;
-        }
-
-        private void btn_Return_Click(object sender, EventArgs e)
-        {
-            ee.Visible = false;
-            ii.Visible = false;
-            ll.Visible = true;
-            mm.Visible = false;
-            pp.Visible = false;
-            pr.Visible = false;
-            ss.Visible = false;
-        }
-
-        private void btn_PriceList_Click(object sender, EventArgs e)
-        {
-            ee.Visible = false;
-            ii.Visible = false;
-            ll.Visible = false;
-            mm.Visible = true;
-            pp.Visible = false;
-            pr.Visible = false;
-            ss.Visible = false;
-        }
-
-        private void btn_ItemInfo_Click(object sender, EventArgs e)
-        {
-            ee.Visible = false;
-            ii.Visible = false;
-            ll.Visible = false;
-            mm.Visible = false;
-            pp.Visible = true;
-            pr.Visible = false;
-            ss.Visible = false;
-        }
-
-        private void btn_ItemAdd_Click(object sender, EventArgs e)
-        {
-            ee.Visible = false;
-            ii.Visible = false;
-            ll.Visible = false;
-            mm.Visible = false;
-            pp.Visible = false;
-            pr.Visible = true;
-            ss.Visible = false;
-        }
-
-        private void btn_MemberAdd_Click(object sender, EventArgs e)
-        {
-            ee.Visible = false;
-            ii.Visible = false;
-            ll.Visible = false;
-            mm.Visible = false;
-            pp.Visible = false;
-            pr.Visible = false;
-            ss.Visible = true;
-        }
 
         private void btn_Top_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ii.Visible = true;
+            mm.Visible = false;
+            ss.Visible = false;
+            pp.Visible = false;
+            pr.Visible = false;
+            ee.Visible = false;
+            ll.Visible = false;
+        }
+
+        private void btn_Lend_Click(object sender, EventArgs e)
+        {
+            ii.Visible = false;
+            mm.Visible = true;
+            ss.Visible = false;
+            pp.Visible = false;
+            pr.Visible = false;
+            ee.Visible = false;
+            ll.Visible = false;
+        }
+
+        private void btn_Return_Click(object sender, EventArgs e)
+        {
+            ii.Visible = false;
+            mm.Visible = false;
+            ss.Visible = true;
+            pp.Visible = false;
+            pr.Visible = false;
+            ee.Visible = false;
+            ll.Visible = false;
+        }
+
+        private void btn_ItemInfo_Click(object sender, EventArgs e)
+        {
+            ii.Visible = false;
+            mm.Visible = false;
+            ss.Visible = false;
+            pp.Visible = true;
+            pr.Visible = false;
+            ee.Visible = false;
+            ll.Visible = false;
+        }
+
+        private void btn_PriceList_Click(object sender, EventArgs e)
+        {
+            ii.Visible = false;
+            mm.Visible = false;
+            ss.Visible = false;
+            pp.Visible = false;
+            pr.Visible = true;
+            ee.Visible = false;
+            ll.Visible = false;
+        }
+
+        private void btn_ItemAdd_Click(object sender, EventArgs e)
+        {
+            ii.Visible = false;
+            mm.Visible = false;
+            ss.Visible = false;
+            pp.Visible = false;
+            pr.Visible = false;
+            ee.Visible = true;
+            ll.Visible = false;
+        }
+
+        private void btn_MemberAdd_Click(object sender, EventArgs e)
+        {
+            ii.Visible = false;
+            mm.Visible = false;
+            ss.Visible = false;
+            pp.Visible = false;
+            pr.Visible = false;
+            ee.Visible = false;
+            ll.Visible = true;
         }
     }
 }

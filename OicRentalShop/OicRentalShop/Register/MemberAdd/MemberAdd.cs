@@ -19,8 +19,8 @@ namespace OicRentalShop.Register.MemberAdd
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int flag = 1;
-            TestForm tstfm = new TestForm(flag);
+            int flag = 0;
+            TestForm.GoNext(flag);
         }
     }
 }

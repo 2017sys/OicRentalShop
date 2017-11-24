@@ -80,6 +80,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_OLDInfo = new System.Windows.Forms.DataGridView();
+            this.tBLLENDBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet = new OicRentalShop.Database1DataSet();
             this.lbl_TopTitle = new System.Windows.Forms.Label();
             this.lbl_MemberInfo = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -91,18 +93,14 @@
             this.txt_2d3n = new System.Windows.Forms.TextBox();
             this.txt_1d2n = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.database1DataSet = new OicRentalShop.Database1DataSet();
             this.tBLCDITEMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tBL_CDITEMTableAdapter = new OicRentalShop.Database1DataSetTableAdapters.TBL_CDITEMTableAdapter();
-            this.tBLLENDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tBL_LENDTableAdapter = new OicRentalShop.Database1DataSetTableAdapters.TBL_LENDTableAdapter();
-            this.lENDIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lENDPRERIODDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NEW)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_OLDInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLLENDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLCDITEMBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLLENDBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label45
@@ -256,6 +254,7 @@
             this.txt_MemberID.Name = "txt_MemberID";
             this.txt_MemberID.Size = new System.Drawing.Size(148, 23);
             this.txt_MemberID.TabIndex = 167;
+            this.txt_MemberID.TextChanged += new System.EventHandler(this.txt_MemberID_TextChanged);
             // 
             // txt_OLDNEW
             // 
@@ -280,6 +279,7 @@
             this.txt_ProductID.Name = "txt_ProductID";
             this.txt_ProductID.Size = new System.Drawing.Size(140, 23);
             this.txt_ProductID.TabIndex = 164;
+            this.txt_ProductID.TextChanged += new System.EventHandler(this.txt_ProductID_TextChanged);
             // 
             // txt_title
             // 
@@ -289,7 +289,6 @@
             this.txt_title.Name = "txt_title";
             this.txt_title.Size = new System.Drawing.Size(237, 46);
             this.txt_title.TabIndex = 163;
-            this.txt_title.Text = "あああああああああああああああああああああああああああああああああああああああああああ";
             // 
             // lbl_LendPeriod
             // 
@@ -315,11 +314,11 @@
             // 
             this.lbl_type.AutoSize = true;
             this.lbl_type.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_type.Location = new System.Drawing.Point(4, 328);
+            this.lbl_type.Location = new System.Drawing.Point(27, 328);
             this.lbl_type.Name = "lbl_type";
-            this.lbl_type.Size = new System.Drawing.Size(105, 16);
+            this.lbl_type.Size = new System.Drawing.Size(82, 16);
             this.lbl_type.TabIndex = 160;
-            this.lbl_type.Text = "CD/アルバム：";
+            this.lbl_type.Text = "CD/DVD：";
             // 
             // lbl_title
             // 
@@ -558,17 +557,22 @@
             // 
             // dgv_OLDInfo
             // 
-            this.dgv_OLDInfo.AutoGenerateColumns = false;
             this.dgv_OLDInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_OLDInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.lENDIDDataGridViewTextBoxColumn,
-            this.lENDPRERIODDataGridViewTextBoxColumn});
-            this.dgv_OLDInfo.DataSource = this.tBLLENDBindingSource;
             this.dgv_OLDInfo.Location = new System.Drawing.Point(365, 218);
             this.dgv_OLDInfo.Name = "dgv_OLDInfo";
             this.dgv_OLDInfo.RowTemplate.Height = 21;
             this.dgv_OLDInfo.Size = new System.Drawing.Size(420, 170);
             this.dgv_OLDInfo.TabIndex = 131;
+            // 
+            // tBLLENDBindingSource
+            // 
+            this.tBLLENDBindingSource.DataMember = "TBL_LEND";
+            this.tBLLENDBindingSource.DataSource = this.database1DataSet;
+            // 
+            // database1DataSet
+            // 
+            this.database1DataSet.DataSetName = "Database1DataSet";
+            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lbl_TopTitle
             // 
@@ -670,11 +674,6 @@
             this.label46.Size = new System.Drawing.Size(215, 70);
             this.label46.TabIndex = 184;
             // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tBLCDITEMBindingSource
             // 
             this.tBLCDITEMBindingSource.DataMember = "TBL_CDITEM";
@@ -684,26 +683,9 @@
             // 
             this.tBL_CDITEMTableAdapter.ClearBeforeFill = true;
             // 
-            // tBLLENDBindingSource
-            // 
-            this.tBLLENDBindingSource.DataMember = "TBL_LEND";
-            this.tBLLENDBindingSource.DataSource = this.database1DataSet;
-            // 
             // tBL_LENDTableAdapter
             // 
             this.tBL_LENDTableAdapter.ClearBeforeFill = true;
-            // 
-            // lENDIDDataGridViewTextBoxColumn
-            // 
-            this.lENDIDDataGridViewTextBoxColumn.DataPropertyName = "LEND_ID";
-            this.lENDIDDataGridViewTextBoxColumn.HeaderText = "LEND_ID";
-            this.lENDIDDataGridViewTextBoxColumn.Name = "lENDIDDataGridViewTextBoxColumn";
-            // 
-            // lENDPRERIODDataGridViewTextBoxColumn
-            // 
-            this.lENDPRERIODDataGridViewTextBoxColumn.DataPropertyName = "LEND_PRERIOD";
-            this.lENDPRERIODDataGridViewTextBoxColumn.HeaderText = "LEND_PRERIOD";
-            this.lENDPRERIODDataGridViewTextBoxColumn.Name = "lENDPRERIODDataGridViewTextBoxColumn";
             // 
             // Lend
             // 
@@ -776,9 +758,9 @@
             this.Load += new System.EventHandler(this.Lend_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NEW)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_OLDInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLLENDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLCDITEMBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLLENDBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -848,8 +830,6 @@
         private System.Windows.Forms.TextBox txt_2d3n;
         private System.Windows.Forms.TextBox txt_1d2n;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lENDIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lENDPRERIODDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource tBLLENDBindingSource;
         private Database1DataSet database1DataSet;
         private System.Windows.Forms.BindingSource tBLCDITEMBindingSource;

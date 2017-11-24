@@ -46,7 +46,7 @@ namespace OicRentalShop.Register.ItemInfo
             string CheckDVD = cmb_OLDNEW.Items[index].ToString();
             if (CheckDVD == "DVD")
             {
-                selectfunc("SELECT dt.DVDTITLE AS タイトル名,dt.DVDTITLE_ID AS タイトルID,di.DVDITEM_ID AS 商品ID,ty.TYPE_NAME AS 商品タイプ,dg.DVDGENRE_NAME AS ジャンル FROM TBL_DVDTITLE dt,TBL_DVDITEM di,TBL_TYPE ty,TBL_DVDGENRE dg WHERE dt.TYPE_ID=ty.TYPE_ID AND di.TITLE_ID=dt.DVDTITLE_ID AND dt.DVDGENRE_ID = dg.DVDGENRE_ID");
+                selectfunc("SELECT dt.DVDTITLE_NAME AS タイトル名,dt.DVDTITLE_ID AS タイトルID,di.DVDITEM_ID AS 商品ID,ty.TYPE_NAME AS 商品タイプ,dg.DVDGENRE_NAME AS ジャンル FROM TBL_DVDTITLE dt,TBL_DVDITEM di,TBL_TYPE ty,TBL_DVDGENRE dg WHERE dt.TYPE_ID=ty.TYPE_ID AND di.TITLE_ID=dt.DVDTITLE_ID AND dt.DVDGENRE_ID = dg.DVDGENRE_ID");
             }
             else
             {

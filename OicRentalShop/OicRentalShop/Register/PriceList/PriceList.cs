@@ -24,12 +24,12 @@ namespace OicRentalShop.Register.PriceList
 
         private void PriceList_Load(object sender, EventArgs e)
         {
-            cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\DB\Database1.accdb;");
+            cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\..\..\DB\Database1.accdb;");
 
             dt.Clear();
             dt = new DataTable();
             dgv_EventInfo.DataSource = null;
-            da = new OleDbDataAdapter("SELECT * FROM TBL_DVDTITLE", cn);
+            da = new OleDbDataAdapter("SELECT * FROM TBL_TITLE", cn);
             da.Fill(dt);
             dgv_EventInfo.DataSource = dt;
             dgv_EventInfo.AutoResizeColumns();
