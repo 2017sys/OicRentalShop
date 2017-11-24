@@ -37,8 +37,8 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Edit = new System.Windows.Forms.Button();
-            this.dgv_IventInfo = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_IventInfo)).BeginInit();
+            this.dgv_EventInfo = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_EventInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_TopTitle
@@ -126,20 +126,20 @@
             this.btn_Edit.Text = "編集";
             this.btn_Edit.UseVisualStyleBackColor = true;
             // 
-            // dgv_IventInfo
+            // dgv_EventInfo
             // 
-            this.dgv_IventInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_IventInfo.Location = new System.Drawing.Point(15, 147);
-            this.dgv_IventInfo.Name = "dgv_IventInfo";
-            this.dgv_IventInfo.RowTemplate.Height = 21;
-            this.dgv_IventInfo.Size = new System.Drawing.Size(639, 430);
-            this.dgv_IventInfo.TabIndex = 14;
+            this.dgv_EventInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_EventInfo.Location = new System.Drawing.Point(15, 147);
+            this.dgv_EventInfo.Name = "dgv_EventInfo";
+            this.dgv_EventInfo.RowTemplate.Height = 21;
+            this.dgv_EventInfo.Size = new System.Drawing.Size(639, 430);
+            this.dgv_EventInfo.TabIndex = 14;
             // 
             // EventList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgv_IventInfo);
+            this.Controls.Add(this.dgv_EventInfo);
             this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Add);
@@ -151,7 +151,8 @@
             this.Controls.Add(this.lbl_TopTitle);
             this.Name = "EventList";
             this.Size = new System.Drawing.Size(948, 591);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_IventInfo)).EndInit();
+            this.Load += new System.EventHandler(this.EventList_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_EventInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,6 +169,6 @@
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Edit;
-        private System.Windows.Forms.DataGridView dgv_IventInfo;
+        private System.Windows.Forms.DataGridView dgv_EventInfo;
     }
 }
