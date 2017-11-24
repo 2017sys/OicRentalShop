@@ -162,6 +162,8 @@
             this.cmb_Type.Name = "cmb_Type";
             this.cmb_Type.Size = new System.Drawing.Size(60, 20);
             this.cmb_Type.TabIndex = 73;
+            this.cmb_Type.Text = "CD";
+            this.cmb_Type.SelectedIndexChanged += new System.EventHandler(this.cmb_Type_SelectedIndexChanged);
             // 
             // txt_Artist
             // 
@@ -187,6 +189,7 @@
             this.cmb_Genre.Name = "cmb_Genre";
             this.cmb_Genre.Size = new System.Drawing.Size(80, 20);
             this.cmb_Genre.TabIndex = 77;
+            this.cmb_Genre.Text = "全ジャンル";
             // 
             // cmb_Old_New
             // 
