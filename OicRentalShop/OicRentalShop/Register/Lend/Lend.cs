@@ -50,6 +50,18 @@ namespace OicRentalShop.Register.Lend
             }
         }
 
+        private void UpdateOld()
+        {
+            OleDbCommand Cmd = new OleDbCommand();
+            Cmd.Connection = cn;
+            cn.Open();
+            DateTime Today = DateTime.Today;    //今日の日付の取得
+            DateTime upday = Today.AddMonths(-1);   //今日の日付に-1か月足す
+            Cmd.CommandText = "UPDATE TBL_OLD SET OLD_DATE=#" + upday.ToString() + "# WHERE OLD_ID=2";
+            Cmd.ExecuteNonQuery();
+            cn.Close();
+        }
+
         private int dtCheck(string cmdstr)　//IDを入力した際　1列以上選択されるかチェックをし　データの有無を確認する
         {
             int flag=0;
@@ -67,7 +79,7 @@ namespace OicRentalShop.Register.Lend
 
         private void Lend_Load(object sender, EventArgs e)
         {
-
+            UpdateOld();
         }
 
         private void txt_MemberID_TextChanged(object sender, EventArgs e)
@@ -113,6 +125,7 @@ namespace OicRentalShop.Register.Lend
                     txt_title.Text = strpi;
                     SetProductInfo("SELECT y.TYPE_NAME FROM TBL_TITLE t,TBL_ITEM i,TBL_TYPE y WHERE t.TITLE_ID=i.TITLE_ID AND y.TYPE_ID=t.TYPE_ID AND i.ITEM_ID = " + txt_ProductID.Text);
                     txt_type.Text = strpi;
+                    
                 }
                 else
                 {

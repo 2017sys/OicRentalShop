@@ -154,7 +154,8 @@ $RECYCLE.BIN/
 OicRentalShop/obj
 OicRentalShop/bin
 
-
+OicRentalShop/DB/*
+/OicRentalShop/DB/*
 /OicRentalShop/obj
 *.suo
 /OicRentalShop/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
