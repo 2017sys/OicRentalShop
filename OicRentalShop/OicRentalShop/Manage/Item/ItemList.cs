@@ -40,11 +40,11 @@ namespace OicRentalShop.Manage.Item
 
             if (cmb_Type.Text == "DVD")
             {
-                selectfunc("SELECT title.TITLE_NAME AS タイトル名, title.TITLE_ID AS タイトルID , item.ITEM_ID AS 商品ID , type.TYPE_NAME AS 商品タイプ , genre.GENRE_NAME AS ジャンル FROM TBL_TITLE title , TBL_ITEM item , TBL_TYPE type , TBL_GENRE genre WHERE title.TYPE_ID = type.TYPE_ID AND item.TITLE_ID = title.TITLE_ID AND title.GENRE_ID = genre.GENRE_ID AND title.TYPE_ID = 1");
+                selectfunc("SELECT title.TITLE_NAME AS タイトル名, title.TITLE_ID AS タイトルID , item.ITEM_ID AS 商品ID , type.TYPE_NAME AS 商品タイプ , genre.GENRE_NAME AS ジャンル FROM TBL_TITLE title , TBL_ITEM item , TBL_TYPE type , TBL_GENRE genre WHERE title.TYPE_ID = type.TYPE_ID AND item.TITLE_ID = title.TITLE_ID AND title.GENRE_ID = genre.GENRE_ID AND title.TYPE_ID = 1" + serchItems());
             }
             else if (cmb_Type.Text == "CD")
             {
-                selectfunc("SELECT title.TITLE_NAME AS タイトル名,title.TITLE_ID AS タイトルID,item.ITEM_ID AS 商品ID,ty.TYPE_NAME AS 商品タイプ,genre.GENRE_NAME AS ジャンル,art.ARTIST_NAME AS アーティスト FROM TBL_TITLE title,TBL_ITEM item,TBL_TYPE ty,TBL_GENRE genre,TBL_ARTIST art WHERE title.TYPE_ID=ty.TYPE_ID AND item.TITLE_ID=title.TITLE_ID AND title.GENRE_ID = genre.GENRE_ID AND art.ARTIST_ID=title.ARTIST_ID");
+                selectfunc("SELECT title.TITLE_NAME AS タイトル名,title.TITLE_ID AS タイトルID,item.ITEM_ID AS 商品ID,type.TYPE_NAME AS 商品タイプ,genre.GENRE_NAME AS ジャンル,art.ARTIST_NAME AS アーティスト FROM TBL_TITLE title,TBL_ITEM item,TBL_TYPE type,TBL_GENRE genre,TBL_ARTIST art WHERE title.TYPE_ID = type.TYPE_ID AND item.TITLE_ID=title.TITLE_ID AND title.GENRE_ID = genre.GENRE_ID AND art.ARTIST_ID=title.ARTIST_ID" + serchItems());
             }
             else return;
         }
@@ -98,33 +98,38 @@ namespace OicRentalShop.Manage.Item
             cn.Close();
             oleCmd.Dispose();
         }
-
+        
+        //検索条件をSQLに追加
         private String serchItems()
         {
 
             String sql = "";
             //タイトル検索
-            if (txt_TitleName.Text != "")
-            {
+            if (txt_TitleName.Text != ""){
                 sql += " AND title.TITLE_NAME = " + txt_TitleName.Text;
             }
             //タイトルID検索
-            if (txt_TitleID.Text != "")
-            {
+            if (txt_TitleID.Text != ""){
                 sql += " AND title.TITLE_ID =" + txt_TitleID.Text;
             }
             //商品ID検索
-            if (txt_ItemID.Text != "")
-            {
+            if (txt_ItemID.Text != ""){
                 sql += " AND title.ITEM_ID =" + txt_ItemID.Text;
             }
             //新作旧作検索
-            if (cmb_Old_New.Text != "")
-            {
+            if (cmb_Old_New.Text != ""){
                 if (cmb_Old_New.Text == "新作")
-                    sql += " AND title.TITLE_RELEASE > " + DateTime.Today.AddMonths(-1);
+                    sql += " AND title.TITLE_RELEASE > " + DateTime.Today.AddMonths(-1).ToString("yyyy/MM/dd");
                 else if (cmb_Old_New.Text == "旧作")
-                    sql += " AND title.TITLE_RELEASE < " + DateTime.Today.AddMonths(-1);
+                    sql += " AND title.TITLE_RELEASE < " + DateTime.Today.AddMonths(-1).ToString("yyyy/MM/dd");
+            }
+            //アーティスト検索
+            if (txt_Artist.Text != ""){
+                sql += " AND art.ARTIST_NAME = " + txt_Artist.Text;
+            }
+            //ジャンル検索
+            if (cmb_Genre.Text != "" && cmb_Genre.Text != "全ジャンル"){
+                sql += " AND genre.GENRE_NAME = " + cmb_Genre.Text;
             }
 
             return sql;
