@@ -33,10 +33,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_StaffList = new System.Windows.Forms.DataGridView();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_StaffList)).BeginInit();
             this.SuspendLayout();
             // 
             // label11
@@ -84,14 +84,14 @@
             this.label7.Size = new System.Drawing.Size(813, 1);
             this.label7.TabIndex = 60;
             // 
-            // dataGridView1
+            // dgv_StaffList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 164);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 424);
-            this.dataGridView1.TabIndex = 63;
+            this.dgv_StaffList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_StaffList.Location = new System.Drawing.Point(5, 164);
+            this.dgv_StaffList.Name = "dgv_StaffList";
+            this.dgv_StaffList.RowTemplate.Height = 21;
+            this.dgv_StaffList.Size = new System.Drawing.Size(800, 424);
+            this.dgv_StaffList.TabIndex = 63;
             // 
             // button12
             // 
@@ -120,7 +120,7 @@
             this.BackColor = System.Drawing.SystemColors.Info;
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_StaffList);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -128,7 +128,8 @@
             this.Controls.Add(this.label11);
             this.Name = "StaffList";
             this.Size = new System.Drawing.Size(948, 591);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.StaffList_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_StaffList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,7 +142,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_StaffList;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
     }
