@@ -283,6 +283,12 @@
     <Compile Include="Register\Return\Return.Designer.cs">
       <DependentUpon>Return.cs</DependentUpon>
     </Compile>
+    <Compile Include="Register\Title\TitleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register\Title\TitleAdd.Designer.cs">
+      <DependentUpon>TitleAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Top.cs">
       <SubType>Form</SubType>
     </Compile>
