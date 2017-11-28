@@ -12,36 +12,35 @@ namespace OicRentalShop.Manage
 {
     public partial class ManageHome : Form
     {
+        public static Item.ItemList it;
+        public static Member.MemberList me;
+        public static Staff.StaffList st;
+        public static Price.PriceList pc;
+        public static Profit.ProfitList pf;
+        public static Event.EventList ev;
+        public static Log.LogList lo;
+
+
         public ManageHome()
         {
             InitializeComponent();
         }
 
-        public static Item.ItemList ii;
-        public static Member.MemberList mm;
-        public static Staff.StaffList ss;
-        public static Price.PriceList pp;
-        public static Profit.ProfitList pr;
-        public static Event.EventList ee;
-        public static Log.LogList ll;
 
         private void ManageHome_Load(object sender, EventArgs e)
         {
-            ee = new Event.EventList();
-            ii = new Item.ItemList();
-            ll = new Log.LogList();
-            mm = new Member.MemberList();
-            pp = new Price.PriceList();
-            pr = new Profit.ProfitList();
-            ss = new Staff.StaffList();
+            it = new Item.ItemList();
+            me = new Member.MemberList();
+            st = new Staff.StaffList();
+            pc = new Price.PriceList();
+            pf = new Profit.ProfitList();
+            ev = new Event.EventList();
+            lo = new Log.LogList();
 
-            panel2.Controls.Add(ii);
-            panel2.Controls.Add(mm);
-            panel2.Controls.Add(ss);
-            panel2.Controls.Add(pp);
-            panel2.Controls.Add(pr);
-            panel2.Controls.Add(ee);
-            panel2.Controls.Add(ll);
+            panel.Controls.Clear();
+            panel.Controls.Add(it);
+            it.Visible = true;
+
         }
 
 
@@ -50,83 +49,53 @@ namespace OicRentalShop.Manage
             this.Close();
         }
 
-        private void btn_ItemList_Click(object sender, EventArgs e)
+        private void btn_Item_Click(object sender, EventArgs e)
         {
-            ii.Visible = true;
-            mm.Visible = false;
-            ss.Visible = false;
-            pp.Visible = false;
-            pr.Visible = false;
-            ee.Visible = false;
-            ll.Visible = false;
+            panel.Controls.Clear();
+            panel.Controls.Add(it);
+            it.Visible = true;
         }
 
-        private void btn_MemberList_Click(object sender, EventArgs e)
+        private void btn_Member_Click(object sender, EventArgs e)
         {
-            ii.Visible = false;
-            mm.Visible = true;
-            ss.Visible = false;
-            pp.Visible = false;
-            pr.Visible = false;
-            ee.Visible = false;
-            ll.Visible = false;
+            panel.Controls.Clear();
+            panel.Controls.Add(me);
+            me.Visible = true;
         }
 
-        private void btn_StaffList_Click(object sender, EventArgs e)
+        private void btn_Staff_Click(object sender, EventArgs e)
         {
-            ii.Visible = false;
-            mm.Visible = false;
-            ss.Visible = true;
-            pp.Visible = false;
-            pr.Visible = false;
-            ee.Visible = false;
-            ll.Visible = false;
+            panel.Controls.Clear();
+            panel.Controls.Add(st);
+            st.Visible = true;
         }
 
-        private void btn_ItemInfo_Click(object sender, EventArgs e)
+        private void btn_Price_Click(object sender, EventArgs e)
         {
-            ii.Visible = false;
-            mm.Visible = false;
-            ss.Visible = false;
-            pp.Visible = true;
-            pr.Visible = false;
-            ee.Visible = false;
-            ll.Visible = false;
+            panel.Controls.Clear();
+            panel.Controls.Add(pc);
+            pc.Visible = true;
         }
 
-        private void btn_PriceList_Click(object sender, EventArgs e)
+        private void btn_Profit_Click(object sender, EventArgs e)
         {
-            ii.Visible = false;
-            mm.Visible = false;
-            ss.Visible = false;
-            pp.Visible = false;
-            pr.Visible = true;
-            ee.Visible = false;
-            ll.Visible = false;
+            panel.Controls.Clear();
+            panel.Controls.Add(pf);
+            pf.Visible = true;
         }
 
-        private void btn_ItemAdd_Click(object sender, EventArgs e)
+        private void btn_Event_Click(object sender, EventArgs e)
         {
-            ii.Visible = false;
-            mm.Visible = false;
-            ss.Visible = false;
-            pp.Visible = false;
-            pr.Visible = false;
-            ee.Visible = true;
-            ll.Visible = false;
+            panel.Controls.Clear();
+            panel.Controls.Add(ev);
+            ev.Visible = true;
         }
 
-        private void btn_MemberAdd_Click(object sender, EventArgs e)
+        private void btn_Log_Click(object sender, EventArgs e)
         {
-            ii.Visible = false;
-            mm.Visible = false;
-            ss.Visible = false;
-            pp.Visible = false;
-            pr.Visible = false;
-            ee.Visible = false;
-            ll.Visible = true;
+            panel.Controls.Clear();
+            panel.Controls.Add(lo);
+            lo.Visible = true;
         }
-
-
     }
 }
