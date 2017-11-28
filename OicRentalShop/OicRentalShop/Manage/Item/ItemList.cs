@@ -105,31 +105,36 @@ namespace OicRentalShop.Manage.Item
 
             String sql = "";
             //タイトル検索
-            if (txt_TitleName.Text != ""){
-                sql += " AND title.TITLE_NAME = " + txt_TitleName.Text;
+            if (txt_TitleName.Text.Trim() != ""){
+                sql += " AND title.TITLE_NAME LIKE '%" + txt_TitleName.Text.TrimStart() +"%'";
             }
             //タイトルID検索
-            if (txt_TitleID.Text != ""){
-                sql += " AND title.TITLE_ID =" + txt_TitleID.Text;
+            if (txt_TitleID.Text.Trim() != "")
+            {
+                sql += " AND title.TITLE_ID LIKE '%" + txt_TitleID.Text.TrimStart() + "%'";
             }
             //商品ID検索
-            if (txt_ItemID.Text != ""){
-                sql += " AND title.ITEM_ID =" + txt_ItemID.Text;
+            if (txt_ItemID.Text.Trim() != "")
+            {
+                sql += " AND item.ITEM_ID LIKE '" + txt_ItemID.Text.TrimStart() + "'";
             }
             //新作旧作検索
-            if (cmb_Old_New.Text != ""){
+            if (cmb_Old_New.Text.Trim() != "")
+            {
                 if (cmb_Old_New.Text == "新作")
                     sql += " AND title.TITLE_RELEASE > " + DateTime.Today.AddMonths(-1).ToString("yyyy/MM/dd");
                 else if (cmb_Old_New.Text == "旧作")
                     sql += " AND title.TITLE_RELEASE < " + DateTime.Today.AddMonths(-1).ToString("yyyy/MM/dd");
             }
             //アーティスト検索
-            if (txt_Artist.Text != ""){
-                sql += " AND art.ARTIST_NAME = " + txt_Artist.Text;
+            if (txt_Artist.Text.Trim() != "")
+            {
+                sql += " AND art.ARTIST_NAME LIKE '%" + txt_Artist.Text.TrimStart() + "%'";
             }
             //ジャンル検索
-            if (cmb_Genre.Text != "" && cmb_Genre.Text != "全ジャンル"){
-                sql += " AND genre.GENRE_NAME = " + cmb_Genre.Text;
+            if (cmb_Genre.Text.Trim() != "" && cmb_Genre.Text != "全ジャンル")
+            {
+                sql += " AND genre.GENRE_NAME = '" + cmb_Genre.Text + "'";
             }
 
             return sql;
