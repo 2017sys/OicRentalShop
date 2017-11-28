@@ -31,12 +31,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Top = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_ItemList = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_MemberAdd = new System.Windows.Forms.Button();
-            this.btn_Lend = new System.Windows.Forms.Button();
+            this.btn_MemberList = new System.Windows.Forms.Button();
             this.btn_ItemAdd = new System.Windows.Forms.Button();
-            this.btn_Return = new System.Windows.Forms.Button();
+            this.btn_StaffList = new System.Windows.Forms.Button();
             this.btn_PriceList = new System.Windows.Forms.Button();
             this.btn_ItemInfo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -62,13 +62,13 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_ItemList);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_Top);
             this.panel1.Controls.Add(this.btn_MemberAdd);
-            this.panel1.Controls.Add(this.btn_Lend);
+            this.panel1.Controls.Add(this.btn_MemberList);
             this.panel1.Controls.Add(this.btn_ItemAdd);
-            this.panel1.Controls.Add(this.btn_Return);
+            this.panel1.Controls.Add(this.btn_StaffList);
             this.panel1.Controls.Add(this.btn_PriceList);
             this.panel1.Controls.Add(this.btn_ItemInfo);
             this.panel1.Location = new System.Drawing.Point(1, 1);
@@ -76,16 +76,16 @@
             this.panel1.Size = new System.Drawing.Size(154, 591);
             this.panel1.TabIndex = 2;
             // 
-            // button1
+            // btn_ItemList
             // 
-            this.button1.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(6, 127);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 60);
-            this.button1.TabIndex = 53;
-            this.button1.Text = "商品管理";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_ItemList.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_ItemList.Location = new System.Drawing.Point(6, 127);
+            this.btn_ItemList.Name = "btn_ItemList";
+            this.btn_ItemList.Size = new System.Drawing.Size(140, 60);
+            this.btn_ItemList.TabIndex = 53;
+            this.btn_ItemList.Text = "商品管理";
+            this.btn_ItemList.UseVisualStyleBackColor = true;
+            this.btn_ItemList.Click += new System.EventHandler(this.btn_ItemList_Click);
             // 
             // label1
             // 
@@ -107,16 +107,16 @@
             this.btn_MemberAdd.UseVisualStyleBackColor = true;
             this.btn_MemberAdd.Click += new System.EventHandler(this.btn_MemberAdd_Click);
             // 
-            // btn_Lend
+            // btn_MemberList
             // 
-            this.btn_Lend.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Lend.Location = new System.Drawing.Point(6, 193);
-            this.btn_Lend.Name = "btn_Lend";
-            this.btn_Lend.Size = new System.Drawing.Size(140, 60);
-            this.btn_Lend.TabIndex = 52;
-            this.btn_Lend.Text = "会員管理";
-            this.btn_Lend.UseVisualStyleBackColor = true;
-            this.btn_Lend.Click += new System.EventHandler(this.btn_Lend_Click);
+            this.btn_MemberList.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_MemberList.Location = new System.Drawing.Point(8, 193);
+            this.btn_MemberList.Name = "btn_MemberList";
+            this.btn_MemberList.Size = new System.Drawing.Size(140, 60);
+            this.btn_MemberList.TabIndex = 52;
+            this.btn_MemberList.Text = "会員管理";
+            this.btn_MemberList.UseVisualStyleBackColor = true;
+            this.btn_MemberList.Click += new System.EventHandler(this.btn_MemberList_Click);
             // 
             // btn_ItemAdd
             // 
@@ -129,16 +129,16 @@
             this.btn_ItemAdd.UseVisualStyleBackColor = true;
             this.btn_ItemAdd.Click += new System.EventHandler(this.btn_ItemAdd_Click);
             // 
-            // btn_Return
+            // btn_StaffList
             // 
-            this.btn_Return.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Return.Location = new System.Drawing.Point(6, 259);
-            this.btn_Return.Name = "btn_Return";
-            this.btn_Return.Size = new System.Drawing.Size(140, 60);
-            this.btn_Return.TabIndex = 53;
-            this.btn_Return.Text = "従業員管理";
-            this.btn_Return.UseVisualStyleBackColor = true;
-            this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
+            this.btn_StaffList.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_StaffList.Location = new System.Drawing.Point(6, 259);
+            this.btn_StaffList.Name = "btn_StaffList";
+            this.btn_StaffList.Size = new System.Drawing.Size(140, 60);
+            this.btn_StaffList.TabIndex = 53;
+            this.btn_StaffList.Text = "従業員管理";
+            this.btn_StaffList.UseVisualStyleBackColor = true;
+            this.btn_StaffList.Click += new System.EventHandler(this.btn_StaffList_Click);
             // 
             // btn_PriceList
             // 
@@ -182,12 +182,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_Top;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_ItemList;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_MemberAdd;
-        private System.Windows.Forms.Button btn_Lend;
+        private System.Windows.Forms.Button btn_MemberList;
         private System.Windows.Forms.Button btn_ItemAdd;
-        private System.Windows.Forms.Button btn_Return;
+        private System.Windows.Forms.Button btn_StaffList;
         private System.Windows.Forms.Button btn_PriceList;
         private System.Windows.Forms.Button btn_ItemInfo;
     }

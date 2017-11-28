@@ -50,7 +50,7 @@ namespace OicRentalShop.Manage
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_ItemList_Click(object sender, EventArgs e)
         {
             ii.Visible = true;
             mm.Visible = false;
@@ -61,7 +61,7 @@ namespace OicRentalShop.Manage
             ll.Visible = false;
         }
 
-        private void btn_Lend_Click(object sender, EventArgs e)
+        private void btn_MemberList_Click(object sender, EventArgs e)
         {
             ii.Visible = false;
             mm.Visible = true;
@@ -72,7 +72,7 @@ namespace OicRentalShop.Manage
             ll.Visible = false;
         }
 
-        private void btn_Return_Click(object sender, EventArgs e)
+        private void btn_StaffList_Click(object sender, EventArgs e)
         {
             ii.Visible = false;
             mm.Visible = false;
@@ -126,5 +126,7 @@ namespace OicRentalShop.Manage
             ee.Visible = false;
             ll.Visible = true;
         }
+
+
     }
 }

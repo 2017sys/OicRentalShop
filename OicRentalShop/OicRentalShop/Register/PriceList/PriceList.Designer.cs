@@ -41,9 +41,9 @@
             this.lbl_price = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_PriceInfo = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_EventInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_PriceInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_EventInfo
@@ -163,20 +163,20 @@
             this.label21.Size = new System.Drawing.Size(1, 50);
             this.label21.TabIndex = 218;
             // 
-            // dataGridView1
+            // dgv_PriceInfo
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 208);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(668, 383);
-            this.dataGridView1.TabIndex = 260;
+            this.dgv_PriceInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_PriceInfo.Location = new System.Drawing.Point(0, 208);
+            this.dgv_PriceInfo.Name = "dgv_PriceInfo";
+            this.dgv_PriceInfo.RowTemplate.Height = 21;
+            this.dgv_PriceInfo.Size = new System.Drawing.Size(668, 383);
+            this.dgv_PriceInfo.TabIndex = 260;
             // 
             // PriceList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_PriceInfo);
             this.Controls.Add(this.dgv_EventInfo);
             this.Controls.Add(this.lbl_Event);
             this.Controls.Add(this.lbl_DVD);
@@ -194,7 +194,7 @@
             this.Size = new System.Drawing.Size(948, 591);
             this.Load += new System.EventHandler(this.PriceList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_EventInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_PriceInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,6 +215,6 @@
         private System.Windows.Forms.Label lbl_price;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_PriceInfo;
     }
 }
