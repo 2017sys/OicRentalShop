@@ -30,31 +30,31 @@
         {
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txt_ID = new System.Windows.Forms.TextBox();
+            this.txt_FamilyName = new System.Windows.Forms.TextBox();
+            this.txt_GivenName = new System.Windows.Forms.TextBox();
+            this.txt_PhoneNumber = new System.Windows.Forms.TextBox();
+            this.txt_PostalCode = new System.Windows.Forms.TextBox();
+            this.txt_Address1 = new System.Windows.Forms.TextBox();
+            this.txt_Address2 = new System.Windows.Forms.TextBox();
+            this.txt_Birtyday = new System.Windows.Forms.TextBox();
+            this.txt_GivenNameKANA = new System.Windows.Forms.TextBox();
+            this.txt_FamilyNameKANA = new System.Windows.Forms.TextBox();
+            this.lbl_ID = new System.Windows.Forms.Label();
+            this.lbl_FamilyName = new System.Windows.Forms.Label();
+            this.lbl_GivenName = new System.Windows.Forms.Label();
+            this.lbl_Sex = new System.Windows.Forms.Label();
+            this.lbl_FamilyNameKANA = new System.Windows.Forms.Label();
+            this.lbl_GivenNameKANA = new System.Windows.Forms.Label();
+            this.lbl_Birthday = new System.Windows.Forms.Label();
+            this.btn_Add = new System.Windows.Forms.Button();
+            this.lbl_PhoneNumber = new System.Windows.Forms.Label();
+            this.lbl_PostalCode = new System.Windows.Forms.Label();
+            this.lbl_Address1 = new System.Windows.Forms.Label();
+            this.lbl_Address2 = new System.Windows.Forms.Label();
+            this.btn_Clear = new System.Windows.Forms.Button();
+            this.rdb_MAN = new System.Windows.Forms.RadioButton();
+            this.rdb_WOMAN = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label4
@@ -75,266 +75,276 @@
             this.label9.Size = new System.Drawing.Size(950, 1);
             this.label9.TabIndex = 225;
             // 
-            // textBox1
+            // txt_ID
             // 
-            this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox1.Location = new System.Drawing.Point(141, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(243, 23);
-            this.textBox1.TabIndex = 228;
+            this.txt_ID.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_ID.Location = new System.Drawing.Point(141, 135);
+            this.txt_ID.Name = "txt_ID";
+            this.txt_ID.Size = new System.Drawing.Size(243, 23);
+            this.txt_ID.TabIndex = 228;
             // 
-            // textBox2
+            // txt_FamilyName
             // 
-            this.textBox2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox2.Location = new System.Drawing.Point(141, 175);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(243, 23);
-            this.textBox2.TabIndex = 229;
+            this.txt_FamilyName.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_FamilyName.Location = new System.Drawing.Point(141, 175);
+            this.txt_FamilyName.Name = "txt_FamilyName";
+            this.txt_FamilyName.Size = new System.Drawing.Size(243, 23);
+            this.txt_FamilyName.TabIndex = 229;
             // 
-            // textBox3
+            // txt_GivenName
             // 
-            this.textBox3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox3.Location = new System.Drawing.Point(141, 215);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(243, 23);
-            this.textBox3.TabIndex = 230;
+            this.txt_GivenName.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_GivenName.Location = new System.Drawing.Point(141, 215);
+            this.txt_GivenName.Name = "txt_GivenName";
+            this.txt_GivenName.Size = new System.Drawing.Size(243, 23);
+            this.txt_GivenName.TabIndex = 230;
             // 
-            // textBox4
+            // txt_PhoneNumber
             // 
-            this.textBox4.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox4.Location = new System.Drawing.Point(141, 255);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 23);
-            this.textBox4.TabIndex = 231;
+            this.txt_PhoneNumber.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_PhoneNumber.Location = new System.Drawing.Point(141, 373);
+            this.txt_PhoneNumber.Name = "txt_PhoneNumber";
+            this.txt_PhoneNumber.Size = new System.Drawing.Size(603, 23);
+            this.txt_PhoneNumber.TabIndex = 232;
             // 
-            // textBox5
+            // txt_PostalCode
             // 
-            this.textBox5.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox5.Location = new System.Drawing.Point(141, 373);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(603, 23);
-            this.textBox5.TabIndex = 232;
+            this.txt_PostalCode.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_PostalCode.Location = new System.Drawing.Point(141, 428);
+            this.txt_PostalCode.Name = "txt_PostalCode";
+            this.txt_PostalCode.Size = new System.Drawing.Size(603, 23);
+            this.txt_PostalCode.TabIndex = 233;
             // 
-            // textBox6
+            // txt_Address1
             // 
-            this.textBox6.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox6.Location = new System.Drawing.Point(141, 428);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(603, 23);
-            this.textBox6.TabIndex = 233;
+            this.txt_Address1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_Address1.Location = new System.Drawing.Point(141, 483);
+            this.txt_Address1.Name = "txt_Address1";
+            this.txt_Address1.Size = new System.Drawing.Size(603, 23);
+            this.txt_Address1.TabIndex = 234;
             // 
-            // textBox7
+            // txt_Address2
             // 
-            this.textBox7.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox7.Location = new System.Drawing.Point(141, 483);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(603, 23);
-            this.textBox7.TabIndex = 234;
+            this.txt_Address2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_Address2.Location = new System.Drawing.Point(141, 538);
+            this.txt_Address2.Name = "txt_Address2";
+            this.txt_Address2.Size = new System.Drawing.Size(603, 23);
+            this.txt_Address2.TabIndex = 235;
             // 
-            // textBox8
+            // txt_Birtyday
             // 
-            this.textBox8.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox8.Location = new System.Drawing.Point(141, 538);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(603, 23);
-            this.textBox8.TabIndex = 235;
+            this.txt_Birtyday.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_Birtyday.Location = new System.Drawing.Point(500, 255);
+            this.txt_Birtyday.Name = "txt_Birtyday";
+            this.txt_Birtyday.Size = new System.Drawing.Size(244, 23);
+            this.txt_Birtyday.TabIndex = 239;
             // 
-            // textBox9
+            // txt_GivenNameKANA
             // 
-            this.textBox9.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox9.Location = new System.Drawing.Point(284, 255);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 23);
-            this.textBox9.TabIndex = 236;
+            this.txt_GivenNameKANA.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_GivenNameKANA.Location = new System.Drawing.Point(500, 215);
+            this.txt_GivenNameKANA.Name = "txt_GivenNameKANA";
+            this.txt_GivenNameKANA.Size = new System.Drawing.Size(244, 23);
+            this.txt_GivenNameKANA.TabIndex = 238;
             // 
-            // textBox10
+            // txt_FamilyNameKANA
             // 
-            this.textBox10.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox10.Location = new System.Drawing.Point(500, 255);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(244, 23);
-            this.textBox10.TabIndex = 239;
+            this.txt_FamilyNameKANA.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_FamilyNameKANA.Location = new System.Drawing.Point(500, 175);
+            this.txt_FamilyNameKANA.Name = "txt_FamilyNameKANA";
+            this.txt_FamilyNameKANA.Size = new System.Drawing.Size(244, 23);
+            this.txt_FamilyNameKANA.TabIndex = 237;
             // 
-            // textBox11
+            // lbl_ID
             // 
-            this.textBox11.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox11.Location = new System.Drawing.Point(500, 215);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(244, 23);
-            this.textBox11.TabIndex = 238;
+            this.lbl_ID.AutoSize = true;
+            this.lbl_ID.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_ID.Location = new System.Drawing.Point(56, 138);
+            this.lbl_ID.Name = "lbl_ID";
+            this.lbl_ID.Size = new System.Drawing.Size(67, 16);
+            this.lbl_ID.TabIndex = 240;
+            this.lbl_ID.Text = "会員ID：";
             // 
-            // textBox12
+            // lbl_FamilyName
             // 
-            this.textBox12.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox12.Location = new System.Drawing.Point(500, 175);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(244, 23);
-            this.textBox12.TabIndex = 237;
+            this.lbl_FamilyName.AutoSize = true;
+            this.lbl_FamilyName.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_FamilyName.Location = new System.Drawing.Point(89, 178);
+            this.lbl_FamilyName.Name = "lbl_FamilyName";
+            this.lbl_FamilyName.Size = new System.Drawing.Size(34, 16);
+            this.lbl_FamilyName.TabIndex = 241;
+            this.lbl_FamilyName.Text = "性：";
             // 
-            // label1
+            // lbl_GivenName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(56, 138);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 16);
-            this.label1.TabIndex = 240;
-            this.label1.Text = "会員ID：";
+            this.lbl_GivenName.AutoSize = true;
+            this.lbl_GivenName.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_GivenName.Location = new System.Drawing.Point(89, 218);
+            this.lbl_GivenName.Name = "lbl_GivenName";
+            this.lbl_GivenName.Size = new System.Drawing.Size(34, 16);
+            this.lbl_GivenName.TabIndex = 242;
+            this.lbl_GivenName.Text = "名：";
             // 
-            // label2
+            // lbl_Sex
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(89, 178);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 16);
-            this.label2.TabIndex = 241;
-            this.label2.Text = "性：";
+            this.lbl_Sex.AutoSize = true;
+            this.lbl_Sex.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Sex.Location = new System.Drawing.Point(72, 258);
+            this.lbl_Sex.Name = "lbl_Sex";
+            this.lbl_Sex.Size = new System.Drawing.Size(51, 16);
+            this.lbl_Sex.TabIndex = 243;
+            this.lbl_Sex.Text = "性別：";
             // 
-            // label3
+            // lbl_FamilyNameKANA
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(89, 218);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 16);
-            this.label3.TabIndex = 242;
-            this.label3.Text = "名：";
+            this.lbl_FamilyNameKANA.AutoSize = true;
+            this.lbl_FamilyNameKANA.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_FamilyNameKANA.Location = new System.Drawing.Point(436, 178);
+            this.lbl_FamilyNameKANA.Name = "lbl_FamilyNameKANA";
+            this.lbl_FamilyNameKANA.Size = new System.Drawing.Size(44, 16);
+            this.lbl_FamilyNameKANA.TabIndex = 244;
+            this.lbl_FamilyNameKANA.Text = "セイ：";
             // 
-            // label5
+            // lbl_GivenNameKANA
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(72, 258);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 16);
-            this.label5.TabIndex = 243;
-            this.label5.Text = "性別：";
+            this.lbl_GivenNameKANA.AutoSize = true;
+            this.lbl_GivenNameKANA.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_GivenNameKANA.Location = new System.Drawing.Point(438, 218);
+            this.lbl_GivenNameKANA.Name = "lbl_GivenNameKANA";
+            this.lbl_GivenNameKANA.Size = new System.Drawing.Size(42, 16);
+            this.lbl_GivenNameKANA.TabIndex = 245;
+            this.lbl_GivenNameKANA.Text = "メイ：";
             // 
-            // label6
+            // lbl_Birthday
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.Location = new System.Drawing.Point(436, 178);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 16);
-            this.label6.TabIndex = 244;
-            this.label6.Text = "セイ：";
+            this.lbl_Birthday.AutoSize = true;
+            this.lbl_Birthday.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Birthday.Location = new System.Drawing.Point(395, 258);
+            this.lbl_Birthday.Name = "lbl_Birthday";
+            this.lbl_Birthday.Size = new System.Drawing.Size(85, 16);
+            this.lbl_Birthday.TabIndex = 246;
+            this.lbl_Birthday.Text = "生年月日：";
             // 
-            // label7
+            // btn_Add
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label7.Location = new System.Drawing.Point(438, 218);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 16);
-            this.label7.TabIndex = 245;
-            this.label7.Text = "メイ：";
+            this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Add.Location = new System.Drawing.Point(796, 373);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(129, 78);
+            this.btn_Add.TabIndex = 247;
+            this.btn_Add.Text = "登録";
+            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
-            // label8
+            // lbl_PhoneNumber
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label8.Location = new System.Drawing.Point(395, 258);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 16);
-            this.label8.TabIndex = 246;
-            this.label8.Text = "生年月日：";
+            this.lbl_PhoneNumber.AutoSize = true;
+            this.lbl_PhoneNumber.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_PhoneNumber.Location = new System.Drawing.Point(38, 376);
+            this.lbl_PhoneNumber.Name = "lbl_PhoneNumber";
+            this.lbl_PhoneNumber.Size = new System.Drawing.Size(85, 16);
+            this.lbl_PhoneNumber.TabIndex = 249;
+            this.lbl_PhoneNumber.Text = "電話番号：";
             // 
-            // button1
+            // lbl_PostalCode
             // 
-            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(796, 373);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 78);
-            this.button1.TabIndex = 247;
-            this.button1.Text = "登録";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lbl_PostalCode.AutoSize = true;
+            this.lbl_PostalCode.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_PostalCode.Location = new System.Drawing.Point(38, 431);
+            this.lbl_PostalCode.Name = "lbl_PostalCode";
+            this.lbl_PostalCode.Size = new System.Drawing.Size(85, 16);
+            this.lbl_PostalCode.TabIndex = 250;
+            this.lbl_PostalCode.Text = "郵便番号：";
             // 
-            // label10
+            // lbl_Address1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label10.Location = new System.Drawing.Point(38, 376);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 16);
-            this.label10.TabIndex = 249;
-            this.label10.Text = "電話番号：";
+            this.lbl_Address1.AutoSize = true;
+            this.lbl_Address1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Address1.Location = new System.Drawing.Point(60, 486);
+            this.lbl_Address1.Name = "lbl_Address1";
+            this.lbl_Address1.Size = new System.Drawing.Size(63, 16);
+            this.lbl_Address1.TabIndex = 251;
+            this.lbl_Address1.Text = "住所１：";
             // 
-            // label11
+            // lbl_Address2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label11.Location = new System.Drawing.Point(38, 431);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 16);
-            this.label11.TabIndex = 250;
-            this.label11.Text = "郵便番号：";
+            this.lbl_Address2.AutoSize = true;
+            this.lbl_Address2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Address2.Location = new System.Drawing.Point(60, 541);
+            this.lbl_Address2.Name = "lbl_Address2";
+            this.lbl_Address2.Size = new System.Drawing.Size(63, 16);
+            this.lbl_Address2.TabIndex = 252;
+            this.lbl_Address2.Text = "住所２：";
             // 
-            // label12
+            // btn_Clear
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label12.Location = new System.Drawing.Point(60, 486);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 16);
-            this.label12.TabIndex = 251;
-            this.label12.Text = "住所１：";
+            this.btn_Clear.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Clear.Location = new System.Drawing.Point(796, 483);
+            this.btn_Clear.Name = "btn_Clear";
+            this.btn_Clear.Size = new System.Drawing.Size(129, 78);
+            this.btn_Clear.TabIndex = 253;
+            this.btn_Clear.Text = "クリア";
+            this.btn_Clear.UseVisualStyleBackColor = true;
             // 
-            // label13
+            // rdb_MAN
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label13.Location = new System.Drawing.Point(60, 541);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 16);
-            this.label13.TabIndex = 252;
-            this.label13.Text = "住所２：";
+            this.rdb_MAN.AutoSize = true;
+            this.rdb_MAN.Location = new System.Drawing.Point(152, 258);
+            this.rdb_MAN.Name = "rdb_MAN";
+            this.rdb_MAN.Size = new System.Drawing.Size(47, 16);
+            this.rdb_MAN.TabIndex = 254;
+            this.rdb_MAN.TabStop = true;
+            this.rdb_MAN.Tag = "Sex";
+            this.rdb_MAN.Text = "男性";
+            this.rdb_MAN.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // rdb_WOMAN
             // 
-            this.button2.Font = new System.Drawing.Font("MS UI Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.Location = new System.Drawing.Point(796, 483);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 78);
-            this.button2.TabIndex = 253;
-            this.button2.Text = "クリア";
-            this.button2.UseVisualStyleBackColor = true;
+            this.rdb_WOMAN.AutoSize = true;
+            this.rdb_WOMAN.Location = new System.Drawing.Point(256, 258);
+            this.rdb_WOMAN.Name = "rdb_WOMAN";
+            this.rdb_WOMAN.Size = new System.Drawing.Size(47, 16);
+            this.rdb_WOMAN.TabIndex = 255;
+            this.rdb_WOMAN.TabStop = true;
+            this.rdb_WOMAN.Tag = "Sex";
+            this.rdb_WOMAN.Text = "女性";
+            this.rdb_WOMAN.UseVisualStyleBackColor = true;
             // 
             // MemberAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.rdb_WOMAN);
+            this.Controls.Add(this.rdb_MAN);
+            this.Controls.Add(this.btn_Clear);
+            this.Controls.Add(this.lbl_Address2);
+            this.Controls.Add(this.lbl_Address1);
+            this.Controls.Add(this.lbl_PostalCode);
+            this.Controls.Add(this.lbl_PhoneNumber);
+            this.Controls.Add(this.btn_Add);
+            this.Controls.Add(this.lbl_Birthday);
+            this.Controls.Add(this.lbl_GivenNameKANA);
+            this.Controls.Add(this.lbl_FamilyNameKANA);
+            this.Controls.Add(this.lbl_Sex);
+            this.Controls.Add(this.lbl_GivenName);
+            this.Controls.Add(this.lbl_FamilyName);
+            this.Controls.Add(this.lbl_ID);
+            this.Controls.Add(this.txt_Birtyday);
+            this.Controls.Add(this.txt_GivenNameKANA);
+            this.Controls.Add(this.txt_FamilyNameKANA);
+            this.Controls.Add(this.txt_Address2);
+            this.Controls.Add(this.txt_Address1);
+            this.Controls.Add(this.txt_PostalCode);
+            this.Controls.Add(this.txt_PhoneNumber);
+            this.Controls.Add(this.txt_GivenName);
+            this.Controls.Add(this.txt_FamilyName);
+            this.Controls.Add(this.txt_ID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label9);
             this.Name = "MemberAdd";
             this.Size = new System.Drawing.Size(948, 591);
+            this.Load += new System.EventHandler(this.MemberAdd_Load);
+            this.VisibleChanged += new System.EventHandler(this.MemberAdd_VisibleChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,30 +354,30 @@
 
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txt_FamilyName;
+        private System.Windows.Forms.TextBox txt_GivenName;
+        private System.Windows.Forms.TextBox txt_PhoneNumber;
+        private System.Windows.Forms.TextBox txt_PostalCode;
+        private System.Windows.Forms.TextBox txt_Address1;
+        private System.Windows.Forms.TextBox txt_Address2;
+        private System.Windows.Forms.TextBox txt_Birtyday;
+        private System.Windows.Forms.TextBox txt_GivenNameKANA;
+        private System.Windows.Forms.TextBox txt_FamilyNameKANA;
+        private System.Windows.Forms.Label lbl_ID;
+        private System.Windows.Forms.Label lbl_FamilyName;
+        private System.Windows.Forms.Label lbl_GivenName;
+        private System.Windows.Forms.Label lbl_Sex;
+        private System.Windows.Forms.Label lbl_FamilyNameKANA;
+        private System.Windows.Forms.Label lbl_GivenNameKANA;
+        private System.Windows.Forms.Label lbl_Birthday;
+        private System.Windows.Forms.Button btn_Add;
+        private System.Windows.Forms.Label lbl_PhoneNumber;
+        private System.Windows.Forms.Label lbl_PostalCode;
+        private System.Windows.Forms.Label lbl_Address1;
+        private System.Windows.Forms.Label lbl_Address2;
+        private System.Windows.Forms.Button btn_Clear;
+        private System.Windows.Forms.RadioButton rdb_MAN;
+        private System.Windows.Forms.RadioButton rdb_WOMAN;
+        public System.Windows.Forms.TextBox txt_ID;
     }
 }
