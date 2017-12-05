@@ -61,8 +61,8 @@ namespace OicRentalShop.Register.MemberAdd
                     MemberAddConfirmation.mi.Sex = "女";
                 }
 
-                TestForm.cancel(flag);
-                TestForm.GoNext(flag);
+                RegisterHome.cancel(flag);
+                RegisterHome.GoNext(flag);
             }
             else
             {
@@ -81,6 +81,7 @@ namespace OicRentalShop.Register.MemberAdd
 
         private void MemberAdd_VisibleChanged(object sender, EventArgs e)
         {
+
             txt_Address1.Clear();
             txt_Address2.Clear();
             txt_Birtyday.Clear();
@@ -92,6 +93,7 @@ namespace OicRentalShop.Register.MemberAdd
             txt_PhoneNumber.Clear();
             txt_PostalCode.Clear();
             txt_TelePhoneNumber.Clear();
+
         }
     }
 }

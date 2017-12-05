@@ -34,7 +34,7 @@
             this.txt_MemberID = new System.Windows.Forms.TextBox();
             this.txt_OLDNEW = new System.Windows.Forms.TextBox();
             this.txt_type = new System.Windows.Forms.TextBox();
-            this.txt_ProductID = new System.Windows.Forms.TextBox();
+            this.txt_InProductID = new System.Windows.Forms.TextBox();
             this.txt_title = new System.Windows.Forms.TextBox();
             this.lbl_OLDNEW = new System.Windows.Forms.Label();
             this.lbl_type = new System.Windows.Forms.Label();
@@ -93,8 +93,10 @@
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.btn_7d8n = new System.Windows.Forms.Button();
-            this.LblSlip = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.LblSlipID = new System.Windows.Forms.Label();
+            this.txt_ProductID = new System.Windows.Forms.TextBox();
+            this.Btn_ClearPID = new System.Windows.Forms.Button();
+            this.Btn_ClearMID = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_info)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLLENDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
@@ -106,14 +108,16 @@
             this.txt_MemberName.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txt_MemberName.Location = new System.Drawing.Point(136, 158);
             this.txt_MemberName.Name = "txt_MemberName";
+            this.txt_MemberName.ReadOnly = true;
             this.txt_MemberName.Size = new System.Drawing.Size(513, 23);
             this.txt_MemberName.TabIndex = 169;
             // 
             // txt_MemberPoint
             // 
             this.txt_MemberPoint.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_MemberPoint.Location = new System.Drawing.Point(493, 129);
+            this.txt_MemberPoint.Location = new System.Drawing.Point(416, 127);
             this.txt_MemberPoint.Name = "txt_MemberPoint";
+            this.txt_MemberPoint.ReadOnly = true;
             this.txt_MemberPoint.Size = new System.Drawing.Size(156, 23);
             this.txt_MemberPoint.TabIndex = 168;
             // 
@@ -133,6 +137,7 @@
             this.txt_OLDNEW.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txt_OLDNEW.Location = new System.Drawing.Point(114, 356);
             this.txt_OLDNEW.Name = "txt_OLDNEW";
+            this.txt_OLDNEW.ReadOnly = true;
             this.txt_OLDNEW.Size = new System.Drawing.Size(67, 23);
             this.txt_OLDNEW.TabIndex = 166;
             // 
@@ -141,18 +146,19 @@
             this.txt_type.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txt_type.Location = new System.Drawing.Point(114, 325);
             this.txt_type.Name = "txt_type";
+            this.txt_type.ReadOnly = true;
             this.txt_type.Size = new System.Drawing.Size(89, 23);
             this.txt_type.TabIndex = 165;
             // 
-            // txt_ProductID
+            // txt_InProductID
             // 
-            this.txt_ProductID.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_ProductID.Location = new System.Drawing.Point(115, 233);
-            this.txt_ProductID.Name = "txt_ProductID";
-            this.txt_ProductID.Size = new System.Drawing.Size(140, 23);
-            this.txt_ProductID.TabIndex = 164;
-            this.txt_ProductID.TextChanged += new System.EventHandler(this.txt_ProductID_TextChanged);
-            this.txt_ProductID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ProductID_KeyPress);
+            this.txt_InProductID.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_InProductID.Location = new System.Drawing.Point(370, 189);
+            this.txt_InProductID.Name = "txt_InProductID";
+            this.txt_InProductID.Size = new System.Drawing.Size(177, 23);
+            this.txt_InProductID.TabIndex = 164;
+            this.txt_InProductID.TextChanged += new System.EventHandler(this.txt_ProductID_TextChanged);
+            this.txt_InProductID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_ProductID_KeyPress);
             // 
             // txt_title
             // 
@@ -160,6 +166,7 @@
             this.txt_title.Location = new System.Drawing.Point(115, 271);
             this.txt_title.Multiline = true;
             this.txt_title.Name = "txt_title";
+            this.txt_title.ReadOnly = true;
             this.txt_title.Size = new System.Drawing.Size(237, 46);
             this.txt_title.TabIndex = 163;
             // 
@@ -269,7 +276,6 @@
             this.txt_UsePoint.Name = "txt_UsePoint";
             this.txt_UsePoint.Size = new System.Drawing.Size(154, 47);
             this.txt_UsePoint.TabIndex = 148;
-            this.txt_UsePoint.Text = "07211";
             this.txt_UsePoint.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lbl_money
@@ -288,9 +294,9 @@
             this.txt_money.Font = new System.Drawing.Font("MS UI Gothic", 30F);
             this.txt_money.Location = new System.Drawing.Point(669, 48);
             this.txt_money.Name = "txt_money";
+            this.txt_money.ReadOnly = true;
             this.txt_money.Size = new System.Drawing.Size(154, 47);
             this.txt_money.TabIndex = 146;
-            this.txt_money.Text = "07211";
             this.txt_money.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label20
@@ -357,7 +363,7 @@
             // 
             this.lbl_MemberPoint.AutoSize = true;
             this.lbl_MemberPoint.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_MemberPoint.Location = new System.Drawing.Point(366, 128);
+            this.lbl_MemberPoint.Location = new System.Drawing.Point(289, 130);
             this.lbl_MemberPoint.Name = "lbl_MemberPoint";
             this.lbl_MemberPoint.Size = new System.Drawing.Size(121, 19);
             this.lbl_MemberPoint.TabIndex = 135;
@@ -517,6 +523,7 @@
             this.txt_1d2n.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txt_1d2n.Location = new System.Drawing.Point(88, 513);
             this.txt_1d2n.Name = "txt_1d2n";
+            this.txt_1d2n.ReadOnly = true;
             this.txt_1d2n.Size = new System.Drawing.Size(73, 19);
             this.txt_1d2n.TabIndex = 185;
             this.txt_1d2n.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -526,6 +533,7 @@
             this.txt_2d3n.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txt_2d3n.Location = new System.Drawing.Point(160, 513);
             this.txt_2d3n.Name = "txt_2d3n";
+            this.txt_2d3n.ReadOnly = true;
             this.txt_2d3n.Size = new System.Drawing.Size(73, 19);
             this.txt_2d3n.TabIndex = 186;
             this.txt_2d3n.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -535,6 +543,7 @@
             this.txt_7d8n.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txt_7d8n.Location = new System.Drawing.Point(232, 513);
             this.txt_7d8n.Name = "txt_7d8n";
+            this.txt_7d8n.ReadOnly = true;
             this.txt_7d8n.Size = new System.Drawing.Size(73, 19);
             this.txt_7d8n.TabIndex = 187;
             this.txt_7d8n.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -556,6 +565,7 @@
             this.btn_1d2n.TabIndex = 170;
             this.btn_1d2n.Text = "1泊2日";
             this.btn_1d2n.UseVisualStyleBackColor = true;
+            this.btn_1d2n.Click += new System.EventHandler(this.btn_1d2n_Click);
             // 
             // btn_2d3n
             // 
@@ -566,6 +576,7 @@
             this.btn_2d3n.TabIndex = 172;
             this.btn_2d3n.Text = "2泊3日";
             this.btn_2d3n.UseVisualStyleBackColor = true;
+            this.btn_2d3n.Click += new System.EventHandler(this.btn_2d3n_Click);
             // 
             // lbl_LendPeriod
             // 
@@ -659,33 +670,55 @@
             this.btn_7d8n.TabIndex = 173;
             this.btn_7d8n.Text = "7泊8日";
             this.btn_7d8n.UseVisualStyleBackColor = true;
+            this.btn_7d8n.Click += new System.EventHandler(this.btn_7d8n_Click);
             // 
-            // LblSlip
+            // LblSlipID
             // 
-            this.LblSlip.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.LblSlip.Location = new System.Drawing.Point(806, 572);
-            this.LblSlip.Name = "LblSlip";
-            this.LblSlip.Size = new System.Drawing.Size(120, 19);
-            this.LblSlip.TabIndex = 188;
-            this.LblSlip.Text = "1";
-            this.LblSlip.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.LblSlipID.Font = new System.Drawing.Font("MS UI Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.LblSlipID.Location = new System.Drawing.Point(806, 572);
+            this.LblSlipID.Name = "LblSlipID";
+            this.LblSlipID.Size = new System.Drawing.Size(120, 19);
+            this.LblSlipID.TabIndex = 188;
+            this.LblSlipID.Text = "1";
+            this.LblSlipID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button1
+            // txt_ProductID
             // 
-            this.button1.Location = new System.Drawing.Point(816, 263);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 94);
-            this.button1.TabIndex = 189;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txt_ProductID.Location = new System.Drawing.Point(115, 237);
+            this.txt_ProductID.Name = "txt_ProductID";
+            this.txt_ProductID.ReadOnly = true;
+            this.txt_ProductID.Size = new System.Drawing.Size(140, 19);
+            this.txt_ProductID.TabIndex = 190;
+            this.txt_ProductID.TextChanged += new System.EventHandler(this.txt_ProductID_TextChanged_1);
+            // 
+            // Btn_ClearPID
+            // 
+            this.Btn_ClearPID.Location = new System.Drawing.Point(261, 235);
+            this.Btn_ClearPID.Name = "Btn_ClearPID";
+            this.Btn_ClearPID.Size = new System.Drawing.Size(75, 23);
+            this.Btn_ClearPID.TabIndex = 191;
+            this.Btn_ClearPID.Text = "取り消し";
+            this.Btn_ClearPID.UseVisualStyleBackColor = true;
+            this.Btn_ClearPID.Click += new System.EventHandler(this.Btn_ClearPID_Click);
+            // 
+            // Btn_ClearMID
+            // 
+            this.Btn_ClearMID.Location = new System.Drawing.Point(578, 126);
+            this.Btn_ClearMID.Name = "Btn_ClearMID";
+            this.Btn_ClearMID.Size = new System.Drawing.Size(75, 23);
+            this.Btn_ClearMID.TabIndex = 192;
+            this.Btn_ClearMID.Text = "取り消し";
+            this.Btn_ClearMID.UseVisualStyleBackColor = true;
+            this.Btn_ClearMID.Click += new System.EventHandler(this.Btn_ClearMID_Click);
             // 
             // Lend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.LblSlip);
+            this.Controls.Add(this.Btn_ClearMID);
+            this.Controls.Add(this.Btn_ClearPID);
+            this.Controls.Add(this.txt_ProductID);
+            this.Controls.Add(this.LblSlipID);
             this.Controls.Add(this.label45);
             this.Controls.Add(this.label44);
             this.Controls.Add(this.label43);
@@ -705,7 +738,7 @@
             this.Controls.Add(this.txt_MemberID);
             this.Controls.Add(this.txt_OLDNEW);
             this.Controls.Add(this.txt_type);
-            this.Controls.Add(this.txt_ProductID);
+            this.Controls.Add(this.txt_InProductID);
             this.Controls.Add(this.txt_title);
             this.Controls.Add(this.lbl_LendPeriod);
             this.Controls.Add(this.lbl_OLDNEW);
@@ -748,6 +781,7 @@
             this.Name = "Lend";
             this.Size = new System.Drawing.Size(948, 591);
             this.Load += new System.EventHandler(this.Lend_Load);
+            this.VisibleChanged += new System.EventHandler(this.Lend_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_info)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLLENDBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
@@ -764,7 +798,7 @@
         private System.Windows.Forms.TextBox txt_MemberID;
         private System.Windows.Forms.TextBox txt_OLDNEW;
         private System.Windows.Forms.TextBox txt_type;
-        private System.Windows.Forms.TextBox txt_ProductID;
+        private System.Windows.Forms.TextBox txt_InProductID;
         private System.Windows.Forms.TextBox txt_title;
         private System.Windows.Forms.Label lbl_OLDNEW;
         private System.Windows.Forms.Label lbl_type;
@@ -823,7 +857,9 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Button btn_7d8n;
-        private System.Windows.Forms.Label LblSlip;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label LblSlipID;
+        private System.Windows.Forms.TextBox txt_ProductID;
+        private System.Windows.Forms.Button Btn_ClearPID;
+        private System.Windows.Forms.Button Btn_ClearMID;
     }
 }

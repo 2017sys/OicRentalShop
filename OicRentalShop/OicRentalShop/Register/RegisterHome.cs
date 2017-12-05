@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace OicRentalShop.Register
 {
-    public partial class TestForm : Form
+    public partial class RegisterHome : Form
     {
         public static ItemAdd.ItemAdd ia;
         public static ItemInfo.ItemInfo ii;
@@ -24,7 +24,7 @@ namespace OicRentalShop.Register
         
         
 
-        public TestForm()
+        public RegisterHome()
         {
             InitializeComponent();
         }
