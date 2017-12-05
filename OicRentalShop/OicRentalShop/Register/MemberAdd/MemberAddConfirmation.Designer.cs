@@ -33,28 +33,28 @@
             this.btn_ok = new System.Windows.Forms.Button();
             this.lbl_TopTitle = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lbl_BirthDay = new System.Windows.Forms.Label();
+            this.lbl_GivenNameKANA = new System.Windows.Forms.Label();
+            this.lbl_FamilyNameKANA = new System.Windows.Forms.Label();
+            this.lbl_Sex = new System.Windows.Forms.Label();
+            this.lbl_GivenName = new System.Windows.Forms.Label();
+            this.lbl_FamilyName = new System.Windows.Forms.Label();
+            this.lbl_MemberID = new System.Windows.Forms.Label();
+            this.lbl_Address2 = new System.Windows.Forms.Label();
+            this.lbl_Address1 = new System.Windows.Forms.Label();
+            this.lbl_PostalNumber = new System.Windows.Forms.Label();
+            this.lbl_PhoneNumber = new System.Windows.Forms.Label();
+            this.lbl_MemberIDInfo = new System.Windows.Forms.Label();
+            this.lbl_FamilyNameInfo = new System.Windows.Forms.Label();
+            this.lbl_GivenNameInfo = new System.Windows.Forms.Label();
+            this.lbl_SexInfo = new System.Windows.Forms.Label();
+            this.lbl_FamilyNameKANAInfo = new System.Windows.Forms.Label();
+            this.lbl_GivenNameKANAInfo = new System.Windows.Forms.Label();
+            this.lbl_BirthDayInfo = new System.Windows.Forms.Label();
+            this.lbl_PhoneNumberInfo = new System.Windows.Forms.Label();
+            this.lbl_PostalNumberInfo = new System.Windows.Forms.Label();
+            this.lbl_Address1Info = new System.Windows.Forms.Label();
+            this.lbl_Address2Info = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label
@@ -88,6 +88,7 @@
             this.btn_ok.TabIndex = 131;
             this.btn_ok.Text = "決定";
             this.btn_ok.UseVisualStyleBackColor = true;
+            this.btn_ok.Visible = false;
             // 
             // lbl_TopTitle
             // 
@@ -107,252 +108,252 @@
             this.label9.Size = new System.Drawing.Size(950, 1);
             this.label9.TabIndex = 128;
             // 
-            // label8
+            // lbl_BirthDay
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label8.Location = new System.Drawing.Point(365, 286);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 16);
-            this.label8.TabIndex = 258;
-            this.label8.Text = "生年月日：";
+            this.lbl_BirthDay.AutoSize = true;
+            this.lbl_BirthDay.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_BirthDay.Location = new System.Drawing.Point(365, 286);
+            this.lbl_BirthDay.Name = "lbl_BirthDay";
+            this.lbl_BirthDay.Size = new System.Drawing.Size(85, 16);
+            this.lbl_BirthDay.TabIndex = 258;
+            this.lbl_BirthDay.Text = "生年月日：";
             // 
-            // label7
+            // lbl_GivenNameKANA
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label7.Location = new System.Drawing.Point(408, 246);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 16);
-            this.label7.TabIndex = 257;
-            this.label7.Text = "メイ：";
+            this.lbl_GivenNameKANA.AutoSize = true;
+            this.lbl_GivenNameKANA.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_GivenNameKANA.Location = new System.Drawing.Point(408, 246);
+            this.lbl_GivenNameKANA.Name = "lbl_GivenNameKANA";
+            this.lbl_GivenNameKANA.Size = new System.Drawing.Size(42, 16);
+            this.lbl_GivenNameKANA.TabIndex = 257;
+            this.lbl_GivenNameKANA.Text = "メイ：";
             // 
-            // label6
+            // lbl_FamilyNameKANA
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.Location = new System.Drawing.Point(406, 206);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 16);
-            this.label6.TabIndex = 256;
-            this.label6.Text = "セイ：";
+            this.lbl_FamilyNameKANA.AutoSize = true;
+            this.lbl_FamilyNameKANA.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_FamilyNameKANA.Location = new System.Drawing.Point(406, 206);
+            this.lbl_FamilyNameKANA.Name = "lbl_FamilyNameKANA";
+            this.lbl_FamilyNameKANA.Size = new System.Drawing.Size(44, 16);
+            this.lbl_FamilyNameKANA.TabIndex = 256;
+            this.lbl_FamilyNameKANA.Text = "セイ：";
             // 
-            // label5
+            // lbl_Sex
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label5.Location = new System.Drawing.Point(117, 286);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 16);
-            this.label5.TabIndex = 255;
-            this.label5.Text = "性別：";
+            this.lbl_Sex.AutoSize = true;
+            this.lbl_Sex.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Sex.Location = new System.Drawing.Point(117, 286);
+            this.lbl_Sex.Name = "lbl_Sex";
+            this.lbl_Sex.Size = new System.Drawing.Size(51, 16);
+            this.lbl_Sex.TabIndex = 255;
+            this.lbl_Sex.Text = "性別：";
             // 
-            // label3
+            // lbl_GivenName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.Location = new System.Drawing.Point(134, 246);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 16);
-            this.label3.TabIndex = 254;
-            this.label3.Text = "名：";
+            this.lbl_GivenName.AutoSize = true;
+            this.lbl_GivenName.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_GivenName.Location = new System.Drawing.Point(134, 246);
+            this.lbl_GivenName.Name = "lbl_GivenName";
+            this.lbl_GivenName.Size = new System.Drawing.Size(34, 16);
+            this.lbl_GivenName.TabIndex = 254;
+            this.lbl_GivenName.Text = "名：";
             // 
-            // label2
+            // lbl_FamilyName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(134, 206);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 16);
-            this.label2.TabIndex = 253;
-            this.label2.Text = "性：";
+            this.lbl_FamilyName.AutoSize = true;
+            this.lbl_FamilyName.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_FamilyName.Location = new System.Drawing.Point(134, 206);
+            this.lbl_FamilyName.Name = "lbl_FamilyName";
+            this.lbl_FamilyName.Size = new System.Drawing.Size(34, 16);
+            this.lbl_FamilyName.TabIndex = 253;
+            this.lbl_FamilyName.Text = "性：";
             // 
-            // label4
+            // lbl_MemberID
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(101, 166);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 16);
-            this.label4.TabIndex = 252;
-            this.label4.Text = "会員ID：";
+            this.lbl_MemberID.AutoSize = true;
+            this.lbl_MemberID.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_MemberID.Location = new System.Drawing.Point(101, 166);
+            this.lbl_MemberID.Name = "lbl_MemberID";
+            this.lbl_MemberID.Size = new System.Drawing.Size(67, 16);
+            this.lbl_MemberID.TabIndex = 252;
+            this.lbl_MemberID.Text = "会員ID：";
             // 
-            // label13
+            // lbl_Address2
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label13.Location = new System.Drawing.Point(105, 521);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 16);
-            this.label13.TabIndex = 262;
-            this.label13.Text = "住所２：";
+            this.lbl_Address2.AutoSize = true;
+            this.lbl_Address2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Address2.Location = new System.Drawing.Point(105, 521);
+            this.lbl_Address2.Name = "lbl_Address2";
+            this.lbl_Address2.Size = new System.Drawing.Size(63, 16);
+            this.lbl_Address2.TabIndex = 262;
+            this.lbl_Address2.Text = "住所２：";
             // 
-            // label12
+            // lbl_Address1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label12.Location = new System.Drawing.Point(105, 466);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 16);
-            this.label12.TabIndex = 261;
-            this.label12.Text = "住所１：";
+            this.lbl_Address1.AutoSize = true;
+            this.lbl_Address1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Address1.Location = new System.Drawing.Point(105, 466);
+            this.lbl_Address1.Name = "lbl_Address1";
+            this.lbl_Address1.Size = new System.Drawing.Size(63, 16);
+            this.lbl_Address1.TabIndex = 261;
+            this.lbl_Address1.Text = "住所１：";
             // 
-            // label11
+            // lbl_PostalNumber
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label11.Location = new System.Drawing.Point(83, 411);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 16);
-            this.label11.TabIndex = 260;
-            this.label11.Text = "郵便番号：";
+            this.lbl_PostalNumber.AutoSize = true;
+            this.lbl_PostalNumber.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_PostalNumber.Location = new System.Drawing.Point(83, 411);
+            this.lbl_PostalNumber.Name = "lbl_PostalNumber";
+            this.lbl_PostalNumber.Size = new System.Drawing.Size(85, 16);
+            this.lbl_PostalNumber.TabIndex = 260;
+            this.lbl_PostalNumber.Text = "郵便番号：";
             // 
-            // label10
+            // lbl_PhoneNumber
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label10.Location = new System.Drawing.Point(83, 356);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 16);
-            this.label10.TabIndex = 259;
-            this.label10.Text = "電話番号：";
+            this.lbl_PhoneNumber.AutoSize = true;
+            this.lbl_PhoneNumber.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_PhoneNumber.Location = new System.Drawing.Point(83, 356);
+            this.lbl_PhoneNumber.Name = "lbl_PhoneNumber";
+            this.lbl_PhoneNumber.Size = new System.Drawing.Size(85, 16);
+            this.lbl_PhoneNumber.TabIndex = 259;
+            this.lbl_PhoneNumber.Text = "電話番号：";
             // 
-            // label1
+            // lbl_MemberIDInfo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(461, 166);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 16);
-            this.label1.TabIndex = 263;
-            this.label1.Text = "1145141919810";
+            this.lbl_MemberIDInfo.AutoSize = true;
+            this.lbl_MemberIDInfo.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_MemberIDInfo.Location = new System.Drawing.Point(461, 166);
+            this.lbl_MemberIDInfo.Name = "lbl_MemberIDInfo";
+            this.lbl_MemberIDInfo.Size = new System.Drawing.Size(125, 16);
+            this.lbl_MemberIDInfo.TabIndex = 263;
+            this.lbl_MemberIDInfo.Text = "1145141919810";
             // 
-            // label14
+            // lbl_FamilyNameInfo
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label14.Location = new System.Drawing.Point(193, 206);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(42, 16);
-            this.label14.TabIndex = 264;
-            this.label14.Text = "田所";
+            this.lbl_FamilyNameInfo.AutoSize = true;
+            this.lbl_FamilyNameInfo.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_FamilyNameInfo.Location = new System.Drawing.Point(193, 206);
+            this.lbl_FamilyNameInfo.Name = "lbl_FamilyNameInfo";
+            this.lbl_FamilyNameInfo.Size = new System.Drawing.Size(42, 16);
+            this.lbl_FamilyNameInfo.TabIndex = 264;
+            this.lbl_FamilyNameInfo.Text = "田所";
             // 
-            // label15
+            // lbl_GivenNameInfo
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label15.Location = new System.Drawing.Point(193, 246);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(42, 16);
-            this.label15.TabIndex = 265;
-            this.label15.Text = "浩二";
+            this.lbl_GivenNameInfo.AutoSize = true;
+            this.lbl_GivenNameInfo.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_GivenNameInfo.Location = new System.Drawing.Point(193, 246);
+            this.lbl_GivenNameInfo.Name = "lbl_GivenNameInfo";
+            this.lbl_GivenNameInfo.Size = new System.Drawing.Size(42, 16);
+            this.lbl_GivenNameInfo.TabIndex = 265;
+            this.lbl_GivenNameInfo.Text = "浩二";
             // 
-            // label16
+            // lbl_SexInfo
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label16.Location = new System.Drawing.Point(193, 286);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(42, 16);
-            this.label16.TabIndex = 266;
-            this.label16.Text = "女性";
+            this.lbl_SexInfo.AutoSize = true;
+            this.lbl_SexInfo.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_SexInfo.Location = new System.Drawing.Point(193, 286);
+            this.lbl_SexInfo.Name = "lbl_SexInfo";
+            this.lbl_SexInfo.Size = new System.Drawing.Size(42, 16);
+            this.lbl_SexInfo.TabIndex = 266;
+            this.lbl_SexInfo.Text = "女性";
             // 
-            // label17
+            // lbl_FamilyNameKANAInfo
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label17.Location = new System.Drawing.Point(461, 206);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(58, 16);
-            this.label17.TabIndex = 267;
-            this.label17.Text = "タドコロ";
+            this.lbl_FamilyNameKANAInfo.AutoSize = true;
+            this.lbl_FamilyNameKANAInfo.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_FamilyNameKANAInfo.Location = new System.Drawing.Point(461, 206);
+            this.lbl_FamilyNameKANAInfo.Name = "lbl_FamilyNameKANAInfo";
+            this.lbl_FamilyNameKANAInfo.Size = new System.Drawing.Size(58, 16);
+            this.lbl_FamilyNameKANAInfo.TabIndex = 267;
+            this.lbl_FamilyNameKANAInfo.Text = "タドコロ";
             // 
-            // label18
+            // lbl_GivenNameKANAInfo
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label18.Location = new System.Drawing.Point(461, 246);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(47, 16);
-            this.label18.TabIndex = 268;
-            this.label18.Text = "コウジ";
+            this.lbl_GivenNameKANAInfo.AutoSize = true;
+            this.lbl_GivenNameKANAInfo.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_GivenNameKANAInfo.Location = new System.Drawing.Point(461, 246);
+            this.lbl_GivenNameKANAInfo.Name = "lbl_GivenNameKANAInfo";
+            this.lbl_GivenNameKANAInfo.Size = new System.Drawing.Size(47, 16);
+            this.lbl_GivenNameKANAInfo.TabIndex = 268;
+            this.lbl_GivenNameKANAInfo.Text = "コウジ";
             // 
-            // label19
+            // lbl_BirthDayInfo
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label19.Location = new System.Drawing.Point(461, 286);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(98, 16);
-            this.label19.TabIndex = 269;
-            this.label19.Text = "2017/11/10";
+            this.lbl_BirthDayInfo.AutoSize = true;
+            this.lbl_BirthDayInfo.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_BirthDayInfo.Location = new System.Drawing.Point(461, 286);
+            this.lbl_BirthDayInfo.Name = "lbl_BirthDayInfo";
+            this.lbl_BirthDayInfo.Size = new System.Drawing.Size(98, 16);
+            this.lbl_BirthDayInfo.TabIndex = 269;
+            this.lbl_BirthDayInfo.Text = "2017/11/10";
             // 
-            // label20
+            // lbl_PhoneNumberInfo
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label20.Location = new System.Drawing.Point(193, 356);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(89, 16);
-            this.label20.TabIndex = 270;
-            this.label20.Text = "1919-4545";
+            this.lbl_PhoneNumberInfo.AutoSize = true;
+            this.lbl_PhoneNumberInfo.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_PhoneNumberInfo.Location = new System.Drawing.Point(193, 356);
+            this.lbl_PhoneNumberInfo.Name = "lbl_PhoneNumberInfo";
+            this.lbl_PhoneNumberInfo.Size = new System.Drawing.Size(89, 16);
+            this.lbl_PhoneNumberInfo.TabIndex = 270;
+            this.lbl_PhoneNumberInfo.Text = "1919-4545";
             // 
-            // label21
+            // lbl_PostalNumberInfo
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label21.Location = new System.Drawing.Point(193, 411);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(80, 16);
-            this.label21.TabIndex = 271;
-            this.label21.Text = "810-4545";
+            this.lbl_PostalNumberInfo.AutoSize = true;
+            this.lbl_PostalNumberInfo.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_PostalNumberInfo.Location = new System.Drawing.Point(193, 411);
+            this.lbl_PostalNumberInfo.Name = "lbl_PostalNumberInfo";
+            this.lbl_PostalNumberInfo.Size = new System.Drawing.Size(80, 16);
+            this.lbl_PostalNumberInfo.TabIndex = 271;
+            this.lbl_PostalNumberInfo.Text = "810-4545";
             // 
-            // label22
+            // lbl_Address1Info
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label22.Location = new System.Drawing.Point(193, 466);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(76, 16);
-            this.label22.TabIndex = 272;
-            this.label22.Text = "大阪民国";
+            this.lbl_Address1Info.AutoSize = true;
+            this.lbl_Address1Info.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Address1Info.Location = new System.Drawing.Point(193, 466);
+            this.lbl_Address1Info.Name = "lbl_Address1Info";
+            this.lbl_Address1Info.Size = new System.Drawing.Size(76, 16);
+            this.lbl_Address1Info.TabIndex = 272;
+            this.lbl_Address1Info.Text = "大阪民国";
             // 
-            // label23
+            // lbl_Address2Info
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label23.Location = new System.Drawing.Point(193, 521);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(258, 16);
-            this.label23.TabIndex = 273;
-            this.label23.Text = "大阪民国あああああああああああああ";
+            this.lbl_Address2Info.AutoSize = true;
+            this.lbl_Address2Info.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Address2Info.Location = new System.Drawing.Point(193, 521);
+            this.lbl_Address2Info.Name = "lbl_Address2Info";
+            this.lbl_Address2Info.Size = new System.Drawing.Size(258, 16);
+            this.lbl_Address2Info.TabIndex = 273;
+            this.lbl_Address2Info.Text = "大阪民国あああああああああああああ";
             // 
             // MemberAddConfirmation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbl_Address2Info);
+            this.Controls.Add(this.lbl_Address1Info);
+            this.Controls.Add(this.lbl_PostalNumberInfo);
+            this.Controls.Add(this.lbl_PhoneNumberInfo);
+            this.Controls.Add(this.lbl_BirthDayInfo);
+            this.Controls.Add(this.lbl_GivenNameKANAInfo);
+            this.Controls.Add(this.lbl_FamilyNameKANAInfo);
+            this.Controls.Add(this.lbl_SexInfo);
+            this.Controls.Add(this.lbl_GivenNameInfo);
+            this.Controls.Add(this.lbl_FamilyNameInfo);
+            this.Controls.Add(this.lbl_MemberIDInfo);
+            this.Controls.Add(this.lbl_Address2);
+            this.Controls.Add(this.lbl_Address1);
+            this.Controls.Add(this.lbl_PostalNumber);
+            this.Controls.Add(this.lbl_PhoneNumber);
+            this.Controls.Add(this.lbl_BirthDay);
+            this.Controls.Add(this.lbl_GivenNameKANA);
+            this.Controls.Add(this.lbl_FamilyNameKANA);
+            this.Controls.Add(this.lbl_Sex);
+            this.Controls.Add(this.lbl_GivenName);
+            this.Controls.Add(this.lbl_FamilyName);
+            this.Controls.Add(this.lbl_MemberID);
             this.Controls.Add(this.label);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_ok);
@@ -361,6 +362,7 @@
             this.Name = "MemberAddConfirmation";
             this.Size = new System.Drawing.Size(948, 591);
             this.Load += new System.EventHandler(this.MemberAddConfirmation_Load);
+            this.VisibleChanged += new System.EventHandler(this.MemberAddConfirmation_VisibleChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,27 +375,27 @@
         private System.Windows.Forms.Button btn_ok;
         private System.Windows.Forms.Label lbl_TopTitle;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lbl_BirthDay;
+        private System.Windows.Forms.Label lbl_GivenNameKANA;
+        private System.Windows.Forms.Label lbl_FamilyNameKANA;
+        private System.Windows.Forms.Label lbl_Sex;
+        private System.Windows.Forms.Label lbl_GivenName;
+        private System.Windows.Forms.Label lbl_FamilyName;
+        private System.Windows.Forms.Label lbl_MemberID;
+        private System.Windows.Forms.Label lbl_Address2;
+        private System.Windows.Forms.Label lbl_Address1;
+        private System.Windows.Forms.Label lbl_PostalNumber;
+        private System.Windows.Forms.Label lbl_PhoneNumber;
+        private System.Windows.Forms.Label lbl_MemberIDInfo;
+        private System.Windows.Forms.Label lbl_FamilyNameInfo;
+        private System.Windows.Forms.Label lbl_GivenNameInfo;
+        private System.Windows.Forms.Label lbl_SexInfo;
+        private System.Windows.Forms.Label lbl_FamilyNameKANAInfo;
+        private System.Windows.Forms.Label lbl_GivenNameKANAInfo;
+        private System.Windows.Forms.Label lbl_BirthDayInfo;
+        private System.Windows.Forms.Label lbl_PhoneNumberInfo;
+        private System.Windows.Forms.Label lbl_PostalNumberInfo;
+        private System.Windows.Forms.Label lbl_Address1Info;
+        private System.Windows.Forms.Label lbl_Address2Info;
     }
 }
