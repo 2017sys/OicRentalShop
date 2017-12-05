@@ -39,6 +39,7 @@
             this.btn_Staff = new System.Windows.Forms.Button();
             this.btn_Profit = new System.Windows.Forms.Button();
             this.btn_Price = new System.Windows.Forms.Button();
+            this.btn_Title = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +63,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btn_Title);
             this.panel1.Controls.Add(this.btn_Item);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_Top);
@@ -79,9 +81,9 @@
             // btn_Item
             // 
             this.btn_Item.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Item.Location = new System.Drawing.Point(6, 127);
+            this.btn_Item.Location = new System.Drawing.Point(6, 188);
             this.btn_Item.Name = "btn_Item";
-            this.btn_Item.Size = new System.Drawing.Size(140, 60);
+            this.btn_Item.Size = new System.Drawing.Size(140, 52);
             this.btn_Item.TabIndex = 53;
             this.btn_Item.Text = "商品管理";
             this.btn_Item.UseVisualStyleBackColor = true;
@@ -99,9 +101,9 @@
             // btn_Log
             // 
             this.btn_Log.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Log.Location = new System.Drawing.Point(6, 523);
+            this.btn_Log.Location = new System.Drawing.Point(6, 536);
             this.btn_Log.Name = "btn_Log";
-            this.btn_Log.Size = new System.Drawing.Size(140, 60);
+            this.btn_Log.Size = new System.Drawing.Size(140, 52);
             this.btn_Log.TabIndex = 57;
             this.btn_Log.Text = "ログ管理";
             this.btn_Log.UseVisualStyleBackColor = true;
@@ -110,9 +112,9 @@
             // btn_Member
             // 
             this.btn_Member.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Member.Location = new System.Drawing.Point(6, 193);
+            this.btn_Member.Location = new System.Drawing.Point(6, 246);
             this.btn_Member.Name = "btn_Member";
-            this.btn_Member.Size = new System.Drawing.Size(140, 60);
+            this.btn_Member.Size = new System.Drawing.Size(140, 52);
             this.btn_Member.TabIndex = 52;
             this.btn_Member.Text = "会員管理";
             this.btn_Member.UseVisualStyleBackColor = true;
@@ -121,9 +123,9 @@
             // btn_Event
             // 
             this.btn_Event.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Event.Location = new System.Drawing.Point(6, 457);
+            this.btn_Event.Location = new System.Drawing.Point(6, 478);
             this.btn_Event.Name = "btn_Event";
-            this.btn_Event.Size = new System.Drawing.Size(140, 60);
+            this.btn_Event.Size = new System.Drawing.Size(140, 52);
             this.btn_Event.TabIndex = 56;
             this.btn_Event.Text = "イベント管理";
             this.btn_Event.UseVisualStyleBackColor = true;
@@ -132,9 +134,9 @@
             // btn_Staff
             // 
             this.btn_Staff.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Staff.Location = new System.Drawing.Point(6, 259);
+            this.btn_Staff.Location = new System.Drawing.Point(6, 304);
             this.btn_Staff.Name = "btn_Staff";
-            this.btn_Staff.Size = new System.Drawing.Size(140, 60);
+            this.btn_Staff.Size = new System.Drawing.Size(140, 52);
             this.btn_Staff.TabIndex = 53;
             this.btn_Staff.Text = "従業員管理";
             this.btn_Staff.UseVisualStyleBackColor = true;
@@ -143,9 +145,9 @@
             // btn_Profit
             // 
             this.btn_Profit.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Profit.Location = new System.Drawing.Point(6, 391);
+            this.btn_Profit.Location = new System.Drawing.Point(6, 420);
             this.btn_Profit.Name = "btn_Profit";
-            this.btn_Profit.Size = new System.Drawing.Size(140, 60);
+            this.btn_Profit.Size = new System.Drawing.Size(140, 52);
             this.btn_Profit.TabIndex = 55;
             this.btn_Profit.Text = "売上管理";
             this.btn_Profit.UseVisualStyleBackColor = true;
@@ -154,13 +156,24 @@
             // btn_Price
             // 
             this.btn_Price.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Price.Location = new System.Drawing.Point(6, 325);
+            this.btn_Price.Location = new System.Drawing.Point(6, 362);
             this.btn_Price.Name = "btn_Price";
-            this.btn_Price.Size = new System.Drawing.Size(140, 60);
+            this.btn_Price.Size = new System.Drawing.Size(140, 52);
             this.btn_Price.TabIndex = 54;
             this.btn_Price.Text = "料金管理";
             this.btn_Price.UseVisualStyleBackColor = true;
             this.btn_Price.Click += new System.EventHandler(this.btn_Price_Click);
+            // 
+            // btn_Title
+            // 
+            this.btn_Title.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Title.Location = new System.Drawing.Point(6, 130);
+            this.btn_Title.Name = "btn_Title";
+            this.btn_Title.Size = new System.Drawing.Size(140, 52);
+            this.btn_Title.TabIndex = 262;
+            this.btn_Title.Text = "タイトル管理";
+            this.btn_Title.UseVisualStyleBackColor = true;
+            this.btn_Title.Click += new System.EventHandler(this.btn_Title_Click);
             // 
             // ManageHome
             // 
@@ -190,5 +203,6 @@
         private System.Windows.Forms.Button btn_Staff;
         private System.Windows.Forms.Button btn_Profit;
         private System.Windows.Forms.Button btn_Price;
+        private System.Windows.Forms.Button btn_Title;
     }
 }

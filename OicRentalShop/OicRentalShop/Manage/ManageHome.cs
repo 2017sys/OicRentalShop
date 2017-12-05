@@ -19,6 +19,7 @@ namespace OicRentalShop.Manage
         public static Profit.ProfitList pf;
         public static Event.EventList ev;
         public static Log.LogList lo;
+        public static Title.TitleList tl;
 
 
         public ManageHome()
@@ -36,6 +37,7 @@ namespace OicRentalShop.Manage
             pf = new Profit.ProfitList();
             ev = new Event.EventList();
             lo = new Log.LogList();
+            tl = new Title.TitleList();
 
             panel.Controls.Clear();
             panel.Controls.Add(it);
@@ -96,6 +98,13 @@ namespace OicRentalShop.Manage
             panel.Controls.Clear();
             panel.Controls.Add(lo);
             lo.Visible = true;
+        }
+
+        private void btn_Title_Click(object sender, EventArgs e)
+        {
+            panel.Controls.Clear();
+            panel.Controls.Add(tl);
+            tl.Visible = true;
         }
     }
 }

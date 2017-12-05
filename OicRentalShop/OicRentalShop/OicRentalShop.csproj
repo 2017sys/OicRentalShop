@@ -194,10 +194,16 @@
       <DependentUpon>StaffList1.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage\Title\TitleList.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manage\Title\TitleList.Designer.cs">
       <DependentUpon>TitleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Title\TitleList11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage\Title\TitleList11.Designer.cs">
+      <DependentUpon>TitleList11.cs</DependentUpon>
     </Compile>
     <Compile Include="Register\ItemAdd\ItemAdd.cs">
       <SubType>UserControl</SubType>
@@ -338,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\Title\TitleList.resx">
       <DependentUpon>TitleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage\Title\TitleList11.resx">
+      <DependentUpon>TitleList11.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
