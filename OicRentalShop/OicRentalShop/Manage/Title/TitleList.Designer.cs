@@ -51,6 +51,7 @@
             this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_Search = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -268,6 +269,16 @@
             this.btn_Delete.Text = "削除";
             this.btn_Delete.UseVisualStyleBackColor = true;
             // 
+            // btn_Search
+            // 
+            this.btn_Search.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.btn_Search.Location = new System.Drawing.Point(690, 140);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(113, 86);
+            this.btn_Search.TabIndex = 106;
+            this.btn_Search.Text = "検索";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            // 
             // TitleList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -275,6 +286,7 @@
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(932, 575);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Edit);
@@ -331,5 +343,6 @@
         private System.Windows.Forms.Button btn_Edit;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btn_Search;
     }
 }
