@@ -55,6 +55,8 @@
             this.btn_Clear = new System.Windows.Forms.Button();
             this.rdb_MAN = new System.Windows.Forms.RadioButton();
             this.rdb_WOMAN = new System.Windows.Forms.RadioButton();
+            this.lbl_TelePhoneNumber = new System.Windows.Forms.Label();
+            this.txt_TelePhoneNumber = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label4
@@ -310,10 +312,30 @@
             this.rdb_WOMAN.Text = "女性";
             this.rdb_WOMAN.UseVisualStyleBackColor = true;
             // 
+            // lbl_TelePhoneNumber
+            // 
+            this.lbl_TelePhoneNumber.AutoSize = true;
+            this.lbl_TelePhoneNumber.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_TelePhoneNumber.Location = new System.Drawing.Point(16, 324);
+            this.lbl_TelePhoneNumber.Name = "lbl_TelePhoneNumber";
+            this.lbl_TelePhoneNumber.Size = new System.Drawing.Size(119, 16);
+            this.lbl_TelePhoneNumber.TabIndex = 257;
+            this.lbl_TelePhoneNumber.Text = "携帯電話番号：";
+            // 
+            // txt_TelePhoneNumber
+            // 
+            this.txt_TelePhoneNumber.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_TelePhoneNumber.Location = new System.Drawing.Point(141, 321);
+            this.txt_TelePhoneNumber.Name = "txt_TelePhoneNumber";
+            this.txt_TelePhoneNumber.Size = new System.Drawing.Size(603, 23);
+            this.txt_TelePhoneNumber.TabIndex = 256;
+            // 
             // MemberAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl_TelePhoneNumber);
+            this.Controls.Add(this.txt_TelePhoneNumber);
             this.Controls.Add(this.rdb_WOMAN);
             this.Controls.Add(this.rdb_MAN);
             this.Controls.Add(this.btn_Clear);
@@ -379,5 +401,7 @@
         private System.Windows.Forms.RadioButton rdb_MAN;
         private System.Windows.Forms.RadioButton rdb_WOMAN;
         public System.Windows.Forms.TextBox txt_ID;
+        private System.Windows.Forms.Label lbl_TelePhoneNumber;
+        private System.Windows.Forms.TextBox txt_TelePhoneNumber;
     }
 }

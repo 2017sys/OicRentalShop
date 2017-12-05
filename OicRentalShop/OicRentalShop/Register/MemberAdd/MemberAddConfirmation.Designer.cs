@@ -55,6 +55,8 @@
             this.lbl_PostalNumberInfo = new System.Windows.Forms.Label();
             this.lbl_Address1Info = new System.Windows.Forms.Label();
             this.lbl_Address2Info = new System.Windows.Forms.Label();
+            this.lbl_TelePhoneNumberInfo = new System.Windows.Forms.Label();
+            this.lbl_TelePhoneNumber = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label
@@ -64,9 +66,9 @@
             this.label.ForeColor = System.Drawing.Color.Red;
             this.label.Location = new System.Drawing.Point(60, 125);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(260, 16);
+            this.label.Size = new System.Drawing.Size(274, 16);
             this.label.TabIndex = 133;
-            this.label.Text = "以下の内容で登録してもよろしですか";
+            this.label.Text = "以下の内容で登録してもよろしいですか";
             // 
             // btn_Cancel
             // 
@@ -88,7 +90,7 @@
             this.btn_ok.TabIndex = 131;
             this.btn_ok.Text = "決定";
             this.btn_ok.UseVisualStyleBackColor = true;
-            this.btn_ok.Visible = false;
+            this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
             // lbl_TopTitle
             // 
@@ -212,7 +214,7 @@
             // 
             this.lbl_PhoneNumber.AutoSize = true;
             this.lbl_PhoneNumber.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_PhoneNumber.Location = new System.Drawing.Point(83, 356);
+            this.lbl_PhoneNumber.Location = new System.Drawing.Point(83, 372);
             this.lbl_PhoneNumber.Name = "lbl_PhoneNumber";
             this.lbl_PhoneNumber.Size = new System.Drawing.Size(85, 16);
             this.lbl_PhoneNumber.TabIndex = 259;
@@ -292,7 +294,7 @@
             // 
             this.lbl_PhoneNumberInfo.AutoSize = true;
             this.lbl_PhoneNumberInfo.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_PhoneNumberInfo.Location = new System.Drawing.Point(193, 356);
+            this.lbl_PhoneNumberInfo.Location = new System.Drawing.Point(193, 372);
             this.lbl_PhoneNumberInfo.Name = "lbl_PhoneNumberInfo";
             this.lbl_PhoneNumberInfo.Size = new System.Drawing.Size(89, 16);
             this.lbl_PhoneNumberInfo.TabIndex = 270;
@@ -328,10 +330,32 @@
             this.lbl_Address2Info.TabIndex = 273;
             this.lbl_Address2Info.Text = "大阪民国あああああああああああああ";
             // 
+            // lbl_TelePhoneNumberInfo
+            // 
+            this.lbl_TelePhoneNumberInfo.AutoSize = true;
+            this.lbl_TelePhoneNumberInfo.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_TelePhoneNumberInfo.Location = new System.Drawing.Point(193, 328);
+            this.lbl_TelePhoneNumberInfo.Name = "lbl_TelePhoneNumberInfo";
+            this.lbl_TelePhoneNumberInfo.Size = new System.Drawing.Size(89, 16);
+            this.lbl_TelePhoneNumberInfo.TabIndex = 275;
+            this.lbl_TelePhoneNumberInfo.Text = "1919-4545";
+            // 
+            // lbl_TelePhoneNumber
+            // 
+            this.lbl_TelePhoneNumber.AutoSize = true;
+            this.lbl_TelePhoneNumber.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_TelePhoneNumber.Location = new System.Drawing.Point(49, 328);
+            this.lbl_TelePhoneNumber.Name = "lbl_TelePhoneNumber";
+            this.lbl_TelePhoneNumber.Size = new System.Drawing.Size(119, 16);
+            this.lbl_TelePhoneNumber.TabIndex = 274;
+            this.lbl_TelePhoneNumber.Text = "携帯電話番号：";
+            // 
             // MemberAddConfirmation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl_TelePhoneNumberInfo);
+            this.Controls.Add(this.lbl_TelePhoneNumber);
             this.Controls.Add(this.lbl_Address2Info);
             this.Controls.Add(this.lbl_Address1Info);
             this.Controls.Add(this.lbl_PostalNumberInfo);
@@ -397,5 +421,7 @@
         private System.Windows.Forms.Label lbl_PostalNumberInfo;
         private System.Windows.Forms.Label lbl_Address1Info;
         private System.Windows.Forms.Label lbl_Address2Info;
+        private System.Windows.Forms.Label lbl_TelePhoneNumberInfo;
+        private System.Windows.Forms.Label lbl_TelePhoneNumber;
     }
 }

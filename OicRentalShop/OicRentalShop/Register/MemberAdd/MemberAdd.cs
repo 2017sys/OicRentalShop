@@ -23,6 +23,7 @@ namespace OicRentalShop.Register.MemberAdd
             public string Sex;
             public string BDay;
             public string PhoneNum;
+            public string TelePhoneNum;
             public string PostNum;
             public string AD1;
             public string AD2;
@@ -35,30 +36,40 @@ namespace OicRentalShop.Register.MemberAdd
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-        
-            int flag = 0;
- 
-            MemberAddConfirmation.mi.ID = txt_ID.Text;
-            MemberAddConfirmation.mi.FName = txt_FamilyName.Text;
-            MemberAddConfirmation.mi.GName = txt_GivenName.Text;
-            MemberAddConfirmation.mi.FNameK = txt_FamilyNameKANA.Text;
-            MemberAddConfirmation.mi.GNameK = txt_GivenNameKANA.Text;
-            MemberAddConfirmation.mi.BDay = txt_Birtyday.Text;
-            MemberAddConfirmation.mi.PhoneNum = txt_PhoneNumber.Text;
-            MemberAddConfirmation.mi.PostNum = txt_PostalCode.Text;
-            MemberAddConfirmation.mi.AD1 = txt_Address1.Text;
-            MemberAddConfirmation.mi.AD2 = txt_Address2.Text;
-            if (rdb_MAN.Checked == true)
+
+            if (txt_ID.Text.Length > 0 && txt_FamilyName.Text.Length > 0 && txt_FamilyNameKANA.Text.Length > 0 && txt_GivenName.Text.Length > 0 && txt_GivenNameKANA.Text.Length > 0 && txt_Birtyday.Text.Length > 0 && (txt_PhoneNumber.Text.Length > 0 || txt_TelePhoneNumber.Text.Length >0) && txt_PostalCode.Text.Length > 0 && txt_Address1.Text.Length > 0 && txt_Address2.Text.Length > 0 && (rdb_MAN.Checked==true || rdb_WOMAN.Checked==true))
             {
-                MemberAddConfirmation.mi.Sex = "男";
+                int flag = 0;
+
+                MemberAddConfirmation.mi.ID = txt_ID.Text;
+                MemberAddConfirmation.mi.FName = txt_FamilyName.Text;
+                MemberAddConfirmation.mi.GName = txt_GivenName.Text;
+                MemberAddConfirmation.mi.FNameK = txt_FamilyNameKANA.Text;
+                MemberAddConfirmation.mi.GNameK = txt_GivenNameKANA.Text;
+                MemberAddConfirmation.mi.BDay = txt_Birtyday.Text;
+                MemberAddConfirmation.mi.PhoneNum = txt_PhoneNumber.Text;
+                MemberAddConfirmation.mi.TelePhoneNum = txt_TelePhoneNumber.Text;
+                MemberAddConfirmation.mi.PostNum = txt_PostalCode.Text;
+                MemberAddConfirmation.mi.AD1 = txt_Address1.Text;
+                MemberAddConfirmation.mi.AD2 = txt_Address2.Text;
+                if (rdb_MAN.Checked == true)
+                {
+                    MemberAddConfirmation.mi.Sex = "男";
+                }
+                else
+                {
+                    MemberAddConfirmation.mi.Sex = "女";
+                }
+
+                TestForm.cancel(flag);
+                TestForm.GoNext(flag);
             }
             else
             {
-                MemberAddConfirmation.mi.Sex = "女";
+                //項目に空欄があるってダイアログ
             }
 
-            TestForm.cancel(flag);
-            TestForm.GoNext(flag);
+         
         }
 
 
