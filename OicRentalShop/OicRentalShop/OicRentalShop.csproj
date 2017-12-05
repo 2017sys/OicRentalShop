@@ -283,6 +283,14 @@
     <Compile Include="Register\Return\Return.Designer.cs">
       <DependentUpon>Return.cs</DependentUpon>
     </Compile>
+    <Compile Include="Register\Title\TitleAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Register\Title\TitleAdd.Designer.cs" />
+    <Compile Include="Register\Title\TitleAdd1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register\Title\TitleAdd1.Designer.cs" />
     <Compile Include="Top.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -378,6 +386,8 @@
     <EmbeddedResource Include="Register\Return\Return.resx">
       <DependentUpon>Return.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Register\Title\Titleadd.resx" />
+    <EmbeddedResource Include="Register\Title\TitleAdd1.resx" />
     <EmbeddedResource Include="TOP.resx">
       <DependentUpon>Top.cs</DependentUpon>
     </EmbeddedResource>
