@@ -48,6 +48,9 @@
             this.txt_TitleName = new System.Windows.Forms.TextBox();
             this.lbl_TitleName = new System.Windows.Forms.Label();
             this.dgv_ItemInfo = new System.Windows.Forms.DataGridView();
+            this.btn_Edit = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -235,6 +238,36 @@
             this.dgv_ItemInfo.Size = new System.Drawing.Size(800, 354);
             this.dgv_ItemInfo.TabIndex = 102;
             // 
+            // btn_Edit
+            // 
+            this.btn_Edit.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.btn_Edit.Location = new System.Drawing.Point(819, 354);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.Size = new System.Drawing.Size(120, 50);
+            this.btn_Edit.TabIndex = 103;
+            this.btn_Edit.Text = "編集";
+            this.btn_Edit.UseVisualStyleBackColor = true;
+            // 
+            // btn_Add
+            // 
+            this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.btn_Add.Location = new System.Drawing.Point(818, 431);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(120, 50);
+            this.btn_Add.TabIndex = 104;
+            this.btn_Add.Text = "追加";
+            this.btn_Add.UseVisualStyleBackColor = true;
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.btn_Delete.Location = new System.Drawing.Point(819, 511);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(120, 50);
+            this.btn_Delete.TabIndex = 105;
+            this.btn_Delete.Text = "削除";
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            // 
             // TitleList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -242,6 +275,9 @@
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(932, 575);
             this.ControlBox = false;
+            this.Controls.Add(this.btn_Delete);
+            this.Controls.Add(this.btn_Add);
+            this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.dgv_ItemInfo);
             this.Controls.Add(this.txt_Artist);
             this.Controls.Add(this.lbl_Artist);
@@ -292,5 +328,8 @@
         private System.Windows.Forms.TextBox txt_TitleName;
         private System.Windows.Forms.Label lbl_TitleName;
         private System.Windows.Forms.DataGridView dgv_ItemInfo;
+        private System.Windows.Forms.Button btn_Edit;
+        private System.Windows.Forms.Button btn_Add;
+        private System.Windows.Forms.Button btn_Delete;
     }
 }
