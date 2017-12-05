@@ -124,6 +124,7 @@
             this.txt_MemberID.Name = "txt_MemberID";
             this.txt_MemberID.Size = new System.Drawing.Size(148, 23);
             this.txt_MemberID.TabIndex = 220;
+            this.txt_MemberID.TextChanged += new System.EventHandler(this.txt_MemberID_TextChanged);
             // 
             // txt_OLDNEW
             // 

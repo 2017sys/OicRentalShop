@@ -271,6 +271,7 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(148, 23);
             this.textBox7.TabIndex = 102;
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox7_KeyPress);
             // 
             // textBox8
             // 
@@ -752,7 +753,7 @@
             this.textBox1.Text = "07211";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Lend
+            // Lend1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -829,7 +830,7 @@
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.label46);
-            this.Name = "Lend";
+            this.Name = "Lend1";
             this.Text = "Lend";
             this.Load += new System.EventHandler(this.Lend_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
