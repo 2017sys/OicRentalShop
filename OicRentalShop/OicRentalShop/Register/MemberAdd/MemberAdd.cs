@@ -20,7 +20,7 @@ namespace OicRentalShop.Register.MemberAdd
         private void button1_Click(object sender, EventArgs e)
         {
             int flag = 0;
-            TestForm.GoNext(flag);
+            RegisterHome.GoNext(flag);
         }
     }
 }

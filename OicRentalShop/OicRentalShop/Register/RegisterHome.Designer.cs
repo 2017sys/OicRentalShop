@@ -1,6 +1,6 @@
 ﻿namespace OicRentalShop.Register
 {
-    partial class TestForm
+    partial class RegisterHome
     {
         /// <summary>
         /// Required designer variable.

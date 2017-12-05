@@ -25,7 +25,7 @@ namespace OicRentalShop.Register.MemberAdd
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             int flag = 0;
-            TestForm.cancel(flag);
+            RegisterHome.cancel(flag);
         }
     }
 }

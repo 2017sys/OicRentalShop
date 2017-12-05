@@ -21,7 +21,7 @@ namespace OicRentalShop
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TestForm tstfm = new TestForm();
+            RegisterHome tstfm = new RegisterHome();
             this.Hide();
             tstfm.ShowDialog();
             this.Show();
