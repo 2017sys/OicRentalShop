@@ -296,7 +296,7 @@
       <DependentUpon>Return.cs</DependentUpon>
     </Compile>
     <Compile Include="Register\Title\TitleAdd.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Register\Title\TitleAdd.Designer.cs">
       <DependentUpon>TitleAdd.cs</DependentUpon>
@@ -401,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register\Return\Return.resx">
       <DependentUpon>Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\Title\TitleAdd.resx">
+      <DependentUpon>TitleAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TOP.resx">
       <DependentUpon>Top.cs</DependentUpon>
