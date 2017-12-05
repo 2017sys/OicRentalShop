@@ -193,6 +193,12 @@
     <Compile Include="Manage\Staff\StaffList1.Designer.cs">
       <DependentUpon>StaffList1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage\Title\TitleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage\Title\TitleList.Designer.cs">
+      <DependentUpon>TitleList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Register\ItemAdd\ItemAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -283,6 +289,12 @@
     <Compile Include="Register\Return\Return.Designer.cs">
       <DependentUpon>Return.cs</DependentUpon>
     </Compile>
+    <Compile Include="Register\Title\TitleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register\Title\TitleAdd.Designer.cs">
+      <DependentUpon>TitleAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Top.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\Staff\StaffList1.resx">
       <DependentUpon>StaffList1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage\Title\TitleList.resx">
+      <DependentUpon>TitleList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
