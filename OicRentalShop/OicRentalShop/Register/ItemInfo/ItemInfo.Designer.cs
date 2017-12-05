@@ -38,7 +38,7 @@
             this.lbl_ItemID = new System.Windows.Forms.Label();
             this.cmb_Genre = new System.Windows.Forms.ComboBox();
             this.cmb_State = new System.Windows.Forms.ComboBox();
-            this.cmb_OLDNEW = new System.Windows.Forms.ComboBox();
+            this.cmb_Type = new System.Windows.Forms.ComboBox();
             this.txt_TitleID = new System.Windows.Forms.TextBox();
             this.txt_TitleName = new System.Windows.Forms.TextBox();
             this.lbl_Genre = new System.Windows.Forms.Label();
@@ -132,6 +132,7 @@
             this.cmb_Genre.Name = "cmb_Genre";
             this.cmb_Genre.Size = new System.Drawing.Size(80, 20);
             this.cmb_Genre.TabIndex = 95;
+            this.cmb_Genre.Text = "全ジャンル";
             // 
             // cmb_State
             // 
@@ -144,17 +145,18 @@
             this.cmb_State.Size = new System.Drawing.Size(40, 20);
             this.cmb_State.TabIndex = 94;
             // 
-            // cmb_OLDNEW
+            // cmb_Type
             // 
-            this.cmb_OLDNEW.FormattingEnabled = true;
-            this.cmb_OLDNEW.Items.AddRange(new object[] {
+            this.cmb_Type.FormattingEnabled = true;
+            this.cmb_Type.Items.AddRange(new object[] {
             "CD",
             "DVD"});
-            this.cmb_OLDNEW.Location = new System.Drawing.Point(537, 136);
-            this.cmb_OLDNEW.Name = "cmb_OLDNEW";
-            this.cmb_OLDNEW.Size = new System.Drawing.Size(60, 20);
-            this.cmb_OLDNEW.TabIndex = 93;
-            this.cmb_OLDNEW.SelectedIndexChanged += new System.EventHandler(this.cmb_OLDNEW_SelectedIndexChanged);
+            this.cmb_Type.Location = new System.Drawing.Point(537, 136);
+            this.cmb_Type.Name = "cmb_Type";
+            this.cmb_Type.Size = new System.Drawing.Size(60, 20);
+            this.cmb_Type.TabIndex = 93;
+            this.cmb_Type.Text = "CD";
+            this.cmb_Type.SelectedIndexChanged += new System.EventHandler(this.cmb_Type_SelectedIndexChanged);
             // 
             // txt_TitleID
             // 
@@ -309,7 +311,7 @@
             this.Controls.Add(this.lbl_ItemID);
             this.Controls.Add(this.cmb_Genre);
             this.Controls.Add(this.cmb_State);
-            this.Controls.Add(this.cmb_OLDNEW);
+            this.Controls.Add(this.cmb_Type);
             this.Controls.Add(this.txt_TitleID);
             this.Controls.Add(this.txt_TitleName);
             this.Controls.Add(this.lbl_Genre);
@@ -345,7 +347,7 @@
         private System.Windows.Forms.Label lbl_ItemID;
         private System.Windows.Forms.ComboBox cmb_Genre;
         private System.Windows.Forms.ComboBox cmb_State;
-        private System.Windows.Forms.ComboBox cmb_OLDNEW;
+        private System.Windows.Forms.ComboBox cmb_Type;
         private System.Windows.Forms.TextBox txt_TitleID;
         private System.Windows.Forms.TextBox txt_TitleName;
         private System.Windows.Forms.Label lbl_Genre;
