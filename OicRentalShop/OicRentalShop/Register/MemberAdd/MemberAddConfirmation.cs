@@ -111,6 +111,7 @@ namespace OicRentalShop.Register.MemberAdd
 
             Cmd.ExecuteNonQuery();
             cn.Close();
+            lbl_Message.Text = "登録しました";
         }
     }
 }

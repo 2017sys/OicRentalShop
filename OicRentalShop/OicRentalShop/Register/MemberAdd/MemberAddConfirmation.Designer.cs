@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label = new System.Windows.Forms.Label();
+            this.lbl_Message = new System.Windows.Forms.Label();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_ok = new System.Windows.Forms.Button();
             this.lbl_TopTitle = new System.Windows.Forms.Label();
@@ -59,16 +59,16 @@
             this.lbl_TelePhoneNumber = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label
+            // lbl_Message
             // 
-            this.label.AutoSize = true;
-            this.label.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label.ForeColor = System.Drawing.Color.Red;
-            this.label.Location = new System.Drawing.Point(60, 125);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(274, 16);
-            this.label.TabIndex = 133;
-            this.label.Text = "以下の内容で登録してもよろしいですか";
+            this.lbl_Message.AutoSize = true;
+            this.lbl_Message.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Message.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Message.Location = new System.Drawing.Point(60, 125);
+            this.lbl_Message.Name = "lbl_Message";
+            this.lbl_Message.Size = new System.Drawing.Size(274, 16);
+            this.lbl_Message.TabIndex = 133;
+            this.lbl_Message.Text = "以下の内容で登録してもよろしいですか";
             // 
             // btn_Cancel
             // 
@@ -378,7 +378,7 @@
             this.Controls.Add(this.lbl_GivenName);
             this.Controls.Add(this.lbl_FamilyName);
             this.Controls.Add(this.lbl_MemberID);
-            this.Controls.Add(this.label);
+            this.Controls.Add(this.lbl_Message);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_ok);
             this.Controls.Add(this.lbl_TopTitle);
@@ -394,7 +394,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.Label lbl_Message;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_ok;
         private System.Windows.Forms.Label lbl_TopTitle;
