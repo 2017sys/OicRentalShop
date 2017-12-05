@@ -20,6 +20,7 @@ namespace OicRentalShop.Register
         public static Return.Return rr;
         public static MemberAdd.MemberAddConfirmation ma;
         public static ItemAdd.ItemAddConfirmation ic;
+        public static Title.TitleAdd ta;
         
         
 
@@ -66,7 +67,7 @@ namespace OicRentalShop.Register
             rr= new Return.Return();
             ma = new MemberAdd.MemberAddConfirmation();
             ic = new ItemAdd.ItemAddConfirmation();
-            
+            ta = new Title.TitleAdd();
             
         }
 
@@ -117,6 +118,13 @@ namespace OicRentalShop.Register
             panel.Controls.Add(mm);
             panel.Controls.Add(ma);
             mm.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel.Controls.Clear();
+            panel.Controls.Add(ta);
+            ta.Visible = true;
         }
 
 
