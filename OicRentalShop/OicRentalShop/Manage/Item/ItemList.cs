@@ -40,11 +40,11 @@ namespace OicRentalShop.Manage.Item
 
             if (cmb_Type.Text == "DVD")
             {
-                selectfunc("SELECT dt.TITLE_NAME AS タイトル名,dt.TITLE_ID AS タイトルID,di.ITEM_ID AS 商品ID,ty.TYPE_NAME AS 商品タイプ,dg.GENRE_NAME AS ジャンル FROM TBL_TITLE dt,TBL_ITEM di,TBL_TYPE ty,TBL_GENRE dg WHERE dt.TYPE_ID=ty.TYPE_ID AND di.TITLE_ID=dt.TITLE_ID AND dt.GENRE_ID = dg.GENRE_ID AND dt.TYPE_ID=1");
+                selectfunc("SELECT title.TITLE_NAME AS タイトル名, title.TITLE_ID AS タイトルID , item.ITEM_ID AS 商品ID , type.TYPE_NAME AS 商品タイプ , genre.GENRE_NAME AS ジャンル FROM TBL_TITLE title , TBL_ITEM item , TBL_TYPE type , TBL_GENRE genre WHERE title.TYPE_ID = type.TYPE_ID AND item.TITLE_ID = title.TITLE_ID AND title.GENRE_ID = genre.GENRE_ID AND title.TYPE_ID = 1" + serchItems());
             }
             else if (cmb_Type.Text == "CD")
             {
-                selectfunc("SELECT ct.TITLE_NAME AS タイトル名,ct.TITLE_ID AS タイトルID,ci.ITEM_ID AS 商品ID,ty.TYPE_NAME AS 商品タイプ,cg.GENRE_NAME AS ジャンル,art.ARTIST_NAME AS アーティスト FROM TBL_TITLE ct,TBL_ITEM ci,TBL_TYPE ty,TBL_GENRE cg,TBL_ARTIST art WHERE ct.TYPE_ID=ty.TYPE_ID AND ci.TITLE_ID=ct.TITLE_ID AND ct.GENRE_ID = cg.GENRE_ID AND art.ARTIST_ID=ct.ARTIST_ID");
+                selectfunc("SELECT title.TITLE_NAME AS タイトル名,title.TITLE_ID AS タイトルID,item.ITEM_ID AS 商品ID,type.TYPE_NAME AS 商品タイプ,genre.GENRE_NAME AS ジャンル,art.ARTIST_NAME AS アーティスト FROM TBL_TITLE title,TBL_ITEM item,TBL_TYPE type,TBL_GENRE genre,TBL_ARTIST art WHERE title.TYPE_ID = type.TYPE_ID AND item.TITLE_ID=title.TITLE_ID AND title.GENRE_ID = genre.GENRE_ID AND art.ARTIST_ID=title.ARTIST_ID" + serchItems());
             }
             else return;
         }
@@ -61,6 +61,7 @@ namespace OicRentalShop.Manage.Item
         {
             cmb_Genre.Text = "全ジャンル";
             cmb_Genre.Items.Clear();
+            cmb_Genre.Items.Add("全ジャンル");
             genreLoad();
         }
 
@@ -68,14 +69,14 @@ namespace OicRentalShop.Manage.Item
         private void genreLoad()
         {
             //CD・DVDのどちらかが選択されるとジャンルを流し込む
-            String sql = "SELECT GENRE_NAME FROM TBL_GENRE WHERE TYPE_ID = ";
+            String sql = "SELECT GENRE_NAME FROM TBL_GENRE WHERE TYPE_ID =";
             if (cmb_Type.Text == "DVD")
             {
-                sql += "1";
+                sql += " 1";
             }
             else if (cmb_Type.Text == "CD")
             {
-                sql += "2";
+                sql += " 2";
             }
             else
             {
@@ -97,7 +98,47 @@ namespace OicRentalShop.Manage.Item
             cn.Close();
             oleCmd.Dispose();
         }
-
         
+        //検索条件をSQLに追加
+        private String serchItems()
+        {
+
+            String sql = "";
+            //タイトル検索
+            if (txt_TitleName.Text.Trim() != ""){
+                sql += " AND title.TITLE_NAME LIKE '%" + txt_TitleName.Text.TrimStart() +"%'";
+            }
+            //タイトルID検索
+            if (txt_TitleID.Text.Trim() != "")
+            {
+                sql += " AND title.TITLE_ID LIKE '%" + txt_TitleID.Text.TrimStart() + "%'";
+            }
+            //商品ID検索
+            if (txt_ItemID.Text.Trim() != "")
+            {
+                sql += " AND item.ITEM_ID LIKE '" + txt_ItemID.Text.TrimStart() + "'";
+            }
+            //新作旧作検索
+            if (cmb_Old_New.Text.Trim() != "")
+            {
+                if (cmb_Old_New.Text == "新作")
+                    sql += " AND title.TITLE_RELEASE > " + DateTime.Today.AddMonths(-1).ToString("yyyy/MM/dd");
+                else if (cmb_Old_New.Text == "旧作")
+                    sql += " AND title.TITLE_RELEASE < " + DateTime.Today.AddMonths(-1).ToString("yyyy/MM/dd");
+            }
+            //アーティスト検索
+            if (txt_Artist.Text.Trim() != "")
+            {
+                sql += " AND art.ARTIST_NAME LIKE '%" + txt_Artist.Text.TrimStart() + "%'";
+            }
+            //ジャンル検索
+            if (cmb_Genre.Text.Trim() != "" && cmb_Genre.Text != "全ジャンル")
+            {
+                sql += " AND genre.GENRE_NAME = '" + cmb_Genre.Text + "'";
+            }
+
+            return sql;
+        }
     }
 }
+
