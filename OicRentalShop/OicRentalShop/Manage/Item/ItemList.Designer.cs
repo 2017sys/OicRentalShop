@@ -185,7 +185,7 @@
             // cmb_Genre
             // 
             this.cmb_Genre.FormattingEnabled = true;
-            this.cmb_Genre.Location = new System.Drawing.Point(387, 188);
+            this.cmb_Genre.Location = new System.Drawing.Point(396, 188);
             this.cmb_Genre.Name = "cmb_Genre";
             this.cmb_Genre.Size = new System.Drawing.Size(80, 20);
             this.cmb_Genre.TabIndex = 77;
@@ -197,16 +197,16 @@
             this.cmb_Old_New.Items.AddRange(new object[] {
             "新作",
             "旧作"});
-            this.cmb_Old_New.Location = new System.Drawing.Point(97, 188);
+            this.cmb_Old_New.Location = new System.Drawing.Point(89, 188);
             this.cmb_Old_New.Name = "cmb_Old_New";
-            this.cmb_Old_New.Size = new System.Drawing.Size(40, 20);
+            this.cmb_Old_New.Size = new System.Drawing.Size(55, 20);
             this.cmb_Old_New.TabIndex = 76;
             // 
             // lbl_Genre
             // 
             this.lbl_Genre.AutoSize = true;
             this.lbl_Genre.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.lbl_Genre.Location = new System.Drawing.Point(330, 190);
+            this.lbl_Genre.Location = new System.Drawing.Point(338, 190);
             this.lbl_Genre.Name = "lbl_Genre";
             this.lbl_Genre.Size = new System.Drawing.Size(52, 13);
             this.lbl_Genre.TabIndex = 75;
@@ -270,6 +270,7 @@
             this.btn_Search.TabIndex = 84;
             this.btn_Search.Text = "検索";
             this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // label8
             // 

@@ -12,15 +12,65 @@ namespace OicRentalShop.Register.MemberAdd
 {
     public partial class MemberAdd : UserControl
     {
+       public MemberInfo mi;
+        public struct MemberInfo
+        {
+            public string ID;
+            public string FName;
+            public string GName;
+            public string FNameK;
+            public string GNameK;
+            public string Sex;
+            public string BDay;
+            public string PhoneNum;
+            public string PostNum;
+            public string AD1;
+            public string AD2;
+
+        }
         public MemberAdd()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_Add_Click(object sender, EventArgs e)
         {
+        
             int flag = 0;
+ 
+            MemberAddConfirmation.mi.ID = txt_ID.Text;
+            MemberAddConfirmation.mi.FName = txt_FamilyName.Text;
+            MemberAddConfirmation.mi.GName = txt_GivenName.Text;
+            MemberAddConfirmation.mi.FNameK = txt_FamilyNameKANA.Text;
+            MemberAddConfirmation.mi.GNameK = txt_GivenNameKANA.Text;
+            MemberAddConfirmation.mi.BDay = txt_Birtyday.Text;
+            MemberAddConfirmation.mi.PhoneNum = txt_PhoneNumber.Text;
+            MemberAddConfirmation.mi.PostNum = txt_PostalCode.Text;
+            MemberAddConfirmation.mi.AD1 = txt_Address1.Text;
+            MemberAddConfirmation.mi.AD2 = txt_Address2.Text;
+            if (rdb_MAN.Checked == true)
+            {
+                MemberAddConfirmation.mi.Sex = "男";
+            }
+            else
+            {
+                MemberAddConfirmation.mi.Sex = "女";
+            }
+
+            TestForm.cancel(flag);
             TestForm.GoNext(flag);
+        }
+
+
+        private void MemberAdd_Load(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void MemberAdd_VisibleChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
