@@ -33,7 +33,6 @@
             this.lbl_DVD = new System.Windows.Forms.Label();
             this.lbl_CD = new System.Windows.Forms.Label();
             this.lbl_today = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,6 +41,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.dgv_PriceInfo = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_EventInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PriceInfo)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +71,7 @@
             // 
             this.lbl_DVD.AutoSize = true;
             this.lbl_DVD.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_DVD.Location = new System.Drawing.Point(551, 176);
+            this.lbl_DVD.Location = new System.Drawing.Point(22, 271);
             this.lbl_DVD.Name = "lbl_DVD";
             this.lbl_DVD.Size = new System.Drawing.Size(48, 19);
             this.lbl_DVD.TabIndex = 248;
@@ -79,11 +81,11 @@
             // 
             this.lbl_CD.AutoSize = true;
             this.lbl_CD.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_CD.Location = new System.Drawing.Point(268, 176);
+            this.lbl_CD.Location = new System.Drawing.Point(13, 380);
             this.lbl_CD.Name = "lbl_CD";
-            this.lbl_CD.Size = new System.Drawing.Size(36, 19);
+            this.lbl_CD.Size = new System.Drawing.Size(74, 38);
             this.lbl_CD.TabIndex = 247;
-            this.lbl_CD.Text = "CD";
+            this.lbl_CD.Text = "CD\r\nシングル";
             // 
             // lbl_today
             // 
@@ -94,14 +96,6 @@
             this.lbl_today.Size = new System.Drawing.Size(87, 13);
             this.lbl_today.TabIndex = 208;
             this.lbl_today.Text = "2017/07/21";
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(91, 160);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1, 47);
-            this.label4.TabIndex = 205;
             // 
             // label3
             // 
@@ -158,24 +152,52 @@
             // label21
             // 
             this.label21.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label21.Location = new System.Drawing.Point(476, 159);
+            this.label21.Location = new System.Drawing.Point(-2, 347);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(1, 50);
+            this.label21.Size = new System.Drawing.Size(100, 1);
             this.label21.TabIndex = 218;
             // 
             // dgv_PriceInfo
             // 
             this.dgv_PriceInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_PriceInfo.Location = new System.Drawing.Point(0, 208);
+            this.dgv_PriceInfo.Location = new System.Drawing.Point(93, 208);
             this.dgv_PriceInfo.Name = "dgv_PriceInfo";
             this.dgv_PriceInfo.RowTemplate.Height = 21;
-            this.dgv_PriceInfo.Size = new System.Drawing.Size(668, 383);
+            this.dgv_PriceInfo.Size = new System.Drawing.Size(575, 383);
             this.dgv_PriceInfo.TabIndex = 260;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(-5, 468);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 1);
+            this.label1.TabIndex = 261;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(94, 160);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(1, 55);
+            this.label4.TabIndex = 205;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Location = new System.Drawing.Point(12, 504);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 38);
+            this.label5.TabIndex = 262;
+            this.label5.Text = "CD\r\nアルバム";
             // 
             // PriceList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_PriceInfo);
             this.Controls.Add(this.dgv_EventInfo);
             this.Controls.Add(this.lbl_Event);
@@ -207,7 +229,6 @@
         private System.Windows.Forms.Label lbl_DVD;
         private System.Windows.Forms.Label lbl_CD;
         private System.Windows.Forms.Label lbl_today;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
@@ -216,5 +237,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.DataGridView dgv_PriceInfo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
