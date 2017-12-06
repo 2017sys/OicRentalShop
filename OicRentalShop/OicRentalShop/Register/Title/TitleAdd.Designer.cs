@@ -46,11 +46,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.cmb_Format = new System.Windows.Forms.ComboBox();
             this.txt_Title = new System.Windows.Forms.TextBox();
-            this.txt_Artist = new System.Windows.Forms.TextBox();
-            this.txt_Genre = new System.Windows.Forms.TextBox();
             this.btn_Toadd = new System.Windows.Forms.Button();
-            this.lbl_TaitleID = new System.Windows.Forms.Label();
-            this.txt_TaitleID = new System.Windows.Forms.TextBox();
+            this.lbl_TitleID = new System.Windows.Forms.Label();
+            this.txt_TitleID = new System.Windows.Forms.TextBox();
+            this.txt_ReleaseDay = new System.Windows.Forms.TextBox();
+            this.lbl_ReleaseDay = new System.Windows.Forms.Label();
+            this.cmb_Genre = new System.Windows.Forms.ComboBox();
+            this.cmb_Artist = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemRe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -192,6 +194,7 @@
             this.cmb_Format.Name = "cmb_Format";
             this.cmb_Format.Size = new System.Drawing.Size(176, 20);
             this.cmb_Format.TabIndex = 137;
+            this.cmb_Format.SelectedIndexChanged += new System.EventHandler(this.cmb_Format_SelectedIndexChanged);
             // 
             // txt_Title
             // 
@@ -200,22 +203,6 @@
             this.txt_Title.Size = new System.Drawing.Size(281, 19);
             this.txt_Title.TabIndex = 138;
             this.txt_Title.Text = "いいい";
-            // 
-            // txt_Artist
-            // 
-            this.txt_Artist.Location = new System.Drawing.Point(227, 362);
-            this.txt_Artist.Name = "txt_Artist";
-            this.txt_Artist.Size = new System.Drawing.Size(281, 19);
-            this.txt_Artist.TabIndex = 139;
-            this.txt_Artist.Text = "ううう";
-            // 
-            // txt_Genre
-            // 
-            this.txt_Genre.Location = new System.Drawing.Point(227, 309);
-            this.txt_Genre.Name = "txt_Genre";
-            this.txt_Genre.Size = new System.Drawing.Size(281, 19);
-            this.txt_Genre.TabIndex = 140;
-            this.txt_Genre.Text = "えええ";
             // 
             // btn_Toadd
             // 
@@ -227,33 +214,71 @@
             this.btn_Toadd.UseVisualStyleBackColor = true;
             this.btn_Toadd.Click += new System.EventHandler(this.btn_Toadd_Click);
             // 
-            // lbl_TaitleID
+            // lbl_TitleID
             // 
-            this.lbl_TaitleID.AutoSize = true;
-            this.lbl_TaitleID.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_TaitleID.Location = new System.Drawing.Point(52, 186);
-            this.lbl_TaitleID.Name = "lbl_TaitleID";
-            this.lbl_TaitleID.Size = new System.Drawing.Size(109, 21);
-            this.lbl_TaitleID.TabIndex = 143;
-            this.lbl_TaitleID.Text = "タイトルID：";
+            this.lbl_TitleID.AutoSize = true;
+            this.lbl_TitleID.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_TitleID.Location = new System.Drawing.Point(52, 186);
+            this.lbl_TitleID.Name = "lbl_TitleID";
+            this.lbl_TitleID.Size = new System.Drawing.Size(109, 21);
+            this.lbl_TitleID.TabIndex = 143;
+            this.lbl_TitleID.Text = "タイトルID：";
             // 
-            // txt_TaitleID
+            // txt_TitleID
             // 
-            this.txt_TaitleID.Location = new System.Drawing.Point(227, 186);
-            this.txt_TaitleID.Name = "txt_TaitleID";
-            this.txt_TaitleID.Size = new System.Drawing.Size(281, 19);
-            this.txt_TaitleID.TabIndex = 144;
-            this.txt_TaitleID.Text = "123";
+            this.txt_TitleID.Location = new System.Drawing.Point(227, 186);
+            this.txt_TitleID.Name = "txt_TitleID";
+            this.txt_TitleID.Size = new System.Drawing.Size(281, 19);
+            this.txt_TitleID.TabIndex = 144;
+            this.txt_TitleID.Text = "123";
+            // 
+            // txt_ReleaseDay
+            // 
+            this.txt_ReleaseDay.Location = new System.Drawing.Point(227, 470);
+            this.txt_ReleaseDay.Name = "txt_ReleaseDay";
+            this.txt_ReleaseDay.Size = new System.Drawing.Size(281, 19);
+            this.txt_ReleaseDay.TabIndex = 146;
+            this.txt_ReleaseDay.Text = "2017/10/10";
+            // 
+            // lbl_ReleaseDay
+            // 
+            this.lbl_ReleaseDay.AutoSize = true;
+            this.lbl_ReleaseDay.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_ReleaseDay.Location = new System.Drawing.Point(52, 470);
+            this.lbl_ReleaseDay.Name = "lbl_ReleaseDay";
+            this.lbl_ReleaseDay.Size = new System.Drawing.Size(88, 21);
+            this.lbl_ReleaseDay.TabIndex = 145;
+            this.lbl_ReleaseDay.Text = "発売日：";
+            // 
+            // cmb_Genre
+            // 
+            this.cmb_Genre.FormattingEnabled = true;
+            this.cmb_Genre.Location = new System.Drawing.Point(227, 309);
+            this.cmb_Genre.Name = "cmb_Genre";
+            this.cmb_Genre.Size = new System.Drawing.Size(121, 20);
+            this.cmb_Genre.TabIndex = 147;
+            // 
+            // cmb_Artist
+            // 
+            this.cmb_Artist.FormattingEnabled = true;
+            this.cmb_Artist.Location = new System.Drawing.Point(227, 363);
+            this.cmb_Artist.Name = "cmb_Artist";
+            this.cmb_Artist.Size = new System.Drawing.Size(176, 20);
+            this.cmb_Artist.TabIndex = 148;
+            this.cmb_Artist.Text = "俺";
+            this.cmb_Artist.TextChanged += new System.EventHandler(this.cmb_Artist_TextChanged);
             // 
             // TitleAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.txt_TaitleID);
-            this.Controls.Add(this.lbl_TaitleID);
+            this.Controls.Add(this.cmb_Artist);
+            this.Controls.Add(this.cmb_Genre);
+            this.Controls.Add(this.txt_ReleaseDay);
+            this.Controls.Add(this.lbl_ReleaseDay);
+            this.Controls.Add(this.txt_TitleID);
+            this.Controls.Add(this.lbl_TitleID);
             this.Controls.Add(this.btn_Toadd);
-            this.Controls.Add(this.txt_Genre);
-            this.Controls.Add(this.txt_Artist);
             this.Controls.Add(this.txt_Title);
             this.Controls.Add(this.cmb_Format);
             this.Controls.Add(this.btn_Add);
@@ -286,16 +311,18 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmb_Format;
         private System.Windows.Forms.TextBox txt_Title;
-        private System.Windows.Forms.TextBox txt_Artist;
-        private System.Windows.Forms.TextBox txt_Genre;
         private System.Windows.Forms.Button btn_Toadd;
-        private System.Windows.Forms.Label lbl_TaitleID;
-        private System.Windows.Forms.TextBox txt_TaitleID;
+        private System.Windows.Forms.Label lbl_TitleID;
+        private System.Windows.Forms.TextBox txt_TitleID;
         private System.Windows.Forms.DataGridViewButtonColumn btn_Delete;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.TextBox txt_ReleaseDay;
+        private System.Windows.Forms.Label lbl_ReleaseDay;
+        private System.Windows.Forms.ComboBox cmb_Genre;
+        private System.Windows.Forms.ComboBox cmb_Artist;
     }
 }
