@@ -19,12 +19,18 @@ namespace OicRentalShop.Register.ItemAdd
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
+        
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             int flag=1;
             RegisterHome.cancel(flag);
+        }
+
+        private void ItemAddConfirmation_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

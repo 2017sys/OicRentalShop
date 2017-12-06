@@ -34,6 +34,11 @@
             this.dgv_ItemCon = new System.Windows.Forms.DataGridView();
             this.lbl_TopTitle = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemCon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,9 +49,9 @@
             this.label.ForeColor = System.Drawing.Color.Red;
             this.label.Location = new System.Drawing.Point(60, 125);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(260, 16);
+            this.label.Size = new System.Drawing.Size(274, 16);
             this.label.TabIndex = 127;
-            this.label.Text = "以下の情報で登録してもよろしですか";
+            this.label.Text = "以下の情報で登録してもよろしいですか";
             // 
             // btn_Cancel
             // 
@@ -73,6 +78,12 @@
             // dgv_ItemCon
             // 
             this.dgv_ItemCon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ItemCon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             this.dgv_ItemCon.Location = new System.Drawing.Point(63, 160);
             this.dgv_ItemCon.Name = "dgv_ItemCon";
             this.dgv_ItemCon.RowTemplate.Height = 21;
@@ -97,6 +108,31 @@
             this.label9.Size = new System.Drawing.Size(950, 1);
             this.label9.TabIndex = 122;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Column4";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Column5";
+            this.Column5.Name = "Column5";
+            // 
             // ItemAddConfirmation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -109,6 +145,7 @@
             this.Controls.Add(this.label9);
             this.Name = "ItemAddConfirmation";
             this.Size = new System.Drawing.Size(948, 591);
+            this.Load += new System.EventHandler(this.ItemAddConfirmation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemCon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -120,8 +157,13 @@
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_ok;
-        private System.Windows.Forms.DataGridView dgv_ItemCon;
         private System.Windows.Forms.Label lbl_TopTitle;
         private System.Windows.Forms.Label label9;
+        internal System.Windows.Forms.DataGridView dgv_ItemCon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
