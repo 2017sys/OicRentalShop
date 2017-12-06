@@ -37,7 +37,7 @@
             this.btn_PriceList = new System.Windows.Forms.Button();
             this.btn_ItemInfo = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Title = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -63,7 +63,7 @@
             // btn_MemberAdd
             // 
             this.btn_MemberAdd.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_MemberAdd.Location = new System.Drawing.Point(6, 512);
+            this.btn_MemberAdd.Location = new System.Drawing.Point(6, 523);
             this.btn_MemberAdd.Name = "btn_MemberAdd";
             this.btn_MemberAdd.Size = new System.Drawing.Size(140, 60);
             this.btn_MemberAdd.TabIndex = 57;
@@ -74,7 +74,7 @@
             // btn_Lend
             // 
             this.btn_Lend.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Lend.Location = new System.Drawing.Point(6, 182);
+            this.btn_Lend.Location = new System.Drawing.Point(6, 127);
             this.btn_Lend.Name = "btn_Lend";
             this.btn_Lend.Size = new System.Drawing.Size(140, 60);
             this.btn_Lend.TabIndex = 52;
@@ -85,7 +85,7 @@
             // btn_ItemAdd
             // 
             this.btn_ItemAdd.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_ItemAdd.Location = new System.Drawing.Point(6, 446);
+            this.btn_ItemAdd.Location = new System.Drawing.Point(6, 457);
             this.btn_ItemAdd.Name = "btn_ItemAdd";
             this.btn_ItemAdd.Size = new System.Drawing.Size(140, 60);
             this.btn_ItemAdd.TabIndex = 56;
@@ -96,7 +96,7 @@
             // btn_Return
             // 
             this.btn_Return.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Return.Location = new System.Drawing.Point(6, 248);
+            this.btn_Return.Location = new System.Drawing.Point(6, 193);
             this.btn_Return.Name = "btn_Return";
             this.btn_Return.Size = new System.Drawing.Size(140, 60);
             this.btn_Return.TabIndex = 53;
@@ -107,7 +107,7 @@
             // btn_PriceList
             // 
             this.btn_PriceList.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_PriceList.Location = new System.Drawing.Point(6, 380);
+            this.btn_PriceList.Location = new System.Drawing.Point(6, 325);
             this.btn_PriceList.Name = "btn_PriceList";
             this.btn_PriceList.Size = new System.Drawing.Size(140, 60);
             this.btn_PriceList.TabIndex = 55;
@@ -118,7 +118,7 @@
             // btn_ItemInfo
             // 
             this.btn_ItemInfo.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_ItemInfo.Location = new System.Drawing.Point(6, 314);
+            this.btn_ItemInfo.Location = new System.Drawing.Point(6, 259);
             this.btn_ItemInfo.Name = "btn_ItemInfo";
             this.btn_ItemInfo.Size = new System.Drawing.Size(140, 60);
             this.btn_ItemInfo.TabIndex = 54;
@@ -133,22 +133,23 @@
             this.panel.Size = new System.Drawing.Size(948, 591);
             this.panel.TabIndex = 1;
             // 
-            // button1
+            // btn_Title
             // 
-            this.button1.Location = new System.Drawing.Point(37, 140);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 262;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Title.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Title.Location = new System.Drawing.Point(6, 391);
+            this.btn_Title.Name = "btn_Title";
+            this.btn_Title.Size = new System.Drawing.Size(140, 60);
+            this.btn_Title.TabIndex = 262;
+            this.btn_Title.Text = "タイトル登録";
+            this.btn_Title.UseVisualStyleBackColor = true;
+            this.btn_Title.Click += new System.EventHandler(this.btn_Title_Click);
             // 
-            // TestForm
+            // RegisterHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1104, 592);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Title);
             this.Controls.Add(this.btn_Return);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Top);
@@ -158,7 +159,7 @@
             this.Controls.Add(this.btn_ItemAdd);
             this.Controls.Add(this.btn_PriceList);
             this.Controls.Add(this.btn_Lend);
-            this.Name = "TestForm";
+            this.Name = "RegisterHome";
             this.Text = "Manatsu_no_yoru_no_inmu";
             this.Load += new System.EventHandler(this.TestForm_Load);
             this.ResumeLayout(false);
@@ -176,6 +177,6 @@
         private System.Windows.Forms.Button btn_ItemInfo;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Title;
     }
 }

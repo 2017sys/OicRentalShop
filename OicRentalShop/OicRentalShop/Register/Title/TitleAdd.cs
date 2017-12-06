@@ -43,20 +43,22 @@ namespace OicRentalShop.Register.Title
 
             {
 
+
                 OleDbCommand Cmd = new OleDbCommand();
                 Cmd.Connection = cn;
                 cn.Open();
-                for (int i = 0; i < dgv_ItemRe.Rows.Count; i++)
+                for (int i = 0; i < dgv_ItemRe.Rows.Count-1; i++)
                 {
 
-                    Cmd.CommandText = "INSERT INTO TBL_TITLE(TITLE_ID,TITLE_NAME,GENRE_ID,ARTIST_ID,TITLE_RELEASE,TYPE_ID) VALUES('"+txt_TitleID.Text+"','"+txt_Title.Text+"',"+SerchID("GENRE",cmb_Genre.Text)+","+SerchID("ARTIST",cmb_Artist.Text)+",#"+txt_ReleaseDay.Text+"#,"+SerchID("TYPE",cmb_Format.Text)+")";
+                    Cmd.CommandText = "INSERT INTO TBL_TITLE(TITLE_ID,TITLE_NAME,GENRE_ID,ARTIST_ID,TITLE_RELEASE,TYPE_ID) VALUES('" + dgv_ItemRe.Rows[i].Cells[0].Value + "','" + dgv_ItemRe.Rows[i].Cells[1].Value + "'," + SerchID("GENRE", dgv_ItemRe.Rows[i].Cells[2].Value.ToString()) + "," + SerchID("ARTIST", dgv_ItemRe.Rows[i].Cells[3].Value.ToString()) + ",#" + dgv_ItemRe.Rows[i].Cells[4].Value + "#," + SerchID("TYPE", dgv_ItemRe.Rows[i].Cells[5].Value.ToString()) + ")";
                     Cmd.ExecuteNonQuery();
 
                 }
                 cn.Close();
                 /* 　-　ここ　-　 */
-
+                    MessageBox.Show("登録が完了しました");
                     dgv_ItemRe.Rows.Clear();
+                   
             }
         }
 
@@ -89,7 +91,7 @@ namespace OicRentalShop.Register.Title
 
         private void btn_Toadd_Click(object sender, EventArgs e)
         {
-            this.dgv_ItemRe.Rows.Add("削除",txt_TitleID.Text, cmb_Format.Text, txt_Title.Text, cmb_Artist.Text, cmb_Genre.Text,txt_ReleaseDay); 
+            this.dgv_ItemRe.Rows.Add( txt_TitleID.Text, txt_Title.Text, cmb_Genre.Text, cmb_Artist.Text, txt_ReleaseDay.Text, cmb_Format.Text,"削除"); 
         }
 
 

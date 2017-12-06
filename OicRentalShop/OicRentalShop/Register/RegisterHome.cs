@@ -120,13 +120,13 @@ namespace OicRentalShop.Register
             mm.Visible = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_Title_Click(object sender, EventArgs e)
         {
             panel.Controls.Clear();
             panel.Controls.Add(ta);
             ta.Visible = true;
         }
-
+  
 
     }
 }
