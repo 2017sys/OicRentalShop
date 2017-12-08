@@ -88,7 +88,6 @@
             this.btn_ok.TabIndex = 131;
             this.btn_ok.Text = "決定";
             this.btn_ok.UseVisualStyleBackColor = true;
-            this.btn_ok.Visible = false;
             // 
             // lbl_TopTitle
             // 
