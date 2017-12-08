@@ -253,6 +253,12 @@
     <Compile Include="Register\Lend\Lend.Designer.cs">
       <DependentUpon>Lend.cs</DependentUpon>
     </Compile>
+    <Compile Include="Register\Lend\LendConf.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Register\Lend\LendConf.Designer.cs">
+      <DependentUpon>LendConf.cs</DependentUpon>
+    </Compile>
     <Compile Include="Register\MemberAdd\MemberAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -309,6 +315,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manage\Event\EventList.resx">
       <DependentUpon>EventList.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register\Lend\Lend.resx">
       <DependentUpon>Lend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\Lend\LendConf.resx">
+      <DependentUpon>LendConf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Register\MemberAdd\MemberAdd.resx">
       <DependentUpon>MemberAdd.cs</DependentUpon>
