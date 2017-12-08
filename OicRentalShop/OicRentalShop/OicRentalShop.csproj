@@ -115,6 +115,18 @@
     <Compile Include="Manage\ManageHome.Designer.cs">
       <DependentUpon>ManageHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage\Member\MemberAddCorrection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manage\Member\MemberAddCorrection.Designer.cs">
+      <DependentUpon>MemberAddCorrection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Member\MemberAddCorrectionConfirmation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manage\Member\MemberAddCorrectionConfirmation.Designer.cs">
+      <DependentUpon>MemberAddCorrectionConfirmation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manage\Member\MemberList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -302,6 +314,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\ManageHome.resx">
       <DependentUpon>ManageHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage\Member\MemberAddCorrection.resx">
+      <DependentUpon>MemberAddCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage\Member\MemberAddCorrectionConfirmation.resx">
+      <DependentUpon>MemberAddCorrectionConfirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\Member\MemberList.resx">
       <DependentUpon>MemberList.cs</DependentUpon>

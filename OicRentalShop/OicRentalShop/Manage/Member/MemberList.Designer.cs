@@ -40,6 +40,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btn_Search = new System.Windows.Forms.Button();
             this.dgv_MemberInfo = new System.Windows.Forms.DataGridView();
+            this.btn_AddCorrection = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MemberInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,7 +134,7 @@
             // btn_Search
             // 
             this.btn_Search.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.btn_Search.Location = new System.Drawing.Point(802, 137);
+            this.btn_Search.Location = new System.Drawing.Point(667, 132);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(80, 40);
             this.btn_Search.TabIndex = 92;
@@ -153,11 +154,23 @@
             this.dgv_MemberInfo.TabIndex = 91;
             this.dgv_MemberInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_MemberInfo_CellContentClick);
             // 
+            // btn_AddCorrection
+            // 
+            this.btn_AddCorrection.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
+            this.btn_AddCorrection.Location = new System.Drawing.Point(787, 132);
+            this.btn_AddCorrection.Name = "btn_AddCorrection";
+            this.btn_AddCorrection.Size = new System.Drawing.Size(123, 40);
+            this.btn_AddCorrection.TabIndex = 93;
+            this.btn_AddCorrection.Text = "登録/修正";
+            this.btn_AddCorrection.UseVisualStyleBackColor = true;
+            this.btn_AddCorrection.Click += new System.EventHandler(this.btn_AddCorrection_Click);
+            // 
             // MemberList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
+            this.Controls.Add(this.btn_AddCorrection);
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.dgv_MemberInfo);
             this.Controls.Add(this.label9);
@@ -193,5 +206,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.DataGridView dgv_MemberInfo;
+        private System.Windows.Forms.Button btn_AddCorrection;
     }
 }

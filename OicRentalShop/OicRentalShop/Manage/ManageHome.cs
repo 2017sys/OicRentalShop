@@ -20,7 +20,8 @@ namespace OicRentalShop.Manage
         public static Event.EventList ev;
         public static Log.LogList lo;
         public static Title.TitleList tl;
-
+        public static Member.MemberAddCorrection ma;
+        public static Member.MemberAddCorrectionConfirmation mac;
 
         public ManageHome()
         {
@@ -38,13 +39,44 @@ namespace OicRentalShop.Manage
             ev = new Event.EventList();
             lo = new Log.LogList();
             tl = new Title.TitleList();
-
+            ma = new Member.MemberAddCorrection();
+            mac = new Member.MemberAddCorrectionConfirmation();
             panel.Controls.Clear();
             panel.Controls.Add(it);
             it.Visible = true;
 
         }
 
+
+        public static void GoNext(int flag)
+        {
+            if (flag == 0)
+            {
+                me.Visible = false;
+              
+                ma.Visible = true;
+            }
+            else if(flag==1)
+            {
+                ma.Visible = false;
+                mac.Visible = true;
+            }
+
+        }
+
+        public static void cancel(int flag)
+        {
+            if (flag == 0)
+            {
+                me.Visible = true;
+                ma.Visible = false;
+            }
+            else if(flag==1)
+            {
+                mac.Visible = false;
+                ma.Visible = true;
+            }
+        }
 
         private void btn_Top_Click(object sender, EventArgs e)
         {
@@ -62,7 +94,11 @@ namespace OicRentalShop.Manage
         {
             panel.Controls.Clear();
             panel.Controls.Add(me);
+            panel.Controls.Add(ma);
+            panel.Controls.Add(mac);
             me.Visible = true;
+            ma.Visible = false;
+            mac.Visible = false;
         }
 
         private void btn_Staff_Click(object sender, EventArgs e)

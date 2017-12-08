@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OicRentalShop.Register.MemberAdd
+namespace OicRentalShop.Manage.MemberAdd
 {
     public partial class MemberAdd : UserControl
     {

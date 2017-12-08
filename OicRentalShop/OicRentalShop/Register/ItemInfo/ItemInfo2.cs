@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OicRentalShop.Register.ItemInfo
+namespace OicRentalShop.Manage.ItemInfo
 {
     public partial class ItemInfo2 : Form
     {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
-namespace OicRentalShop.Register.ItemInfo
+namespace OicRentalShop.Manage.ItemInfo
 {
     public partial class ItemInfo : UserControl
     {

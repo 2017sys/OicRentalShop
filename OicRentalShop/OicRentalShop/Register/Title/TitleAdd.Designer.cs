@@ -1,4 +1,4 @@
-﻿namespace OicRentalShop.Register.Title
+﻿namespace OicRentalShop.Manage.Title
 {
     partial class TitleAdd
     {

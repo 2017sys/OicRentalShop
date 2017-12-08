@@ -1,4 +1,4 @@
-﻿namespace OicRentalShop.Register
+﻿namespace OicRentalShop.Manage
 {
     partial class RegisterHome
     {

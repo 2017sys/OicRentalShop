@@ -1,4 +1,4 @@
-﻿namespace OicRentalShop.Register.ItemInfo
+﻿namespace OicRentalShop.Manage.ItemInfo
 {
     partial class ItemInfo
     {

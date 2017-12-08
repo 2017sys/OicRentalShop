@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
-namespace OicRentalShop.Register.Return
+namespace OicRentalShop.Manage.Return
 {
     public partial class Return : UserControl
     {

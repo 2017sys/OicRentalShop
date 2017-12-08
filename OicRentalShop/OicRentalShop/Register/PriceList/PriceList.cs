@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
-namespace OicRentalShop.Register.PriceList
+namespace OicRentalShop.Manage.PriceList
 {
     public partial class PriceList : UserControl
     {

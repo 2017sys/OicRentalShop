@@ -1,4 +1,4 @@
-﻿namespace OicRentalShop.Register.ItemAdd
+﻿namespace OicRentalShop.Manage.ItemAdd
 {
     partial class ItemAdd
     {

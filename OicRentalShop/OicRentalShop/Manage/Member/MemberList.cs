@@ -49,11 +49,11 @@ namespace OicRentalShop.Manage.Member
 
             if (txt_PhoneNumber.TextLength == 10)
             {
-                selectfunc("SELECT * FROM TBL_MEMBER WHERE MEMBER_NAME LIKE '%" + sName + "%' AND MEMBER_ID LIKE '%" + sID + "%' AND MEMBER_TEL LIKE '%" + sPhone + "%'");
+                selectfunc("SELECT * FROM TBL_MEMBER WHERE MEMBER_NAME LIKE '%" + sName + "%' AND MEMBER_ID LIKE '%" + sID + "%' AND MEMBER_TEL LIKE '%" + sPhone + "%' AND MEMBER_DELETE = false");
             }
             else
             {
-                selectfunc("SELECT * FROM TBL_MEMBER WHERE MEMBER_NAME LIKE '%" + sName + "%' AND MEMBER_ID LIKE '%" + sID + "%' AND MEMBER_MOBILE LIKE '%" + sPhone + "%'");
+                selectfunc("SELECT * FROM TBL_MEMBER WHERE MEMBER_NAME LIKE '%" + sName + "%' AND MEMBER_ID LIKE '%" + sID + "%' AND MEMBER_MOBILE LIKE '%" + sPhone + "%' AND MEMBER_DELETE = false");
             }
 
             //DataGridViewButtonColumnの作成
@@ -74,7 +74,7 @@ namespace OicRentalShop.Manage.Member
             //"Button"列ならば、ボタンがクリックされた
             if (dgv.Columns[e.ColumnIndex].Name == "Button")
             {
-                if (DialogResult.Yes == MessageBox.Show(dgv.Rows[e.RowIndex].Cells[2].Value + "のデータを削除してよろしいですか？", "確認",
+                if (DialogResult.Yes == MessageBox.Show("会員番号　"+dgv.Rows[e.RowIndex].Cells[0].Value+"　会員名　"+dgv.Rows[e.RowIndex].Cells[2].Value + "　のデータを削除してよろしいですか？", "確認",
                  MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
                     CmdFunc("UPDATE TBL_MEMBER SET MEMBER_DELETE = true WHERE MEMBER_ID ="+dgv.Rows[e.RowIndex].Cells[0].Value);
@@ -101,6 +101,11 @@ namespace OicRentalShop.Manage.Member
             Cmd.CommandText = cmdstr;
             Cmd.ExecuteNonQuery();
             cn.Close();
+        }
+
+        private void btn_AddCorrection_Click(object sender, EventArgs e)
+        {
+            ManageHome.GoNext(0);
         }
 
 

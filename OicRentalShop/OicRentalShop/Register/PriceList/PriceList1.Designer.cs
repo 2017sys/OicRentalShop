@@ -1,4 +1,4 @@
-﻿namespace OicRentalShop.Register.PriceList
+﻿namespace OicRentalShop.Manage.PriceList
 {
     partial class PriceList1
     {

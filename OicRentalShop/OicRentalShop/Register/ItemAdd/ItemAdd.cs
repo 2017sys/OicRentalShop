@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
-namespace OicRentalShop.Register.ItemAdd
+namespace OicRentalShop.Manage.ItemAdd
 {
     public partial class ItemAdd : UserControl
     {

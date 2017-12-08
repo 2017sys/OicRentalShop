@@ -1,4 +1,4 @@
-﻿namespace OicRentalShop.Register.Return
+﻿namespace OicRentalShop.Manage.Return
 {
     partial class Return
     {
