@@ -25,24 +25,14 @@ namespace OicRentalShop.Register.Lend
             InitializeComponent();
         }
 
-        private int SetCount(string cmdstr)　//特定のDBの行数の取得に使う
+
+        private string SetInfo(string cmdstr) //SQLでデータが1行1列だけ出力される形で取り出したいデータを持ってくるのに使う　数値で使うならint.Parse(SetInfo("SQL"))
         {
             dt.Clear();
             dt = new DataTable();
             da = new OleDbDataAdapter(cmdstr, cn);
             da.Fill(dt);
-            string cnt =dt.Rows[0][0].ToString();
-            int count = int.Parse(cnt);
-            return count;
-        }
-
-        private string SetInfo(string cmdstr) //SQLでデータが1行1列だけ出力される形で取り出したいデータを持ってくるのに使う　数値で使うならint.Parse(SetInfo("SQL"))
-        {
-            dtp.Clear();
-            dtp = new DataTable();
-            da = new OleDbDataAdapter(cmdstr, cn);
-            da.Fill(dtp);
-            return dtp.Rows[0][0].ToString();
+            return dt.Rows[0][0].ToString();
          }
 
         private int dtCheck(string cmdstr)　//IDを入力した際　指定したSQL文によって1列以上選択されるかチェックをし　データの有無を確認する　エラー防止
@@ -97,7 +87,7 @@ namespace OicRentalShop.Register.Lend
 
         private void InsertLineSlip()   //レジを通した商品の情報を伝票表に登録
         {
-            int lineslipID = SetCount("SELECT COUNT(*) FROM TBL_LINESLIP");
+            int lineslipID = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_LINESLIP").ToString());
             lineslipID++;
             dtp.Clear();
             dtp = new DataTable();
@@ -122,14 +112,14 @@ namespace OicRentalShop.Register.Lend
         {
             DateTime Today = DateTime.Today;    //今日の日付の取得
             DateTime upday = Today.AddMonths(-1);
-            CmdFunc("UPDATE TBL_OLD SET OLD_DATE=#" + upday.ToString() + "# WHERE OLD_ID=2");       //旧作の日時設定（画面を読み込んだ日の1か月前）
+            CmdFunc("UPDATE TBL_OLD SET OLD_DATE=#" + upday.ToString() + "# WHERE OLD_ID = 2");       //旧作の日時設定（画面を読み込んだ日の1か月前）
             CmdFunc("UPDATE TBL_TITLE SET OLD_ID=2 WHERE TITLE_RELEASE <= ANY(SELECT OLD_DATE FROM TBL_OLD WHERE OLD_ID=2)");   //新作が旧作の期間になっていないかチェックする
             txt_MemberID.Focus();
 
-            slipID = SetCount("SELECT COUNT(*) FROM TBL_SLIP");
+            slipID = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_SLIP").ToString());
             slipID++;
             LblSlipID.Text = slipID.ToString();
-            selectedlsID = SetCount("SELECT COUNT(*) FROM TBL_LINESLIP");
+            selectedlsID = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_LINESLIP").ToString());
             lsIDpoint = 0;
         }
 
@@ -174,22 +164,30 @@ namespace OicRentalShop.Register.Lend
                 {
                     if (dtCheck("SELECT * FROM TBL_ITEM WHERE ITEM_ID=" + txt_InProductID.Text) == 1)
                     {
-                        if (SlipFlag == 0)
+                        if ("True" == SetInfo("SELECT ITEM_STATE FROM TBL_ITEM WHERE ITEM_ID=" + txt_InProductID.Text))
                         {
-                            DateTime Today = DateTime.Today;
-                            CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",false,#" + Today.ToString() + "#,0,1)");
-                            txt_MemberID.ReadOnly = true;
-                            SlipFlag = 1;
+                            if (SlipFlag == 0)
+                            {
+                                DateTime Today = DateTime.Today;
+                                CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",false,#" + Today.ToString() + "#,0,1)");
+                                txt_MemberID.ReadOnly = true;
+                                SlipFlag = 1;
+                            }
+                            txt_ProductID.Text = txt_InProductID.Text;
+                            txt_title.Text = SetInfo("SELECT t.TITLE_NAME FROM TBL_TITLE t,TBL_ITEM i WHERE t.TITLE_ID=i.TITLE_ID AND i.ITEM_ID = " + txt_InProductID.Text);
+                            InsertLineSlip();
+                            slipprice = int.Parse(SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID=" + slipID));
+                            txt_money.Text = slipprice.ToString();
+                            CmdFunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
+                            txt_InProductID.Clear();
+                            selectedlsID++;
+                            lsIDpoint++;
                         }
-                        txt_title.Text = SetInfo("SELECT t.TITLE_NAME FROM TBL_TITLE t,TBL_ITEM i WHERE t.TITLE_ID=i.TITLE_ID AND i.ITEM_ID = " + txt_InProductID.Text);
-                        InsertLineSlip();
-                        slipprice = int.Parse(SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID=" + slipID));
-                        txt_money.Text = slipprice.ToString();
-                        txt_ProductID.Text = txt_InProductID.Text;
-                        CmdFunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
-                        txt_InProductID.Clear();
-                        selectedlsID++;
-                        lsIDpoint++;
+                        else
+                        {
+                            MessageBox.Show("指定された商品はすでに貸し出されています");
+                            txt_InProductID.Clear();
+                        }
                     }
                     else
                     {
@@ -263,8 +261,21 @@ namespace OicRentalShop.Register.Lend
             }
         }
 
+
+
         private void btn_ok_Click(object sender, EventArgs e)
         {
+            int lscnt=int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID="+slipID).ToString());
+            for (int i = 0; i < lscnt;i++)
+            {
+                dt.Clear();
+                dt = new DataTable();
+                da = new OleDbDataAdapter("SELECT ITEM_ID FROM TBL_LINESLIP WHERE SLIP_ID="+slipID, cn);
+                da.Fill(dt);
+                CmdFunc("UPDATE TBL_ITEM SET ITEM_STATE = false WHERE ITEM_ID =" +  dt.Rows[i][0].ToString());
+            }
+
+
             SlipFlag = 0;
         }
 
@@ -360,6 +371,11 @@ namespace OicRentalShop.Register.Lend
             {
                 MessageBox.Show("更新可能な商品が存在しません");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(SetInfo("SELECT ITEM_STATE FROM TBL_ITEM WHERE ITEM_ID=4"));
         }
 
 
