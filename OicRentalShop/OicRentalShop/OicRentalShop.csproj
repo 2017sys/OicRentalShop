@@ -109,30 +109,6 @@
     <Compile Include="Manage\Log\LogList.Designer.cs">
       <DependentUpon>LogList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage\Member\MemberAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage\Member\MemberAdd.Designer.cs">
-      <DependentUpon>MemberAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Manage\Member\MemberDelete.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage\Member\MemberDelete.Designer.cs">
-      <DependentUpon>MemberDelete.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Manage\Member\MemberEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage\Member\MemberEdit.Designer.cs">
-      <DependentUpon>MemberEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Manage\Member\MemberInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage\Member\MemberInfo.Designer.cs">
-      <DependentUpon>MemberInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Manage\ManageHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,12 +120,6 @@
     </Compile>
     <Compile Include="Manage\Member\MemberList.Designer.cs">
       <DependentUpon>MemberList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Manage\Member\MemberList1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage\Member\MemberList1.Designer.cs">
-      <DependentUpon>MemberList1.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage\Price\PriceList.cs">
       <SubType>UserControl</SubType>
@@ -335,9 +305,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\Member\MemberList.resx">
       <DependentUpon>MemberList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Manage\Member\MemberList1.resx">
-      <DependentUpon>MemberList1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\Price\PriceList.resx">
       <DependentUpon>PriceList.cs</DependentUpon>
