@@ -11,13 +11,13 @@ using System.Data.OleDb;
 
 namespace OicRentalShop.Manage.Staff
 {
-    public partial class lbl_Title : UserControl
+    public partial class StaffList : UserControl
     {
         OleDbConnection cn = new OleDbConnection();
         OleDbDataAdapter da = new OleDbDataAdapter();
         DataTable dt = new DataTable();
 
-        public lbl_Title()
+        public StaffList()
         {
             InitializeComponent();
         }
@@ -73,6 +73,11 @@ namespace OicRentalShop.Manage.Staff
             Cmd.CommandText = cmdstr;
             Cmd.ExecuteNonQuery();
             cn.Close();
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            ManageHome.GoNext(2);
         }
 
     }

@@ -145,6 +145,18 @@
     <Compile Include="Manage\Profit\ProfitList.Designer.cs">
       <DependentUpon>ProfitList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage\Staff\StaffAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manage\Staff\StaffAdd.Designer.cs">
+      <DependentUpon>StaffAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Staff\StaffAddConfirmation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manage\Staff\StaffAddConfirmation.Designer.cs">
+      <DependentUpon>StaffAddConfirmation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manage\Staff\StaffList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -305,6 +317,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\Profit\ProfitList.resx">
       <DependentUpon>ProfitList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage\Staff\StaffAdd.resx">
+      <DependentUpon>StaffAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage\Staff\StaffAddConfirmation.resx">
+      <DependentUpon>StaffAddConfirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\Staff\StaffList.resx">
       <DependentUpon>StaffList.cs</DependentUpon>

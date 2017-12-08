@@ -14,7 +14,9 @@ namespace OicRentalShop.Manage
     {
         public static Item.ItemList it;
         public static Member.MemberList me;
-        public static Staff.lbl_Title st;
+        public static Staff.StaffList st;
+        public static Staff.StaffAdd sa;
+        public static Staff.StaffAddConfirmation sac;
         public static Price.PriceList pc;
         public static Profit.ProfitList pf;
         public static Event.EventList ev;
@@ -22,6 +24,7 @@ namespace OicRentalShop.Manage
         public static Title.TitleList tl;
         public static Member.MemberAddCorrection ma;
         public static Member.MemberAddCorrectionConfirmation mac;
+ 
 
         public ManageHome()
         {
@@ -33,7 +36,9 @@ namespace OicRentalShop.Manage
         {
             it = new Item.ItemList();
             me = new Member.MemberList();
-            st = new Staff.lbl_Title();
+            st = new Staff.StaffList();
+            sa = new Staff.StaffAdd();
+            sac = new Staff.StaffAddConfirmation();
             pc = new Price.PriceList();
             pf = new Profit.ProfitList();
             ev = new Event.EventList();
@@ -61,6 +66,17 @@ namespace OicRentalShop.Manage
                 ma.Visible = false;
                 mac.Visible = true;
             }
+            else if(flag==2)
+            {
+                st.Visible = false;
+                sa.Visible = true;
+            }
+            else if(flag==3)
+            {
+                sa.Visible = false;
+                sac.Visible = true;
+            }
+
 
         }
 
@@ -75,6 +91,16 @@ namespace OicRentalShop.Manage
             {
                 mac.Visible = false;
                 ma.Visible = true;
+            }
+            else if(flag==2)
+            {
+                sa.Visible = false;
+                st.Visible = true;
+            }
+            else if(flag==3)
+            {
+                sac.Visible = false;
+                sa.Visible = true;
             }
         }
 
@@ -105,7 +131,11 @@ namespace OicRentalShop.Manage
         {
             panel.Controls.Clear();
             panel.Controls.Add(st);
+            panel.Controls.Add(sa);
+            panel.Controls.Add(sac);
             st.Visible = true;
+            sa.Visible = false;
+            sac.Visible = false;
         }
 
         private void btn_Price_Click(object sender, EventArgs e)

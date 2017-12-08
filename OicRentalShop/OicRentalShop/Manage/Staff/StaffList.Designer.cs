@@ -1,6 +1,6 @@
 ﻿namespace OicRentalShop.Manage.Staff
 {
-    partial class lbl_Title
+    partial class StaffList
     {
         /// <summary> 
         /// 必要なデザイナー変数です。
@@ -35,7 +35,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dgv_StaffList = new System.Windows.Forms.DataGridView();
             this.btn_Add = new System.Windows.Forms.Button();
-            this.btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_StaffList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +92,7 @@
             // 
             this.dgv_StaffList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_StaffList.Location = new System.Drawing.Point(6, 200);
-            this.dgv_StaffList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_StaffList.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_StaffList.Name = "dgv_StaffList";
             this.dgv_StaffList.RowTemplate.Height = 21;
             this.dgv_StaffList.Size = new System.Drawing.Size(1067, 530);
@@ -103,40 +102,29 @@
             // btn_Add
             // 
             this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.btn_Add.Location = new System.Drawing.Point(1091, 524);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Add.Location = new System.Drawing.Point(1090, 650);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(160, 62);
             this.btn_Add.TabIndex = 65;
             this.btn_Add.Text = "追加";
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
-            // btn
-            // 
-            this.btn.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.btn.Location = new System.Drawing.Point(1092, 624);
-            this.btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(160, 62);
-            this.btn.TabIndex = 64;
-            this.btn.Text = "削除";
-            this.btn.UseVisualStyleBackColor = true;
-            // 
-            // lbl_Title
+            // StaffList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.btn);
             this.Controls.Add(this.dgv_StaffList);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lbl_StaffInfo);
             this.Controls.Add(this.label11);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "lbl_Title";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "StaffList";
             this.Size = new System.Drawing.Size(1264, 739);
             this.Load += new System.EventHandler(this.StaffList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_StaffList)).EndInit();
@@ -154,6 +142,5 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgv_StaffList;
         private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.Button btn;
     }
 }
