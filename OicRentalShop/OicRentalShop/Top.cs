@@ -29,9 +29,9 @@ namespace OicRentalShop
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ManageHome mngfm = new ManageHome();
+            Login Lg = new Login();
             this.Hide();
-            mngfm.ShowDialog();
+            Lg.ShowDialog();
             this.Show();
         }
     }
