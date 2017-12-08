@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OicRentalShop.Register.PriceList
+namespace OicRentalShop.Manage.PriceList
 {
     public partial class PriceList1 : Form
     {

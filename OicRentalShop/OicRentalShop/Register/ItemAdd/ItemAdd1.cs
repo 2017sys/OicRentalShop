@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OicRentalShop.Register.ItemAdd
+namespace OicRentalShop.Manage.ItemAdd
 {
     public partial class ItemAdd1 : Form
     {

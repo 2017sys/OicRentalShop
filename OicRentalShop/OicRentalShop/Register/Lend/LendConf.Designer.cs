@@ -1,4 +1,4 @@
-﻿namespace OicRentalShop.Register.Lend
+﻿namespace OicRentalShop.Manage.Lend
 {
     partial class LendConf
     {

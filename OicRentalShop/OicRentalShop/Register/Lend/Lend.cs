@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 
-namespace OicRentalShop.Register.Lend
+namespace OicRentalShop.Manage.Lend
 {
     public partial class Lend : UserControl
     {

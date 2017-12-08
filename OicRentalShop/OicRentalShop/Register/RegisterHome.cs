@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OicRentalShop.Register
+namespace OicRentalShop.Manage
 {
     public partial class RegisterHome : Form
     {

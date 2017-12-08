@@ -66,6 +66,7 @@
             this.txt_MgrID.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txt_MgrID.Size = new System.Drawing.Size(357, 50);
             this.txt_MgrID.TabIndex = 2;
+            this.txt_MgrID.Text = "2";
             this.txt_MgrID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_PassWord
@@ -75,6 +76,7 @@
             this.txt_PassWord.Name = "txt_PassWord";
             this.txt_PassWord.Size = new System.Drawing.Size(357, 50);
             this.txt_PassWord.TabIndex = 3;
+            this.txt_PassWord.Text = "2222001111";
             this.txt_PassWord.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txt_PassWord.UseSystemPasswordChar = true;
             // 

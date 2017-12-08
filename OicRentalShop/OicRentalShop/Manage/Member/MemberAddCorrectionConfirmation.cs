@@ -9,11 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 
-namespace OicRentalShop.Manage.MemberAdd
+namespace OicRentalShop.Manage.Member
 {
-    public partial class MemberAddConfirmation : UserControl
+    public partial class MemberAddCorrectionConfirmation : UserControl
     {
-
         OleDbConnection cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\..\..\DB\Database1.accdb;");
         OleDbDataAdapter da = new OleDbDataAdapter();
         DataTable dt = new DataTable();
@@ -36,27 +35,18 @@ namespace OicRentalShop.Manage.MemberAdd
             public string AD2;
 
         }
-        public MemberAddConfirmation()
+
+        public MemberAddCorrectionConfirmation()
         {
             InitializeComponent();
         }
 
-
-
-
-        private void MemberAddConfirmation_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
-            int flag = 0;
-            RegisterHome.cancel(flag);
-            
+            ManageHome.cancel(1);
         }
 
-        private void MemberAddConfirmation_VisibleChanged(object sender, EventArgs e)
+        private void MemberAddCorrectionConfirmation_VisibleChanged(object sender, EventArgs e)
         {
             lbl_MemberIDInfo.Text = mi.ID;
             lbl_FamilyNameInfo.Text = mi.FName;
@@ -86,19 +76,19 @@ namespace OicRentalShop.Manage.MemberAdd
                 Cmd.CommandText += ",MEMBER_TEL";
             }
 
-            if(mi.TelePhoneNum.Length>0)
+            if (mi.TelePhoneNum.Length > 0)
             {
                 Cmd.CommandText += ",MEMBER_MOBILE";
             }
 
 
             DateTime Today = DateTime.Today;
-            Cmd.CommandText += ",MEMBER_BIRTH)  VALUES(#" + Today.ToString() + "#,'" + mi.FName + " " + mi.GName + "','" + mi.FNameK + 
+            Cmd.CommandText += ",MEMBER_BIRTH)  VALUES(#" + Today.ToString() + "#,'" + mi.FName + " " + mi.GName + "','" + mi.FNameK +
                                 " " + mi.GNameK + "','" + mi.Sex + "','" + mi.PostNum + "','" + mi.AD1 + " " + mi.AD2;
 
             if (mi.PhoneNum.Length > 0)
             {
-                Cmd.CommandText += "','" +mi.PhoneNum;
+                Cmd.CommandText += "','" + mi.PhoneNum;
             }
 
             if (mi.TelePhoneNum.Length > 0)

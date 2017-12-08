@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OicRentalShop.Register.Return
+namespace OicRentalShop.Manage.Return
 {
     public partial class Return1 : Form
     {

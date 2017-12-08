@@ -1,4 +1,4 @@
-﻿namespace OicRentalShop.Register.MemberAdd
+﻿namespace OicRentalShop.Manage.MemberAdd
 {
     partial class MemberAdd
     {

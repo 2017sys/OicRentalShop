@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OicRentalShop.Register.Lend
+namespace OicRentalShop.Manage.Lend
 {
     public partial class LendConf : UserControl
     {

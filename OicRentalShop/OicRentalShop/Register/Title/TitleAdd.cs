@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OicRentalShop.Register.Title
+namespace OicRentalShop.Manage.Title
 {
 
     public partial class TitleAdd : UserControl
