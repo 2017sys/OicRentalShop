@@ -128,7 +128,6 @@
             this.txt_MemberID.Name = "txt_MemberID";
             this.txt_MemberID.Size = new System.Drawing.Size(148, 23);
             this.txt_MemberID.TabIndex = 167;
-            this.txt_MemberID.Text = "2";
             this.txt_MemberID.TextChanged += new System.EventHandler(this.txt_MemberID_TextChanged);
             this.txt_MemberID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_MemberID_KeyPress);
             // 

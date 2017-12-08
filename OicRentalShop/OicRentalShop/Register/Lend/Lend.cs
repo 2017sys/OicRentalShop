@@ -25,7 +25,7 @@ namespace OicRentalShop.Register.Lend
             InitializeComponent();
         }
 
-        private int SetCount(string cmdstr)
+        private int SetCount(string cmdstr)　//特定のDBの行数の取得に使う
         {
             dt.Clear();
             dt = new DataTable();
@@ -36,7 +36,7 @@ namespace OicRentalShop.Register.Lend
             return count;
         }
 
-        private string SetInfo(string cmdstr)
+        private string SetInfo(string cmdstr) //SQLでデータが1行1列だけ出力される形で取り出したいデータを持ってくるのに使う　数値で使うならint.Parse(SetInfo("SQL"))
         {
             dtp.Clear();
             dtp = new DataTable();
@@ -45,29 +45,7 @@ namespace OicRentalShop.Register.Lend
             return dtp.Rows[0][0].ToString();
          }
 
-        private void UpdateOldDate() //旧作の日時を現在の日付より1か月前に変更する
-        {
-            OleDbCommand Cmd = new OleDbCommand();
-            Cmd.Connection = cn;
-            cn.Open();
-            DateTime Today = DateTime.Today;    //今日の日付の取得
-            DateTime upday = Today.AddMonths(-1);   //今日の日付に-1か月足す
-            Cmd.CommandText = "UPDATE TBL_OLD SET OLD_DATE=#" + upday.ToString() + "# WHERE OLD_ID=2";
-            Cmd.ExecuteNonQuery();
-            cn.Close();
-        }
-
-        private void UpdateOldID() //TBL_TITLEのリリース日時がが旧作の指定日時より古い物のOLD_ID（新旧分別用）を旧作用に変更する
-        {
-            OleDbCommand Cmd = new OleDbCommand();
-            Cmd.Connection = cn;
-            cn.Open();
-            Cmd.CommandText = "UPDATE TBL_TITLE SET OLD_ID=2 WHERE TITLE_RELEASE <= ANY(SELECT OLD_DATE FROM TBL_OLD WHERE OLD_ID=2)";
-            Cmd.ExecuteNonQuery();
-            cn.Close();
-        }
-
-        private int dtCheck(string cmdstr)　//IDを入力した際　1列以上選択されるかチェックをし　データの有無を確認する
+        private int dtCheck(string cmdstr)　//IDを入力した際　指定したSQL文によって1列以上選択されるかチェックをし　データの有無を確認する　エラー防止
         {
             int flag=0;
             dt.Clear();
@@ -81,7 +59,7 @@ namespace OicRentalShop.Register.Lend
             return flag;
         }
 
-        private void selectfunc(string cmdstr)//DataGridViewにレジを通した商品の情報を登録
+        private void selectfunc(string cmdstr)//DataGridViewにレジを通した商品の情報を出力 DataTable dtpを他の用途に使う(Clearする)とDataGridViewに表示してるものが消える
         {
             dtp.Clear();
             dtp = new DataTable();
@@ -92,7 +70,7 @@ namespace OicRentalShop.Register.Lend
             dgv_info.AutoResizeColumns();
         }
 
-        private void deletefunc(string cmdstr)
+        private void CmdFunc(string cmdstr) //UPDATE DELETE INSERTを実行できる　CmdFunc("SQL文"); 
         {
             OleDbCommand Cmd = new OleDbCommand();
             Cmd.Connection = cn;
@@ -100,10 +78,9 @@ namespace OicRentalShop.Register.Lend
             Cmd.CommandText = cmdstr;
             Cmd.ExecuteNonQuery();
             cn.Close();
-            
         }
 
-        private void clearfunc()
+        private void clearfunc() //現在行っているレジ内容の破棄・入力した会員情報・商品情報を取り消す
         {
             txt_MemberID.Clear();
             txt_MemberPoint.Clear();
@@ -112,8 +89,8 @@ namespace OicRentalShop.Register.Lend
             txt_ProductID.Clear();
             txt_money.Clear();
             dtp.Clear();
-            deletefunc("DELETE FROM TBL_LINESLIP WHERE SLIP_ID=" + slipID);
-            deletefunc("DELETE FROM TBL_SLIP WHERE SLIP_ID=" + slipID);
+            CmdFunc("DELETE FROM TBL_LINESLIP WHERE SLIP_ID=" + slipID);
+            CmdFunc("DELETE FROM TBL_SLIP WHERE SLIP_ID=" + slipID);
             SlipFlag = 0;
         }
 
@@ -134,54 +111,21 @@ namespace OicRentalShop.Register.Lend
             da.Fill(dtp);
             string Price = dtp.Rows[0][0].ToString();
 
-            OleDbCommand Cmd = new OleDbCommand();
-            Cmd.Connection = cn;
-            cn.Open();
-            Cmd.CommandText = "INSERT INTO TBL_LINESLIP VALUES(" + lineslipID + "," + slipID + "," + int.Parse(txt_InProductID.Text) + ",1," + int.Parse(typeid) + "," + int.Parse(Price)+ ")";
-            Cmd.ExecuteNonQuery();
-            cn.Close();
+            CmdFunc("INSERT INTO TBL_LINESLIP VALUES(" + lineslipID + "," + slipID + "," + int.Parse(txt_InProductID.Text) + ",1," + int.Parse(typeid) + "," + int.Parse(Price) + ")");
         }
 
         int slipID;
-
-        private void SetSlip()
-        {
-            OleDbCommand Cmd = new OleDbCommand();
-            Cmd.Connection = cn;
-            cn.Open();
-            DateTime Today = DateTime.Today;    //今日の日付の取得
-            Cmd.CommandText = "INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",false,#" + Today.ToString() + "#,0,1)";  //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!スタッフIDを後で変更する!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            Cmd.ExecuteNonQuery();
-            cn.Close();
-            txt_MemberID.ReadOnly = true;
-        }
-
-        private void updateSlipPrice() //TBL_SLIPのSLIP_PRICEを更新
-        {
-            OleDbCommand Cmd = new OleDbCommand();
-            Cmd.Connection = cn;
-            cn.Open();
-            Cmd.CommandText = "UPDATE TBL_SLIP SET SLIP_PRICE="+slipprice+" WHERE SLIP_ID="+slipID;
-            Cmd.ExecuteNonQuery();
-            cn.Close();
-        }
-
-        private void updatefunc(string cmdstr)
-        {
-            OleDbCommand Cmd = new OleDbCommand();
-            Cmd.Connection = cn;
-            cn.Open();
-            Cmd.CommandText = cmdstr;
-            Cmd.ExecuteNonQuery();
-            cn.Close();
-        }
 
 
 
         private void Lend_Load(object sender, EventArgs e)
         {
-            UpdateOldDate();
-            UpdateOldID();
+            DateTime Today = DateTime.Today;    //今日の日付の取得
+            DateTime upday = Today.AddMonths(-1);
+            CmdFunc("UPDATE TBL_OLD SET OLD_DATE=#" + upday.ToString() + "# WHERE OLD_ID=2");       //旧作の日時設定（画面を読み込んだ日の1か月前）
+            CmdFunc("UPDATE TBL_TITLE SET OLD_ID=2 WHERE TITLE_RELEASE <= ANY(SELECT OLD_DATE FROM TBL_OLD WHERE OLD_ID=2)");   //新作が旧作の期間になっていないかチェックする
+            txt_MemberID.Focus();
+
             slipID = SetCount("SELECT COUNT(*) FROM TBL_SLIP");
             slipID++;
             LblSlipID.Text = slipID.ToString();
@@ -232,7 +176,9 @@ namespace OicRentalShop.Register.Lend
                     {
                         if (SlipFlag == 0)
                         {
-                            SetSlip();
+                            DateTime Today = DateTime.Today;
+                            CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",false,#" + Today.ToString() + "#,0,1)");
+                            txt_MemberID.ReadOnly = true;
                             SlipFlag = 1;
                         }
                         txt_title.Text = SetInfo("SELECT t.TITLE_NAME FROM TBL_TITLE t,TBL_ITEM i WHERE t.TITLE_ID=i.TITLE_ID AND i.ITEM_ID = " + txt_InProductID.Text);
@@ -240,7 +186,7 @@ namespace OicRentalShop.Register.Lend
                         slipprice = int.Parse(SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID=" + slipID));
                         txt_money.Text = slipprice.ToString();
                         txt_ProductID.Text = txt_InProductID.Text;
-                        updateSlipPrice();
+                        CmdFunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
                         txt_InProductID.Clear();
                         selectedlsID++;
                         lsIDpoint++;
@@ -274,14 +220,14 @@ namespace OicRentalShop.Register.Lend
             {
             txt_ProductID.Clear();
             slipprice -= int.Parse(SetInfo("SELECT LS_PRICE FROM TBL_LINESLIP WHERE LINESLIP_ID=" + selectedlsID));
-            updateSlipPrice();
-            deletefunc("DELETE FROM TBL_LINESLIP WHERE LINESLIP_ID = " + selectedlsID.ToString());
+            CmdFunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
+            CmdFunc("DELETE FROM TBL_LINESLIP WHERE LINESLIP_ID = " + selectedlsID.ToString());
             selectedlsID--;
             lsIDpoint--;
                 if(lsIDpoint==0)
                 {
                     txt_money.Clear();
-                    deletefunc("DELETE FROM TBL_SLIP WHERE SLIP_ID= " + slipID);
+                    CmdFunc("DELETE FROM TBL_SLIP WHERE SLIP_ID= " + slipID);
                     SlipFlag = 0;
                 }
                 else
@@ -342,7 +288,8 @@ namespace OicRentalShop.Register.Lend
                 txt_1d2n.Text = SetInfo("SELECT p.PRICE_12 FROM TBL_PRICE p,TBL_TITLE t,TBL_ITEM i WHERE t.TYPE_ID=p.TYPE_ID AND t.OLD_ID=p.OLD_ID AND i.TITLE_ID = t.TITLE_ID AND i.ITEM_ID=" + txt_ProductID.Text);
                 txt_2d3n.Text = SetInfo("SELECT p.PRICE_23 FROM TBL_PRICE p,TBL_TITLE t,TBL_ITEM i WHERE t.TYPE_ID=p.TYPE_ID AND t.OLD_ID=p.OLD_ID AND i.TITLE_ID = t.TITLE_ID AND i.ITEM_ID=" + txt_ProductID.Text);
                 txt_7d8n.Text = SetInfo("SELECT p.PRICE_78 FROM TBL_PRICE p,TBL_TITLE t,TBL_ITEM i WHERE t.TYPE_ID=p.TYPE_ID AND t.OLD_ID=p.OLD_ID AND i.TITLE_ID = t.TITLE_ID AND i.ITEM_ID=" + txt_ProductID.Text);
-            }else
+            }
+            else
             {
                 txt_title.Clear();
                 txt_type.Clear();
@@ -360,10 +307,11 @@ namespace OicRentalShop.Register.Lend
             if (txt_ProductID.Text != "")
             {
                 uprice = int.Parse(txt_1d2n.Text);
-                updatefunc("UPDATE TBL_LINESLIP SET LS_PRICE =" + uprice + "  WHERE LINESLIP_ID=" + selectedlsID);
+                CmdFunc("UPDATE TBL_LINESLIP SET LS_PRICE =" + uprice + "  WHERE LINESLIP_ID=" + selectedlsID);
+                CmdFunc("Update TBL_LINESLIP SET LEND_ID =1 WHERE LINESLIP_ID="+selectedlsID);
 
                 slipprice = int.Parse(SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SliP_ID HAVING SLIP_ID=" + slipID));
-                updatefunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
+                CmdFunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
                 txt_money.Text = SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID=" + slipID);
 
                 selectfunc("SELECT t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
@@ -379,10 +327,11 @@ namespace OicRentalShop.Register.Lend
             if (txt_ProductID.Text != "")
             {
                 uprice = int.Parse(txt_2d3n.Text);
-                updatefunc("UPDATE TBL_LINESLIP SET LS_PRICE =" + uprice + "  WHERE LINESLIP_ID=" + selectedlsID);
+                CmdFunc("UPDATE TBL_LINESLIP SET LS_PRICE =" + uprice + "  WHERE LINESLIP_ID=" + selectedlsID);
+                CmdFunc("Update TBL_LINESLIP SET LEND_ID =2 WHERE LINESLIP_ID=" + selectedlsID);
                 
                 slipprice = int.Parse(SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SliP_ID HAVING SLIP_ID="+slipID));
-                updatefunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
+                CmdFunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
                 txt_money.Text = SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID=" + slipID);
 
                 selectfunc("SELECT t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
@@ -398,10 +347,11 @@ namespace OicRentalShop.Register.Lend
             if (txt_ProductID.Text != "")
             {
                 uprice = int.Parse(txt_7d8n.Text);
-                updatefunc("UPDATE TBL_LINESLIP SET LS_PRICE =" + uprice + "  WHERE LINESLIP_ID=" + selectedlsID);
+                CmdFunc("UPDATE TBL_LINESLIP SET LS_PRICE =" + uprice + "  WHERE LINESLIP_ID=" + selectedlsID);
+                CmdFunc("Update TBL_LINESLIP SET LEND_ID =3 WHERE LINESLIP_ID=" + selectedlsID);
 
                 slipprice = int.Parse(SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SliP_ID HAVING SLIP_ID=" + slipID));
-                updatefunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
+                CmdFunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
                 txt_money.Text = SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID=" + slipID);
 
                 selectfunc("SELECT t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
@@ -415,16 +365,3 @@ namespace OicRentalShop.Register.Lend
 
     }
 }
-
-/*
- * DBへの追加反映まで終わった
- * 決定ボタンを押したときにSLIPの合計金額を更新
- * 決定ボタンを押したときにSlipFlagを0に戻す
- * 読み込んだ（LINESLIPに登録した)物をDELETE文で取り消せる機能をつける
- * バーコードで随時読み込むことを考慮して現txt_ProductIDを隔離　商品IDを表示する別の項目を作り　読み込むごとにクリアしてスムーズに登録できるようにする
- * n泊n日のボタンを押すことで　最後に読み込んだ商品のの貸出日程・金額などを更新する機能を付与
- * 右上の金額の機能（合計金額の標示　ポイント利用の際の差など）
- * その他誤操作などで起こりうるバグに対する制御の追加
- * 後々従業員の判別ができるようになった際にSLIP表に登録する従業員の番号の制御変更
- * 
-*/

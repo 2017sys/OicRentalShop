@@ -27,6 +27,27 @@ namespace OicRentalShop.Register.Return
 
         }
 
+        private void selectfunc(string cmdstr)//DataGridViewにレジを通した商品の情報を出力 DataTable dtpを他の用途に使う(Clearする)とDataGridViewに表示してるものが消える
+        {
+            dt.Clear();
+            dt = new DataTable();
+            dgv_ReturnItem.DataSource = null;
+            da = new OleDbDataAdapter(cmdstr, cn);
+            da.Fill(dt);
+            dgv_ReturnItem.DataSource = dt;
+            dgv_ReturnItem.AutoResizeColumns();
+        }
+
+        private void CmdFunc(string cmdstr) //UPDATE DELETE INSERTを実行できる　CmdFunc("SQL文"); 
+        {
+            OleDbCommand Cmd = new OleDbCommand();
+            Cmd.Connection = cn;
+            cn.Open();
+            Cmd.CommandText = cmdstr;
+            Cmd.ExecuteNonQuery();
+            cn.Close();
+        }
+
         private int dtCheck(string cmdstr)　//IDを入力した際　1列以上選択されるかチェックをし　データの有無を確認する
         {
             int flag = 0;
@@ -39,66 +60,6 @@ namespace OicRentalShop.Register.Return
                 flag = 1;
             }
             return flag;
-        }
-
-            private void SetProductInfo(string cmdstr)
-        {
-            dt.Clear();
-            dt = new DataTable();
-            da = new OleDbDataAdapter(cmdstr, cn);
-            da.Fill(dt);
-            if (dt.Rows.Count != 0)
-            {
-                strpi = dt.Rows[0][0].ToString();
-            }
-         }
-
-        private void SetMemberInfo(string cmdstr)
-        {
-            {
-                dt.Clear();
-                dt = new DataTable();
-                da = new OleDbDataAdapter(cmdstr, cn);
-                da.Fill(dt);
-                if (dt.Rows.Count != 0)
-                {
-                    strmi = dt.Rows[0][0].ToString();
-                }
-            }
-        }
-
-        string strmi;
-        string strpi;
-        private void txt_MemberID_TextChanged(object sender, EventArgs e)
-        {
-            {
-                if (txt_MemberID.Text.Length == 1)
-                {
-                    if (dtCheck("SELECT * FROM TBL_MEMBER WHERE MEMBER_ID=" + txt_MemberID.Text) == 1)
-                    {
-                        SetMemberInfo("SELECT MEMBER_POINT FROM TBL_MEMBER WHERE MEMBER_ID=" + txt_MemberID.Text);
-                        txt_MemberPoint.Text = strmi;
-                        SetMemberInfo("SELECT MEMBER_NAME FROM TBL_MEMBER WHERE MEMBER_ID=" + txt_MemberID.Text);
-                        txt_MemberName.Text = strmi;
-                    }
-                    else
-                    {
-                        MessageBox.Show("メンバーID:" + txt_MemberID.Text + "は存在しません");
-                        txt_MemberID.Clear();
-                    }
-                }
-                else if (txt_MemberID.Text.Length >= 2)
-                {
-                    MessageBox.Show("メンバーIDはN文字です");
-                    txt_MemberID.Clear();
-                }
-                if (txt_MemberID.Text.Length == 0)
-                {
-                    txt_MemberPoint.Clear();
-                    txt_MemberName.Clear();
-                }
-
-            }
         }
     }
 }
