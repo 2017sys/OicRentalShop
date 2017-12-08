@@ -57,5 +57,20 @@ namespace OicRentalShop.Manage.Member
         {
             ManageHome.cancel(0);
         }
+
+        private void btn_Clear_Click(object sender, EventArgs e)
+        {
+            txt_Address1.Clear();
+            txt_Address2.Clear();
+            txt_Birtyday.Clear();
+            txt_FamilyName.Clear();
+            txt_FamilyNameKANA.Clear();
+            txt_GivenName.Clear();
+            txt_GivenNameKANA.Clear();
+            txt_ID.Clear();
+            txt_PhoneNumber.Clear();
+            txt_PostalCode.Clear();
+            txt_TelePhoneNumber.Clear();
+        }
     }
 }

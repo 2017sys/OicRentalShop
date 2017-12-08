@@ -145,35 +145,11 @@
     <Compile Include="Manage\Profit\ProfitList.Designer.cs">
       <DependentUpon>ProfitList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage\Staff\StaffAd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage\Staff\StaffAd.Designer.cs">
-      <DependentUpon>StaffAd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Manage\Staff\StaffDelete.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage\Staff\StaffDelete.Designer.cs">
-      <DependentUpon>StaffDelete.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Manage\Staff\StaffEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage\Staff\StaffEdit.Designer.cs">
-      <DependentUpon>StaffEdit.cs</DependentUpon>
-    </Compile>
     <Compile Include="Manage\Staff\StaffList.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Manage\Staff\StaffList.Designer.cs">
       <DependentUpon>StaffList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Manage\Staff\StaffList1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage\Staff\StaffList1.Designer.cs">
-      <DependentUpon>StaffList1.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage\Title\TitleList.cs">
       <SubType>UserControl</SubType>
@@ -332,9 +308,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\Staff\StaffList.resx">
       <DependentUpon>StaffList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Manage\Staff\StaffList1.resx">
-      <DependentUpon>StaffList1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\Title\TitleList.resx">
       <DependentUpon>TitleList.cs</DependentUpon>

@@ -14,7 +14,7 @@ namespace OicRentalShop.Manage
     {
         public static Item.ItemList it;
         public static Member.MemberList me;
-        public static Staff.StaffList st;
+        public static Staff.lbl_Title st;
         public static Price.PriceList pc;
         public static Profit.ProfitList pf;
         public static Event.EventList ev;
@@ -33,7 +33,7 @@ namespace OicRentalShop.Manage
         {
             it = new Item.ItemList();
             me = new Member.MemberList();
-            st = new Staff.StaffList();
+            st = new Staff.lbl_Title();
             pc = new Price.PriceList();
             pf = new Profit.ProfitList();
             ev = new Event.EventList();
