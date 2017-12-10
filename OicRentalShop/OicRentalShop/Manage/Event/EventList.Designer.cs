@@ -93,7 +93,7 @@
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(896, 109);
+            this.label6.Location = new System.Drawing.Point(1064, 122);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(1, 631);
@@ -103,7 +103,7 @@
             // btn_Add
             // 
             this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Add.Location = new System.Drawing.Point(954, 635);
+            this.btn_Add.Location = new System.Drawing.Point(1073, 638);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(187, 75);
@@ -118,7 +118,7 @@
             this.dgv_EventInfo.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_EventInfo.Name = "dgv_EventInfo";
             this.dgv_EventInfo.RowTemplate.Height = 21;
-            this.dgv_EventInfo.Size = new System.Drawing.Size(852, 538);
+            this.dgv_EventInfo.Size = new System.Drawing.Size(1036, 538);
             this.dgv_EventInfo.TabIndex = 14;
             this.dgv_EventInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_EventInfo_CellContentClick);
             // 
