@@ -73,6 +73,9 @@ namespace OicRentalShop.Manage.Title
 
         private void btn_Search_Click(object sender, EventArgs e)
         {
+            dgv_TitleInfo.Columns.Clear();
+            dgv_TitleInfo.ClearSelection();
+
             selectfunc("SELECT * FROM TBL_TITLE ORDER BY  TITLE_ID ASC");
 
             //DataGridViewButtonColumnの作成
