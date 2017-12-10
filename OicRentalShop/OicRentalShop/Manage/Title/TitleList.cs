@@ -24,7 +24,7 @@ namespace OicRentalShop.Manage.Title
             InitializeComponent();
         }
 
-        private void selectfunc(string cmdstr)//DataGridViewにレジを通した商品の情報を登録
+        private void selectfunc(string cmdstr)
         {
             dt.Clear();
             dt = new DataTable();
@@ -37,15 +37,53 @@ namespace OicRentalShop.Manage.Title
 
         private void TitleList_Load(object sender, EventArgs e)
         {
-            //selectfunc("SELECT t.TITLE_NAME,gn.GENRE_NAME,at.ARTIST_NAME,t.TITLE_RELEASE,ty.TYPE_NAME,ol.OLD_NAME,i.ITEM_ID FROM TBL_TITLE t,TBL_ITEM i,TBL_GENRE gn,TBL_ARTIST at,TBL_OLD ol,TBL_TYPE ty WHERE t.TITLE_ID=i.TITLE_ID AND t.GENRE_ID=gn.GENRE_ID AND t.TYPE_ID=ty.TYPE_ID AND t.ARTIST_ID=at.ARTIST_ID AND t.OLD_ID = ol.OLD_ID ");
 
-
-            //,COUNT(i.ITEM_ID) AS 枚数        GROUP BY  t.TITLE_NAME,gn.GENRE_NAME,at.ARTIST_NAME,t.TITLE_RELEASE,ty.TYPE_NAME,ol.OLD_NAME
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
             ManageHome.GoNext(4);
+        }
+
+        private void dgv_TitleInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            //"Button"列ならば、ボタンがクリックされた
+            if (dgv.Columns[e.ColumnIndex].Name == "DELETE")
+            {
+                if (DialogResult.Yes == MessageBox.Show("タイトルID　" + dgv.Rows[e.RowIndex].Cells[1].Value + "　タイトル名　" + dgv.Rows[e.RowIndex].Cells[2].Value + "　のデータを削除してよろしいですか？", "確認",
+                 MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                {
+                    CmdFunc("UPDATE TBL_Title SET Title_DELETE = true WHERE Title_ID =" + dgv.Rows[e.RowIndex].Cells[0].Value);
+                }
+
+
+            }
+        }
+
+        private void CmdFunc(string cmdstr) //UPDATE DELETE INSERTを実行できる　CmdFunc("SQL文"); 
+        {
+            OleDbCommand Cmd = new OleDbCommand();
+            Cmd.Connection = cn;
+            cn.Open();
+            Cmd.CommandText = cmdstr;
+            Cmd.ExecuteNonQuery();
+            cn.Close();
+        }
+
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
+            selectfunc("SELECT * FROM TBL_TITLE ORDER BY  TITLE_ID ASC");
+
+            //DataGridViewButtonColumnの作成
+            DataGridViewButtonColumn column = new DataGridViewButtonColumn();
+            //列の名前を設定
+            column.Name = "DELETE";
+            //全てのボタンに"詳細閲覧"と表示する
+            column.UseColumnTextForButtonValue = true;
+            column.Text = "削除";
+            //DataGridViewに追加する
+            dgv_TitleInfo.Columns.Add(column);
         }
     }
 }

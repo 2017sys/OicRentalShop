@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btn_Search = new System.Windows.Forms.Button();
-            this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Edit = new System.Windows.Forms.Button();
             this.dgv_TitleInfo = new System.Windows.Forms.DataGridView();
@@ -57,29 +56,19 @@
             // 
             this.btn_Search.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.btn_Search.Location = new System.Drawing.Point(927, 170);
-            this.btn_Search.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Search.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(151, 108);
             this.btn_Search.TabIndex = 130;
             this.btn_Search.Text = "検索";
             this.btn_Search.UseVisualStyleBackColor = true;
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.btn_Delete.Location = new System.Drawing.Point(1099, 634);
-            this.btn_Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(160, 62);
-            this.btn_Delete.TabIndex = 129;
-            this.btn_Delete.Text = "削除";
-            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // btn_Add
             // 
             this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.btn_Add.Location = new System.Drawing.Point(1097, 534);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(160, 62);
             this.btn_Add.TabIndex = 128;
@@ -91,7 +80,7 @@
             // 
             this.btn_Edit.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
             this.btn_Edit.Location = new System.Drawing.Point(1099, 438);
-            this.btn_Edit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Edit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new System.Drawing.Size(160, 62);
             this.btn_Edit.TabIndex = 127;
@@ -102,16 +91,17 @@
             // 
             this.dgv_TitleInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_TitleInfo.Location = new System.Drawing.Point(11, 285);
-            this.dgv_TitleInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_TitleInfo.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_TitleInfo.Name = "dgv_TitleInfo";
             this.dgv_TitleInfo.RowTemplate.Height = 21;
             this.dgv_TitleInfo.Size = new System.Drawing.Size(1067, 442);
             this.dgv_TitleInfo.TabIndex = 126;
+            this.dgv_TitleInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TitleInfo_CellContentClick);
             // 
             // txt_Artist
             // 
             this.txt_Artist.Location = new System.Drawing.Point(345, 232);
-            this.txt_Artist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Artist.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Artist.Name = "txt_Artist";
             this.txt_Artist.Size = new System.Drawing.Size(100, 22);
             this.txt_Artist.TabIndex = 125;
@@ -131,7 +121,7 @@
             // 
             this.cmb_Genre.FormattingEnabled = true;
             this.cmb_Genre.Location = new System.Drawing.Point(543, 231);
-            this.cmb_Genre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_Genre.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_Genre.Name = "cmb_Genre";
             this.cmb_Genre.Size = new System.Drawing.Size(105, 23);
             this.cmb_Genre.TabIndex = 123;
@@ -144,7 +134,7 @@
             "新作",
             "旧作"});
             this.cmb_Old_New.Location = new System.Drawing.Point(133, 231);
-            this.cmb_Old_New.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_Old_New.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_Old_New.Name = "cmb_Old_New";
             this.cmb_Old_New.Size = new System.Drawing.Size(72, 23);
             this.cmb_Old_New.TabIndex = 122;
@@ -178,7 +168,7 @@
             "CD",
             "DVD"});
             this.cmb_Type.Location = new System.Drawing.Point(555, 189);
-            this.cmb_Type.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_Type.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_Type.Name = "cmb_Type";
             this.cmb_Type.Size = new System.Drawing.Size(79, 23);
             this.cmb_Type.TabIndex = 119;
@@ -198,7 +188,7 @@
             // txt_TitleID
             // 
             this.txt_TitleID.Location = new System.Drawing.Point(347, 188);
-            this.txt_TitleID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_TitleID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_TitleID.Name = "txt_TitleID";
             this.txt_TitleID.Size = new System.Drawing.Size(100, 22);
             this.txt_TitleID.TabIndex = 115;
@@ -217,7 +207,7 @@
             // txt_TitleName
             // 
             this.txt_TitleName.Location = new System.Drawing.Point(133, 190);
-            this.txt_TitleName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_TitleName.Margin = new System.Windows.Forms.Padding(4);
             this.txt_TitleName.Name = "txt_TitleName";
             this.txt_TitleName.Size = new System.Drawing.Size(100, 22);
             this.txt_TitleName.TabIndex = 113;
@@ -289,7 +279,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.Controls.Add(this.btn_Search);
-            this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.dgv_TitleInfo);
@@ -310,7 +299,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lbl_TopTitle);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TitleList";
             this.Size = new System.Drawing.Size(1264, 739);
             this.Load += new System.EventHandler(this.TitleList_Load);
@@ -323,7 +312,6 @@
         #endregion
 
         private System.Windows.Forms.Button btn_Search;
-        private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Edit;
         private System.Windows.Forms.DataGridView dgv_TitleInfo;
