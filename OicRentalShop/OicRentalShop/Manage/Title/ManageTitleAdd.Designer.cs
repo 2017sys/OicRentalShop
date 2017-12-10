@@ -101,7 +101,6 @@
             this.txt_TitleID.Name = "txt_TitleID";
             this.txt_TitleID.Size = new System.Drawing.Size(373, 22);
             this.txt_TitleID.TabIndex = 162;
-            this.txt_TitleID.TextChanged += new System.EventHandler(this.txt_TitleID_TextChanged);
             // 
             // lbl_TitleID
             // 
@@ -314,6 +313,7 @@
             this.Controls.Add(this.label9);
             this.Name = "ManageTitleAdd";
             this.Size = new System.Drawing.Size(1264, 739);
+            this.Load += new System.EventHandler(this.ManageTitleAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemRe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
