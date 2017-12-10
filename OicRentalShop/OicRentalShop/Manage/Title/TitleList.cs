@@ -42,5 +42,10 @@ namespace OicRentalShop.Manage.Title
 
             //,COUNT(i.ITEM_ID) AS 枚数        GROUP BY  t.TITLE_NAME,gn.GENRE_NAME,at.ARTIST_NAME,t.TITLE_RELEASE,ty.TYPE_NAME,ol.OLD_NAME
         }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            ManageHome.GoNext(4);
+        }
     }
 }

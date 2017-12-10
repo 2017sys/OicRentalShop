@@ -163,6 +163,12 @@
     <Compile Include="Manage\Staff\StaffList.Designer.cs">
       <DependentUpon>StaffList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage\Title\ManageTitleAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manage\Title\ManageTitleAdd.Designer.cs">
+      <DependentUpon>ManageTitleAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manage\Title\TitleList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -326,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\Staff\StaffList.resx">
       <DependentUpon>StaffList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage\Title\ManageTitleAdd.resx">
+      <DependentUpon>ManageTitleAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\Title\TitleList.resx">
       <DependentUpon>TitleList.cs</DependentUpon>

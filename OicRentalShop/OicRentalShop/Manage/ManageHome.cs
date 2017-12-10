@@ -22,6 +22,7 @@ namespace OicRentalShop.Manage
         public static Event.EventList ev;
         public static Log.LogList lo;
         public static Title.TitleList tl;
+        public static Title.ManageTitleAdd mta;
         public static Member.MemberAddCorrection ma;
         public static Member.MemberAddCorrectionConfirmation mac;
  
@@ -44,6 +45,7 @@ namespace OicRentalShop.Manage
             ev = new Event.EventList();
             lo = new Log.LogList();
             tl = new Title.TitleList();
+            mta = new Title.ManageTitleAdd();
             ma = new Member.MemberAddCorrection();
             mac = new Member.MemberAddCorrectionConfirmation();
             panel.Controls.Clear();
@@ -75,6 +77,11 @@ namespace OicRentalShop.Manage
             {
                 sa.Visible = false;
                 sac.Visible = true;
+            }
+            else if(flag==4)
+            {
+                tl.Visible = false;
+                mta.Visible = true;
             }
 
 
@@ -170,7 +177,9 @@ namespace OicRentalShop.Manage
         {
             panel.Controls.Clear();
             panel.Controls.Add(tl);
+            panel.Controls.Add(mta);
             tl.Visible = true;
+            mta.Visible = false;
         }
     }
 }
