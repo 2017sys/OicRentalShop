@@ -192,7 +192,7 @@ namespace OicRentalShop.Manage.Title
             {
                 if (DuplicationIDSerch("Title", "'" + ZeroCut(txt_TitleID.Text) + "'") == true)
                 {
-                    this.dgv_ItemRe.Rows.Add(txt_TitleID.Text, txt_Title.Text, cmb_Genre.Text, cmb_Artist.Text, txt_ReleaseDay.Text, cmb_Format.Text, "削除");
+                    this.dgv_ItemRe.Rows.Add(txt_TitleID.Text, txt_Title.Text, cmb_Genre.Text, cmb_Artist.Text, txt_ReleaseDay.Text, cmb_Format.Text, "削除"); 
                 }
                 else
                 {
@@ -297,7 +297,75 @@ namespace OicRentalShop.Manage.Title
             }
         }
 
+        private void txt_TitleID_TextChanged(object sender, EventArgs e)
+        {
+            if(txt_TitleID.Text.Length==8)
+            {
+                if (DuplicationIDSerch("TITLE","'"+ ZeroCut(txt_TitleID.Text)+"'") == false)//すでにそのタイトルIDが登録されていたら
+                {
+                    ChangeCorrection();
+                    
+                }
+            }
+        }
 
+        private void ChangeCorrection()
+        {
+            lbl_TopTitle.Text = "タイトル修正";
+            this.BackColor = Color.Red;
+            btn_Add.Visible = false;
+            btn_Clear.Visible = false;
+            btn_Toadd.Visible = false;
+            dgv_ItemRe.Visible = false;
+            btn_Correction.Visible = true;
+            btn_ReturnAdd.Visible = true;
+
+            dt.Clear();
+            dt = new DataTable();
+            dgv_ItemRe.DataSource = null;
+            da = new OleDbDataAdapter("SELECT title.TITLE_NAME , type.TYPE_NAME , genre.GENRE_NAME ,art.ARTIST_NAME , title.TITLE_RELEASE  FROM TBL_TITLE title , TBL_ITEM item , TBL_TYPE type , TBL_GENRE genre, TBL_ARTIST art WHERE title.TYPE_ID = type.TYPE_ID AND  title.GENRE_ID = genre.GENRE_ID AND title.ARTIST_ID = art.ARTIST_ID", cn);
+            da.Fill(dt);
+            txt_Title.Text = dt.Rows[0][0].ToString();
+            cmb_Format.Text = dt.Rows[0][1].ToString();
+            cmb_Genre.Text = dt.Rows[0][2].ToString();
+            cmb_Artist.Text=dt.Rows[0][3].ToString();
+            txt_ReleaseDay.Text = dt.Rows[0][4].ToString();
+        }
+
+        private void ChangeDefault()
+        {
+            this.BackColor = System.Drawing.SystemColors.Info;
+            lbl_TopTitle.Text = "タイトル登録";
+            dgv_ItemRe.Rows.Clear();
+            txt_TitleID.Clear();
+            txt_Title.Clear();
+            txt_ReleaseDay.Clear();
+            cmb_Artist.Text = "";
+            cmb_Format.Text = "シングル";
+            cmb_Genre.Text = "";
+            btn_Add.Visible = true;
+            btn_Clear.Visible = true;
+            btn_Toadd.Visible = true;
+            dgv_ItemRe.Visible = true;
+            btn_Correction.Visible = false;
+            btn_ReturnAdd.Visible = false;
+        }
+
+        private void ManageTitleAdd_VisibleChanged(object sender, EventArgs e)
+        {
+            ChangeDefault();
+      
+        }
+
+        private void btn_Correction_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_ReturnAdd_Click(object sender, EventArgs e)
+        {
+            ChangeDefault();
+        }
    
     }
 }

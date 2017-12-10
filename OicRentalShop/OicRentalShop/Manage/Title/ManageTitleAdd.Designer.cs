@@ -38,7 +38,7 @@
             this.txt_Title = new System.Windows.Forms.TextBox();
             this.cmb_Format = new System.Windows.Forms.ComboBox();
             this.btn_Add = new System.Windows.Forms.Button();
-            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_Clear = new System.Windows.Forms.Button();
             this.dgv_ItemRe = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +53,8 @@
             this.lbl_Format = new System.Windows.Forms.Label();
             this.lbl_TopTitle = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.btn_Correction = new System.Windows.Forms.Button();
+            this.btn_ReturnAdd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemRe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +103,7 @@
             this.txt_TitleID.Name = "txt_TitleID";
             this.txt_TitleID.Size = new System.Drawing.Size(373, 22);
             this.txt_TitleID.TabIndex = 162;
+            this.txt_TitleID.TextChanged += new System.EventHandler(this.txt_TitleID_TextChanged);
             // 
             // lbl_TitleID
             // 
@@ -158,17 +161,17 @@
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
-            // btn_clear
+            // btn_Clear
             // 
-            this.btn_clear.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_clear.Location = new System.Drawing.Point(864, 636);
-            this.btn_clear.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(129, 88);
-            this.btn_clear.TabIndex = 156;
-            this.btn_clear.Text = "クリア";
-            this.btn_clear.UseVisualStyleBackColor = true;
-            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
+            this.btn_Clear.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Clear.Location = new System.Drawing.Point(864, 636);
+            this.btn_Clear.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Clear.Name = "btn_Clear";
+            this.btn_Clear.Size = new System.Drawing.Size(129, 88);
+            this.btn_Clear.TabIndex = 156;
+            this.btn_Clear.Text = "クリア";
+            this.btn_Clear.UseVisualStyleBackColor = true;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // dgv_ItemRe
             // 
@@ -288,11 +291,39 @@
             this.label9.Size = new System.Drawing.Size(1267, 1);
             this.label9.TabIndex = 149;
             // 
+            // btn_Correction
+            // 
+            this.btn_Correction.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Correction.Location = new System.Drawing.Point(1094, 636);
+            this.btn_Correction.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Correction.Name = "btn_Correction";
+            this.btn_Correction.Size = new System.Drawing.Size(129, 88);
+            this.btn_Correction.TabIndex = 167;
+            this.btn_Correction.Text = "修正";
+            this.btn_Correction.UseVisualStyleBackColor = true;
+            this.btn_Correction.Visible = false;
+            this.btn_Correction.Click += new System.EventHandler(this.btn_Correction_Click);
+            // 
+            // btn_ReturnAdd
+            // 
+            this.btn_ReturnAdd.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_ReturnAdd.Location = new System.Drawing.Point(914, 636);
+            this.btn_ReturnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_ReturnAdd.Name = "btn_ReturnAdd";
+            this.btn_ReturnAdd.Size = new System.Drawing.Size(129, 88);
+            this.btn_ReturnAdd.TabIndex = 168;
+            this.btn_ReturnAdd.Text = "戻る";
+            this.btn_ReturnAdd.UseVisualStyleBackColor = true;
+            this.btn_ReturnAdd.Visible = false;
+            this.btn_ReturnAdd.Click += new System.EventHandler(this.btn_ReturnAdd_Click);
+            // 
             // ManageTitleAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
+            this.Controls.Add(this.btn_ReturnAdd);
+            this.Controls.Add(this.btn_Correction);
             this.Controls.Add(this.cmb_Artist);
             this.Controls.Add(this.cmb_Genre);
             this.Controls.Add(this.txt_ReleaseDay);
@@ -303,7 +334,7 @@
             this.Controls.Add(this.txt_Title);
             this.Controls.Add(this.cmb_Format);
             this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.btn_Clear);
             this.Controls.Add(this.dgv_ItemRe);
             this.Controls.Add(this.lbl_Genre);
             this.Controls.Add(this.lbl_Artist);
@@ -314,6 +345,7 @@
             this.Name = "ManageTitleAdd";
             this.Size = new System.Drawing.Size(1264, 739);
             this.Load += new System.EventHandler(this.ManageTitleAdd_Load);
+            this.VisibleChanged += new System.EventHandler(this.ManageTitleAdd_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemRe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -332,7 +364,7 @@
         private System.Windows.Forms.TextBox txt_Title;
         private System.Windows.Forms.ComboBox cmb_Format;
         private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Button btn_Clear;
         private System.Windows.Forms.DataGridView dgv_ItemRe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -347,6 +379,8 @@
         private System.Windows.Forms.Label lbl_Format;
         private System.Windows.Forms.Label lbl_TopTitle;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btn_Correction;
+        private System.Windows.Forms.Button btn_ReturnAdd;
 
     }
 }

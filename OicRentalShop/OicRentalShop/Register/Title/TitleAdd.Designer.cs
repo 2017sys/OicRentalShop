@@ -30,7 +30,7 @@
         private void InitializeComponent()
         {
             this.btn_Add = new System.Windows.Forms.Button();
-            this.btn_clear = new System.Windows.Forms.Button();
+            this.btn_Clear = new System.Windows.Forms.Button();
             this.dgv_ItemRe = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +61,7 @@
             // 
             this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_Add.Location = new System.Drawing.Point(1051, 636);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(129, 88);
             this.btn_Add.TabIndex = 136;
@@ -69,17 +69,17 @@
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
-            // btn_clear
+            // btn_Clear
             // 
-            this.btn_clear.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_clear.Location = new System.Drawing.Point(864, 636);
-            this.btn_clear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(129, 88);
-            this.btn_clear.TabIndex = 135;
-            this.btn_clear.Text = "クリア";
-            this.btn_clear.UseVisualStyleBackColor = true;
-            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
+            this.btn_Clear.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Clear.Location = new System.Drawing.Point(864, 636);
+            this.btn_Clear.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Clear.Name = "btn_Clear";
+            this.btn_Clear.Size = new System.Drawing.Size(129, 88);
+            this.btn_Clear.TabIndex = 135;
+            this.btn_Clear.Text = "クリア";
+            this.btn_Clear.UseVisualStyleBackColor = true;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // dgv_ItemRe
             // 
@@ -93,7 +93,7 @@
             this.Column2,
             this.btn_Delete});
             this.dgv_ItemRe.Location = new System.Drawing.Point(737, 118);
-            this.dgv_ItemRe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_ItemRe.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_ItemRe.Name = "dgv_ItemRe";
             this.dgv_ItemRe.RowTemplate.Height = 21;
             this.dgv_ItemRe.Size = new System.Drawing.Size(523, 475);
@@ -207,7 +207,7 @@
             "アルバム",
             "DVD"});
             this.cmb_Format.Location = new System.Drawing.Point(303, 370);
-            this.cmb_Format.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_Format.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_Format.Name = "cmb_Format";
             this.cmb_Format.Size = new System.Drawing.Size(233, 23);
             this.cmb_Format.TabIndex = 137;
@@ -216,7 +216,7 @@
             // txt_Title
             // 
             this.txt_Title.Location = new System.Drawing.Point(303, 308);
-            this.txt_Title.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Title.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Title.Name = "txt_Title";
             this.txt_Title.Size = new System.Drawing.Size(373, 22);
             this.txt_Title.TabIndex = 138;
@@ -224,7 +224,7 @@
             // btn_Toadd
             // 
             this.btn_Toadd.Location = new System.Drawing.Point(515, 656);
-            this.btn_Toadd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Toadd.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Toadd.Name = "btn_Toadd";
             this.btn_Toadd.Size = new System.Drawing.Size(100, 29);
             this.btn_Toadd.TabIndex = 142;
@@ -246,7 +246,7 @@
             // txt_TitleID
             // 
             this.txt_TitleID.Location = new System.Drawing.Point(303, 232);
-            this.txt_TitleID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_TitleID.Margin = new System.Windows.Forms.Padding(4);
             this.txt_TitleID.Name = "txt_TitleID";
             this.txt_TitleID.Size = new System.Drawing.Size(373, 22);
             this.txt_TitleID.TabIndex = 144;
@@ -254,7 +254,7 @@
             // txt_ReleaseDay
             // 
             this.txt_ReleaseDay.Location = new System.Drawing.Point(303, 588);
-            this.txt_ReleaseDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_ReleaseDay.Margin = new System.Windows.Forms.Padding(4);
             this.txt_ReleaseDay.Name = "txt_ReleaseDay";
             this.txt_ReleaseDay.Size = new System.Drawing.Size(373, 22);
             this.txt_ReleaseDay.TabIndex = 146;
@@ -274,7 +274,7 @@
             // 
             this.cmb_Genre.FormattingEnabled = true;
             this.cmb_Genre.Location = new System.Drawing.Point(303, 516);
-            this.cmb_Genre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_Genre.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_Genre.Name = "cmb_Genre";
             this.cmb_Genre.Size = new System.Drawing.Size(160, 23);
             this.cmb_Genre.TabIndex = 147;
@@ -283,7 +283,7 @@
             // 
             this.cmb_Artist.FormattingEnabled = true;
             this.cmb_Artist.Location = new System.Drawing.Point(303, 444);
-            this.cmb_Artist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmb_Artist.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_Artist.Name = "cmb_Artist";
             this.cmb_Artist.Size = new System.Drawing.Size(233, 23);
             this.cmb_Artist.TabIndex = 148;
@@ -303,7 +303,7 @@
             this.Controls.Add(this.txt_Title);
             this.Controls.Add(this.cmb_Format);
             this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.btn_clear);
+            this.Controls.Add(this.btn_Clear);
             this.Controls.Add(this.dgv_ItemRe);
             this.Controls.Add(this.lbl_Genre);
             this.Controls.Add(this.lbl_Artist);
@@ -311,7 +311,7 @@
             this.Controls.Add(this.lbl_Format);
             this.Controls.Add(this.lbl_TopTitle);
             this.Controls.Add(this.label9);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TitleAdd";
             this.Size = new System.Drawing.Size(1264, 739);
             this.Load += new System.EventHandler(this.TitleAdd_Load);
@@ -324,7 +324,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Button btn_Clear;
         private System.Windows.Forms.DataGridView dgv_ItemRe;
         private System.Windows.Forms.Label lbl_Genre;
         private System.Windows.Forms.Label lbl_Artist;
