@@ -64,7 +64,7 @@
             this.cmb_Artist.Name = "cmb_Artist";
             this.cmb_Artist.Size = new System.Drawing.Size(233, 23);
             this.cmb_Artist.TabIndex = 166;
-            this.cmb_Artist.TextChanged += new System.EventHandler(this.cmb_Artist_TextChanged);
+            this.cmb_Artist.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_Artist_KeyDown);
             // 
             // cmb_Genre
             // 

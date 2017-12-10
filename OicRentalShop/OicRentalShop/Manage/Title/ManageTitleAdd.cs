@@ -106,7 +106,9 @@ namespace OicRentalShop.Manage.Title
             OleDbDataReader oleReader = oleCmd.ExecuteReader(CommandBehavior.Default);
 
             List<String> ArtistList = new List<string>();
-  
+         
+            ArtistList.Add(cmb_Artist.Text);
+          
             while (oleReader.Read())
             {
                 ArtistList.Add(oleReader["ARTIST_NAME"].ToString());
@@ -282,9 +284,17 @@ namespace OicRentalShop.Manage.Title
             ArtistLoad();
         }
 
-        private void cmb_Artist_TextChanged(object sender, EventArgs e)
-        {
 
+
+        private void cmb_Artist_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                cmb_Artist.Items.Clear();
+                ArtistLoad();
+               cmb_Artist.Select(cmb_Artist.Text.Length, 0);
+              
+            }
         }
 
 
