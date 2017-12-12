@@ -20,11 +20,19 @@ namespace OicRentalShop.Manage.Lend
         DataTable dtp = new DataTable();
         DataTable dt = new DataTable();
 
-        public Lend()
+        RegisterHome rh;
+        public Lend(RegisterHome fm)
         {
             InitializeComponent();
+            rh = fm;
         }
-
+        
+        public  void Commit()
+        {
+            slipID++;
+            SlipFlag = 1;
+            
+        }
 
         private string SetInfo(string cmdstr) //SQLでデータが1行1列だけ出力される形で取り出したいデータを持ってくるのに使う　数値で使うならint.Parse(SetInfo("SQL"))
         {
@@ -104,10 +112,10 @@ namespace OicRentalShop.Manage.Lend
             CmdFunc("INSERT INTO TBL_LINESLIP VALUES(" + lineslipID + "," + slipID + "," + int.Parse(txt_InProductID.Text) + ",1," + int.Parse(typeid) + "," + int.Parse(Price) + ")");
         }
 
-        int slipID;
+        public int slipID;
 
 
-
+        int flag = 0;
         private void Lend_Load(object sender, EventArgs e)
         {
             DateTime Today = DateTime.Today;    //今日の日付の取得
@@ -151,8 +159,9 @@ namespace OicRentalShop.Manage.Lend
                 }
         }
 
+        
 
-        int SlipFlag = 0;
+        static int SlipFlag = 0;
         int slipprice = 0;
         int selectedlsID;
         int lsIDpoint;
@@ -169,7 +178,7 @@ namespace OicRentalShop.Manage.Lend
                             if (SlipFlag == 0)
                             {
                                 DateTime Today = DateTime.Today;
-                                CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",false,#" + Today.ToString() + "#,0,1)");
+                                CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",true,#" + Today.ToString() + "#,0,1)");
                                 txt_MemberID.ReadOnly = true;
                                 SlipFlag = 1;
                             }
@@ -265,23 +274,17 @@ namespace OicRentalShop.Manage.Lend
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            int lscnt=int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID="+slipID).ToString());
-            for (int i = 0; i < lscnt;i++)
-            {
-                dt.Clear();
-                dt = new DataTable();
-                da = new OleDbDataAdapter("SELECT ITEM_ID FROM TBL_LINESLIP WHERE SLIP_ID="+slipID, cn);
-                da.Fill(dt);
-                CmdFunc("UPDATE TBL_ITEM SET ITEM_STATE = false WHERE ITEM_ID =" +  dt.Rows[i][0].ToString());
-            }
-
-
             SlipFlag = 0;
+            rh.MoveOnLRConf(flag);            
         }
 
         private void Lend_VisibleChanged(object sender, EventArgs e)
         {
-            clearfunc();
+            if (SlipFlag == 1)
+            {
+                clearfunc();
+            }
+
         }
 
         private void Btn_ClearMID_Click(object sender, EventArgs e)

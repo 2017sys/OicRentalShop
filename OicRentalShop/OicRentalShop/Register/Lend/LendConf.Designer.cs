@@ -52,7 +52,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(416, 284);
+            this.label1.Location = new System.Drawing.Point(485, 284);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 27);
             this.label1.TabIndex = 0;
@@ -62,7 +62,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(416, 348);
+            this.label2.Location = new System.Drawing.Point(485, 348);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 27);
             this.label2.TabIndex = 1;
@@ -72,7 +72,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(416, 414);
+            this.label3.Location = new System.Drawing.Point(485, 414);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 27);
             this.label3.TabIndex = 2;
@@ -80,20 +80,21 @@
             // 
             // dgv_PayInfo
             // 
+            this.dgv_PayInfo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_PayInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_PayInfo.Location = new System.Drawing.Point(20, 105);
+            this.dgv_PayInfo.Location = new System.Drawing.Point(3, 105);
             this.dgv_PayInfo.Name = "dgv_PayInfo";
             this.dgv_PayInfo.RowTemplate.Height = 21;
-            this.dgv_PayInfo.Size = new System.Drawing.Size(291, 469);
+            this.dgv_PayInfo.Size = new System.Drawing.Size(454, 469);
             this.dgv_PayInfo.TabIndex = 5;
             // 
             // dgv_MemberInfo
             // 
             this.dgv_MemberInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_MemberInfo.Location = new System.Drawing.Point(346, 105);
+            this.dgv_MemberInfo.Location = new System.Drawing.Point(472, 105);
             this.dgv_MemberInfo.Name = "dgv_MemberInfo";
             this.dgv_MemberInfo.RowTemplate.Height = 21;
-            this.dgv_MemberInfo.Size = new System.Drawing.Size(587, 65);
+            this.dgv_MemberInfo.Size = new System.Drawing.Size(461, 65);
             this.dgv_MemberInfo.TabIndex = 6;
             // 
             // lbl_TopTitle
@@ -117,7 +118,7 @@
             // btn_Pay
             // 
             this.btn_Pay.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Pay.Location = new System.Drawing.Point(696, 480);
+            this.btn_Pay.Location = new System.Drawing.Point(796, 480);
             this.btn_Pay.Name = "btn_Pay";
             this.btn_Pay.Size = new System.Drawing.Size(110, 94);
             this.btn_Pay.TabIndex = 133;
@@ -127,15 +128,18 @@
             // 
             // txt_TotalM
             // 
-            this.txt_TotalM.Location = new System.Drawing.Point(558, 271);
+            this.txt_TotalM.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_TotalM.Location = new System.Drawing.Point(627, 271);
             this.txt_TotalM.Multiline = true;
             this.txt_TotalM.Name = "txt_TotalM";
+            this.txt_TotalM.ReadOnly = true;
             this.txt_TotalM.Size = new System.Drawing.Size(248, 40);
             this.txt_TotalM.TabIndex = 135;
             // 
             // txt_KeepM
             // 
-            this.txt_KeepM.Location = new System.Drawing.Point(558, 334);
+            this.txt_KeepM.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_KeepM.Location = new System.Drawing.Point(627, 334);
             this.txt_KeepM.Multiline = true;
             this.txt_KeepM.Name = "txt_KeepM";
             this.txt_KeepM.Size = new System.Drawing.Size(248, 41);
@@ -143,9 +147,11 @@
             // 
             // txt_ChangeM
             // 
-            this.txt_ChangeM.Location = new System.Drawing.Point(558, 400);
+            this.txt_ChangeM.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_ChangeM.Location = new System.Drawing.Point(627, 400);
             this.txt_ChangeM.Multiline = true;
             this.txt_ChangeM.Name = "txt_ChangeM";
+            this.txt_ChangeM.ReadOnly = true;
             this.txt_ChangeM.Size = new System.Drawing.Size(248, 41);
             this.txt_ChangeM.TabIndex = 137;
             // 
@@ -153,7 +159,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(417, 218);
+            this.label4.Location = new System.Drawing.Point(486, 218);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 21);
             this.label4.TabIndex = 138;
@@ -163,7 +169,7 @@
             // 
             this.lbl_MemberID.AutoSize = true;
             this.lbl_MemberID.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_MemberID.Location = new System.Drawing.Point(554, 218);
+            this.lbl_MemberID.Location = new System.Drawing.Point(623, 218);
             this.lbl_MemberID.Name = "lbl_MemberID";
             this.lbl_MemberID.Size = new System.Drawing.Size(142, 21);
             this.lbl_MemberID.TabIndex = 139;
@@ -173,17 +179,18 @@
             // btn_Redo
             // 
             this.btn_Redo.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Redo.Location = new System.Drawing.Point(558, 480);
+            this.btn_Redo.Location = new System.Drawing.Point(658, 480);
             this.btn_Redo.Name = "btn_Redo";
             this.btn_Redo.Size = new System.Drawing.Size(110, 94);
             this.btn_Redo.TabIndex = 140;
             this.btn_Redo.Text = "戻る";
             this.btn_Redo.UseVisualStyleBackColor = true;
+            this.btn_Redo.Click += new System.EventHandler(this.btn_Redo_Click);
             // 
             // label16
             // 
             this.label16.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(326, 86);
+            this.label16.Location = new System.Drawing.Point(463, 86);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(1, 550);
             this.label16.TabIndex = 141;
@@ -191,9 +198,9 @@
             // label5
             // 
             this.label5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(326, 183);
+            this.label5.Location = new System.Drawing.Point(463, 183);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(630, 1);
+            this.label5.Size = new System.Drawing.Size(493, 1);
             this.label5.TabIndex = 142;
             // 
             // LendConf

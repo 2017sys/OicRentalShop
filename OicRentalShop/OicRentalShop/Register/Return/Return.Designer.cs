@@ -135,6 +135,7 @@
             this.txt_MemberID.TabIndex = 220;
             this.txt_MemberID.Text = "2";
             this.txt_MemberID.TextChanged += new System.EventHandler(this.txt_MemberID_TextChanged);
+            this.txt_MemberID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_MemberID_KeyPress);
             // 
             // txt_OLDNEW
             // 
@@ -309,6 +310,7 @@
             this.txt_money.Font = new System.Drawing.Font("MS UI Gothic", 30F);
             this.txt_money.Location = new System.Drawing.Point(674, 48);
             this.txt_money.Name = "txt_money";
+            this.txt_money.ReadOnly = true;
             this.txt_money.Size = new System.Drawing.Size(154, 47);
             this.txt_money.TabIndex = 199;
             this.txt_money.Text = "07211";
@@ -456,6 +458,7 @@
             this.btn_ok.TabIndex = 183;
             this.btn_ok.Text = "決定";
             this.btn_ok.UseVisualStyleBackColor = true;
+            this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
             // btn_clear
             // 
@@ -466,6 +469,7 @@
             this.btn_clear.TabIndex = 182;
             this.btn_clear.Text = "クリア";
             this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // label23
             // 
@@ -499,6 +503,7 @@
             this.txt_InProductID.Size = new System.Drawing.Size(175, 23);
             this.txt_InProductID.TabIndex = 227;
             this.txt_InProductID.TextChanged += new System.EventHandler(this.txt_InProductID_TextChanged);
+            this.txt_InProductID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_InProductID_KeyPress);
             // 
             // Btn_ClearMID
             // 
@@ -508,6 +513,7 @@
             this.Btn_ClearMID.TabIndex = 228;
             this.Btn_ClearMID.Text = "取り消し";
             this.Btn_ClearMID.UseVisualStyleBackColor = true;
+            this.Btn_ClearMID.Click += new System.EventHandler(this.Btn_ClearMID_Click);
             // 
             // Btn_ClearPID
             // 
@@ -517,6 +523,7 @@
             this.Btn_ClearPID.TabIndex = 229;
             this.Btn_ClearPID.Text = "取り消し";
             this.Btn_ClearPID.UseVisualStyleBackColor = true;
+            this.Btn_ClearPID.Click += new System.EventHandler(this.Btn_ClearPID_Click);
             // 
             // button1
             // 
@@ -584,6 +591,7 @@
             this.Name = "Return";
             this.Size = new System.Drawing.Size(948, 591);
             this.Load += new System.EventHandler(this.Return_Load);
+            this.VisibleChanged += new System.EventHandler(this.Return_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ReturnItem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -176,7 +176,7 @@
         private System.Windows.Forms.Button btn_PriceList;
         private System.Windows.Forms.Button btn_ItemInfo;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Button btn_Title;
+        public System.Windows.Forms.Panel panel;
     }
 }

@@ -806,7 +806,6 @@
 
         private System.Windows.Forms.TextBox txt_MemberName;
         private System.Windows.Forms.TextBox txt_MemberPoint;
-        private System.Windows.Forms.TextBox txt_MemberID;
         private System.Windows.Forms.TextBox txt_OLDNEW;
         private System.Windows.Forms.TextBox txt_type;
         private System.Windows.Forms.TextBox txt_InProductID;
@@ -873,5 +872,6 @@
         private System.Windows.Forms.Button Btn_ClearPID;
         private System.Windows.Forms.Button Btn_ClearMID;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox txt_MemberID;
     }
 }

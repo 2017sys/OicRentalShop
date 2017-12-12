@@ -25,9 +25,16 @@ namespace OicRentalShop.Manage.Return
 
         private void Return_Load(object sender, EventArgs e)
         {
+            DateTime Today = DateTime.Today;    //今日の日付の取得
+            DateTime upday = Today.AddMonths(-1);
+            CmdFunc("UPDATE TBL_OLD SET OLD_DATE=#" + upday.ToString() + "# WHERE OLD_ID = 2");       //旧作の日時設定（画面を読み込んだ日の1か月前）
+            CmdFunc("UPDATE TBL_TITLE SET OLD_ID=2 WHERE TITLE_RELEASE <= ANY(SELECT OLD_DATE FROM TBL_OLD WHERE OLD_ID=2)");   //新作が旧作の期間になっていないかチェックする
             txt_MemberID.Focus();
-            slipID = SetCount("SELECT COUNT(*) FROM TBL_SLIP");
+
+            slipID = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_SLIP").ToString());
             slipID++;
+            selectedlsID = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_LINESLIP").ToString());
+            lsIDpoint = 0;
         }
 
 
@@ -104,7 +111,7 @@ namespace OicRentalShop.Manage.Return
             da.Fill(dtp);
             string Price = dtp.Rows[0][0].ToString();
 
-            CmdFunc("INSERT INTO TBL_LINESLIP VALUES(" + lineslipID + "," + slipID + "," + int.Parse(txt_InProductID.Text) + ",1," + int.Parse(typeid) + "," + int.Parse(Price) + ")");
+            CmdFunc("INSERT INTO TBL_LINESLIP VALUES(" + lineslipID + "," + slipID + "," + int.Parse(txt_InProductID.Text) + ",4," + int.Parse(typeid) + "," + int.Parse(Price) + ")");
         }
 
         private void txt_MemberID_TextChanged(object sender, EventArgs e)
@@ -176,13 +183,13 @@ namespace OicRentalShop.Manage.Return
                             if (SlipFlag == 0)
                             {
                                 DateTime Today = DateTime.Today;
-                                CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",false,#" + Today.ToString() + "#,0,1)");
+                                CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",true,#" + Today.ToString() + "#,0,1)");
                                 txt_MemberID.ReadOnly = true;
                                 SlipFlag = 1;
                             }
                             txt_ProductID.Text = txt_InProductID.Text;
                             txt_title.Text = SetInfo("SELECT t.TITLE_NAME FROM TBL_TITLE t,TBL_ITEM i WHERE t.TITLE_ID=i.TITLE_ID AND i.ITEM_ID = " + txt_InProductID.Text);
-                            //InsertLineSlip();
+                            InsertLineSlip();
                             slipprice = int.Parse(SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID=" + slipID));
                             txt_money.Text = slipprice.ToString();
                             CmdFunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
@@ -192,7 +199,7 @@ namespace OicRentalShop.Manage.Return
                         }
                         else
                         {
-                            MessageBox.Show("指定された商品は貸し出されていません");
+                            MessageBox.Show("指定された商品はすでに貸し出されています");
                             txt_InProductID.Clear();
                         }
                     }
@@ -237,6 +244,85 @@ namespace OicRentalShop.Manage.Return
                 txt_ProductID.Clear();
             }
             }
+
+        private void Btn_ClearPID_Click(object sender, EventArgs e)
+        {
+            {
+                if (lsIDpoint > 0)
+                {
+                    txt_ProductID.Clear();
+                    slipprice -= int.Parse(SetInfo("SELECT LS_PRICE FROM TBL_LINESLIP WHERE LINESLIP_ID=" + selectedlsID));
+                    CmdFunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
+                    CmdFunc("DELETE FROM TBL_LINESLIP WHERE LINESLIP_ID = " + selectedlsID.ToString());
+                    selectedlsID--;
+                    lsIDpoint--;
+                    if (lsIDpoint == 0)
+                    {
+                        txt_money.Clear();
+                        CmdFunc("DELETE FROM TBL_SLIP WHERE SLIP_ID= " + slipID);
+                        SlipFlag = 0;
+                    }
+                    else
+                    {
+                        txt_money.Text = SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID=" + slipID);
+
+                        txt_ProductID.Text = SetInfo("SELECT ITEM_ID FROM TBL_LINESLIP WHERE LINESLIP_ID=" + selectedlsID);
+
+
+                    }
+                    selectfunc("SELECT t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
+                }
+            }
+        }
+
+        private void Btn_ClearMID_Click(object sender, EventArgs e)
+        {
+            txt_MemberID.Clear();
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            clearfunc();
+        }
+
+        private void btn_ok_Click(object sender, EventArgs e)
+        {
+            int lscnt = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID=" + slipID).ToString());
+            for (int i = 0; i < lscnt; i++)
+            {
+                dt.Clear();
+                dt = new DataTable();
+                da = new OleDbDataAdapter("SELECT ITEM_ID FROM TBL_LINESLIP WHERE SLIP_ID=" + slipID, cn);
+                da.Fill(dt);
+                CmdFunc("UPDATE TBL_ITEM SET ITEM_STATE = true WHERE ITEM_ID =" + dt.Rows[i][0].ToString());
+            }
+
+            clearfunc();
+            SlipFlag = 0;
+        }
+
+        private void txt_MemberID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || '9' < e.KeyChar) && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_InProductID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || '9' < e.KeyChar) && e.KeyChar != '\b')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Return_VisibleChanged(object sender, EventArgs e)
+        {
+            {
+                txt_MemberID.Clear();
+            }
+        }
     }
 }
 

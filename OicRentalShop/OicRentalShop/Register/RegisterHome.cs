@@ -15,14 +15,14 @@ namespace OicRentalShop.Manage
         public static ItemAdd.ItemAdd ia;
         public static ItemInfo.ItemInfo ii;
         public static Lend.Lend ll;
+        public static Lend.LendConf lc;
         public static MemberAdd.MemberAdd mm;
         public static PriceList.PriceList pp;
         public static Return.Return rr;
         public static MemberAdd.MemberAddConfirmation ma;
         public static ItemAdd.ItemAddConfirmation ic;
         public static Title.TitleAdd ta;
-        
-        
+
 
         public RegisterHome()
         {
@@ -57,17 +57,39 @@ namespace OicRentalShop.Manage
             }
         }
 
+        public void MoveOnLRConf(int flag)
+        {
+            if(flag==0)
+            {
+                panel.Controls.Clear();
+                panel.Controls.Add(lc);
+                lc.Visible = true;
+            }
+        }
+
+        public void ReturnLRHome(int flag)
+        {
+            if(flag==0)
+            {
+                panel.Controls.Clear();
+                panel.Controls.Add(ll);
+                ll.Visible = true;
+            }
+        }
+
         private void TestForm_Load(object sender, EventArgs e)
         {
             ia = new ItemAdd.ItemAdd();
             ii = new ItemInfo.ItemInfo();
-            ll = new Lend.Lend();
+            ll = new Lend.Lend(this);
+            lc = new Lend.LendConf(this,ll);//this
             mm = new MemberAdd.MemberAdd();
             pp = new PriceList.PriceList();
-            rr= new Return.Return();
+            rr = new Return.Return();
             ma = new MemberAdd.MemberAddConfirmation();
             ic = new ItemAdd.ItemAddConfirmation();
             ta = new Title.TitleAdd();
+            
             
         }
 
@@ -81,6 +103,7 @@ namespace OicRentalShop.Manage
             panel.Controls.Clear();
             panel.Controls.Add(ll);
             ll.Visible = true;
+            
         }
 
         private void btn_Return_Click(object sender, EventArgs e)
@@ -126,7 +149,7 @@ namespace OicRentalShop.Manage
             panel.Controls.Add(ta);
             ta.Visible = true;
         }
-  
+
 
     }
 }
