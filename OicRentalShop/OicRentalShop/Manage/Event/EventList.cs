@@ -37,7 +37,7 @@ namespace OicRentalShop.Manage.Event
         private void EventList_Load(object sender, EventArgs e)
         {
             cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\..\..\DB\Database1.accdb;");
-            selectfunc("SELECT * FROM TBL_EVENT");
+            selectfunc("SELECT EVENT_ID AS イベントID,EVENT_NAME AS イベント名,EVENT_PRICE AS イベント料金,TYPE_ID AS 商品タイプ,EVENT_NUM AS 枚数,EVENT_START AS 開始日,EVENT_END AS 終了日,EVENT_OLD,EVENT_DELETE FROM TBL_EVENT ORDER BY EVENT_ID");
             //DataGridViewButtonColumnの作成
             DataGridViewButtonColumn column = new DataGridViewButtonColumn();
             //列の名前を設定
@@ -66,20 +66,20 @@ namespace OicRentalShop.Manage.Event
             //"Button"列ならば、ボタンがクリックされた
             if (dgv.Columns[e.ColumnIndex].Name == "DELETE")
             {
-                if (DialogResult.Yes == MessageBox.Show("タイトルID　" + dgv.Rows[e.RowIndex].Cells[0].Value + "　タイトル名　" + dgv.Rows[e.RowIndex].Cells[1].Value + "　のデータを削除してよろしいですか？", "確認",
+                if (DialogResult.Yes == MessageBox.Show("タイトルID　" + dgv.Rows[e.RowIndex].Cells[2].Value + "　タイトル名　" + dgv.Rows[e.RowIndex].Cells[3].Value + "　のデータを削除してよろしいですか？", "確認",
                  MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
-                    CmdFunc("UPDATE TBL_EVENT SET EVENT_DELETE = true WHERE EVENT_ID =" + dgv.Rows[e.RowIndex].Cells[0].Value);
+                    CmdFunc("UPDATE TBL_EVENT SET EVENT_DELETE = true WHERE EVENT_ID =" + dgv.Rows[e.RowIndex].Cells[2].Value);
                 }
 
 
             }
             else if(dgv.Columns[e.ColumnIndex].Name=="UPDATE")
             {
-                if (DialogResult.Yes == MessageBox.Show("イベントID　" + dgv.Rows[e.RowIndex].Cells[1].Value + "　イベント名　" + dgv.Rows[e.RowIndex].Cells[2].Value + "　のデータを編集してよろしいですか？", "確認",
+                if (DialogResult.Yes == MessageBox.Show("イベントID　" + dgv.Rows[e.RowIndex].Cells[2].Value + "　イベント名　" + dgv.Rows[e.RowIndex].Cells[3].Value + "　のデータを編集してよろしいですか？", "確認",
                  MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
-                    CmdFunc("UPDATE TBL_EVENT SET EVENT_DELETE = true WHERE EVENT_ID =" + dgv.Rows[e.RowIndex].Cells[0].Value);
+                    CmdFunc("UPDATE TBL_EVENT SET EVENT_NAME ='" + dgv.Rows[e.RowIndex].Cells[3].Value + "',EVENT_PRICE =" + dgv.Rows[e.RowIndex].Cells[4].Value + ",TYPE_ID = " + dgv.Rows[e.RowIndex].Cells[5].Value + ",EVENT_NUM = " + dgv.Rows[e.RowIndex].Cells[6].Value + ",EVENT_START =#" + dgv.Rows[e.RowIndex].Cells[7].Value + "#,EVENT_END =#" + dgv.Rows[e.RowIndex].Cells[8].Value + "# WHERE EVENT_ID =" + dgv.Rows[e.RowIndex].Cells[2].Value);
                 }
             }
         }
@@ -94,6 +94,12 @@ namespace OicRentalShop.Manage.Event
             Cmd.CommandText = cmdstr;
             Cmd.ExecuteNonQuery();
             cn.Close();
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            int flag = 5;
+            ManageHome.GoNext(flag);
         }
     }
 }

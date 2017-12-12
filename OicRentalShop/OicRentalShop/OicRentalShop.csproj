@@ -67,6 +67,12 @@
     <Compile Include="Manage\Event\EventList.Designer.cs">
       <DependentUpon>EventList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage\Event\EventAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Manage\Event\EventAdd.Designer.cs">
+      <DependentUpon>EventAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manage\Item\ItemList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\Event\EventList.resx">
       <DependentUpon>EventList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage\Event\EventAdd.resx">
+      <DependentUpon>EventAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage\Item\ItemList.resx">
       <DependentUpon>ItemList.cs</DependentUpon>

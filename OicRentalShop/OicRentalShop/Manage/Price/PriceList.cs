@@ -13,7 +13,7 @@ namespace OicRentalShop.Manage.Price
 {
     public partial class PriceList : UserControl
     {
-        OleDbConnection cn = new OleDbConnection();
+        OleDbConnection cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\..\..\DB\Database1.accdb;");
         OleDbDataAdapter da = new OleDbDataAdapter();
         DataTable dt = new DataTable();
 

@@ -25,6 +25,7 @@ namespace OicRentalShop.Manage
         public static Title.ManageTitleAdd mta;
         public static Member.MemberAddCorrection ma;
         public static Member.MemberAddCorrectionConfirmation mac;
+        public static Event.EventAdd ea;
  
 
         public ManageHome()
@@ -48,6 +49,8 @@ namespace OicRentalShop.Manage
             mta = new Title.ManageTitleAdd();
             ma = new Member.MemberAddCorrection();
             mac = new Member.MemberAddCorrectionConfirmation();
+            ea = new Event.EventAdd();
+
             panel.Controls.Clear();
             panel.Controls.Add(it);
             it.Visible = true;
@@ -83,6 +86,12 @@ namespace OicRentalShop.Manage
                 tl.Visible = false;
                 mta.Visible = true;
             }
+            else if (flag == 5)
+            {
+                ev.Visible = false;
+                ea.Visible = true;
+            }
+            
 
 
         }
@@ -108,6 +117,11 @@ namespace OicRentalShop.Manage
             {
                 sac.Visible = false;
                 sa.Visible = true;
+            }
+            else if (flag == 4)
+            {
+                ea.Visible = false;
+                ev.Visible = true;
             }
         }
 
@@ -163,7 +177,9 @@ namespace OicRentalShop.Manage
         {
             panel.Controls.Clear();
             panel.Controls.Add(ev);
+            panel.Controls.Add(ea);
             ev.Visible = true;
+            ea.Visible = false;
         }
 
         private void btn_Log_Click(object sender, EventArgs e)
