@@ -75,9 +75,14 @@ namespace OicRentalShop.Manage.Title
         {
             dgv_TitleInfo.Columns.Clear();
             dgv_TitleInfo.ClearSelection();
-
-            selectfunc("SELECT * FROM TBL_TITLE ORDER BY  TITLE_ID ASC");
-
+            selectfunc("SELECT TBL_TITLE.TITLE_NAME, TBL_TITLE.TITLE_ID, TBL_TYPE.TYPE_NAME, TBL_OLD.OLD_NAME, TBL_ARTIST.ARTIST_NAME, TBL_GENRE.GENRE_NAME FROM TBL_TYPE INNER JOIN (TBL_OLD INNER JOIN (TBL_GENRE INNER JOIN (TBL_ARTIST RIGHT OUTER JOIN TBL_TITLE ON TBL_ARTIST.ARTIST_ID = TBL_TITLE.ARTIST_ID) ON TBL_GENRE.GENRE_ID = TBL_TITLE.GENRE_ID) ON TBL_OLD.OLD_ID = TBL_TITLE.OLD_ID) ON (TBL_TYPE.TYPE_ID = TBL_GENRE.TYPE_ID) AND (TBL_TYPE.TYPE_ID = TBL_TITLE.TYPE_ID) WHERE TBL_TITLE.TITLE_NAME LIKE '%" + txt_TitleName.Text + "%' AND TBL_TITLE.TITLE_ID LIKE '%" + txt_TitleID.Text + "%' AND TBL_TYPE.TYPE_NAME LIKE '%" + cmb_Type.Text + "%' AND TBL_OLD.OLD_NAME LIKE '%" + cmb_Old_New.Text + "%' AND TBL_ARTIST.ARTIST_NAME LIKE '%" + txt_Artist.Text + "%' AND TBL_GENRE.GENRE_NAME LIKE '%" + cmb_Genre.Text + "%' ORDER BY TBL_TITLE.TITLE_ID");
+            //selectfunc("SELECT t.TITLE_NAME,t.TITLE_ID,ty.TYPE_NAME,ol.OLD_NAME,a.ARTIST_NAME,g.GENRE_NAME FROM TBL_TITLE t,TBL_TYPE ty,TBL_OLD ol,TBL_ARTIST a,TBL_GENRE g WHERE t.GENRE_ID=g.GENRE_ID AND t.TYPE_ID=ty.TYPE_ID AND t.ARTIST_ID IS NULL AND t.OLD_ID = ol.OLD_ID");
+            //SELECT t.TITLE_NAME,t.TITLE_ID,ty.TYPE_NAME,ol.OLD_NAME,a.ARTIST_NAME,g.GENRE_NAME FROM TBL_TITLE t,TBL_TYPE ty,TBL_OLD ol,TBL_ARTIST a,TBL_GENRE g WHERE t.GENRE_ID=g.GENRE_ID AND t.TYPE_ID=ty.TYPE_ID AND t.ARTIST_ID = 1 AND t.OLD_ID = ol.OLD_ID
+            //selectfunc("SELECT t.TITLE_NAME,t.TITLE_ID,ty.TYPE_NAME,ol.OLD_NAME,a.ARTIST_NAME,g.GENRE_NAME FROM TBL_TITLE t LEFT OUTER JOIN TBL_ARTIST a ON t.ARTIST_ID=a.ARTIST_ID,TBL_TYPE ty,TBL_OLD ol,TBL_GENRE g WHERE t.GENRE_ID=g.GENRE_ID AND t.TYPE_ID=ty.TYPE_ID AND t.OLD_ID = ol.OLD_ID");
+            //SELECT t.TITLE_NAME,t.TITLE_ID,ty.TYPE_NAME,ol.OLD_NAME,IIf([a.ARTIST_NAME]!='','私','うんち'),g.GENRE_NAME FROM TBL_TITLE t,TBL_TYPE ty,TBL_OLD ol,TBL_ARTIST a,TBL_GENRE g WHERE t.GENRE_ID=g.GENRE_ID AND t.TYPE_ID=ty.TYPE_ID AND t.ARTIST_ID=a.ARTIST_ID AND t.OLD_ID = ol.OLD_ID
+            //IIf([a.ARTIST_NAME]!='','私','うんち')   ON 
+            // AND t.TITLE_NAME LIKE '%" + txt_TitleName.Text + "%' t.TITLE_ID LIKE '%" + txt_TitleID.Text + "%' ty.TYPE_NAME LIKE '%" + cmb_Type.Text + "%' o.OLD_NAME LILE '%" + cmb_Old_New.Text + "%' a.ARTIST_NAME LIKE '%" + txt_Artist.Text + "%' g.GENRE_NAME LIKE '%" + cmb_Genre.Text + "%'
+            
             //DataGridViewButtonColumnの作成
             DataGridViewButtonColumn column = new DataGridViewButtonColumn();
             //列の名前を設定
@@ -87,6 +92,11 @@ namespace OicRentalShop.Manage.Title
             column.Text = "削除";
             //DataGridViewに追加する
             dgv_TitleInfo.Columns.Add(column);
+        }
+
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
