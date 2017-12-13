@@ -28,24 +28,24 @@ namespace OicRentalShop.Manage.Profit
         private void btn_Set_Click(object sender, EventArgs e)
         {
 
-            dt.Clear();
-            dt = new DataTable();
-            OleDbDataAdapter da = new OleDbDataAdapter("SELECT SUM(SLIP_PRICE) FROM TBL_SLIP WHERE SLIP_DATE BETWEEN #" + txt_StartDay.Text + "# AND #" + txt_EndDay.Text + "#", cn);
-            da.Fill(dt);
-            txt_Total.Text = dt.Rows[0][0].ToString();
 
-
-
-            dt.Clear();
-            dt = new DataTable();
-            dgv_Voucher.Columns.Clear();
-            dgv_Voucher.DataSource = null;
-            OleDbDataAdapter da1 = new OleDbDataAdapter("SELECT * FROM TBL_SLIP WHERE SLIP_DATE BETWEEN #" + txt_StartDay.Text + "# AND #" + txt_EndDay.Text + "#", cn);
-            if (dt.Rows.Count == 1)
+            if (txt_StartDay.Text.Length > 0 && txt_EndDay.Text.Length > 0)
             {
-                MessageBox.Show("anal");
+                dt.Clear();
+                dt = new DataTable();
+                OleDbDataAdapter da = new OleDbDataAdapter("SELECT SUM(SLIP_PRICE) FROM TBL_SLIP WHERE SLIP_DATE BETWEEN #" + txt_StartDay.Text + "# AND #" + txt_EndDay.Text + "#", cn);
+                da.Fill(dt);
+                txt_Total.Text = dt.Rows[0][0].ToString();
+                dt.Clear();
+                dt = new DataTable();
+                dgv_Voucher.Columns.Clear();
+                dgv_Voucher.DataSource = null;
+                OleDbDataAdapter da1 = new OleDbDataAdapter("SELECT * FROM TBL_SLIP WHERE SLIP_DATE BETWEEN #" + txt_StartDay.Text + "# AND #" + txt_EndDay.Text + "#", cn);
+                da1.Fill(dt);
             }
-            da1.Fill(dt);
+
+  
+            
             dgv_Voucher.DataSource = dt;
             dgv_Voucher.AutoResizeColumns();
         }
