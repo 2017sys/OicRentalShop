@@ -37,7 +37,7 @@ namespace OicRentalShop.Manage.Event
         private void EventList_Load(object sender, EventArgs e)
         {
             cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\..\..\DB\Database1.accdb;");
-            selectfunc("SELECT EVENT_ID AS イベントID,EVENT_NAME AS イベント名,EVENT_PRICE AS イベント料金,TYPE_ID AS 商品タイプ,EVENT_NUM AS 枚数,EVENT_START AS 開始日,EVENT_END AS 終了日,EVENT_OLD,EVENT_DELETE FROM TBL_EVENT ORDER BY EVENT_ID");
+            selectfunc("SELECT EVENT_ID AS イベントID,EVENT_NAME AS イベント名,EVENT_PRICE AS イベント料金,TYPE_ID AS 商品タイプ,EVENT_NUM AS 枚数,EVENT_START AS 開始日,EVENT_END AS 終了日,EVENT_OLD,EVENT_DELETE FROM TBL_EVENT WHERE EVENT_DELETE=false ORDER BY EVENT_ID");
             //DataGridViewButtonColumnの作成
             DataGridViewButtonColumn column = new DataGridViewButtonColumn();
             //列の名前を設定

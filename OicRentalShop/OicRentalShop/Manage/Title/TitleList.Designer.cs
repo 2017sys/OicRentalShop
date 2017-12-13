@@ -30,7 +30,6 @@
         {
             this.btn_Search = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
-            this.btn_Edit = new System.Windows.Forms.Button();
             this.dgv_TitleInfo = new System.Windows.Forms.DataGridView();
             this.txt_Artist = new System.Windows.Forms.TextBox();
             this.lbl_Artist = new System.Windows.Forms.Label();
@@ -66,24 +65,13 @@
             // btn_Add
             // 
             this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.btn_Add.Location = new System.Drawing.Point(823, 427);
+            this.btn_Add.Location = new System.Drawing.Point(824, 513);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(120, 50);
             this.btn_Add.TabIndex = 128;
             this.btn_Add.Text = "追加";
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
-            // 
-            // btn_Edit
-            // 
-            this.btn_Edit.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.btn_Edit.Location = new System.Drawing.Point(824, 350);
-            this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(120, 50);
-            this.btn_Edit.TabIndex = 127;
-            this.btn_Edit.Text = "編集";
-            this.btn_Edit.UseVisualStyleBackColor = true;
-            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // dgv_TitleInfo
             // 
@@ -115,10 +103,13 @@
             // cmb_Genre
             // 
             this.cmb_Genre.FormattingEnabled = true;
+            this.cmb_Genre.Items.AddRange(new object[] {
+            "全ジャンル"});
             this.cmb_Genre.Location = new System.Drawing.Point(407, 185);
             this.cmb_Genre.Name = "cmb_Genre";
             this.cmb_Genre.Size = new System.Drawing.Size(80, 20);
             this.cmb_Genre.TabIndex = 123;
+            this.cmb_Genre.Text = "全ジャンル";
             // 
             // cmb_Old_New
             // 
@@ -155,13 +146,17 @@
             // 
             this.cmb_Type.FormattingEnabled = true;
             this.cmb_Type.Items.AddRange(new object[] {
+            "すべて",
             "CD",
-            "DVD"});
+            "DVD",
+            "シングル",
+            "アルバム"});
             this.cmb_Type.Location = new System.Drawing.Point(416, 151);
             this.cmb_Type.Name = "cmb_Type";
             this.cmb_Type.Size = new System.Drawing.Size(60, 20);
             this.cmb_Type.TabIndex = 119;
-            this.cmb_Type.Text = "CD";
+            this.cmb_Type.Text = "すべて";
+            this.cmb_Type.SelectedIndexChanged += new System.EventHandler(this.cmb_Type_SelectedIndexChanged);
             // 
             // lbl_Type
             // 
@@ -259,7 +254,6 @@
             this.BackColor = System.Drawing.SystemColors.Info;
             this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.dgv_TitleInfo);
             this.Controls.Add(this.txt_Artist);
             this.Controls.Add(this.lbl_Artist);
@@ -291,7 +285,6 @@
 
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.Button btn_Edit;
         private System.Windows.Forms.DataGridView dgv_TitleInfo;
         private System.Windows.Forms.TextBox txt_Artist;
         private System.Windows.Forms.Label lbl_Artist;
