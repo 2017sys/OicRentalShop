@@ -13,6 +13,8 @@ namespace OicRentalShop.Manage
     public partial class ManageHome : Form
     {
         public static Item.ItemList it;
+        public static Item.ItemAdd ia;
+        public static Item.ItemAddConfimation ic;
         public static Member.MemberList me;
         public static Staff.StaffList st;
         public static Staff.StaffAdd sa;
@@ -20,12 +22,13 @@ namespace OicRentalShop.Manage
         public static Price.PriceList pc;
         public static Profit.ProfitList pf;
         public static Event.EventList ev;
+        public static Event.EventAdd ea;
         public static Log.LogList lo;
         public static Title.TitleList tl;
         public static Title.ManageTitleAdd mta;
         public static Member.MemberAddCorrection ma;
         public static Member.MemberAddCorrectionConfirmation mac;
-        public static Event.EventAdd ea;
+        
  
 
         public ManageHome()
@@ -37,6 +40,8 @@ namespace OicRentalShop.Manage
         private void ManageHome_Load(object sender, EventArgs e)
         {
             it = new Item.ItemList();
+            ia = new Item.ItemAdd();
+            ic = new Item.ItemAddConfimation(ia);
             me = new Member.MemberList();
             st = new Staff.StaffList();
             sa = new Staff.StaffAdd();
@@ -91,6 +96,21 @@ namespace OicRentalShop.Manage
                 ev.Visible = false;
                 ea.Visible = true;
             }
+            else if (flag == 6)
+            {
+                it.Visible = false;
+                ia.Visible = true;
+            }
+            else if (flag == 7)
+            {
+                ia.Visible = false;
+                ic.Visible = true;
+            }
+            else if (flag == 8)
+            {
+                ic.Visible = false;
+                it.Visible = true;
+            }
             
 
 
@@ -123,6 +143,16 @@ namespace OicRentalShop.Manage
                 ea.Visible = false;
                 ev.Visible = true;
             }
+            else if (flag == 5)
+            {
+                ia.Visible = false;
+                it.Visible = true;
+            }
+            else if (flag == 6)
+            {
+                ic.Visible = false;
+                ia.Visible = true;
+            }
         }
 
         private void btn_Top_Click(object sender, EventArgs e)
@@ -134,7 +164,11 @@ namespace OicRentalShop.Manage
         {
             panel.Controls.Clear();
             panel.Controls.Add(it);
+            panel.Controls.Add(ia);
+            panel.Controls.Add(ic);
             it.Visible = true;
+            ia.Visible = false;
+            ic.Visible = false;
         }
 
         private void btn_Member_Click(object sender, EventArgs e)
