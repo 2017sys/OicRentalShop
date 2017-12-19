@@ -33,26 +33,33 @@ namespace OicRentalShop.Manage.ItemAdd
             //int flag = 1;
             //RegisterHome.GoNext(flag);
 
-            if (DialogResult.Yes == MessageBox.Show("仮登録データを全て登録しますか？", "確認",
-           MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            if (dgv_ItemRe.Rows.Count - 1 != 0)
             {
-
-
-                OleDbCommand Cmd = new OleDbCommand();
-                Cmd.Connection = cn;
-                cn.Open();
-                for (int i = 0; i < dgv_ItemRe.Rows.Count - 1; i++)
+                if (DialogResult.Yes == MessageBox.Show("仮登録データを全て登録しますか？", "確認",
+               MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
 
-                    Cmd.CommandText = "INSERT INTO TBL_ITEM VALUES(" + dgv_ItemRe.Rows[i].Cells[0].Value + ",false,'" + ZeroCut(dgv_ItemRe.Rows[i].Cells[1].Value.ToString()) + "',false)";
-                    Cmd.ExecuteNonQuery();
+
+                    OleDbCommand Cmd = new OleDbCommand();
+                    Cmd.Connection = cn;
+                    cn.Open();
+                    for (int i = 0; i < dgv_ItemRe.Rows.Count - 1; i++)
+                    {
+
+                        Cmd.CommandText = "INSERT INTO TBL_ITEM VALUES(" + dgv_ItemRe.Rows[i].Cells[0].Value + ",false,'" + ZeroCut(dgv_ItemRe.Rows[i].Cells[1].Value.ToString()) + "',false)";
+                        Cmd.ExecuteNonQuery();
+
+                    }
+                    cn.Close();
+                    /* 　-　ここ　-　 */
+                    MessageBox.Show("登録が完了しました");
+                    dgv_ItemRe.Rows.Clear();
 
                 }
-                cn.Close();
-                /* 　-　ここ　-　 */
-                MessageBox.Show("登録が完了しました");
-                dgv_ItemRe.Rows.Clear();
-
+            }
+            else
+            {
+                MessageBox.Show("データを追加してください");
             }
         }
 
@@ -103,8 +110,24 @@ namespace OicRentalShop.Manage.ItemAdd
 
         private void btn_ToAdd_Click(object sender, EventArgs e)
         {
-            this.dgv_ItemRe.Rows.Add(lbl_UniqueIDInfo.Text,txt_TitleID.Text, lbl_TitleNameInfo.Text, lbl_ArtistInfo.Text, lbl_GenreInfo.Text, lbl_ReleaseDateInfo.Text);
-            count++;
+            if (txt_TitleID.Text != "" && txt_TitleID.TextLength == 8)
+            {
+                this.dgv_ItemRe.Rows.Add(lbl_UniqueIDInfo.Text, txt_TitleID.Text, lbl_TitleNameInfo.Text, lbl_ArtistInfo.Text, lbl_GenreInfo.Text, lbl_ReleaseDateInfo.Text);
+                count++;
+            }
+            else
+            {
+                MessageBox.Show("正しいタイトルIDを入力してください");
+            }
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show("仮登録データを全て削除しますか？", "確認",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
+                dgv_ItemRe.Rows.Clear();
+            }
         }
 
 

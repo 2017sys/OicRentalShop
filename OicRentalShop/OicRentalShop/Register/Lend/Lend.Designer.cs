@@ -97,7 +97,6 @@
             this.txt_ProductID = new System.Windows.Forms.TextBox();
             this.Btn_ClearPID = new System.Windows.Forms.Button();
             this.Btn_ClearMID = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_info)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLLENDBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
@@ -711,21 +710,10 @@
             this.Btn_ClearMID.UseVisualStyleBackColor = true;
             this.Btn_ClearMID.Click += new System.EventHandler(this.Btn_ClearMID_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(809, 228);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 162);
-            this.button1.TabIndex = 193;
-            this.button1.Text = "木村悦楽帝国";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Lend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.Btn_ClearMID);
             this.Controls.Add(this.Btn_ClearPID);
             this.Controls.Add(this.txt_ProductID);
@@ -871,7 +859,6 @@
         private System.Windows.Forms.TextBox txt_ProductID;
         private System.Windows.Forms.Button Btn_ClearPID;
         private System.Windows.Forms.Button Btn_ClearMID;
-        private System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox txt_MemberID;
     }
 }

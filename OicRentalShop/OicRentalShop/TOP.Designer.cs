@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_Manage = new System.Windows.Forms.Button();
+            this.btn_Register = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_Manage
             // 
-            this.button1.Location = new System.Drawing.Point(155, 165);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(300, 300);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "店長";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Manage.Location = new System.Drawing.Point(155, 165);
+            this.btn_Manage.Name = "btn_Manage";
+            this.btn_Manage.Size = new System.Drawing.Size(300, 300);
+            this.btn_Manage.TabIndex = 0;
+            this.btn_Manage.Text = "店長";
+            this.btn_Manage.UseVisualStyleBackColor = true;
+            this.btn_Manage.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btn_Register
             // 
-            this.button2.Location = new System.Drawing.Point(566, 165);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(300, 300);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "一般";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_Register.Location = new System.Drawing.Point(566, 165);
+            this.btn_Register.Name = "btn_Register";
+            this.btn_Register.Size = new System.Drawing.Size(300, 300);
+            this.btn_Register.TabIndex = 1;
+            this.btn_Register.Text = "一般";
+            this.btn_Register.UseVisualStyleBackColor = true;
+            this.btn_Register.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1104, 592);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Register);
+            this.Controls.Add(this.btn_Manage);
             this.Name = "Form1";
             this.ShowInTaskbar = false;
             this.Text = "Top";
@@ -68,8 +68,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Manage;
+        private System.Windows.Forms.Button btn_Register;
     }
 }
 

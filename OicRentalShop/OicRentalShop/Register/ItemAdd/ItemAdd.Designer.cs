@@ -31,6 +31,12 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.dgv_ItemRe = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl_ReleaseDateInfo = new System.Windows.Forms.Label();
             this.lbl_GenreInfo = new System.Windows.Forms.Label();
             this.lbl_ArtistInfo = new System.Windows.Forms.Label();
@@ -46,12 +52,6 @@
             this.txt_TitleID = new System.Windows.Forms.TextBox();
             this.lbl_UniqueIDInfo = new System.Windows.Forms.Label();
             this.btn_ToAdd = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemRe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +75,7 @@
             this.btn_clear.TabIndex = 120;
             this.btn_clear.Text = "クリア";
             this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // dgv_ItemRe
             // 
@@ -91,6 +92,36 @@
             this.dgv_ItemRe.RowTemplate.Height = 21;
             this.dgv_ItemRe.Size = new System.Drawing.Size(288, 362);
             this.dgv_ItemRe.TabIndex = 119;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "商品ID";
+            this.Column1.Name = "Column1";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "タイトルID";
+            this.Column6.Name = "Column6";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "タイトル名";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "アーティスト名";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "ジャンル名";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "発売日";
+            this.Column5.Name = "Column5";
             // 
             // lbl_ReleaseDateInfo
             // 
@@ -232,36 +263,6 @@
             this.btn_ToAdd.Text = "追加";
             this.btn_ToAdd.UseVisualStyleBackColor = true;
             this.btn_ToAdd.Click += new System.EventHandler(this.btn_ToAdd_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "商品ID";
-            this.Column1.Name = "Column1";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "タイトルID";
-            this.Column6.Name = "Column6";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "タイトル名";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "アーティスト名";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "ジャンル名";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "発売日";
-            this.Column5.Name = "Column5";
             // 
             // ItemAdd
             // 

@@ -53,7 +53,7 @@ namespace OicRentalShop.Manage.Price
 
         private void PriceList_Load(object sender, EventArgs e)
         {
-       
+
             selectfunc("SELECT p.PRICE_ID,t.TYPE_NAME,o.OLD_NAME,p.PRICE_12,p.PRICE_23,p.PRICE_78,p.PRICE_START,p.PRICE_END FROM TBL_PRICE p,TBL_OLD o,TBL_TYPE t WHERE p.TYPE_ID=t.TYPE_ID AND p.OLD_ID=o.OLD_ID ORDER BY t.TYPE_ID ASC,o.OLD_ID DESC");
 
         }
@@ -72,8 +72,8 @@ namespace OicRentalShop.Manage.Price
                     CmdFunc("UPDATE TBL_PRICE SET PRICE_12=" + dgv.Rows[e.RowIndex].Cells[4].Value + ",PRICE_23=" + dgv.Rows[e.RowIndex].Cells[5].Value + ",PRICE_78=" + dgv.Rows[e.RowIndex].Cells[6].Value + "  WHERE PRICE_ID=" + dgv.Rows[e.RowIndex].Cells[1].Value + " AND PRICE_DELETE=false");
                     dgv_PriceInfo.Columns.Clear();
                     dgv_PriceInfo.ClearSelection();
-                    
-                    selectfunc("SELECT p.PRICE_ID,t.TYPE_NAME,o.OLD_NAME,p.PRICE_12,p.PRICE_23,p.PRICE_78,p.PRICE_START,p.PRICE_END FROM TBL_PRICE p,TBL_OLD o,TBL_TYPE t WHERE p.TYPE_ID=t.TYPE_ID AND p.OLD_ID=o.OLD_ID ORDER BY t.TYPE_ID ASC,o.OLD_ID DESC");
+
+                    selectfunc("SELECT p.PRICE_ID,t.TYPE_NAME,o.OLD_NAME,p.PRICE_12,p.PRICE_23,p.PRICE_78,p.PRICE_START,p.PRICE_END FROM TBL_PRICE p,TBL_OLD o,TBL_TYPE t WHERE p.TYPE_ID=t.TYPE_ID AND p.OLD_ID=o.OLD_ID ORDER BY t.TYPE_ID ASC,o.OLD_ID DESC"); 
             
                 }
             }

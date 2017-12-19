@@ -76,7 +76,6 @@
             this.txt_InProductID = new System.Windows.Forms.TextBox();
             this.Btn_ClearMID = new System.Windows.Forms.Button();
             this.Btn_ClearPID = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ReturnItem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -525,21 +524,10 @@
             this.Btn_ClearPID.UseVisualStyleBackColor = true;
             this.Btn_ClearPID.Click += new System.EventHandler(this.Btn_ClearPID_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(810, 221);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 220);
-            this.button1.TabIndex = 230;
-            this.button1.Text = "木村純一";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Return
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.Btn_ClearPID);
             this.Controls.Add(this.Btn_ClearMID);
             this.Controls.Add(this.txt_InProductID);
@@ -648,6 +636,5 @@
         private System.Windows.Forms.TextBox txt_InProductID;
         private System.Windows.Forms.Button Btn_ClearMID;
         private System.Windows.Forms.Button Btn_ClearPID;
-        private System.Windows.Forms.Button button1;
     }
 }
