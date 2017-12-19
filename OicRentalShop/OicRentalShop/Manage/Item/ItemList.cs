@@ -174,6 +174,15 @@ namespace OicRentalShop.Manage.Item
                  MessageBoxButtons.YesNo, MessageBoxIcon.Question))
                 {
                     CmdFunc("UPDATE TBL_ITEM SET ITEM_DELETE = true WHERE ITEM_ID =" + dgv.Rows[e.RowIndex].Cells[2].Value);
+
+                    if (cmb_Type.Text == "DVD")
+                    {
+                        selectfunc("SELECT title.TITLE_NAME AS タイトル名, title.TITLE_ID AS タイトルID , item.ITEM_ID AS 商品ID , type.TYPE_NAME AS 商品タイプ , genre.GENRE_NAME AS ジャンル FROM TBL_TITLE title , TBL_ITEM item , TBL_TYPE type , TBL_GENRE genre WHERE title.TYPE_ID = type.TYPE_ID AND item.TITLE_ID = title.TITLE_ID AND title.GENRE_ID = genre.GENRE_ID AND title.TYPE_ID = 1" + serchItems() + "AND item.ITEM_DELETE= false");
+                    }
+                    else if (cmb_Type.Text == "CD")
+                    {
+                        selectfunc("SELECT title.TITLE_NAME AS タイトル名,title.TITLE_ID AS タイトルID,item.ITEM_ID AS 商品ID,type.TYPE_NAME AS 商品タイプ,genre.GENRE_NAME AS ジャンル,art.ARTIST_NAME AS アーティスト FROM TBL_TITLE title,TBL_ITEM item,TBL_TYPE type,TBL_GENRE genre,TBL_ARTIST art WHERE title.TYPE_ID = type.TYPE_ID AND item.TITLE_ID=title.TITLE_ID AND title.GENRE_ID = genre.GENRE_ID AND art.ARTIST_ID=title.ARTIST_ID" + serchItems() + "AND item.ITEM_DELETE= false");
+                    }
                 }
 
 
