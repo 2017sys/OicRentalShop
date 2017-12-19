@@ -79,12 +79,6 @@
     <Compile Include="Manage\Item\ItemAdd.Designer.cs">
       <DependentUpon>ItemAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage\Item\ItemAddConfimation.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Manage\Item\ItemAddConfimation.Designer.cs">
-      <DependentUpon>ItemAddConfimation.cs</DependentUpon>
-    </Compile>
     <Compile Include="Manage\Item\ItemList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,12 +163,6 @@
     <Compile Include="Register\ItemAdd\ItemAdd.Designer.cs">
       <DependentUpon>ItemAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Register\ItemAdd\ItemAddConfirmation.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Register\ItemAdd\ItemAddConfirmation.Designer.cs">
-      <DependentUpon>ItemAddConfirmation.cs</DependentUpon>
-    </Compile>
     <Compile Include="Register\ItemInfo\ItemInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -249,9 +237,6 @@
     <EmbeddedResource Include="Manage\Item\ItemAdd.resx">
       <DependentUpon>ItemAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage\Item\ItemAddConfimation.resx">
-      <DependentUpon>ItemAddConfimation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Manage\Item\ItemList.resx">
       <DependentUpon>ItemList.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,9 +287,6 @@
     </Compile>
     <EmbeddedResource Include="Register\ItemAdd\ItemAdd.resx">
       <DependentUpon>ItemAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Register\ItemAdd\ItemAddConfirmation.resx">
-      <DependentUpon>ItemAddConfirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Register\ItemInfo\ItemInfo.resx">
       <DependentUpon>ItemInfo.cs</DependentUpon>

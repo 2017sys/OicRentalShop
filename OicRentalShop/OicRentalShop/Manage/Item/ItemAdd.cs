@@ -19,6 +19,8 @@ namespace OicRentalShop.Manage.Item
         DataTable dt = new DataTable();
         int count = 0;
 
+        
+
         public ItemAdd()
         {
             InitializeComponent();
@@ -75,10 +77,17 @@ namespace OicRentalShop.Manage.Item
             }
         }
 
-        private void btn_ToAdd_Click(object sender, EventArgs e)
+        public void btn_ToAdd_Click(object sender, EventArgs e)
         {
-            this.dgv_ItemRe.Rows.Add(txt_TitleID.Text, lbl_ItemIDInfo.Text, lbl_TitleNameInfo.Text, lbl_ArtistNameInfo.Text, lbl_TypeInfo.Text, lbl_OldNewInfo.Text, lbl_GenreInfo.Text);
-            count++;
+            if (txt_TitleID.Text != "" && txt_TitleID.TextLength != 8)
+            {
+                this.dgv_ItemRe.Rows.Add(txt_TitleID.Text, lbl_ItemIDInfo.Text, lbl_TitleNameInfo.Text, lbl_ArtistNameInfo.Text, lbl_TypeInfo.Text, lbl_OldNewInfo.Text, lbl_GenreInfo.Text);
+                count++;
+            }
+            else
+            {
+                MessageBox.Show("正しいタイトルIDを入力してください");
+            }
         }
 
         private void btn_Cancel_Click_1(object sender, EventArgs e)
@@ -111,7 +120,7 @@ namespace OicRentalShop.Manage.Item
                 /* 　-　ここ　-　 */
                 MessageBox.Show("登録が完了しました");
                 dgv_ItemRe.Rows.Clear();
-                ManageHome.GoNext(7);
+                
             }
         }
 
@@ -123,11 +132,6 @@ namespace OicRentalShop.Manage.Item
                 dgv_ItemRe.Rows.Clear();
             }
         }
-
-        
-
-        
-
         
     }
 }

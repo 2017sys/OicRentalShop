@@ -14,7 +14,6 @@ namespace OicRentalShop.Manage
     {
         public static Item.ItemList it;
         public static Item.ItemAdd ia;
-        public static Item.ItemAddConfimation ic;
         public static Member.MemberList me;
         public static Staff.StaffList st;
         public static Staff.StaffAdd sa;
@@ -41,7 +40,6 @@ namespace OicRentalShop.Manage
         {
             it = new Item.ItemList();
             ia = new Item.ItemAdd();
-            ic = new Item.ItemAddConfimation(ia);
             me = new Member.MemberList();
             st = new Staff.StaffList();
             sa = new Staff.StaffAdd();
@@ -101,18 +99,6 @@ namespace OicRentalShop.Manage
                 it.Visible = false;
                 ia.Visible = true;
             }
-            else if (flag == 7)
-            {
-                ia.Visible = false;
-                ic.Visible = true;
-            }
-            else if (flag == 8)
-            {
-                ic.Visible = false;
-                it.Visible = true;
-            }
-            
-
 
         }
 
@@ -148,11 +134,6 @@ namespace OicRentalShop.Manage
                 ia.Visible = false;
                 it.Visible = true;
             }
-            else if (flag == 6)
-            {
-                ic.Visible = false;
-                ia.Visible = true;
-            }
         }
 
         private void btn_Top_Click(object sender, EventArgs e)
@@ -165,10 +146,8 @@ namespace OicRentalShop.Manage
             panel.Controls.Clear();
             panel.Controls.Add(it);
             panel.Controls.Add(ia);
-            panel.Controls.Add(ic);
             it.Visible = true;
             ia.Visible = false;
-            ic.Visible = false;
         }
 
         private void btn_Member_Click(object sender, EventArgs e)

@@ -20,7 +20,6 @@ namespace OicRentalShop.Manage
         public static PriceList.PriceList pp;
         public static Return.Return rr;
         public static MemberAdd.MemberAddConfirmation ma;
-        public static ItemAdd.ItemAddConfirmation ic;
         public static Title.TitleAdd ta;
 
 
@@ -36,11 +35,6 @@ namespace OicRentalShop.Manage
                 mm.Visible = false;
                 ma.Visible = true;
             }
-            else
-            {
-                ia.Visible = false;
-                ic.Visible = true;
-            }
         }
 
         public static void cancel(int flag)
@@ -49,11 +43,6 @@ namespace OicRentalShop.Manage
             {
                 mm.Visible = true;
                 ma.Visible = false;
-            }
-            else
-            {
-                ia.Visible = true;
-                ic.Visible = false;
             }
         }
 
@@ -87,7 +76,6 @@ namespace OicRentalShop.Manage
             pp = new PriceList.PriceList();
             rr = new Return.Return();
             ma = new MemberAdd.MemberAddConfirmation();
-            ic = new ItemAdd.ItemAddConfirmation();
             ta = new Title.TitleAdd();
             
             
@@ -131,7 +119,6 @@ namespace OicRentalShop.Manage
         {
             panel.Controls.Clear();
             panel.Controls.Add(ia);
-            panel.Controls.Add(ic);
             ia.Visible = true;
         }
 
