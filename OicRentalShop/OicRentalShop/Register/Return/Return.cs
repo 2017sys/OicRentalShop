@@ -183,7 +183,7 @@ namespace OicRentalShop.Manage.Return
                             if (SlipFlag == 0)
                             {
                                 DateTime Today = DateTime.Today;
-                                CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",true,#" + Today.ToString() + "#,0,1)");
+                                CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",true,#" + Today.ToString() + "#,0,1,null)");
                                 txt_MemberID.ReadOnly = true;
                                 SlipFlag = 1;
                             }
@@ -282,7 +282,12 @@ namespace OicRentalShop.Manage.Return
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
+            dt.Clear();
+            dt = new DataTable();
+            da = new OleDbDataAdapter("SELECT ITEM_ID FROM TBL_LINESLIP WHERE SLIP_ID=" + slipID, cn);
+            da.Fill(dt);
             clearfunc();
+            SlipFlag = 0;
         }
 
         private void btn_ok_Click(object sender, EventArgs e)

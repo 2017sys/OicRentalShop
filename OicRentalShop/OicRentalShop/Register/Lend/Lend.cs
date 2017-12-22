@@ -65,7 +65,7 @@ namespace OicRentalShop.Manage.Lend
             da = new OleDbDataAdapter(cmdstr, cn);
             da.Fill(dtp);
             dgv_info.DataSource = dtp;
-            dgv_info.AutoResizeColumns();
+
         }
 
         private void CmdFunc(string cmdstr) //UPDATE DELETE INSERTを実行できる　CmdFunc("SQL文"); 
@@ -116,6 +116,7 @@ namespace OicRentalShop.Manage.Lend
 
 
         int flag = 0;
+        int visflag;
         private void Lend_Load(object sender, EventArgs e)
         {
             DateTime Today = DateTime.Today;    //今日の日付の取得
@@ -129,6 +130,7 @@ namespace OicRentalShop.Manage.Lend
             LblSlipID.Text = slipID.ToString();
             selectedlsID = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_LINESLIP").ToString());
             lsIDpoint = 0;
+            visflag = 1;
         }
 
         private void txt_MemberID_TextChanged(object sender, EventArgs e)
@@ -178,7 +180,7 @@ namespace OicRentalShop.Manage.Lend
                             if (SlipFlag == 0)
                             {
                                 DateTime Today = DateTime.Today;
-                                CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",true,#" + Today.ToString() + "#,0,1)");
+                                CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",true,#" + Today.ToString() + "#,0,1,null)");
                                 txt_MemberID.ReadOnly = true;
                                 SlipFlag = 1;
                             }
@@ -274,8 +276,15 @@ namespace OicRentalShop.Manage.Lend
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            SlipFlag = 0;
-            rh.MoveOnLRConf(flag);            
+            if (dtCheck("SELECT * FROM TBL_SLIP WHERE SLIP_ID=" + slipID) == 1)
+            {
+                SlipFlag = 0;
+                rh.MoveOnLRConf(flag);
+            }
+            else
+            {
+                MessageBox.Show("商品が選択されていません");
+            }
         }
 
         private void Lend_VisibleChanged(object sender, EventArgs e)
@@ -284,6 +293,21 @@ namespace OicRentalShop.Manage.Lend
             {
                 clearfunc();
             }
+            //else if (visflag == 0)
+            //    {
+            //        DateTime Today = DateTime.Today;    //今日の日付の取得
+            //        DateTime upday = Today.AddMonths(-1);
+            //        CmdFunc("UPDATE TBL_OLD SET OLD_DATE=#" + upday.ToString() + "# WHERE OLD_ID = 2");       //旧作の日時設定（画面を読み込んだ日の1か月前）
+            //        CmdFunc("UPDATE TBL_TITLE SET OLD_ID=2 WHERE TITLE_RELEASE <= ANY(SELECT OLD_DATE FROM TBL_OLD WHERE OLD_ID=2)");   //新作が旧作の期間になっていないかチェックする
+            //        txt_MemberID.Focus();
+
+            //        slipID = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_SLIP").ToString());
+            //        slipID++;
+            //        LblSlipID.Text = slipID.ToString();
+            //        selectedlsID = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_LINESLIP").ToString());
+            //        lsIDpoint = 0;
+            //    }
+            //visflag = 0;
 
         }
 
@@ -378,7 +402,15 @@ namespace OicRentalShop.Manage.Lend
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(SetInfo("SELECT ITEM_STATE FROM TBL_ITEM WHERE ITEM_ID=4"));
+            
+
+        }
+
+        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
 
 
