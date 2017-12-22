@@ -18,11 +18,20 @@ namespace OicRentalShop.Manage.Return
         DataTable dt = new DataTable();
         DataTable dtp = new DataTable();
 
-        public Return()
+        public DataSet ds = new DataSet();//dtsour
+        DataTable dts;
+        DataRow dr;
+
+        RegisterHome rh;
+        ReturnConf rc;
+        public Return(RegisterHome fm1,ReturnConf fm2)
         {
             InitializeComponent();
+            rh = fm1;
+            rc = fm2;
         }
 
+        int flag = 1;
         private void Return_Load(object sender, EventArgs e)
         {
             DateTime Today = DateTime.Today;    //今日の日付の取得
@@ -31,13 +40,24 @@ namespace OicRentalShop.Manage.Return
             CmdFunc("UPDATE TBL_TITLE SET OLD_ID=2 WHERE TITLE_RELEASE <= ANY(SELECT OLD_DATE FROM TBL_OLD WHERE OLD_ID=2)");   //新作が旧作の期間になっていないかチェックする
             txt_MemberID.Focus();
 
-            slipID = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_SLIP").ToString());
-            slipID++;
             selectedlsID = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_LINESLIP").ToString());
             lsIDpoint = 0;
+            dt.Clear();
+
+            dts = ds.Tables.Add("Product");
+
+            dts.Columns.Add("タイトル");
+            dts.Columns.Add("CD DVD");
+            dts.Columns.Add("返却予定日");
+            dts.Columns.Add("延滞料金");
         }
 
+        public void Commit()
+        {
+            slipID++;
+            SlipFlag = 1;
 
+        }
 
 
         private void selectfunc(string cmdstr)//DataGridViewにレジを通した商品の情報を出力 DataTable dtpを他の用途に使う(Clearする)とDataGridViewに表示してるものが消える
@@ -48,7 +68,6 @@ namespace OicRentalShop.Manage.Return
             da = new OleDbDataAdapter(cmdstr, cn);
             da.Fill(dt);
             dgv_ReturnItem.DataSource = dt;
-            dgv_ReturnItem.AutoResizeColumns();
         }
 
         private void CmdFunc(string cmdstr) //UPDATE DELETE INSERTを実行できる　CmdFunc("SQL文"); 
@@ -93,6 +112,9 @@ namespace OicRentalShop.Manage.Return
             txt_ProductID.Clear();
             txt_money.Clear();
             dtp.Clear();
+            CmdFunc("DELETE FROM TBL_LINESLIP WHERE SLIP_ID=" + slipID);
+            CmdFunc("DELETE FROM TBL_SLIP WHERE SLIP_ID=" + slipID);
+            SlipFlag = 0;
         }
 
          private void InsertLineSlip()   //レジを通した商品の情報を伝票表に登録
@@ -155,20 +177,81 @@ namespace OicRentalShop.Manage.Return
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DateTime Today = DateTime.Today;    //今日の日付の取得
-            
-            //int miday = int.Parse(SetInfo("SELECT DATEDIFF(dd,2017/11/30,SYSDATE) FROM TBL_SLIP"));
-            //SetInfo("SELECT SLIP");
-            //MessageBox.Show(miday.ToString());
+            //if (dtCheck("SELECT ls.LEND_ID FROM TBL_SLIP s,TBL_LINESLIP ls WHERE ls.ITEM_ID= " + txt_ProductID.Text + " AND s.SLIP_ID = ls.SLIP_ID AND s.SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID=1 AND ITEM_ID= " + txt_ProductID.Text + ")") == 1)
+            //{
+            //    if (int.Parse(SetInfo("SELECT ls.LEND_ID FROM TBL_SLIP s,TBL_LINESLIP ls WHERE ls.ITEM_ID= " + txt_ProductID.Text + " AND s.SLIP_ID = ls.SLIP_ID AND s.SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID=1 AND ITEM_ID= " + txt_ProductID.Text + ")")) == 1)
+            //    {
+            //        DateTime today = DateTime.Today;
+            //        string slipdate = SetInfo("SELECT SLIP_DATE FROM TBL_SLIP WHERE SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID<>4 AND ITEM_ID= " + txt_ProductID.Text + ")");
+            //        string returndate = SetInfo("SELECT DateAdd('d',1,#" + slipdate + "#)");
+            //        txt_ReturnDay.Text = returndate.Remove(10, 8);
+            //        int latefees = int.Parse(SetInfo("SELECT DateDiff('d',#" + returndate + "#,#" + today + "#) FROM TBL_SLIP s WHERE SLIP_ID=" + slipID));
+            //        if (latefees < 0)
+            //        {
+            //            txt_late.Text = "0";
+            //        }
+            //        else
+            //        {
+            //            txt_late.Text = (latefees *= 100).ToString();
+            //        }
+            //    }
+            //}
+            //if (dtCheck("SELECT ls.LEND_ID FROM TBL_SLIP s,TBL_LINESLIP ls WHERE ls.ITEM_ID= " + txt_ProductID.Text + " AND s.SLIP_ID = ls.SLIP_ID AND s.SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID=2 AND ITEM_ID= " + txt_ProductID.Text + ")") == 1)
+            //{
+            //    DateTime today = DateTime.Today;
+            //    string slipdate = SetInfo("SELECT SLIP_DATE FROM TBL_SLIP WHERE SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID<>4 AND ITEM_ID= " + txt_ProductID.Text + ")");
+            //    string returndate = SetInfo("SELECT DateAdd('d',2,#" + slipdate + "#)");
+            //    txt_ReturnDay.Text = returndate.Remove(10, 8);
+            //    int latefees = int.Parse(SetInfo("SELECT DateDiff('d',#" + returndate + "#,#" + today + "#) FROM TBL_SLIP s WHERE SLIP_ID=" + slipID));
+            //    if (latefees < 0)
+            //    {
+            //        txt_late.Text = "0";
+            //    }
+            //    else
+            //    {
+            //        txt_late.Text = (latefees *= 100).ToString();
+            //    }
+            //}
+            //if (dtCheck("SELECT ls.LEND_ID FROM TBL_SLIP s,TBL_LINESLIP ls WHERE ls.ITEM_ID= " + txt_ProductID.Text + " AND s.SLIP_ID = ls.SLIP_ID AND s.SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID=3 AND ITEM_ID= " + txt_ProductID.Text + ")") == 1)
+            //{
+            //    DateTime today = DateTime.Today;
+            //    string slipdate = SetInfo("SELECT SLIP_DATE FROM TBL_SLIP WHERE SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID<>4 AND ITEM_ID= " + txt_ProductID.Text + ")");
+            //    string returndate = SetInfo("SELECT DateAdd('d',7,#" + slipdate + "#)");
+            //    txt_ReturnDay.Text = returndate.Remove(10, 8);
+            //    int latefees = int.Parse(SetInfo("SELECT DateDiff('d',#" + returndate + "#,#" + today + "#) FROM TBL_SLIP s WHERE SLIP_ID=" + slipID));
+            //    if (latefees < 0)
+            //    {
+            //        txt_late.Text = "0";
+            //    }
+            //    else
+            //    {
+            //        txt_late.Text = (latefees *= 100).ToString();
+            //    }
+            //}
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //string tst = SetInfo("SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID<>4 AND ITEM_ID=" + txt_ProductID.Text);
+            //MessageBox.Show(tst);
+            //selectfunc("SELECT SLIP_DATE FROM TBL_SLIP WHERE SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID<>4 AND ITEM_ID= " + txt_ProductID.Text + ")");
+            //DateTime today = DateTime.Today;
+            //string slipdate = SetInfo("SELECT SLIP_DATE FROM TBL_SLIP WHERE SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID<>4 AND ITEM_ID= " + txt_ProductID.Text + ")");
+            //string returndate = SetInfo("SELECT DateAdd('d',1,#" + slipdate + "#)");
+            //MessageBox.Show(returndate);
+
+            //for(int i=0;i<lt.Count;i++)
+            //{
+            //    MessageBox.Show(lt[i]);
+            //}
         }
 
 
-
         int SlipFlag = 0;
-        int slipprice = 0;
         int selectedlsID;
         int lsIDpoint;
-        int slipID;
+        public int slipID;
 
         private void txt_InProductID_TextChanged(object sender, EventArgs e)
         {
@@ -182,24 +265,32 @@ namespace OicRentalShop.Manage.Return
                         {
                             if (SlipFlag == 0)
                             {
+                                slipID = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_SLIP").ToString());
+                                slipID++;
                                 DateTime Today = DateTime.Today;
+
                                 CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",true,#" + Today.ToString() + "#,0,1,null)");
+
                                 txt_MemberID.ReadOnly = true;
                                 SlipFlag = 1;
+
+                                
+
+                               
                             }
+
                             txt_ProductID.Text = txt_InProductID.Text;
                             txt_title.Text = SetInfo("SELECT t.TITLE_NAME FROM TBL_TITLE t,TBL_ITEM i WHERE t.TITLE_ID=i.TITLE_ID AND i.ITEM_ID = " + txt_InProductID.Text);
                             InsertLineSlip();
-                            slipprice = int.Parse(SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID=" + slipID));
-                            txt_money.Text = slipprice.ToString();
-                            CmdFunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
                             txt_InProductID.Clear();
                             selectedlsID++;
                             lsIDpoint++;
+
+                            
                         }
                         else
                         {
-                            MessageBox.Show("指定された商品はすでに貸し出されています");
+                            MessageBox.Show("指定された商品は貸し出されていません");
                             txt_InProductID.Clear();
                         }
                     }
@@ -224,9 +315,20 @@ namespace OicRentalShop.Manage.Return
             {
                 txt_InProductID.Clear();
             }
-            selectfunc("SELECT t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
-        }
+            //int late = int.Parse(txt_late.Text);
+         
+                         
+                rd.Add(txt_ReturnDay.Text);
+                lt.Add(txt_late.Text);
 
+                //selectfunc("SELECT t.TITLE_NAME,ty.TYPE_NAME,#" + txt_ReturnDay.Text + "# AS 返却予定日," + txt_late.Text + " AS 延滞料金 FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
+                txt_money.Text = totalmoney.ToString() ;
+            
+        }
+        public List<string> rd = new List<string>();
+        public List<string> lt = new List<string>();
+
+        public int totalmoney;
         private void txt_ProductID_TextChanged(object sender, EventArgs e)
         {
             if (txt_ProductID.Text != "")
@@ -234,6 +336,72 @@ namespace OicRentalShop.Manage.Return
                 txt_title.Text = SetInfo("SELECT t.TITLE_NAME FROM TBL_TITLE t,TBL_ITEM i WHERE t.TITLE_ID=i.TITLE_ID AND i.ITEM_ID = " + txt_ProductID.Text);
                 txt_type.Text = SetInfo("SELECT y.TYPE_NAME FROM TBL_TITLE t,TBL_ITEM i,TBL_TYPE y WHERE t.TITLE_ID=i.TITLE_ID AND y.TYPE_ID=t.TYPE_ID AND i.ITEM_ID = " + txt_ProductID.Text);
                 txt_OLDNEW.Text = SetInfo("SELECT o.OLD_NAME FROM TBL_OLD o,TBL_TITLE t,TBL_ITEM i WHERE o.OLD_ID=t.OLD_ID AND i.TITLE_ID = t.TITLE_ID AND i.ITEM_ID= " + txt_ProductID.Text);
+                if (dtCheck("SELECT ls.LEND_ID FROM TBL_SLIP s,TBL_LINESLIP ls WHERE ls.ITEM_ID= " + txt_ProductID.Text + " AND s.SLIP_ID = ls.SLIP_ID AND s.SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID=1 AND ITEM_ID= " + txt_ProductID.Text + ")") == 1)
+                {
+                    if (int.Parse(SetInfo("SELECT ls.LEND_ID FROM TBL_SLIP s,TBL_LINESLIP ls WHERE ls.ITEM_ID= " + txt_ProductID.Text + " AND s.SLIP_ID = ls.SLIP_ID AND s.SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID=1 AND ITEM_ID= " + txt_ProductID.Text + ")")) == 1)
+                    {
+                        DateTime today = DateTime.Today;
+                        string slipdate = SetInfo("SELECT SLIP_DATE FROM TBL_SLIP WHERE SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID<>4 AND ITEM_ID= " + txt_ProductID.Text + ")");
+                        string returndate = SetInfo("SELECT DateAdd('d',1,#" + slipdate + "#)");
+                        txt_ReturnDay.Text = returndate.Remove(10, 8);
+                        int latefees = int.Parse(SetInfo("SELECT DateDiff('d',#" + returndate + "#,#" + today + "#) FROM TBL_SLIP s WHERE SLIP_ID=" + slipID));
+                        if (latefees < 0)
+                        {
+                            txt_late.Text = "0";
+                        }
+                        else
+                        {
+                            txt_late.Text = (latefees *= 100).ToString();
+                            totalmoney += latefees;
+                        }
+                    }
+                }
+                if (dtCheck("SELECT ls.LEND_ID FROM TBL_SLIP s,TBL_LINESLIP ls WHERE ls.ITEM_ID= " + txt_ProductID.Text + " AND s.SLIP_ID = ls.SLIP_ID AND s.SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID=2 AND ITEM_ID= " + txt_ProductID.Text + ")") == 1)
+                {
+                    DateTime today = DateTime.Today;
+                    string slipdate = SetInfo("SELECT SLIP_DATE FROM TBL_SLIP WHERE SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID<>4 AND ITEM_ID= " + txt_ProductID.Text + ")");
+                    string returndate = SetInfo("SELECT DateAdd('d',2,#" + slipdate + "#)");
+                    txt_ReturnDay.Text = returndate.Remove(10, 8);
+                    int latefees = int.Parse(SetInfo("SELECT DateDiff('d',#" + returndate + "#,#" + today + "#) FROM TBL_SLIP s WHERE SLIP_ID=" + slipID));
+                    if (latefees < 0)
+                    {
+                        txt_late.Text = "0";
+                    }
+                    else
+                    {
+                        txt_late.Text = (latefees *= 100).ToString();
+                        totalmoney += latefees * 100;
+                    }
+                }
+                if (dtCheck("SELECT ls.LEND_ID FROM TBL_SLIP s,TBL_LINESLIP ls WHERE ls.ITEM_ID= " + txt_ProductID.Text + " AND s.SLIP_ID = ls.SLIP_ID AND s.SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID=3 AND ITEM_ID= " + txt_ProductID.Text + ")") == 1)
+                {
+                    DateTime today = DateTime.Today;
+                    string slipdate = SetInfo("SELECT SLIP_DATE FROM TBL_SLIP WHERE SLIP_ID = (SELECT MAX(SLIP_ID) FROM TBL_LINESLIP WHERE LEND_ID<>4 AND ITEM_ID= " + txt_ProductID.Text + ")");
+                    string returndate = SetInfo("SELECT DateAdd('d',7,#" + slipdate + "#)");
+                    txt_ReturnDay.Text = returndate.Remove(10, 8);
+                    int latefees = int.Parse(SetInfo("SELECT DateDiff('d',#" + returndate + "#,#" + today + "#) FROM TBL_SLIP s WHERE SLIP_ID=" + slipID));
+                    if (latefees < 0)
+                    {
+                        txt_late.Text = "0";
+                    }
+                    else
+                    {
+                        txt_late.Text = (latefees *= 100).ToString();
+                        totalmoney += latefees * 100;
+                    }
+                }
+                if (ndflag == 0)
+                {
+                    dr = dts.NewRow();
+                    dr["タイトル"] = txt_title.Text;
+                    dr["CD DVD"] = txt_type.Text;
+                    dr["返却予定日"] = txt_ReturnDay.Text;
+                    dr["延滞料金"] = txt_late.Text;
+                    dts.Rows.Add(dr);
+                }
+                dgv_ReturnItem.DataSource = ds;
+                dgv_ReturnItem.DataMember = "Product";
+
             }
             else
             {
@@ -242,35 +410,50 @@ namespace OicRentalShop.Manage.Return
                 txt_InProductID.Clear();
                 txt_OLDNEW.Clear();
                 txt_ProductID.Clear();
+                txt_ReturnDay.Clear();
+                txt_late.Clear();
+                dt.Clear();
             }
+
             }
+        int ndflag=0;
 
         private void Btn_ClearPID_Click(object sender, EventArgs e)
         {
+            ndflag = 1;
+            if (dgv_ReturnItem.RowCount >= 1)
+            {
+                dgv_ReturnItem.Rows.RemoveAt(dgv_ReturnItem.RowCount - 2);
+            }
+
             {
                 if (lsIDpoint > 0)
                 {
-                    txt_ProductID.Clear();
-                    slipprice -= int.Parse(SetInfo("SELECT LS_PRICE FROM TBL_LINESLIP WHERE LINESLIP_ID=" + selectedlsID));
-                    CmdFunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
+                    CmdFunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + txt_money.Text + " WHERE SLIP_ID=" + slipID);
                     CmdFunc("DELETE FROM TBL_LINESLIP WHERE LINESLIP_ID = " + selectedlsID.ToString());
                     selectedlsID--;
+
                     lsIDpoint--;
                     if (lsIDpoint == 0)
                     {
                         txt_money.Clear();
                         CmdFunc("DELETE FROM TBL_SLIP WHERE SLIP_ID= " + slipID);
                         SlipFlag = 0;
+                        txt_ProductID.Clear();
+                        totalmoney = 0;
+                        ndflag = 0;
+
                     }
                     else
                     {
-                        txt_money.Text = SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID=" + slipID);
-
+                        totalmoney = int.Parse(txt_money.Text) - int.Parse(txt_late.Text);
+                        txt_money.Text = totalmoney.ToString();
                         txt_ProductID.Text = SetInfo("SELECT ITEM_ID FROM TBL_LINESLIP WHERE LINESLIP_ID=" + selectedlsID);
-
-
+                        ndflag = 0;
+                        
                     }
-                    selectfunc("SELECT t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
+                    
+                        //selectfunc("SELECT t.TITLE_NAME,ty.TYPE_NAME,#" + txt_ReturnDay.Text + "# AS 返却予定日," + txt_late.Text + " AS 延滞料金 FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
                 }
             }
         }
@@ -292,18 +475,16 @@ namespace OicRentalShop.Manage.Return
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            int lscnt = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID=" + slipID).ToString());
-            for (int i = 0; i < lscnt; i++)
+            if (dtCheck("SELECT * FROM TBL_SLIP WHERE SLIP_ID=" + slipID) == 1)
             {
-                dt.Clear();
-                dt = new DataTable();
-                da = new OleDbDataAdapter("SELECT ITEM_ID FROM TBL_LINESLIP WHERE SLIP_ID=" + slipID, cn);
-                da.Fill(dt);
-                CmdFunc("UPDATE TBL_ITEM SET ITEM_STATE = true WHERE ITEM_ID =" + dt.Rows[i][0].ToString());
+                SlipFlag = 0;
+                rh.MoveOnLRConf(flag);
             }
-
-            clearfunc();
-            SlipFlag = 0;
+            else
+            {
+                MessageBox.Show("商品が選択されていません");
+            }
+            
         }
 
         private void txt_MemberID_KeyPress(object sender, KeyPressEventArgs e)
@@ -324,10 +505,61 @@ namespace OicRentalShop.Manage.Return
 
         private void Return_VisibleChanged(object sender, EventArgs e)
         {
+            if (SlipFlag == 1)
             {
-                txt_MemberID.Clear();
+                clearfunc();
             }
+            dt.Clear();
         }
+
+        
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //DataTable dt = new DataTable();
+            //dt.Columns.Add("タイトル", typeof(string));
+            //dt.Columns.Add("CD DVD",typeof(string));
+            //dt.Columns.Add("返却予定日",typeof(string));
+            //dt.Columns.Add("延滞料金", typeof(string));
+            //dt.Rows.Add(txt_title.Text, txt_type.Text, txt_ReturnDay.Text, txt_late.Text);
+            //dgv_ReturnItem.DataSource = dt;
+
+
+            dts = ds.Tables.Add("Product");
+ 
+            dts.Columns.Add("タイトル");
+            dts.Columns.Add("CD DVD");
+            dts.Columns.Add("返却予定日");
+            dts.Columns.Add("延滞料金");
+
+            dr = dts.NewRow();
+            dr["タイトル"] = txt_title.Text;
+            dr["CD DVD"] = txt_type.Text;
+            dr["返却予定日"] = txt_ReturnDay.Text;
+            dr["延滞料金"] = txt_late.Text;
+            dts.Rows.Add(dr);
+
+            dgv_ReturnItem.DataSource = ds;
+            dgv_ReturnItem.DataMember = "Product";
+
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            dr = dts.NewRow();
+            dr["タイトル"] = txt_title.Text;
+            dr["CD DVD"] = txt_type.Text;
+            dr["返却予定日"] = txt_ReturnDay.Text;
+            dr["延滞料金"] = txt_late.Text;
+            dts.Rows.Add(dr);
+
+
+            dgv_ReturnItem.DataSource = ds;
+
+        }
+
+        
     }
 }
 

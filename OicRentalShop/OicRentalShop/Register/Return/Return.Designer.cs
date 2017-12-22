@@ -43,14 +43,10 @@
             this.lbl_type = new System.Windows.Forms.Label();
             this.lbl_title = new System.Windows.Forms.Label();
             this.lbl_ProductID = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.lbl_UsePoint = new System.Windows.Forms.Label();
-            this.txt_UsePoint = new System.Windows.Forms.TextBox();
             this.lbl_money = new System.Windows.Forms.Label();
             this.txt_money = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -71,12 +67,14 @@
             this.btn_ok = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_InProductID = new System.Windows.Forms.TextBox();
             this.Btn_ClearMID = new System.Windows.Forms.Button();
             this.Btn_ClearPID = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ReturnItem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -225,14 +223,6 @@
             this.lbl_ProductID.TabIndex = 211;
             this.lbl_ProductID.Text = "商品ID：";
             // 
-            // label30
-            // 
-            this.label30.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label30.Location = new System.Drawing.Point(827, 129);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(1, 47);
-            this.label30.TabIndex = 210;
-            // 
             // label29
             // 
             this.label29.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -257,14 +247,6 @@
             this.label27.Size = new System.Drawing.Size(284, 1);
             this.label27.TabIndex = 207;
             // 
-            // label26
-            // 
-            this.label26.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label26.Location = new System.Drawing.Point(672, 128);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(284, 1);
-            this.label26.TabIndex = 206;
-            // 
             // label25
             // 
             this.label25.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -272,27 +254,6 @@
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(284, 1);
             this.label25.TabIndex = 205;
-            // 
-            // lbl_UsePoint
-            // 
-            this.lbl_UsePoint.AutoSize = true;
-            this.lbl_UsePoint.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_UsePoint.Font = new System.Drawing.Font("MS UI Gothic", 30F);
-            this.lbl_UsePoint.Location = new System.Drawing.Point(834, 131);
-            this.lbl_UsePoint.Name = "lbl_UsePoint";
-            this.lbl_UsePoint.Size = new System.Drawing.Size(122, 40);
-            this.lbl_UsePoint.TabIndex = 202;
-            this.lbl_UsePoint.Text = "使用P";
-            // 
-            // txt_UsePoint
-            // 
-            this.txt_UsePoint.Font = new System.Drawing.Font("MS UI Gothic", 30F);
-            this.txt_UsePoint.Location = new System.Drawing.Point(674, 128);
-            this.txt_UsePoint.Name = "txt_UsePoint";
-            this.txt_UsePoint.Size = new System.Drawing.Size(154, 47);
-            this.txt_UsePoint.TabIndex = 201;
-            this.txt_UsePoint.Text = "07211";
-            this.txt_UsePoint.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lbl_money
             // 
@@ -313,7 +274,6 @@
             this.txt_money.ReadOnly = true;
             this.txt_money.Size = new System.Drawing.Size(154, 47);
             this.txt_money.TabIndex = 199;
-            this.txt_money.Text = "07211";
             this.txt_money.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label20
@@ -414,6 +374,7 @@
             // 
             // dgv_ReturnItem
             // 
+            this.dgv_ReturnItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ReturnItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ReturnItem.Location = new System.Drawing.Point(370, 218);
             this.dgv_ReturnItem.Name = "dgv_ReturnItem";
@@ -479,14 +440,6 @@
             this.label23.Size = new System.Drawing.Size(153, 47);
             this.label23.TabIndex = 203;
             // 
-            // label24
-            // 
-            this.label24.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label24.Location = new System.Drawing.Point(819, 128);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(153, 47);
-            this.label24.TabIndex = 204;
-            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -535,10 +488,43 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(680, 102);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(265, 70);
+            this.button2.TabIndex = 231;
+            this.button2.Text = "アナルファックキング木村";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(499, 46);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 232;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(420, 43);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 233;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Return
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Btn_ClearPID);
             this.Controls.Add(this.Btn_ClearMID);
@@ -559,14 +545,10 @@
             this.Controls.Add(this.lbl_type);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.lbl_ProductID);
-            this.Controls.Add(this.label30);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
-            this.Controls.Add(this.lbl_UsePoint);
-            this.Controls.Add(this.txt_UsePoint);
             this.Controls.Add(this.lbl_money);
             this.Controls.Add(this.txt_money);
             this.Controls.Add(this.label20);
@@ -587,7 +569,6 @@
             this.Controls.Add(this.btn_ok);
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.label24);
             this.Name = "Return";
             this.Size = new System.Drawing.Size(948, 591);
             this.Load += new System.EventHandler(this.Return_Load);
@@ -605,7 +586,6 @@
         private System.Windows.Forms.Label lbl_late;
         private System.Windows.Forms.TextBox txt_MemberName;
         private System.Windows.Forms.TextBox txt_MemberPoint;
-        private System.Windows.Forms.TextBox txt_MemberID;
         private System.Windows.Forms.TextBox txt_OLDNEW;
         private System.Windows.Forms.TextBox txt_type;
         private System.Windows.Forms.TextBox txt_ProductID;
@@ -615,16 +595,11 @@
         private System.Windows.Forms.Label lbl_type;
         private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.Label lbl_ProductID;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label lbl_UsePoint;
-        private System.Windows.Forms.TextBox txt_UsePoint;
         private System.Windows.Forms.Label lbl_money;
-        private System.Windows.Forms.TextBox txt_money;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
@@ -636,18 +611,22 @@
         private System.Windows.Forms.Label label4lbl_MemberID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgv_ReturnItem;
         private System.Windows.Forms.Label lbl_TopTitle;
         private System.Windows.Forms.Label lbl_MemberInfo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_ok;
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_InProductID;
         private System.Windows.Forms.Button Btn_ClearMID;
         private System.Windows.Forms.Button Btn_ClearPID;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox txt_MemberID;
+        private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.TextBox txt_money;
+        private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.DataGridView dgv_ReturnItem;
+        private System.Windows.Forms.Button button4;
     }
 }
