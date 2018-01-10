@@ -64,6 +64,7 @@
             this.dgv_PriceInfo.RowTemplate.Height = 21;
             this.dgv_PriceInfo.Size = new System.Drawing.Size(699, 435);
             this.dgv_PriceInfo.TabIndex = 221;
+            this.dgv_PriceInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_PriceInfo_CellContentClick);
             // 
             // button1
             // 
