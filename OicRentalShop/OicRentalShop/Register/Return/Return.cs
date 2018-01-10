@@ -268,11 +268,7 @@ namespace OicRentalShop.Manage.Return
                                 slipID = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_SLIP").ToString());
                                 slipID++;
                                 DateTime Today = DateTime.Today;
-
-
-                                CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",true,#" + Today.ToString() + "#,0,1,null)");
-
-
+                                CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",false,#" + Today.ToString() + "#,0,1,null)");
                                 txt_MemberID.ReadOnly = true;
                                 SlipFlag = 1;
 
@@ -467,12 +463,7 @@ namespace OicRentalShop.Manage.Return
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
-            dt.Clear();
-            dt = new DataTable();
-            da = new OleDbDataAdapter("SELECT ITEM_ID FROM TBL_LINESLIP WHERE SLIP_ID=" + slipID, cn);
-            da.Fill(dt);
             clearfunc();
-            SlipFlag = 0;
         }
 
         private void btn_ok_Click(object sender, EventArgs e)
@@ -544,7 +535,6 @@ namespace OicRentalShop.Manage.Return
             dgv_ReturnItem.DataMember = "Product";
 
 
-<<<<<<< HEAD
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -562,25 +552,6 @@ namespace OicRentalShop.Manage.Return
 
         }
 
-=======
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-            dr = dts.NewRow();
-            dr["タイトル"] = txt_title.Text;
-            dr["CD DVD"] = txt_type.Text;
-            dr["返却予定日"] = txt_ReturnDay.Text;
-            dr["延滞料金"] = txt_late.Text;
-            dts.Rows.Add(dr);
-
-
-            dgv_ReturnItem.DataSource = ds;
-
-        }
-
->>>>>>> e0bef1d5e9b3ac7069f3f0b744ec2de98ac6abe7
         
     }
 }

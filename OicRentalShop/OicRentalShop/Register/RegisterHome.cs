@@ -19,9 +19,11 @@ namespace OicRentalShop.Manage
         public static MemberAdd.MemberAdd mm;
         public static PriceList.PriceList pp;
         public static Return.Return rr;
+        public static Return.ReturnConf rc;
         public static MemberAdd.MemberAddConfirmation ma;
         public static ItemAdd.ItemAddConfirmation ic;
         public static Title.TitleAdd ta;
+
 
 
         public RegisterHome()
@@ -65,6 +67,12 @@ namespace OicRentalShop.Manage
                 panel.Controls.Add(lc);
                 lc.Visible = true;
             }
+            else if(flag==1)
+            {
+                panel.Controls.Clear();
+                panel.Controls.Add(rc);
+                rc.Visible = true;
+            }
         }
 
         public void ReturnLRHome(int flag)
@@ -74,6 +82,12 @@ namespace OicRentalShop.Manage
                 panel.Controls.Clear();
                 panel.Controls.Add(ll);
                 ll.Visible = true;
+            }
+            else if(flag==1)
+            {
+                panel.Controls.Clear();
+                panel.Controls.Add(rr);
+                rr.Visible = true;
             }
         }
 
@@ -85,7 +99,8 @@ namespace OicRentalShop.Manage
             lc = new Lend.LendConf(this,ll);//this
             mm = new MemberAdd.MemberAdd();
             pp = new PriceList.PriceList();
-            rr = new Return.Return();
+            rr = new Return.Return(this,rc);
+            rc = new Return.ReturnConf(this,rr);
             ma = new MemberAdd.MemberAddConfirmation();
             ic = new ItemAdd.ItemAddConfirmation();
             ta = new Title.TitleAdd();
@@ -100,6 +115,7 @@ namespace OicRentalShop.Manage
 
         private void btn_Lend_Click(object sender, EventArgs e)
         {
+            
             panel.Controls.Clear();
             panel.Controls.Add(ll);
             ll.Visible = true;

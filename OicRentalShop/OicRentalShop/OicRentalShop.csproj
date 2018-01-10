@@ -211,6 +211,12 @@
     <Compile Include="Register\Return\Return.Designer.cs">
       <DependentUpon>Return.cs</DependentUpon>
     </Compile>
+    <Compile Include="Register\Return\ReturnConf.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Register\Return\ReturnConf.Designer.cs">
+      <DependentUpon>ReturnConf.cs</DependentUpon>
+    </Compile>
     <Compile Include="Register\Title\TitleAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -311,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register\Return\Return.resx">
       <DependentUpon>Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register\Return\ReturnConf.resx">
+      <DependentUpon>ReturnConf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Register\Title\TitleAdd.resx">
       <DependentUpon>TitleAdd.cs</DependentUpon>
