@@ -42,7 +42,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 24F);
-            this.label1.Location = new System.Drawing.Point(282, 162);
+            this.label1.Location = new System.Drawing.Point(511, 321);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 33);
             this.label1.TabIndex = 0;
@@ -52,7 +52,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(250, 283);
+            this.label2.Location = new System.Drawing.Point(511, 457);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 33);
             this.label2.TabIndex = 1;
@@ -60,21 +60,21 @@
             // 
             // txt_MgrID
             // 
-            this.txt_MgrID.Location = new System.Drawing.Point(436, 145);
+            this.txt_MgrID.Location = new System.Drawing.Point(919, 304);
             this.txt_MgrID.Multiline = true;
             this.txt_MgrID.Name = "txt_MgrID";
             this.txt_MgrID.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txt_MgrID.Size = new System.Drawing.Size(357, 50);
+            this.txt_MgrID.Size = new System.Drawing.Size(528, 50);
             this.txt_MgrID.TabIndex = 2;
             this.txt_MgrID.Text = "2";
             this.txt_MgrID.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_PassWord
             // 
-            this.txt_PassWord.Location = new System.Drawing.Point(436, 266);
+            this.txt_PassWord.Location = new System.Drawing.Point(919, 457);
             this.txt_PassWord.Multiline = true;
             this.txt_PassWord.Name = "txt_PassWord";
-            this.txt_PassWord.Size = new System.Drawing.Size(357, 50);
+            this.txt_PassWord.Size = new System.Drawing.Size(528, 50);
             this.txt_PassWord.TabIndex = 3;
             this.txt_PassWord.Text = "2222001111";
             this.txt_PassWord.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -84,9 +84,9 @@
             // 
             this.btn_Login.AutoSize = true;
             this.btn_Login.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Login.Location = new System.Drawing.Point(611, 389);
+            this.btn_Login.Location = new System.Drawing.Point(1138, 681);
             this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(182, 55);
+            this.btn_Login.Size = new System.Drawing.Size(325, 157);
             this.btn_Login.TabIndex = 4;
             this.btn_Login.Text = "ログイン";
             this.btn_Login.UseVisualStyleBackColor = true;
@@ -96,9 +96,9 @@
             // 
             this.btn_Redo.AutoSize = true;
             this.btn_Redo.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Redo.Location = new System.Drawing.Point(300, 389);
+            this.btn_Redo.Location = new System.Drawing.Point(501, 681);
             this.btn_Redo.Name = "btn_Redo";
-            this.btn_Redo.Size = new System.Drawing.Size(182, 55);
+            this.btn_Redo.Size = new System.Drawing.Size(325, 157);
             this.btn_Redo.TabIndex = 5;
             this.btn_Redo.Text = "戻る";
             this.btn_Redo.UseVisualStyleBackColor = true;
@@ -107,7 +107,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(799, 283);
+            this.label3.Location = new System.Drawing.Point(1351, 369);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(254, 12);
             this.label3.TabIndex = 7;
@@ -117,7 +117,7 @@
             // 
             this.Msg.Font = new System.Drawing.Font("MS UI Gothic", 24F);
             this.Msg.ForeColor = System.Drawing.Color.Red;
-            this.Msg.Location = new System.Drawing.Point(109, 319);
+            this.Msg.Location = new System.Drawing.Point(546, 579);
             this.Msg.Name = "Msg";
             this.Msg.Size = new System.Drawing.Size(887, 67);
             this.Msg.TabIndex = 6;
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 592);
+            this.ClientSize = new System.Drawing.Size(1904, 1042);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Msg);
             this.Controls.Add(this.btn_Redo);
