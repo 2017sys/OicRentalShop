@@ -19,6 +19,17 @@ namespace OicRentalShop
             InitializeComponent();
         }
 
+
+        private Boolean SqlCheck(string text,string textBoxName)
+        {
+            if(text.IndexOf("'")>=0 || text.IndexOf(";")>=0 || text.IndexOf("--") >=0)
+            {
+                MessageBox.Show(textBoxName+"に無効な文字列が含まれています");
+                return false;
+            }
+            return true;
+        }
+
         private void Login_Load(object sender, EventArgs e)
         {
             Msg.Visible = false;   
@@ -26,6 +37,9 @@ namespace OicRentalShop
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
+
+            if (SqlCheck(txt_MgrID.Text, "ID") == true && SqlCheck(txt_PassWord.Text,"パスワード")==true)
+            {
             String mgrID = txt_MgrID.Text;
             String pass = txt_PassWord.Text;
 
@@ -56,7 +70,7 @@ namespace OicRentalShop
                 Msg.Visible = true;
             }
             
-            
+            }
         }
 
         private void btn_Redo_Click(object sender, EventArgs e)

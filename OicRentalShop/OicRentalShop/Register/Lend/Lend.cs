@@ -93,6 +93,13 @@ namespace OicRentalShop.Manage.Lend
         }
 
 
+
+        private string ZeroCut(string Num)
+        {
+            string ZeroCutNum = int.Parse(Num).ToString();
+            return ZeroCutNum;
+        }
+
         private void InsertLineSlip()   //レジを通した商品の情報を伝票表に登録
         {
             int lineslipID = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_LINESLIP").ToString());
@@ -135,12 +142,12 @@ namespace OicRentalShop.Manage.Lend
 
         private void txt_MemberID_TextChanged(object sender, EventArgs e)
         {
-                if (txt_MemberID.Text.Length == 1)
+                if (txt_MemberID.Text.Length == 8)
                 {
                     if (dtCheck("SELECT * FROM TBL_MEMBER WHERE MEMBER_ID=" + txt_MemberID.Text) == 1)
                     {
-                        txt_MemberPoint.Text = SetInfo("SELECT MEMBER_POINT FROM TBL_MEMBER WHERE MEMBER_ID=" + txt_MemberID.Text);
-                        txt_MemberName.Text = SetInfo("SELECT MEMBER_NAME FROM TBL_MEMBER WHERE MEMBER_ID=" + txt_MemberID.Text);
+                        txt_MemberPoint.Text = SetInfo("SELECT MEMBER_POINT FROM TBL_MEMBER WHERE MEMBER_ID=" + ZeroCut(txt_MemberID.Text));
+                        txt_MemberName.Text = SetInfo("SELECT MEMBER_NAME FROM TBL_MEMBER WHERE MEMBER_ID=" + ZeroCut(txt_MemberID.Text));
                         txt_InProductID.Focus();
                         selectfunc("SELECT t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
                     }
@@ -150,9 +157,9 @@ namespace OicRentalShop.Manage.Lend
                         txt_MemberID.Clear();
                     }
                 }
-                else if (txt_MemberID.Text.Length >= 2)
+                else if (txt_MemberID.Text.Length >= 9)
                 {
-                    MessageBox.Show("メンバーIDはN文字です");
+                    MessageBox.Show("メンバーIDは8文字です");
                     txt_MemberID.Clear();
                 }
                 if (txt_MemberID.Text.Length == 0)
@@ -171,11 +178,11 @@ namespace OicRentalShop.Manage.Lend
         {
             if (txt_MemberID.Text!="")
             {
-                if (txt_InProductID.Text.Length == 1)
+                if (txt_InProductID.Text.Length == 8)
                 {
                     if (dtCheck("SELECT * FROM TBL_ITEM WHERE ITEM_ID=" + txt_InProductID.Text) == 1)
                     {
-                        if ("True" == SetInfo("SELECT ITEM_STATE FROM TBL_ITEM WHERE ITEM_ID=" + txt_InProductID.Text))
+                        if ("True" == SetInfo("SELECT ITEM_STATE FROM TBL_ITEM WHERE ITEM_ID=" + ZeroCut(txt_InProductID.Text)))
                         {
                             if (SlipFlag == 0)
                             {
@@ -206,9 +213,9 @@ namespace OicRentalShop.Manage.Lend
                         txt_InProductID.Clear();
                     }
                 }
-                else if (txt_InProductID.Text.Length >= 2)
+                else if (txt_InProductID.Text.Length >= 9)
                 {
-                    MessageBox.Show("商品IDはN文字です");
+                    MessageBox.Show("商品IDは8文字です");
                     txt_InProductID.Clear();
                 }
             }

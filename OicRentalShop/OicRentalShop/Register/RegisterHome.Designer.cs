@@ -159,8 +159,10 @@
             this.Controls.Add(this.btn_ItemAdd);
             this.Controls.Add(this.btn_PriceList);
             this.Controls.Add(this.btn_Lend);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "RegisterHome";
-            this.Text = "Manatsu_no_yoru_no_inmu";
+            this.Text = "Register";
             this.Load += new System.EventHandler(this.TestForm_Load);
             this.ResumeLayout(false);
 

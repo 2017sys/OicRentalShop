@@ -59,6 +59,12 @@ namespace OicRentalShop.Manage.Return
 
         }
 
+        private string ZeroCut(string Num)
+        {
+            string ZeroCutNum = int.Parse(Num).ToString();
+            return ZeroCutNum;
+        }
+
 
         private void selectfunc(string cmdstr)//DataGridViewにレジを通した商品の情報を出力 DataTable dtpを他の用途に使う(Clearする)とDataGridViewに表示してるものが消える
         {
@@ -138,12 +144,12 @@ namespace OicRentalShop.Manage.Return
 
         private void txt_MemberID_TextChanged(object sender, EventArgs e)
         {
-            if (txt_MemberID.Text.Length == 1)
+            if (txt_MemberID.Text.Length == 8)
             {
                 if (dtCheck("SELECT * FROM TBL_MEMBER WHERE MEMBER_ID=" + txt_MemberID.Text) == 1)
                 {
-                    txt_MemberPoint.Text = SetInfo("SELECT MEMBER_POINT FROM TBL_MEMBER WHERE MEMBER_ID=" + txt_MemberID.Text);
-                    txt_MemberName.Text = SetInfo("SELECT MEMBER_NAME FROM TBL_MEMBER WHERE MEMBER_ID=" + txt_MemberID.Text);
+                    txt_MemberPoint.Text = SetInfo("SELECT MEMBER_POINT FROM TBL_MEMBER WHERE MEMBER_ID=" + ZeroCut(txt_MemberID.Text));
+                    txt_MemberName.Text = SetInfo("SELECT MEMBER_NAME FROM TBL_MEMBER WHERE MEMBER_ID=" + ZeroCut(txt_MemberID.Text));
                     txt_MemberID.ReadOnly = true;
                     txt_InProductID.Focus();
                 }
@@ -153,9 +159,9 @@ namespace OicRentalShop.Manage.Return
                     txt_MemberID.Clear();
                 }
             }
-            else if (txt_MemberID.Text.Length >= 2)
+            else if (txt_MemberID.Text.Length >= 9)
             {
-                MessageBox.Show("メンバーIDはN文字です");
+                MessageBox.Show("メンバーIDは8文字です");
                 txt_MemberID.Clear();
             }
             if (txt_MemberID.Text.Length == 0)
@@ -257,11 +263,11 @@ namespace OicRentalShop.Manage.Return
         {
             if (txt_MemberID.Text != "")
             {
-                if (txt_InProductID.Text.Length == 1)
+                if (txt_InProductID.Text.Length == 8)
                 {
                     if (dtCheck("SELECT * FROM TBL_ITEM WHERE ITEM_ID=" + txt_InProductID.Text) == 1)
                     {
-                        if ("False" == SetInfo("SELECT ITEM_STATE FROM TBL_ITEM WHERE ITEM_ID=" + txt_InProductID.Text))
+                        if ("False" == SetInfo("SELECT ITEM_STATE FROM TBL_ITEM WHERE ITEM_ID=" + ZeroCut(txt_InProductID.Text)))
                         {
                             if (SlipFlag == 0)
                             {
@@ -278,7 +284,7 @@ namespace OicRentalShop.Manage.Return
                             }
 
                             txt_ProductID.Text = txt_InProductID.Text;
-                            txt_title.Text = SetInfo("SELECT t.TITLE_NAME FROM TBL_TITLE t,TBL_ITEM i WHERE t.TITLE_ID=i.TITLE_ID AND i.ITEM_ID = " + txt_InProductID.Text);
+                            txt_title.Text = SetInfo("SELECT t.TITLE_NAME FROM TBL_TITLE t,TBL_ITEM i WHERE t.TITLE_ID=i.TITLE_ID AND i.ITEM_ID = " + ZeroCut(txt_InProductID.Text));
                             InsertLineSlip();
                             txt_InProductID.Clear();
                             selectedlsID++;
@@ -298,9 +304,9 @@ namespace OicRentalShop.Manage.Return
                         txt_InProductID.Clear();
                     }
                 }
-                else if (txt_InProductID.Text.Length >= 2)
+                else if (txt_InProductID.Text.Length >= 9)
                 {
-                    MessageBox.Show("商品IDはN文字です");
+                    MessageBox.Show("商品IDは8文字です");
                     txt_InProductID.Clear();
                 }
             }
