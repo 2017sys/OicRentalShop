@@ -43,18 +43,18 @@
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(152, 0);
+            this.label1.Location = new System.Drawing.Point(269, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1, 600);
+            this.label1.Size = new System.Drawing.Size(1, 1042);
             this.label1.TabIndex = 261;
             this.label1.Text = "label1";
             // 
             // btn_Top
             // 
             this.btn_Top.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Top.Location = new System.Drawing.Point(6, 12);
+            this.btn_Top.Location = new System.Drawing.Point(12, 12);
             this.btn_Top.Name = "btn_Top";
-            this.btn_Top.Size = new System.Drawing.Size(140, 109);
+            this.btn_Top.Size = new System.Drawing.Size(245, 190);
             this.btn_Top.TabIndex = 51;
             this.btn_Top.Text = "TOP";
             this.btn_Top.UseVisualStyleBackColor = true;
@@ -63,9 +63,9 @@
             // btn_MemberAdd
             // 
             this.btn_MemberAdd.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_MemberAdd.Location = new System.Drawing.Point(6, 523);
+            this.btn_MemberAdd.Location = new System.Drawing.Point(12, 904);
             this.btn_MemberAdd.Name = "btn_MemberAdd";
-            this.btn_MemberAdd.Size = new System.Drawing.Size(140, 60);
+            this.btn_MemberAdd.Size = new System.Drawing.Size(245, 110);
             this.btn_MemberAdd.TabIndex = 57;
             this.btn_MemberAdd.Text = "会員登録";
             this.btn_MemberAdd.UseVisualStyleBackColor = true;
@@ -74,9 +74,9 @@
             // btn_Lend
             // 
             this.btn_Lend.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Lend.Location = new System.Drawing.Point(6, 127);
+            this.btn_Lend.Location = new System.Drawing.Point(12, 208);
             this.btn_Lend.Name = "btn_Lend";
-            this.btn_Lend.Size = new System.Drawing.Size(140, 60);
+            this.btn_Lend.Size = new System.Drawing.Size(245, 110);
             this.btn_Lend.TabIndex = 52;
             this.btn_Lend.Text = "貸出処理";
             this.btn_Lend.UseVisualStyleBackColor = true;
@@ -85,9 +85,9 @@
             // btn_ItemAdd
             // 
             this.btn_ItemAdd.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_ItemAdd.Location = new System.Drawing.Point(6, 457);
+            this.btn_ItemAdd.Location = new System.Drawing.Point(12, 788);
             this.btn_ItemAdd.Name = "btn_ItemAdd";
-            this.btn_ItemAdd.Size = new System.Drawing.Size(140, 60);
+            this.btn_ItemAdd.Size = new System.Drawing.Size(245, 110);
             this.btn_ItemAdd.TabIndex = 56;
             this.btn_ItemAdd.Text = "商品登録";
             this.btn_ItemAdd.UseVisualStyleBackColor = true;
@@ -96,9 +96,9 @@
             // btn_Return
             // 
             this.btn_Return.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Return.Location = new System.Drawing.Point(6, 193);
+            this.btn_Return.Location = new System.Drawing.Point(12, 324);
             this.btn_Return.Name = "btn_Return";
-            this.btn_Return.Size = new System.Drawing.Size(140, 60);
+            this.btn_Return.Size = new System.Drawing.Size(245, 110);
             this.btn_Return.TabIndex = 53;
             this.btn_Return.Text = "返却処理";
             this.btn_Return.UseVisualStyleBackColor = true;
@@ -107,9 +107,9 @@
             // btn_PriceList
             // 
             this.btn_PriceList.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_PriceList.Location = new System.Drawing.Point(6, 325);
+            this.btn_PriceList.Location = new System.Drawing.Point(12, 556);
             this.btn_PriceList.Name = "btn_PriceList";
-            this.btn_PriceList.Size = new System.Drawing.Size(140, 60);
+            this.btn_PriceList.Size = new System.Drawing.Size(245, 110);
             this.btn_PriceList.TabIndex = 55;
             this.btn_PriceList.Text = "料金表";
             this.btn_PriceList.UseVisualStyleBackColor = true;
@@ -118,9 +118,9 @@
             // btn_ItemInfo
             // 
             this.btn_ItemInfo.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_ItemInfo.Location = new System.Drawing.Point(6, 259);
+            this.btn_ItemInfo.Location = new System.Drawing.Point(12, 440);
             this.btn_ItemInfo.Name = "btn_ItemInfo";
-            this.btn_ItemInfo.Size = new System.Drawing.Size(140, 60);
+            this.btn_ItemInfo.Size = new System.Drawing.Size(245, 110);
             this.btn_ItemInfo.TabIndex = 54;
             this.btn_ItemInfo.Text = "商品情報";
             this.btn_ItemInfo.UseVisualStyleBackColor = true;
@@ -128,17 +128,17 @@
             // 
             // panel
             // 
-            this.panel.Location = new System.Drawing.Point(154, 0);
+            this.panel.Location = new System.Drawing.Point(271, 0);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(948, 591);
+            this.panel.Size = new System.Drawing.Size(1632, 1042);
             this.panel.TabIndex = 1;
             // 
             // btn_Title
             // 
             this.btn_Title.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Title.Location = new System.Drawing.Point(6, 391);
+            this.btn_Title.Location = new System.Drawing.Point(12, 672);
             this.btn_Title.Name = "btn_Title";
-            this.btn_Title.Size = new System.Drawing.Size(140, 60);
+            this.btn_Title.Size = new System.Drawing.Size(245, 110);
             this.btn_Title.TabIndex = 262;
             this.btn_Title.Text = "タイトル登録";
             this.btn_Title.UseVisualStyleBackColor = true;
@@ -148,11 +148,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 592);
+            this.ClientSize = new System.Drawing.Size(1904, 1042);
+            this.Controls.Add(this.btn_Top);
             this.Controls.Add(this.btn_Title);
             this.Controls.Add(this.btn_Return);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_Top);
             this.Controls.Add(this.btn_ItemInfo);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.btn_MemberAdd);

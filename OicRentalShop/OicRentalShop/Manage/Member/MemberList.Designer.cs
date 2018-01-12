@@ -184,7 +184,7 @@
             this.Controls.Add(this.lbl_MemberID);
             this.Controls.Add(this.lbl_MemberName);
             this.Name = "MemberList";
-            this.Size = new System.Drawing.Size(948, 591);
+            this.Size = new System.Drawing.Size(1632, 1042);
             this.Load += new System.EventHandler(this.MemberList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MemberInfo)).EndInit();
             this.ResumeLayout(false);

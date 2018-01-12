@@ -61,47 +61,42 @@
             // cmb_Artist
             // 
             this.cmb_Artist.FormattingEnabled = true;
-            this.cmb_Artist.Location = new System.Drawing.Point(303, 444);
-            this.cmb_Artist.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_Artist.Location = new System.Drawing.Point(227, 355);
             this.cmb_Artist.Name = "cmb_Artist";
-            this.cmb_Artist.Size = new System.Drawing.Size(233, 23);
+            this.cmb_Artist.Size = new System.Drawing.Size(176, 20);
             this.cmb_Artist.TabIndex = 166;
             this.cmb_Artist.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_Artist_KeyDown);
             // 
             // cmb_Genre
             // 
             this.cmb_Genre.FormattingEnabled = true;
-            this.cmb_Genre.Location = new System.Drawing.Point(303, 516);
-            this.cmb_Genre.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_Genre.Location = new System.Drawing.Point(227, 413);
             this.cmb_Genre.Name = "cmb_Genre";
-            this.cmb_Genre.Size = new System.Drawing.Size(160, 23);
+            this.cmb_Genre.Size = new System.Drawing.Size(121, 20);
             this.cmb_Genre.TabIndex = 165;
             // 
             // txt_ReleaseDay
             // 
-            this.txt_ReleaseDay.Location = new System.Drawing.Point(303, 588);
-            this.txt_ReleaseDay.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_ReleaseDay.Location = new System.Drawing.Point(227, 470);
             this.txt_ReleaseDay.Name = "txt_ReleaseDay";
-            this.txt_ReleaseDay.Size = new System.Drawing.Size(373, 22);
+            this.txt_ReleaseDay.Size = new System.Drawing.Size(281, 19);
             this.txt_ReleaseDay.TabIndex = 164;
             // 
             // lbl_ReleaseDay
             // 
             this.lbl_ReleaseDay.AutoSize = true;
             this.lbl_ReleaseDay.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_ReleaseDay.Location = new System.Drawing.Point(69, 588);
-            this.lbl_ReleaseDay.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_ReleaseDay.Location = new System.Drawing.Point(52, 470);
             this.lbl_ReleaseDay.Name = "lbl_ReleaseDay";
-            this.lbl_ReleaseDay.Size = new System.Drawing.Size(111, 27);
+            this.lbl_ReleaseDay.Size = new System.Drawing.Size(88, 21);
             this.lbl_ReleaseDay.TabIndex = 163;
             this.lbl_ReleaseDay.Text = "発売日：";
             // 
             // txt_TitleID
             // 
-            this.txt_TitleID.Location = new System.Drawing.Point(303, 232);
-            this.txt_TitleID.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TitleID.Location = new System.Drawing.Point(227, 186);
             this.txt_TitleID.Name = "txt_TitleID";
-            this.txt_TitleID.Size = new System.Drawing.Size(373, 22);
+            this.txt_TitleID.Size = new System.Drawing.Size(281, 19);
             this.txt_TitleID.TabIndex = 162;
             this.txt_TitleID.TextChanged += new System.EventHandler(this.txt_TitleID_TextChanged);
             // 
@@ -109,19 +104,17 @@
             // 
             this.lbl_TitleID.AutoSize = true;
             this.lbl_TitleID.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_TitleID.Location = new System.Drawing.Point(69, 232);
-            this.lbl_TitleID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_TitleID.Location = new System.Drawing.Point(52, 186);
             this.lbl_TitleID.Name = "lbl_TitleID";
-            this.lbl_TitleID.Size = new System.Drawing.Size(138, 27);
+            this.lbl_TitleID.Size = new System.Drawing.Size(109, 21);
             this.lbl_TitleID.TabIndex = 161;
             this.lbl_TitleID.Text = "タイトルID：";
             // 
             // btn_Toadd
             // 
-            this.btn_Toadd.Location = new System.Drawing.Point(515, 656);
-            this.btn_Toadd.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Toadd.Location = new System.Drawing.Point(386, 525);
             this.btn_Toadd.Name = "btn_Toadd";
-            this.btn_Toadd.Size = new System.Drawing.Size(100, 29);
+            this.btn_Toadd.Size = new System.Drawing.Size(75, 23);
             this.btn_Toadd.TabIndex = 160;
             this.btn_Toadd.Text = "追加";
             this.btn_Toadd.UseVisualStyleBackColor = true;
@@ -129,10 +122,9 @@
             // 
             // txt_Title
             // 
-            this.txt_Title.Location = new System.Drawing.Point(303, 308);
-            this.txt_Title.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Title.Location = new System.Drawing.Point(227, 246);
             this.txt_Title.Name = "txt_Title";
-            this.txt_Title.Size = new System.Drawing.Size(373, 22);
+            this.txt_Title.Size = new System.Drawing.Size(281, 19);
             this.txt_Title.TabIndex = 159;
             // 
             // cmb_Format
@@ -142,20 +134,18 @@
             "シングル",
             "アルバム",
             "DVD"});
-            this.cmb_Format.Location = new System.Drawing.Point(303, 370);
-            this.cmb_Format.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_Format.Location = new System.Drawing.Point(227, 296);
             this.cmb_Format.Name = "cmb_Format";
-            this.cmb_Format.Size = new System.Drawing.Size(233, 23);
+            this.cmb_Format.Size = new System.Drawing.Size(176, 20);
             this.cmb_Format.TabIndex = 158;
             this.cmb_Format.SelectedIndexChanged += new System.EventHandler(this.cmb_Format_SelectedIndexChanged);
             // 
             // btn_Add
             // 
             this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Add.Location = new System.Drawing.Point(1051, 636);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Add.Location = new System.Drawing.Point(788, 509);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(129, 88);
+            this.btn_Add.Size = new System.Drawing.Size(97, 70);
             this.btn_Add.TabIndex = 157;
             this.btn_Add.Text = "登録";
             this.btn_Add.UseVisualStyleBackColor = true;
@@ -164,10 +154,9 @@
             // btn_Clear
             // 
             this.btn_Clear.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Clear.Location = new System.Drawing.Point(864, 636);
-            this.btn_Clear.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Clear.Location = new System.Drawing.Point(648, 509);
             this.btn_Clear.Name = "btn_Clear";
-            this.btn_Clear.Size = new System.Drawing.Size(129, 88);
+            this.btn_Clear.Size = new System.Drawing.Size(97, 70);
             this.btn_Clear.TabIndex = 156;
             this.btn_Clear.Text = "クリア";
             this.btn_Clear.UseVisualStyleBackColor = true;
@@ -184,11 +173,10 @@
             this.Column5,
             this.Column2,
             this.btn_Delete});
-            this.dgv_ItemRe.Location = new System.Drawing.Point(737, 118);
-            this.dgv_ItemRe.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_ItemRe.Location = new System.Drawing.Point(553, 94);
             this.dgv_ItemRe.Name = "dgv_ItemRe";
             this.dgv_ItemRe.RowTemplate.Height = 21;
-            this.dgv_ItemRe.Size = new System.Drawing.Size(523, 475);
+            this.dgv_ItemRe.Size = new System.Drawing.Size(392, 380);
             this.dgv_ItemRe.TabIndex = 155;
             this.dgv_ItemRe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ItemRe_CellContentClick);
             // 
@@ -231,10 +219,9 @@
             // 
             this.lbl_Genre.AutoSize = true;
             this.lbl_Genre.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_Genre.Location = new System.Drawing.Point(95, 516);
-            this.lbl_Genre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Genre.Location = new System.Drawing.Point(71, 413);
             this.lbl_Genre.Name = "lbl_Genre";
-            this.lbl_Genre.Size = new System.Drawing.Size(113, 27);
+            this.lbl_Genre.Size = new System.Drawing.Size(90, 21);
             this.lbl_Genre.TabIndex = 154;
             this.lbl_Genre.Text = "ジャンル：";
             // 
@@ -242,10 +229,9 @@
             // 
             this.lbl_Artist.AutoSize = true;
             this.lbl_Artist.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_Artist.Location = new System.Drawing.Point(55, 442);
-            this.lbl_Artist.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Artist.Location = new System.Drawing.Point(41, 354);
             this.lbl_Artist.Name = "lbl_Artist";
-            this.lbl_Artist.Size = new System.Drawing.Size(151, 27);
+            this.lbl_Artist.Size = new System.Drawing.Size(120, 21);
             this.lbl_Artist.TabIndex = 153;
             this.lbl_Artist.Text = "アーティスト：";
             // 
@@ -253,10 +239,9 @@
             // 
             this.lbl_Title.AutoSize = true;
             this.lbl_Title.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_Title.Location = new System.Drawing.Point(69, 308);
-            this.lbl_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Title.Location = new System.Drawing.Point(52, 246);
             this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(139, 27);
+            this.lbl_Title.Size = new System.Drawing.Size(110, 21);
             this.lbl_Title.TabIndex = 152;
             this.lbl_Title.Text = "タイトル名：";
             // 
@@ -264,10 +249,9 @@
             // 
             this.lbl_Format.AutoSize = true;
             this.lbl_Format.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_Format.Location = new System.Drawing.Point(127, 370);
-            this.lbl_Format.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Format.Location = new System.Drawing.Point(95, 296);
             this.lbl_Format.Name = "lbl_Format";
-            this.lbl_Format.Size = new System.Drawing.Size(83, 27);
+            this.lbl_Format.Size = new System.Drawing.Size(66, 21);
             this.lbl_Format.TabIndex = 151;
             this.lbl_Format.Text = "形式：";
             // 
@@ -275,29 +259,26 @@
             // 
             this.lbl_TopTitle.AutoSize = true;
             this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_TopTitle.Location = new System.Drawing.Point(336, 14);
-            this.lbl_TopTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_TopTitle.Location = new System.Drawing.Point(252, 11);
             this.lbl_TopTitle.Name = "lbl_TopTitle";
-            this.lbl_TopTitle.Size = new System.Drawing.Size(435, 80);
+            this.lbl_TopTitle.Size = new System.Drawing.Size(349, 64);
             this.lbl_TopTitle.TabIndex = 150;
             this.lbl_TopTitle.Text = "タイトル登録";
             // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(-1, 112);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(-1, 90);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(1267, 1);
+            this.label9.Size = new System.Drawing.Size(950, 1);
             this.label9.TabIndex = 149;
             // 
             // btn_Correction
             // 
             this.btn_Correction.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Correction.Location = new System.Drawing.Point(1094, 636);
-            this.btn_Correction.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Correction.Location = new System.Drawing.Point(820, 509);
             this.btn_Correction.Name = "btn_Correction";
-            this.btn_Correction.Size = new System.Drawing.Size(129, 88);
+            this.btn_Correction.Size = new System.Drawing.Size(97, 70);
             this.btn_Correction.TabIndex = 167;
             this.btn_Correction.Text = "修正";
             this.btn_Correction.UseVisualStyleBackColor = true;
@@ -307,10 +288,9 @@
             // btn_ReturnAdd
             // 
             this.btn_ReturnAdd.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_ReturnAdd.Location = new System.Drawing.Point(914, 636);
-            this.btn_ReturnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_ReturnAdd.Location = new System.Drawing.Point(686, 509);
             this.btn_ReturnAdd.Name = "btn_ReturnAdd";
-            this.btn_ReturnAdd.Size = new System.Drawing.Size(129, 88);
+            this.btn_ReturnAdd.Size = new System.Drawing.Size(97, 70);
             this.btn_ReturnAdd.TabIndex = 168;
             this.btn_ReturnAdd.Text = "戻る";
             this.btn_ReturnAdd.UseVisualStyleBackColor = true;
@@ -319,7 +299,7 @@
             // 
             // ManageTitleAdd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.Controls.Add(this.btn_ReturnAdd);
@@ -342,8 +322,9 @@
             this.Controls.Add(this.lbl_Format);
             this.Controls.Add(this.lbl_TopTitle);
             this.Controls.Add(this.label9);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ManageTitleAdd";
-            this.Size = new System.Drawing.Size(1264, 739);
+            this.Size = new System.Drawing.Size(1632, 1042);
             this.Load += new System.EventHandler(this.ManageTitleAdd_Load);
             this.VisibleChanged += new System.EventHandler(this.ManageTitleAdd_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemRe)).EndInit();

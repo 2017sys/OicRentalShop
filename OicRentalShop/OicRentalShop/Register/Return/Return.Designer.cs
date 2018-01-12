@@ -49,8 +49,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.lbl_money = new System.Windows.Forms.Label();
             this.txt_money = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.lbl_ProductInfo = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -67,7 +65,6 @@
             this.btn_ok = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txt_InProductID = new System.Windows.Forms.TextBox();
             this.Btn_ClearMID = new System.Windows.Forms.Button();
             this.Btn_ClearPID = new System.Windows.Forms.Button();
@@ -81,7 +78,7 @@
             // txt_late
             // 
             this.txt_late.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_late.Location = new System.Drawing.Point(120, 466);
+            this.txt_late.Location = new System.Drawing.Point(227, 742);
             this.txt_late.Name = "txt_late";
             this.txt_late.ReadOnly = true;
             this.txt_late.Size = new System.Drawing.Size(110, 23);
@@ -90,7 +87,7 @@
             // txt_ReturnDay
             // 
             this.txt_ReturnDay.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_ReturnDay.Location = new System.Drawing.Point(121, 426);
+            this.txt_ReturnDay.Location = new System.Drawing.Point(227, 685);
             this.txt_ReturnDay.Name = "txt_ReturnDay";
             this.txt_ReturnDay.ReadOnly = true;
             this.txt_ReturnDay.Size = new System.Drawing.Size(169, 23);
@@ -100,7 +97,7 @@
             // 
             this.lbl_late.AutoSize = true;
             this.lbl_late.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_late.Location = new System.Drawing.Point(22, 471);
+            this.lbl_late.Location = new System.Drawing.Point(129, 747);
             this.lbl_late.Name = "lbl_late";
             this.lbl_late.Size = new System.Drawing.Size(85, 16);
             this.lbl_late.TabIndex = 223;
@@ -109,7 +106,7 @@
             // txt_MemberName
             // 
             this.txt_MemberName.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_MemberName.Location = new System.Drawing.Point(141, 158);
+            this.txt_MemberName.Location = new System.Drawing.Point(254, 257);
             this.txt_MemberName.Name = "txt_MemberName";
             this.txt_MemberName.ReadOnly = true;
             this.txt_MemberName.Size = new System.Drawing.Size(513, 23);
@@ -118,7 +115,7 @@
             // txt_MemberPoint
             // 
             this.txt_MemberPoint.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_MemberPoint.Location = new System.Drawing.Point(417, 128);
+            this.txt_MemberPoint.Location = new System.Drawing.Point(530, 227);
             this.txt_MemberPoint.Name = "txt_MemberPoint";
             this.txt_MemberPoint.ReadOnly = true;
             this.txt_MemberPoint.Size = new System.Drawing.Size(156, 23);
@@ -127,7 +124,7 @@
             // txt_MemberID
             // 
             this.txt_MemberID.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_MemberID.Location = new System.Drawing.Point(141, 128);
+            this.txt_MemberID.Location = new System.Drawing.Point(254, 227);
             this.txt_MemberID.Name = "txt_MemberID";
             this.txt_MemberID.Size = new System.Drawing.Size(148, 23);
             this.txt_MemberID.TabIndex = 220;
@@ -137,7 +134,7 @@
             // txt_OLDNEW
             // 
             this.txt_OLDNEW.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_OLDNEW.Location = new System.Drawing.Point(120, 384);
+            this.txt_OLDNEW.Location = new System.Drawing.Point(227, 625);
             this.txt_OLDNEW.Name = "txt_OLDNEW";
             this.txt_OLDNEW.ReadOnly = true;
             this.txt_OLDNEW.Size = new System.Drawing.Size(67, 23);
@@ -146,7 +143,7 @@
             // txt_type
             // 
             this.txt_type.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_type.Location = new System.Drawing.Point(120, 342);
+            this.txt_type.Location = new System.Drawing.Point(227, 565);
             this.txt_type.Name = "txt_type";
             this.txt_type.ReadOnly = true;
             this.txt_type.Size = new System.Drawing.Size(89, 23);
@@ -155,7 +152,7 @@
             // txt_ProductID
             // 
             this.txt_ProductID.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_ProductID.Location = new System.Drawing.Point(120, 233);
+            this.txt_ProductID.Location = new System.Drawing.Point(227, 423);
             this.txt_ProductID.Name = "txt_ProductID";
             this.txt_ProductID.ReadOnly = true;
             this.txt_ProductID.Size = new System.Drawing.Size(140, 23);
@@ -165,7 +162,7 @@
             // txt_title
             // 
             this.txt_title.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_title.Location = new System.Drawing.Point(120, 283);
+            this.txt_title.Location = new System.Drawing.Point(227, 481);
             this.txt_title.Multiline = true;
             this.txt_title.Name = "txt_title";
             this.txt_title.ReadOnly = true;
@@ -176,7 +173,7 @@
             // 
             this.lbl_ReturnDay.AutoSize = true;
             this.lbl_ReturnDay.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_ReturnDay.Location = new System.Drawing.Point(13, 429);
+            this.lbl_ReturnDay.Location = new System.Drawing.Point(119, 688);
             this.lbl_ReturnDay.Name = "lbl_ReturnDay";
             this.lbl_ReturnDay.Size = new System.Drawing.Size(102, 16);
             this.lbl_ReturnDay.TabIndex = 215;
@@ -186,7 +183,7 @@
             // 
             this.lbl_OLDNEW.AutoSize = true;
             this.lbl_OLDNEW.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_OLDNEW.Location = new System.Drawing.Point(22, 387);
+            this.lbl_OLDNEW.Location = new System.Drawing.Point(129, 628);
             this.lbl_OLDNEW.Name = "lbl_OLDNEW";
             this.lbl_OLDNEW.Size = new System.Drawing.Size(94, 16);
             this.lbl_OLDNEW.TabIndex = 214;
@@ -196,7 +193,7 @@
             // 
             this.lbl_type.AutoSize = true;
             this.lbl_type.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_type.Location = new System.Drawing.Point(10, 345);
+            this.lbl_type.Location = new System.Drawing.Point(117, 568);
             this.lbl_type.Name = "lbl_type";
             this.lbl_type.Size = new System.Drawing.Size(105, 16);
             this.lbl_type.TabIndex = 213;
@@ -206,7 +203,7 @@
             // 
             this.lbl_title.AutoSize = true;
             this.lbl_title.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_title.Location = new System.Drawing.Point(29, 283);
+            this.lbl_title.Location = new System.Drawing.Point(136, 481);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(85, 16);
             this.lbl_title.TabIndex = 212;
@@ -216,7 +213,7 @@
             // 
             this.lbl_ProductID.AutoSize = true;
             this.lbl_ProductID.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_ProductID.Location = new System.Drawing.Point(47, 236);
+            this.lbl_ProductID.Location = new System.Drawing.Point(154, 426);
             this.lbl_ProductID.Name = "lbl_ProductID";
             this.lbl_ProductID.Size = new System.Drawing.Size(67, 16);
             this.lbl_ProductID.TabIndex = 211;
@@ -225,7 +222,7 @@
             // label29
             // 
             this.label29.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label29.Location = new System.Drawing.Point(827, 46);
+            this.label29.Location = new System.Drawing.Point(1336, 104);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(1, 50);
             this.label29.TabIndex = 209;
@@ -233,7 +230,7 @@
             // label28
             // 
             this.label28.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label28.Location = new System.Drawing.Point(672, 46);
+            this.label28.Location = new System.Drawing.Point(1181, 104);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(284, 1);
             this.label28.TabIndex = 208;
@@ -241,7 +238,7 @@
             // label27
             // 
             this.label27.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label27.Location = new System.Drawing.Point(672, 95);
+            this.label27.Location = new System.Drawing.Point(1181, 153);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(284, 1);
             this.label27.TabIndex = 207;
@@ -249,7 +246,7 @@
             // label25
             // 
             this.label25.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label25.Location = new System.Drawing.Point(672, 175);
+            this.label25.Location = new System.Drawing.Point(1181, 233);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(284, 1);
             this.label25.TabIndex = 205;
@@ -259,7 +256,7 @@
             this.lbl_money.AutoSize = true;
             this.lbl_money.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lbl_money.Font = new System.Drawing.Font("MS UI Gothic", 30F);
-            this.lbl_money.Location = new System.Drawing.Point(834, 51);
+            this.lbl_money.Location = new System.Drawing.Point(1343, 109);
             this.lbl_money.Name = "lbl_money";
             this.lbl_money.Size = new System.Drawing.Size(97, 40);
             this.lbl_money.TabIndex = 200;
@@ -268,68 +265,52 @@
             // txt_money
             // 
             this.txt_money.Font = new System.Drawing.Font("MS UI Gothic", 30F);
-            this.txt_money.Location = new System.Drawing.Point(674, 48);
+            this.txt_money.Location = new System.Drawing.Point(1183, 106);
             this.txt_money.Name = "txt_money";
             this.txt_money.ReadOnly = true;
             this.txt_money.Size = new System.Drawing.Size(154, 47);
             this.txt_money.TabIndex = 199;
             this.txt_money.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label20
-            // 
-            this.label20.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label20.Location = new System.Drawing.Point(789, 183);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(1, 56);
-            this.label20.TabIndex = 198;
-            // 
-            // label17
-            // 
-            this.label17.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(789, 218);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(1, 576);
-            this.label17.TabIndex = 197;
-            // 
             // label16
             // 
             this.label16.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(368, 218);
+            this.label16.Location = new System.Drawing.Point(596, 336);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(1, 446);
+            this.label16.Size = new System.Drawing.Size(1, 708);
             this.label16.TabIndex = 196;
             // 
             // lbl_ProductInfo
             // 
             this.lbl_ProductInfo.AutoSize = true;
-            this.lbl_ProductInfo.Font = new System.Drawing.Font("MS UI Gothic", 10.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_ProductInfo.Location = new System.Drawing.Point(142, 194);
+            this.lbl_ProductInfo.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_ProductInfo.Location = new System.Drawing.Point(132, 353);
             this.lbl_ProductInfo.Name = "lbl_ProductInfo";
-            this.lbl_ProductInfo.Size = new System.Drawing.Size(67, 14);
+            this.lbl_ProductInfo.Size = new System.Drawing.Size(89, 19);
             this.lbl_ProductInfo.TabIndex = 195;
             this.lbl_ProductInfo.Text = "商品情報";
             // 
             // label14
             // 
             this.label14.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(-4, 217);
+            this.label14.Location = new System.Drawing.Point(0, 394);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(952, 1);
+            this.label14.Size = new System.Drawing.Size(1632, 1);
             this.label14.TabIndex = 194;
             // 
             // label13
             // 
             this.label13.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(672, -14);
+            this.label13.Location = new System.Drawing.Point(1181, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(1, 198);
+            this.label13.Size = new System.Drawing.Size(1, 1042);
             this.label13.TabIndex = 193;
             // 
             // lbl_MemberName
             // 
             this.lbl_MemberName.AutoSize = true;
             this.lbl_MemberName.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_MemberName.Location = new System.Drawing.Point(10, 158);
+            this.lbl_MemberName.Location = new System.Drawing.Point(123, 257);
             this.lbl_MemberName.Name = "lbl_MemberName";
             this.lbl_MemberName.Size = new System.Drawing.Size(125, 19);
             this.lbl_MemberName.TabIndex = 192;
@@ -339,7 +320,7 @@
             // 
             this.lbl_MemberPoint.AutoSize = true;
             this.lbl_MemberPoint.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_MemberPoint.Location = new System.Drawing.Point(293, 131);
+            this.lbl_MemberPoint.Location = new System.Drawing.Point(406, 230);
             this.lbl_MemberPoint.Name = "lbl_MemberPoint";
             this.lbl_MemberPoint.Size = new System.Drawing.Size(121, 19);
             this.lbl_MemberPoint.TabIndex = 191;
@@ -349,7 +330,7 @@
             // 
             this.label4lbl_MemberID.AutoSize = true;
             this.label4lbl_MemberID.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4lbl_MemberID.Location = new System.Drawing.Point(56, 128);
+            this.label4lbl_MemberID.Location = new System.Drawing.Point(169, 227);
             this.label4lbl_MemberID.Name = "label4lbl_MemberID";
             this.label4lbl_MemberID.Size = new System.Drawing.Size(79, 19);
             this.label4lbl_MemberID.TabIndex = 190;
@@ -358,63 +339,63 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(-2, 183);
+            this.label3.Location = new System.Drawing.Point(3, 337);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(954, 1);
+            this.label3.Size = new System.Drawing.Size(1632, 1);
             this.label3.TabIndex = 189;
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(0, 117);
+            this.label2.Location = new System.Drawing.Point(0, 211);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(673, 1);
+            this.label2.Size = new System.Drawing.Size(1182, 1);
             this.label2.TabIndex = 188;
             // 
             // dgv_ReturnItem
             // 
             this.dgv_ReturnItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ReturnItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ReturnItem.Location = new System.Drawing.Point(370, 218);
+            this.dgv_ReturnItem.Location = new System.Drawing.Point(598, 394);
             this.dgv_ReturnItem.Name = "dgv_ReturnItem";
             this.dgv_ReturnItem.RowTemplate.Height = 21;
-            this.dgv_ReturnItem.Size = new System.Drawing.Size(420, 373);
+            this.dgv_ReturnItem.Size = new System.Drawing.Size(584, 533);
             this.dgv_ReturnItem.TabIndex = 187;
             // 
             // lbl_TopTitle
             // 
             this.lbl_TopTitle.AutoSize = true;
-            this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_TopTitle.Location = new System.Drawing.Point(256, 5);
+            this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_TopTitle.Location = new System.Drawing.Point(401, 35);
             this.lbl_TopTitle.Name = "lbl_TopTitle";
-            this.lbl_TopTitle.Size = new System.Drawing.Size(158, 64);
+            this.lbl_TopTitle.Size = new System.Drawing.Size(236, 97);
             this.lbl_TopTitle.TabIndex = 186;
             this.lbl_TopTitle.Text = "返却";
             // 
             // lbl_MemberInfo
             // 
             this.lbl_MemberInfo.AutoSize = true;
-            this.lbl_MemberInfo.Font = new System.Drawing.Font("MS UI Gothic", 10.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_MemberInfo.Location = new System.Drawing.Point(303, 95);
+            this.lbl_MemberInfo.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_MemberInfo.Location = new System.Drawing.Point(159, 180);
             this.lbl_MemberInfo.Name = "lbl_MemberInfo";
-            this.lbl_MemberInfo.Size = new System.Drawing.Size(67, 14);
+            this.lbl_MemberInfo.Size = new System.Drawing.Size(89, 19);
             this.lbl_MemberInfo.TabIndex = 185;
             this.lbl_MemberInfo.Text = "会員情報";
             // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(0, 85);
+            this.label9.Location = new System.Drawing.Point(0, 153);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(673, 1);
+            this.label9.Size = new System.Drawing.Size(1182, 1);
             this.label9.TabIndex = 184;
             // 
             // btn_ok
             // 
             this.btn_ok.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.btn_ok.Location = new System.Drawing.Point(810, 447);
+            this.btn_ok.Location = new System.Drawing.Point(1267, 685);
             this.btn_ok.Name = "btn_ok";
-            this.btn_ok.Size = new System.Drawing.Size(120, 50);
+            this.btn_ok.Size = new System.Drawing.Size(250, 118);
             this.btn_ok.TabIndex = 183;
             this.btn_ok.Text = "決定";
             this.btn_ok.UseVisualStyleBackColor = true;
@@ -423,9 +404,9 @@
             // btn_clear
             // 
             this.btn_clear.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Bold);
-            this.btn_clear.Location = new System.Drawing.Point(810, 527);
+            this.btn_clear.Location = new System.Drawing.Point(1267, 835);
             this.btn_clear.Name = "btn_clear";
-            this.btn_clear.Size = new System.Drawing.Size(120, 50);
+            this.btn_clear.Size = new System.Drawing.Size(250, 118);
             this.btn_clear.TabIndex = 182;
             this.btn_clear.Text = "クリア";
             this.btn_clear.UseVisualStyleBackColor = true;
@@ -434,32 +415,24 @@
             // label23
             // 
             this.label23.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label23.Location = new System.Drawing.Point(819, 48);
+            this.label23.Location = new System.Drawing.Point(1328, 106);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(153, 47);
             this.label23.TabIndex = 203;
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(368, 184);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1, 56);
-            this.label1.TabIndex = 226;
-            // 
             // txt_InProductID
             // 
             this.txt_InProductID.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_InProductID.Location = new System.Drawing.Point(375, 189);
+            this.txt_InProductID.Location = new System.Drawing.Point(603, 353);
             this.txt_InProductID.Name = "txt_InProductID";
-            this.txt_InProductID.Size = new System.Drawing.Size(175, 23);
+            this.txt_InProductID.Size = new System.Drawing.Size(206, 23);
             this.txt_InProductID.TabIndex = 227;
             this.txt_InProductID.TextChanged += new System.EventHandler(this.txt_InProductID_TextChanged);
             this.txt_InProductID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_InProductID_KeyPress);
             // 
             // Btn_ClearMID
             // 
-            this.Btn_ClearMID.Location = new System.Drawing.Point(579, 128);
+            this.Btn_ClearMID.Location = new System.Drawing.Point(692, 227);
             this.Btn_ClearMID.Name = "Btn_ClearMID";
             this.Btn_ClearMID.Size = new System.Drawing.Size(75, 23);
             this.Btn_ClearMID.TabIndex = 228;
@@ -469,7 +442,7 @@
             // 
             // Btn_ClearPID
             // 
-            this.Btn_ClearPID.Location = new System.Drawing.Point(282, 233);
+            this.Btn_ClearPID.Location = new System.Drawing.Point(389, 423);
             this.Btn_ClearPID.Name = "Btn_ClearPID";
             this.Btn_ClearPID.Size = new System.Drawing.Size(75, 23);
             this.Btn_ClearPID.TabIndex = 229;
@@ -479,9 +452,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(810, 221);
+            this.button1.Location = new System.Drawing.Point(1267, 426);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 220);
+            this.button1.Size = new System.Drawing.Size(250, 230);
             this.button1.TabIndex = 230;
             this.button1.Text = "木村純一";
             this.button1.UseVisualStyleBackColor = true;
@@ -489,7 +462,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(680, 102);
+            this.button2.Location = new System.Drawing.Point(1189, 160);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(265, 70);
             this.button2.TabIndex = 231;
@@ -499,7 +472,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(499, 46);
+            this.button3.Location = new System.Drawing.Point(913, 64);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 232;
@@ -509,7 +482,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(420, 43);
+            this.button4.Location = new System.Drawing.Point(834, 61);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 233;
@@ -528,7 +501,6 @@
             this.Controls.Add(this.Btn_ClearPID);
             this.Controls.Add(this.Btn_ClearMID);
             this.Controls.Add(this.txt_InProductID);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_late);
             this.Controls.Add(this.txt_ReturnDay);
             this.Controls.Add(this.lbl_late);
@@ -550,8 +522,6 @@
             this.Controls.Add(this.label25);
             this.Controls.Add(this.lbl_money);
             this.Controls.Add(this.txt_money);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.lbl_ProductInfo);
             this.Controls.Add(this.label14);
@@ -569,7 +539,7 @@
             this.Controls.Add(this.btn_clear);
             this.Controls.Add(this.label23);
             this.Name = "Return";
-            this.Size = new System.Drawing.Size(948, 591);
+            this.Size = new System.Drawing.Size(1632, 1042);
             this.Load += new System.EventHandler(this.Return_Load);
             this.VisibleChanged += new System.EventHandler(this.Return_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ReturnItem)).EndInit();
@@ -599,8 +569,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label lbl_money;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label lbl_ProductInfo;
         private System.Windows.Forms.Label label14;
@@ -616,7 +584,6 @@
         private System.Windows.Forms.Button btn_ok;
         private System.Windows.Forms.Button btn_clear;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_InProductID;
         private System.Windows.Forms.Button Btn_ClearMID;
         private System.Windows.Forms.Button Btn_ClearPID;

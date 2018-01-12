@@ -289,7 +289,8 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.lbl_TopTitle);
             this.Name = "ItemList";
-            this.Size = new System.Drawing.Size(948, 591);
+
+            this.Size = new System.Drawing.Size(1632, 1042);
             this.Load += new System.EventHandler(this.ItemList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemInfo)).EndInit();
             this.ResumeLayout(false);

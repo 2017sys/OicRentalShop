@@ -129,7 +129,7 @@
             this.Controls.Add(this.lbl_SecTitle);
             this.Controls.Add(this.lbl_TopTitle);
             this.Name = "EventList";
-            this.Size = new System.Drawing.Size(948, 591);
+            this.Size = new System.Drawing.Size(1632, 1042);
             this.Load += new System.EventHandler(this.EventList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_EventInfo)).EndInit();
             this.ResumeLayout(false);
