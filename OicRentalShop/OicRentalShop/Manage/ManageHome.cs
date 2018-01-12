@@ -13,6 +13,7 @@ namespace OicRentalShop.Manage
     public partial class ManageHome : Form
     {
         public static Item.ItemList it;
+        public static Item.ItemAdd ia;
         public static Member.MemberList me;
         public static Staff.StaffList st;
         public static Staff.StaffAdd sa;
@@ -37,6 +38,7 @@ namespace OicRentalShop.Manage
         private void ManageHome_Load(object sender, EventArgs e)
         {
             it = new Item.ItemList();
+            ia = new Item.ItemAdd();
             me = new Member.MemberList();
             st = new Staff.StaffList();
             sa = new Staff.StaffAdd();
@@ -92,7 +94,11 @@ namespace OicRentalShop.Manage
                 ea.Visible = true;
             }
             
-
+            else if (flag==6)
+            {
+                it.Visible = false;
+                ia.Visible = true;
+            }
 
         }
 
@@ -123,6 +129,11 @@ namespace OicRentalShop.Manage
                 ea.Visible = false;
                 ev.Visible = true;
             }
+            else if(flag==5)
+            {
+                it.Visible = true;
+                ia.Visible = false;
+            }
         }
 
         private void btn_Top_Click(object sender, EventArgs e)
@@ -134,7 +145,9 @@ namespace OicRentalShop.Manage
         {
             panel.Controls.Clear();
             panel.Controls.Add(it);
+            panel.Controls.Add(ia);
             it.Visible = true;
+            ia.Visible = false;
         }
 
         private void btn_Member_Click(object sender, EventArgs e)
