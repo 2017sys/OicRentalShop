@@ -107,6 +107,7 @@
             // 
             // dgv_EventInfo
             // 
+            this.dgv_EventInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_EventInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_EventInfo.Location = new System.Drawing.Point(15, 147);
             this.dgv_EventInfo.Name = "dgv_EventInfo";

@@ -46,15 +46,23 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txt_Point = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.dgv_EventDiscount = new System.Windows.Forms.DataGridView();
+            this.イベント名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.商品タイプ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.新作旧作 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.割引額 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_EventDiscount = new System.Windows.Forms.TextBox();
+            this.lbl_EventDicount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PayInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MemberInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_EventDiscount)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(495, 256);
+            this.label1.Location = new System.Drawing.Point(495, 243);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 27);
             this.label1.TabIndex = 0;
@@ -88,7 +96,7 @@
             this.dgv_PayInfo.Location = new System.Drawing.Point(3, 105);
             this.dgv_PayInfo.Name = "dgv_PayInfo";
             this.dgv_PayInfo.RowTemplate.Height = 21;
-            this.dgv_PayInfo.Size = new System.Drawing.Size(454, 469);
+            this.dgv_PayInfo.Size = new System.Drawing.Size(454, 352);
             this.dgv_PayInfo.TabIndex = 5;
             // 
             // dgv_MemberInfo
@@ -133,7 +141,7 @@
             // txt_TotalMoney
             // 
             this.txt_TotalMoney.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_TotalMoney.Location = new System.Drawing.Point(630, 243);
+            this.txt_TotalMoney.Location = new System.Drawing.Point(630, 230);
             this.txt_TotalMoney.Multiline = true;
             this.txt_TotalMoney.Name = "txt_TotalMoney";
             this.txt_TotalMoney.ReadOnly = true;
@@ -181,7 +189,7 @@
             // btn_Redo
             // 
             this.btn_Redo.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Redo.Location = new System.Drawing.Point(658, 480);
+            this.btn_Redo.Location = new System.Drawing.Point(661, 480);
             this.btn_Redo.Name = "btn_Redo";
             this.btn_Redo.Size = new System.Drawing.Size(110, 94);
             this.btn_Redo.TabIndex = 140;
@@ -208,7 +216,7 @@
             // txt_Point
             // 
             this.txt_Point.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_Point.Location = new System.Drawing.Point(629, 311);
+            this.txt_Point.Location = new System.Drawing.Point(630, 285);
             this.txt_Point.Name = "txt_Point";
             this.txt_Point.Size = new System.Drawing.Size(248, 31);
             this.txt_Point.TabIndex = 144;
@@ -218,16 +226,73 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(470, 315);
+            this.label6.Location = new System.Drawing.Point(470, 285);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(153, 27);
             this.label6.TabIndex = 143;
             this.label6.Text = "利用ポイント";
             // 
+            // dgv_EventDiscount
+            // 
+            this.dgv_EventDiscount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_EventDiscount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_EventDiscount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.イベント名,
+            this.商品タイプ,
+            this.新作旧作,
+            this.割引額});
+            this.dgv_EventDiscount.Location = new System.Drawing.Point(3, 464);
+            this.dgv_EventDiscount.Name = "dgv_EventDiscount";
+            this.dgv_EventDiscount.RowTemplate.Height = 21;
+            this.dgv_EventDiscount.Size = new System.Drawing.Size(454, 110);
+            this.dgv_EventDiscount.TabIndex = 145;
+            // 
+            // イベント名
+            // 
+            this.イベント名.HeaderText = "イベント名";
+            this.イベント名.Name = "イベント名";
+            // 
+            // 商品タイプ
+            // 
+            this.商品タイプ.HeaderText = "商品タイプ";
+            this.商品タイプ.Name = "商品タイプ";
+            // 
+            // 新作旧作
+            // 
+            this.新作旧作.HeaderText = "新作旧作";
+            this.新作旧作.Name = "新作旧作";
+            // 
+            // 割引額
+            // 
+            this.割引額.HeaderText = "割引額";
+            this.割引額.Name = "割引額";
+            // 
+            // txt_EventDiscount
+            // 
+            this.txt_EventDiscount.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_EventDiscount.Location = new System.Drawing.Point(661, 326);
+            this.txt_EventDiscount.Name = "txt_EventDiscount";
+            this.txt_EventDiscount.Size = new System.Drawing.Size(217, 31);
+            this.txt_EventDiscount.TabIndex = 147;
+            this.txt_EventDiscount.Text = "0";
+            // 
+            // lbl_EventDicount
+            // 
+            this.lbl_EventDicount.AutoSize = true;
+            this.lbl_EventDicount.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_EventDicount.Location = new System.Drawing.Point(467, 326);
+            this.lbl_EventDicount.Name = "lbl_EventDicount";
+            this.lbl_EventDicount.Size = new System.Drawing.Size(181, 27);
+            this.lbl_EventDicount.TabIndex = 146;
+            this.lbl_EventDicount.Text = "イベント割引額";
+            // 
             // LendConf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txt_EventDiscount);
+            this.Controls.Add(this.lbl_EventDicount);
+            this.Controls.Add(this.dgv_EventDiscount);
             this.Controls.Add(this.txt_Point);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -252,6 +317,7 @@
             this.VisibleChanged += new System.EventHandler(this.LendConf_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PayInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_MemberInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_EventDiscount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,5 +343,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_Point;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dgv_EventDiscount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn イベント名;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 商品タイプ;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 新作旧作;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 割引額;
+        private System.Windows.Forms.TextBox txt_EventDiscount;
+        private System.Windows.Forms.Label lbl_EventDicount;
     }
 }

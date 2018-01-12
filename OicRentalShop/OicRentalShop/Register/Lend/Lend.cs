@@ -187,7 +187,7 @@ namespace OicRentalShop.Manage.Lend
                             if (SlipFlag == 0)
                             {
                                 DateTime Today = DateTime.Today;
-                                CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",true,#" + Today.ToString() + "#,0,1,null)");
+                                CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",true,#" + Today.ToString() + "#,0,1,null,0)");
                                 txt_MemberID.ReadOnly = true;
                                 SlipFlag = 1;
                             }

@@ -38,11 +38,11 @@ namespace OicRentalShop.Manage.Event
 
 
             string old="null";
-            if(cmb_Old.Text=="旧作")
+            if(cmb_Old.Text=="新作")
             {
                 old = "1";
             }
-            else if(cmb_Old.Text=="新作")
+            else if (cmb_Old.Text == "旧作")
             {
                 old = "2";
             }

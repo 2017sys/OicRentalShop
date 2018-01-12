@@ -274,7 +274,7 @@ namespace OicRentalShop.Manage.Return
                                 slipID = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_SLIP").ToString());
                                 slipID++;
                                 DateTime Today = DateTime.Today;
-                                CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",false,#" + Today.ToString() + "#,0,1,null)");
+                                CmdFunc("INSERT INTO TBL_SLIP VALUES(" + slipID + "," + int.Parse(txt_MemberID.Text) + ",false,#" + Today.ToString() + "#,0,1,null,null)");
                                 txt_MemberID.ReadOnly = true;
                                 SlipFlag = 1;
 
