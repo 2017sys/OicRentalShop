@@ -53,10 +53,10 @@
             // 
             // txt_Point
             // 
-            this.txt_Point.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_Point.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txt_Point.Location = new System.Drawing.Point(1022, 456);
             this.txt_Point.Name = "txt_Point";
-            this.txt_Point.Size = new System.Drawing.Size(386, 31);
+            this.txt_Point.Size = new System.Drawing.Size(386, 34);
             this.txt_Point.TabIndex = 162;
             this.txt_Point.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Point_KeyUp);
             // 
@@ -109,16 +109,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.Location = new System.Drawing.Point(846, 360);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 21);
+            this.label4.Size = new System.Drawing.Size(139, 27);
             this.label4.TabIndex = 156;
             this.label4.Text = "会員番号：";
             // 
             // txt_ReturnMoney
             // 
-            this.txt_ReturnMoney.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_ReturnMoney.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txt_ReturnMoney.Location = new System.Drawing.Point(1023, 552);
             this.txt_ReturnMoney.Multiline = true;
             this.txt_ReturnMoney.Name = "txt_ReturnMoney";
@@ -128,16 +128,16 @@
             // 
             // txt_PayMoney
             // 
-            this.txt_PayMoney.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_PayMoney.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txt_PayMoney.Location = new System.Drawing.Point(1023, 509);
             this.txt_PayMoney.Name = "txt_PayMoney";
-            this.txt_PayMoney.Size = new System.Drawing.Size(386, 31);
+            this.txt_PayMoney.Size = new System.Drawing.Size(386, 34);
             this.txt_PayMoney.TabIndex = 154;
             this.txt_PayMoney.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_PayMoney_KeyPress);
             // 
             // txt_TotalMoney
             // 
-            this.txt_TotalMoney.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_TotalMoney.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txt_TotalMoney.Location = new System.Drawing.Point(1023, 388);
             this.txt_TotalMoney.Multiline = true;
             this.txt_TotalMoney.Name = "txt_TotalMoney";
