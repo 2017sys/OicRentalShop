@@ -57,7 +57,7 @@
             // 
             // btn_Add
             // 
-            this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_Add.Location = new System.Drawing.Point(1257, 795);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(251, 83);
@@ -68,7 +68,7 @@
             // 
             // btn_clear
             // 
-            this.btn_clear.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_clear.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_clear.Location = new System.Drawing.Point(951, 795);
             this.btn_clear.Name = "btn_clear";
             this.btn_clear.Size = new System.Drawing.Size(251, 83);
@@ -237,9 +237,10 @@
             // 
             // txt_TitleID
             // 
+            this.txt_TitleID.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txt_TitleID.Location = new System.Drawing.Point(334, 268);
             this.txt_TitleID.Name = "txt_TitleID";
-            this.txt_TitleID.Size = new System.Drawing.Size(199, 19);
+            this.txt_TitleID.Size = new System.Drawing.Size(199, 28);
             this.txt_TitleID.TabIndex = 124;
             this.txt_TitleID.TextChanged += new System.EventHandler(this.txt_TitleID_TextChanged);
             // 
@@ -254,7 +255,7 @@
             // 
             // btn_ToAdd
             // 
-            this.btn_ToAdd.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_ToAdd.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_ToAdd.Location = new System.Drawing.Point(636, 795);
             this.btn_ToAdd.Name = "btn_ToAdd";
             this.btn_ToAdd.Size = new System.Drawing.Size(251, 83);

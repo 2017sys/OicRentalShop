@@ -59,8 +59,8 @@
             // 
             // btn_Add
             // 
-            this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Add.Location = new System.Drawing.Point(1216, 781);
+            this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Add.Location = new System.Drawing.Point(1202, 732);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(164, 79);
             this.btn_Add.TabIndex = 136;
@@ -70,8 +70,8 @@
             // 
             // btn_Clear
             // 
-            this.btn_Clear.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Clear.Location = new System.Drawing.Point(1026, 781);
+            this.btn_Clear.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Clear.Location = new System.Drawing.Point(1012, 732);
             this.btn_Clear.Name = "btn_Clear";
             this.btn_Clear.Size = new System.Drawing.Size(164, 79);
             this.btn_Clear.TabIndex = 135;
@@ -90,7 +90,7 @@
             this.Column5,
             this.Column2,
             this.btn_Delete});
-            this.dgv_ItemRe.Location = new System.Drawing.Point(819, 246);
+            this.dgv_ItemRe.Location = new System.Drawing.Point(816, 224);
             this.dgv_ItemRe.Name = "dgv_ItemRe";
             this.dgv_ItemRe.RowTemplate.Height = 21;
             this.dgv_ItemRe.Size = new System.Drawing.Size(746, 468);
@@ -192,6 +192,7 @@
             // 
             // cmb_Format
             // 
+            this.cmb_Format.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb_Format.FormattingEnabled = true;
             this.cmb_Format.Items.AddRange(new object[] {
             "シングル",
@@ -199,20 +200,22 @@
             "DVD"});
             this.cmb_Format.Location = new System.Drawing.Point(331, 410);
             this.cmb_Format.Name = "cmb_Format";
-            this.cmb_Format.Size = new System.Drawing.Size(176, 20);
+            this.cmb_Format.Size = new System.Drawing.Size(176, 29);
             this.cmb_Format.TabIndex = 137;
             this.cmb_Format.SelectedIndexChanged += new System.EventHandler(this.cmb_Format_SelectedIndexChanged);
             // 
             // txt_Title
             // 
+            this.txt_Title.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txt_Title.Location = new System.Drawing.Point(331, 330);
             this.txt_Title.Name = "txt_Title";
-            this.txt_Title.Size = new System.Drawing.Size(281, 19);
+            this.txt_Title.Size = new System.Drawing.Size(281, 28);
             this.txt_Title.TabIndex = 138;
             // 
             // btn_Toadd
             // 
-            this.btn_Toadd.Location = new System.Drawing.Point(521, 811);
+            this.btn_Toadd.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Toadd.Location = new System.Drawing.Point(521, 774);
             this.btn_Toadd.Name = "btn_Toadd";
             this.btn_Toadd.Size = new System.Drawing.Size(135, 49);
             this.btn_Toadd.TabIndex = 142;
@@ -232,16 +235,18 @@
             // 
             // txt_TitleID
             // 
+            this.txt_TitleID.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txt_TitleID.Location = new System.Drawing.Point(331, 246);
             this.txt_TitleID.Name = "txt_TitleID";
-            this.txt_TitleID.Size = new System.Drawing.Size(281, 19);
+            this.txt_TitleID.Size = new System.Drawing.Size(281, 28);
             this.txt_TitleID.TabIndex = 144;
             // 
             // txt_ReleaseDay
             // 
+            this.txt_ReleaseDay.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txt_ReleaseDay.Location = new System.Drawing.Point(331, 671);
             this.txt_ReleaseDay.Name = "txt_ReleaseDay";
-            this.txt_ReleaseDay.Size = new System.Drawing.Size(281, 19);
+            this.txt_ReleaseDay.Size = new System.Drawing.Size(281, 28);
             this.txt_ReleaseDay.TabIndex = 146;
             // 
             // lbl_ReleaseDay
@@ -256,18 +261,20 @@
             // 
             // cmb_Genre
             // 
+            this.cmb_Genre.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb_Genre.FormattingEnabled = true;
             this.cmb_Genre.Location = new System.Drawing.Point(331, 586);
             this.cmb_Genre.Name = "cmb_Genre";
-            this.cmb_Genre.Size = new System.Drawing.Size(121, 20);
+            this.cmb_Genre.Size = new System.Drawing.Size(121, 29);
             this.cmb_Genre.TabIndex = 147;
             // 
             // cmb_Artist
             // 
+            this.cmb_Artist.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cmb_Artist.FormattingEnabled = true;
             this.cmb_Artist.Location = new System.Drawing.Point(331, 498);
             this.cmb_Artist.Name = "cmb_Artist";
-            this.cmb_Artist.Size = new System.Drawing.Size(176, 20);
+            this.cmb_Artist.Size = new System.Drawing.Size(176, 29);
             this.cmb_Artist.TabIndex = 148;
             this.cmb_Artist.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmb_Artist_KeyDown);
             // 
