@@ -43,7 +43,7 @@
             // 
             this.lbl_TopTitle.AutoSize = true;
             this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 48F);
-            this.lbl_TopTitle.Location = new System.Drawing.Point(262, 11);
+            this.lbl_TopTitle.Location = new System.Drawing.Point(301, 11);
             this.lbl_TopTitle.Name = "lbl_TopTitle";
             this.lbl_TopTitle.Size = new System.Drawing.Size(347, 64);
             this.lbl_TopTitle.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             this.lbl_SecTitle.AutoSize = true;
             this.lbl_SecTitle.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_SecTitle.Location = new System.Drawing.Point(247, 98);
+            this.lbl_SecTitle.Location = new System.Drawing.Point(329, 100);
             this.lbl_SecTitle.Name = "lbl_SecTitle";
             this.lbl_SecTitle.Size = new System.Drawing.Size(82, 24);
             this.lbl_SecTitle.TabIndex = 1;
@@ -96,13 +96,14 @@
             // 
             // btn_Add
             // 
-            this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Add.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_Add.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.btn_Add.Location = new System.Drawing.Point(805, 510);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(140, 60);
             this.btn_Add.TabIndex = 11;
-            this.btn_Add.Text = "追加";
-            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Text = "追 加";
+            this.btn_Add.UseVisualStyleBackColor = false;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // dgv_EventInfo

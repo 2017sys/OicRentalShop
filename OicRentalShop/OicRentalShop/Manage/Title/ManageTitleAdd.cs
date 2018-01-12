@@ -334,7 +334,7 @@ namespace OicRentalShop.Manage.Title
 
         private void ChangeDefault()
         {
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.SystemColors.Control;
             lbl_TopTitle.Text = "タイトル登録";
             dgv_ItemRe.Rows.Clear();
             txt_TitleID.Clear();

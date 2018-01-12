@@ -61,7 +61,7 @@
             // 
             this.lbl_TopTitle.AutoSize = true;
             this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 48F);
-            this.lbl_TopTitle.Location = new System.Drawing.Point(262, 11);
+            this.lbl_TopTitle.Location = new System.Drawing.Point(301, 11);
             this.lbl_TopTitle.Name = "lbl_TopTitle";
             this.lbl_TopTitle.Size = new System.Drawing.Size(347, 64);
             this.lbl_TopTitle.TabIndex = 5;
@@ -171,24 +171,26 @@
             // 
             // btn_Add
             // 
-            this.btn_Add.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Add.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_Add.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.btn_Add.Location = new System.Drawing.Point(516, 498);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(131, 58);
             this.btn_Add.TabIndex = 22;
-            this.btn_Add.Text = "追加";
-            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Text = "追 加";
+            this.btn_Add.UseVisualStyleBackColor = false;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Redo
             // 
-            this.btn_Redo.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Redo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_Redo.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btn_Redo.Location = new System.Drawing.Point(300, 499);
             this.btn_Redo.Name = "btn_Redo";
             this.btn_Redo.Size = new System.Drawing.Size(131, 58);
             this.btn_Redo.TabIndex = 23;
             this.btn_Redo.Text = "キャンセル";
-            this.btn_Redo.UseVisualStyleBackColor = true;
+            this.btn_Redo.UseVisualStyleBackColor = false;
             this.btn_Redo.Click += new System.EventHandler(this.btn_Redo_Click);
             // 
             // lbl_Old
