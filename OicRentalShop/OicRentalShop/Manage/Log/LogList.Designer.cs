@@ -81,7 +81,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_LogInfo);
             this.Name = "LogList";
-            this.Size = new System.Drawing.Size(948, 591);
+            this.Size = new System.Drawing.Size(1632, 1042);
             this.Load += new System.EventHandler(this.LogList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_LogInfo)).EndInit();
             this.ResumeLayout(false);

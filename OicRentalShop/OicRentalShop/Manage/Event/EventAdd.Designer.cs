@@ -237,7 +237,7 @@
             this.Controls.Add(this.lbl_TopTitle);
             this.Controls.Add(this.label4);
             this.Name = "EventAdd";
-            this.Size = new System.Drawing.Size(948, 591);
+            this.Size = new System.Drawing.Size(1632, 1042);
             this.Load += new System.EventHandler(this.EventAdd_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -180,7 +180,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label9);
             this.Name = "ProfitList";
-            this.Size = new System.Drawing.Size(948, 591);
+            this.Size = new System.Drawing.Size(1632, 1042);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Voucher)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

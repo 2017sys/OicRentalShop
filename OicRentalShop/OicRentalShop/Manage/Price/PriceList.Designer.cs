@@ -107,7 +107,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label9);
             this.Name = "PriceList";
-            this.Size = new System.Drawing.Size(948, 591);
+            this.Size = new System.Drawing.Size(1632, 1042);
             this.Load += new System.EventHandler(this.PriceList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_PriceInfo)).EndInit();
             this.ResumeLayout(false);
