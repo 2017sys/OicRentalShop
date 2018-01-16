@@ -111,6 +111,13 @@ namespace OicRentalShop.Manage.MemberAdd
 
             Cmd.ExecuteNonQuery();
             cn.Close();
+
+            //ログ保存
+            String text = "'" +mi.FName + mi.GName + "'さんを登録";
+
+            RegisterHome registerHome = new RegisterHome();
+            registerHome.add_Log("追加","ユーザー",text);
+
             lbl_Message.Text = "登録しました";
 
         }

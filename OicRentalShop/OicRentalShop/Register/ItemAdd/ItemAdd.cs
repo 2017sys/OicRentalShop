@@ -41,15 +41,24 @@ namespace OicRentalShop.Manage.ItemAdd
                 OleDbCommand Cmd = new OleDbCommand();
                 Cmd.Connection = cn;
                 cn.Open();
+
+                String text = "商品ID";
                 for (int i = 0; i < dgv_ItemRe.Rows.Count - 1; i++)
                 {
 
                     Cmd.CommandText = "INSERT INTO TBL_ITEM VALUES(" + dgv_ItemRe.Rows[i].Cells[0].Value + ",false,'" + ZeroCut(dgv_ItemRe.Rows[i].Cells[1].Value.ToString()) + "',false)";
                     Cmd.ExecuteNonQuery();
 
+                    text += "[" + dgv_ItemRe.Rows[i].Cells[0].Value + "] ";
+
                 }
                 cn.Close();
-                /* 　-　ここ　-　 */
+
+                //ログ登録
+                text += "を追加";
+                RegisterHome registerHome = new RegisterHome();
+                registerHome.add_Log("追加", "商品", text);
+
                 MessageBox.Show("登録が完了しました");
                 dgv_ItemRe.Rows.Clear();
 

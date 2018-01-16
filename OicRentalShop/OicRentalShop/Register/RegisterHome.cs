@@ -111,7 +111,6 @@ namespace OicRentalShop.Manage
 
         private void btn_Top_Click(object sender, EventArgs e)
         {
-            add_Log("テスト", "あああああ");
             this.Close();
         }
 
@@ -168,7 +167,7 @@ namespace OicRentalShop.Manage
             ta.Visible = true;
         }
 
-        public void add_Log(String table, String text)
+        public void add_Log(String operation, String table, String text)
         {
 
             OleDbConnection cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\..\..\DB\Database1.accdb;");
@@ -177,11 +176,10 @@ namespace OicRentalShop.Manage
             cn.Open();
 
             int staffid = int.Parse(lbl_staffid.Text);
-            String staffname = lbl_staffname.Text;
-
+            
             String sql = "INSERT INTO TBL_LOG(STAFF_ID, LOG_NAME, LOG_TABLE_NAME, LOG_DATE_TIME, LOG_NOTE) VALUES (";
             sql += staffid + ",";
-            sql += "'" + staffname + "',";
+            sql += "'" + operation + "',";
             sql += "'" + table + "',";
             sql += "'" + System.DateTime.Now + "',";
             sql += "'" + text + "')";
