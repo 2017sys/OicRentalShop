@@ -38,6 +38,10 @@
             this.btn_ItemInfo = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
             this.btn_Title = new System.Windows.Forms.Button();
+            this.lbl_name = new System.Windows.Forms.Label();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.lbl_staffname = new System.Windows.Forms.Label();
+            this.lbl_staffid = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -52,9 +56,9 @@
             // btn_Top
             // 
             this.btn_Top.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Top.Location = new System.Drawing.Point(12, 12);
+            this.btn_Top.Location = new System.Drawing.Point(12, 92);
             this.btn_Top.Name = "btn_Top";
-            this.btn_Top.Size = new System.Drawing.Size(245, 190);
+            this.btn_Top.Size = new System.Drawing.Size(245, 110);
             this.btn_Top.TabIndex = 51;
             this.btn_Top.Text = "TOP";
             this.btn_Top.UseVisualStyleBackColor = true;
@@ -144,11 +148,52 @@
             this.btn_Title.UseVisualStyleBackColor = true;
             this.btn_Title.Click += new System.EventHandler(this.btn_Title_Click);
             // 
+            // lbl_name
+            // 
+            this.lbl_name.AutoSize = true;
+            this.lbl_name.Location = new System.Drawing.Point(43, 29);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(35, 12);
+            this.lbl_name.TabIndex = 263;
+            this.lbl_name.Text = "名前 :";
+            // 
+            // lbl_id
+            // 
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Location = new System.Drawing.Point(56, 59);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(22, 12);
+            this.lbl_id.TabIndex = 264;
+            this.lbl_id.Text = "ID :";
+            // 
+            // lbl_staffname
+            // 
+            this.lbl_staffname.AutoSize = true;
+            this.lbl_staffname.Location = new System.Drawing.Point(84, 29);
+            this.lbl_staffname.Name = "lbl_staffname";
+            this.lbl_staffname.Size = new System.Drawing.Size(10, 12);
+            this.lbl_staffname.TabIndex = 265;
+            this.lbl_staffname.Text = "?";
+            // 
+            // lbl_staffid
+            // 
+            this.lbl_staffid.AutoSize = true;
+            this.lbl_staffid.Location = new System.Drawing.Point(84, 59);
+            this.lbl_staffid.Name = "lbl_staffid";
+            this.lbl_staffid.Size = new System.Drawing.Size(11, 12);
+            this.lbl_staffid.TabIndex = 266;
+            this.lbl_staffid.Text = "1";
+            // 
             // RegisterHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1042);
+            this.ControlBox = false;
+            this.Controls.Add(this.lbl_staffid);
+            this.Controls.Add(this.lbl_staffname);
+            this.Controls.Add(this.lbl_id);
+            this.Controls.Add(this.lbl_name);
             this.Controls.Add(this.btn_Top);
             this.Controls.Add(this.btn_Title);
             this.Controls.Add(this.btn_Return);
@@ -159,12 +204,15 @@
             this.Controls.Add(this.btn_ItemAdd);
             this.Controls.Add(this.btn_PriceList);
             this.Controls.Add(this.btn_Lend);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RegisterHome";
             this.Text = "Register";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TestForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -180,5 +228,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Title;
         public System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Label lbl_name;
+        private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.Label lbl_staffname;
+        private System.Windows.Forms.Label lbl_staffid;
     }
 }
