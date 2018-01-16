@@ -100,6 +100,20 @@ namespace OicRentalShop.Manage.Lend
             return ZeroCutNum;
         }
 
+
+        private Boolean AlreadyReadId(string ID)
+        {
+            Boolean flag = true;
+            for (int i = 0; i < dgv_info.Rows.Count-1;i++ )
+            {
+                if (ZeroCut(ID) == dgv_info.Rows[i].Cells[0].Value.ToString())
+                {
+                    flag=false;
+                }
+            }
+            return flag;
+        }
+
         private void InsertLineSlip()   //レジを通した商品の情報を伝票表に登録
         {
             int lineslipID = int.Parse(SetInfo("SELECT COUNT(*) FROM TBL_LINESLIP").ToString());
@@ -142,10 +156,12 @@ namespace OicRentalShop.Manage.Lend
 
         private void txt_MemberID_TextChanged(object sender, EventArgs e)
         {
-                if (txt_MemberID.Text.Length == 8)
+            
+                if (txt_MemberID.Text.Length == 13)
                 {
-                    if (dtCheck("SELECT * FROM TBL_MEMBER WHERE MEMBER_ID=" + txt_MemberID.Text) == 1)
+                    if (dtCheck("SELECT * FROM TBL_MEMBER WHERE MEMBER_ID=" + txt_MemberID.Text.Remove(12)) == 1)
                     {
+                        txt_MemberID.Text = txt_MemberID.Text.Remove(12);
                         txt_MemberPoint.Text = SetInfo("SELECT MEMBER_POINT FROM TBL_MEMBER WHERE MEMBER_ID=" + ZeroCut(txt_MemberID.Text));
                         txt_MemberName.Text = SetInfo("SELECT MEMBER_NAME FROM TBL_MEMBER WHERE MEMBER_ID=" + ZeroCut(txt_MemberID.Text));
                         txt_InProductID.Focus();
@@ -157,9 +173,9 @@ namespace OicRentalShop.Manage.Lend
                         txt_MemberID.Clear();
                     }
                 }
-                else if (txt_MemberID.Text.Length >= 9)
+                else if (txt_MemberID.Text.Length >= 14)
                 {
-                    MessageBox.Show("メンバーIDは8文字です");
+                    MessageBox.Show("メンバーIDは12文字です");
                     txt_MemberID.Clear();
                 }
                 if (txt_MemberID.Text.Length == 0)
@@ -174,15 +190,17 @@ namespace OicRentalShop.Manage.Lend
         int slipprice = 0;
         int selectedlsID;
         int lsIDpoint;
+
         private void txt_ProductID_TextChanged(object sender, EventArgs e)
         {
             if (txt_MemberID.Text!="")
             {
-                if (txt_InProductID.Text.Length == 8)
+                if (txt_InProductID.Text.Length == 13)
                 {
-                    if (dtCheck("SELECT * FROM TBL_ITEM WHERE ITEM_ID=" + txt_InProductID.Text) == 1)
+                    if (dtCheck("SELECT * FROM TBL_ITEM WHERE ITEM_ID=" + txt_InProductID.Text.Remove(12)) == 1)
                     {
-                        if ("True" == SetInfo("SELECT ITEM_STATE FROM TBL_ITEM WHERE ITEM_ID=" + ZeroCut(txt_InProductID.Text)))
+                        txt_InProductID.Text = txt_InProductID.Text.Remove(12);
+                        if ("True" == SetInfo("SELECT ITEM_STATE FROM TBL_ITEM WHERE ITEM_ID=" + ZeroCut(txt_InProductID.Text)) && AlreadyReadId(txt_InProductID.Text)==true)
                         {
                             if (SlipFlag == 0)
                             {
@@ -213,9 +231,9 @@ namespace OicRentalShop.Manage.Lend
                         txt_InProductID.Clear();
                     }
                 }
-                else if (txt_InProductID.Text.Length >= 9)
+                else if (txt_InProductID.Text.Length >= 14)
                 {
-                    MessageBox.Show("商品IDは8文字です");
+                    MessageBox.Show("商品IDは12文字です");
                     txt_InProductID.Clear();
                 }
             }
@@ -227,7 +245,7 @@ namespace OicRentalShop.Manage.Lend
             {
                 txt_InProductID.Clear();
             }
-            selectfunc("SELECT t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID="+slipID);
+            selectfunc("SELECT i.ITEM_ID,t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID="+slipID);
         }
 
         private void Btn_ClearPID_Click(object sender, EventArgs e)

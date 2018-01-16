@@ -98,13 +98,22 @@ namespace OicRentalShop.Manage.Price
             //"Button"列ならば、ボタンがクリックされた
             if (dgv.Columns[e.ColumnIndex].Name == "UPDATE")
             {
+                //      if (DialogResult.Yes == MessageBox.Show("商品タイプ：　" + dgv.Rows[e.RowIndex].Cells[1].Value + "　旧作/新作　" + dgv.Rows[e.RowIndex].Cells[2].Value + "　のデータを更新してよろしいですか？", "確認",
+                //       MessageBoxButtons.YesNo, MessageBoxIcon.Question))
 
-                if (DialogResult.Yes == MessageBox.Show("商品タイプ：　" + dgv.Rows[e.RowIndex].Cells[1].Value + "　旧作/新作　" + dgv.Rows[e.RowIndex].Cells[2].Value + "　のデータを更新してよろしいですか？", "確認",
+                //●こおから　Cellsは番号でなく列名にする    
+                if (DialogResult.Yes == MessageBox.Show("商品タイプ：　" + dgv.Rows[e.RowIndex].Cells["TYPE_NAME"].Value + "　旧作/新作　" + dgv.Rows[e.RowIndex].Cells["OLD_NAME"].Value + "　のデータを更新してよろしいですか？", "確認",
                  MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+                //●ここまで
                 {
+                    //  CmdFunc("UPDATE TBL_PRICE SET PRICE_12=" + dgv.Rows[e.RowIndex].Cells[3].Value + ",PRICE_23=" + dgv.Rows[e.RowIndex].Cells[4].Value + ",PRICE_78=" + dgv.Rows[e.RowIndex].Cells[5].Value +",PRICE_DELETE=true"+ "  WHERE PRICE_ID=" + ReturnPriceID(e.RowIndex));
 
-                    CmdFunc("UPDATE TBL_PRICE SET PRICE_12=" + dgv.Rows[e.RowIndex].Cells[3].Value + ",PRICE_23=" + dgv.Rows[e.RowIndex].Cells[4].Value + ",PRICE_78=" + dgv.Rows[e.RowIndex].Cells[5].Value +",PRICE_DELETE=true"+ "  WHERE PRICE_ID=" + ReturnPriceID(e.RowIndex));
+                    //●ここから  Cellsは番号でなく列名にする 
+                    CmdFunc("UPDATE TBL_PRICE SET PRICE_12=" + dgv.Rows[e.RowIndex].Cells["PRICE_12"].Value + ",PRICE_23=" + dgv.Rows[e.RowIndex].Cells["PRICE_23"].Value + ",PRICE_78=" + dgv.Rows[e.RowIndex].Cells["PRICE_78"].Value + "  WHERE PRICE_ID=" + ReturnPriceID(e.RowIndex));
+                    //●ここまで
+
                     //CmdFunc("INSERT INTO TBL_PRICE VALUES(" + (int.Parse(SetInfo("SELECT MAX(PRICE_ID) FROM TBL_PRICE")) + 1) + "," + SerchID("TYPE", dgv.Rows[e.RowIndex].Cells[1].Value.ToString()) + "," + SerchID("TYPE", dgv.Rows[e.RowIndex].Cells[2].Value.ToString()) + ")");
+
                     dgv_PriceInfo.Columns.Clear();
                     dgv_PriceInfo.ClearSelection();
 
@@ -115,3 +124,4 @@ namespace OicRentalShop.Manage.Price
         }
     }
 }
+    

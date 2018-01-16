@@ -198,7 +198,7 @@ namespace OicRentalShop.Manage.Lend
                 dtu.Clear();
                 lbl_MemberID.Text = "";
                 txt_ReturnMoney.Clear();
-                int memberpoint = int.Parse(SetInfo("SELECT MEMBER_POINT FROM TBL_MEMBER WHERE MEMBER_ID=" + ll.txt_MemberID.Text)) - usedpoint;
+                int memberpoint = int.Parse(SetInfo("SELECT MEMBER_POINT FROM TBL_MEMBER WHERE MEMBER_ID=" + ll.txt_MemberID.Text)) - usedpoint+(int.Parse(txt_TotalMoney.Text)-usedpoint)/100;
                 CmdFunc("UPDATE TBL_MEMBER SET MEMBER_POINT = " + memberpoint + " WHERE MEMBER_ID=" + ll.txt_MemberID.Text);
                 ll.Commit();
                 rh.panel.Controls.Clear();

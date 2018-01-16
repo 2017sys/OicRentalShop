@@ -101,7 +101,7 @@
             // 
             this.lbl_MemberID.AutoSize = true;
             this.lbl_MemberID.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_MemberID.Location = new System.Drawing.Point(1009, 387);
+            this.lbl_MemberID.Location = new System.Drawing.Point(1019, 368);
             this.lbl_MemberID.Name = "lbl_MemberID";
             this.lbl_MemberID.Size = new System.Drawing.Size(0, 21);
             this.lbl_MemberID.TabIndex = 157;
@@ -110,7 +110,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(846, 360);
+            this.label4.Location = new System.Drawing.Point(843, 363);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(139, 27);
             this.label4.TabIndex = 156;
@@ -138,7 +138,7 @@
             // txt_TotalMoney
             // 
             this.txt_TotalMoney.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_TotalMoney.Location = new System.Drawing.Point(1023, 388);
+            this.txt_TotalMoney.Location = new System.Drawing.Point(1020, 401);
             this.txt_TotalMoney.Multiline = true;
             this.txt_TotalMoney.Name = "txt_TotalMoney";
             this.txt_TotalMoney.ReadOnly = true;
@@ -219,7 +219,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(888, 401);
+            this.label1.Location = new System.Drawing.Point(885, 404);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 27);
             this.label1.TabIndex = 145;
