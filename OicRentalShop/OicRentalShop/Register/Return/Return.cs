@@ -144,8 +144,9 @@ namespace OicRentalShop.Manage.Return
 
         private void txt_MemberID_TextChanged(object sender, EventArgs e)
         {
-            if (txt_MemberID.Text.Length == 8)
+            if (txt_MemberID.Text.Length == 13)
             {
+                txt_MemberID.Text = txt_MemberID.Text.Remove(12);
                 if (dtCheck("SELECT * FROM TBL_MEMBER WHERE MEMBER_ID=" + txt_MemberID.Text) == 1)
                 {
                     txt_MemberPoint.Text = SetInfo("SELECT MEMBER_POINT FROM TBL_MEMBER WHERE MEMBER_ID=" + ZeroCut(txt_MemberID.Text));
@@ -159,9 +160,9 @@ namespace OicRentalShop.Manage.Return
                     txt_MemberID.Clear();
                 }
             }
-            else if (txt_MemberID.Text.Length >= 9)
+            else if (txt_MemberID.Text.Length >= 14)
             {
-                MessageBox.Show("メンバーIDは8文字です");
+                MessageBox.Show("メンバーIDは12文字です");
                 txt_MemberID.Clear();
             }
             if (txt_MemberID.Text.Length == 0)
@@ -263,8 +264,9 @@ namespace OicRentalShop.Manage.Return
         {
             if (txt_MemberID.Text != "")
             {
-                if (txt_InProductID.Text.Length == 8)
+                if (txt_InProductID.Text.Length == 13)
                 {
+                    txt_InProductID.Text = txt_InProductID.Text.Remove(12);
                     if (dtCheck("SELECT * FROM TBL_ITEM WHERE ITEM_ID=" + txt_InProductID.Text) == 1)
                     {
                         if ("False" == SetInfo("SELECT ITEM_STATE FROM TBL_ITEM WHERE ITEM_ID=" + ZeroCut(txt_InProductID.Text)))
@@ -304,9 +306,9 @@ namespace OicRentalShop.Manage.Return
                         txt_InProductID.Clear();
                     }
                 }
-                else if (txt_InProductID.Text.Length >= 9)
+                else if (txt_InProductID.Text.Length >= 14)
                 {
-                    MessageBox.Show("商品IDは8文字です");
+                    MessageBox.Show("商品IDは12文字です");
                     txt_InProductID.Clear();
                 }
             }
