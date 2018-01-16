@@ -46,19 +46,20 @@
             // 
             // txt_PhoneNumber
             // 
-            this.txt_PhoneNumber.Location = new System.Drawing.Point(1071, 271);
+            this.txt_PhoneNumber.Font = new System.Drawing.Font("MS UI Gothic", 18F);
+            this.txt_PhoneNumber.Location = new System.Drawing.Point(1041, 271);
             this.txt_PhoneNumber.Multiline = true;
             this.txt_PhoneNumber.Name = "txt_PhoneNumber";
-            this.txt_PhoneNumber.Size = new System.Drawing.Size(180, 30);
+            this.txt_PhoneNumber.Size = new System.Drawing.Size(180, 33);
             this.txt_PhoneNumber.TabIndex = 88;
             // 
             // lbl_PhoneNumber
             // 
             this.lbl_PhoneNumber.AutoSize = true;
-            this.lbl_PhoneNumber.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_PhoneNumber.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
             this.lbl_PhoneNumber.Location = new System.Drawing.Point(888, 271);
             this.lbl_PhoneNumber.Name = "lbl_PhoneNumber";
-            this.lbl_PhoneNumber.Size = new System.Drawing.Size(124, 27);
+            this.lbl_PhoneNumber.Size = new System.Drawing.Size(147, 33);
             this.lbl_PhoneNumber.TabIndex = 87;
             this.lbl_PhoneNumber.Text = "電話番号";
             // 
@@ -66,7 +67,7 @@
             // 
             this.lbl_TopTitle.AutoSize = true;
             this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 65.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_TopTitle.Location = new System.Drawing.Point(580, 26);
+            this.lbl_TopTitle.Location = new System.Drawing.Point(636, 26);
             this.lbl_TopTitle.Name = "lbl_TopTitle";
             this.lbl_TopTitle.Size = new System.Drawing.Size(389, 87);
             this.lbl_TopTitle.TabIndex = 86;
@@ -84,37 +85,39 @@
             // 
             // txt_MemberID
             // 
-            this.txt_MemberID.Location = new System.Drawing.Point(595, 271);
+            this.txt_MemberID.Font = new System.Drawing.Font("MS UI Gothic", 18F);
+            this.txt_MemberID.Location = new System.Drawing.Point(602, 271);
             this.txt_MemberID.Multiline = true;
             this.txt_MemberID.Name = "txt_MemberID";
-            this.txt_MemberID.Size = new System.Drawing.Size(180, 30);
+            this.txt_MemberID.Size = new System.Drawing.Size(180, 33);
             this.txt_MemberID.TabIndex = 84;
             // 
             // txt_MemberName
             // 
-            this.txt_MemberName.Location = new System.Drawing.Point(216, 268);
+            this.txt_MemberName.Font = new System.Drawing.Font("Vani", 8.25F);
+            this.txt_MemberName.Location = new System.Drawing.Point(211, 271);
             this.txt_MemberName.Multiline = true;
             this.txt_MemberName.Name = "txt_MemberName";
-            this.txt_MemberName.Size = new System.Drawing.Size(180, 30);
+            this.txt_MemberName.Size = new System.Drawing.Size(180, 33);
             this.txt_MemberName.TabIndex = 83;
             // 
             // lbl_MemberID
             // 
             this.lbl_MemberID.AutoSize = true;
-            this.lbl_MemberID.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_MemberID.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
             this.lbl_MemberID.Location = new System.Drawing.Point(484, 271);
             this.lbl_MemberID.Name = "lbl_MemberID";
-            this.lbl_MemberID.Size = new System.Drawing.Size(95, 27);
+            this.lbl_MemberID.Size = new System.Drawing.Size(112, 33);
             this.lbl_MemberID.TabIndex = 82;
             this.lbl_MemberID.Text = "会員ID";
             // 
             // lbl_MemberName
             // 
             this.lbl_MemberName.AutoSize = true;
-            this.lbl_MemberName.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_MemberName.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbl_MemberName.Location = new System.Drawing.Point(91, 271);
             this.lbl_MemberName.Name = "lbl_MemberName";
-            this.lbl_MemberName.Size = new System.Drawing.Size(96, 27);
+            this.lbl_MemberName.Size = new System.Drawing.Size(114, 33);
             this.lbl_MemberName.TabIndex = 81;
             this.lbl_MemberName.Text = "会員名";
             // 

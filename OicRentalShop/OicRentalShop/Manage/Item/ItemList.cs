@@ -180,6 +180,7 @@ namespace OicRentalShop.Manage.Item
             }
         }
 
+
         private void btn_Add_Click(object sender, EventArgs e)
         {
             ManageHome.GoNext(6);

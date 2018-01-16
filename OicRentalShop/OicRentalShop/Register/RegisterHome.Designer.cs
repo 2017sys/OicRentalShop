@@ -51,79 +51,86 @@
             // 
             // btn_Top
             // 
-            this.btn_Top.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Top.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_Top.Font = new System.Drawing.Font("Meiryo UI", 21.75F, System.Drawing.FontStyle.Bold);
             this.btn_Top.Location = new System.Drawing.Point(12, 12);
             this.btn_Top.Name = "btn_Top";
             this.btn_Top.Size = new System.Drawing.Size(245, 190);
             this.btn_Top.TabIndex = 51;
             this.btn_Top.Text = "TOP";
-            this.btn_Top.UseVisualStyleBackColor = true;
+            this.btn_Top.UseVisualStyleBackColor = false;
             this.btn_Top.Click += new System.EventHandler(this.btn_Top_Click);
             // 
             // btn_MemberAdd
             // 
-            this.btn_MemberAdd.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_MemberAdd.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_MemberAdd.Font = new System.Drawing.Font("Meiryo UI", 21.75F, System.Drawing.FontStyle.Bold);
             this.btn_MemberAdd.Location = new System.Drawing.Point(12, 904);
             this.btn_MemberAdd.Name = "btn_MemberAdd";
             this.btn_MemberAdd.Size = new System.Drawing.Size(245, 110);
             this.btn_MemberAdd.TabIndex = 57;
             this.btn_MemberAdd.Text = "会員登録";
-            this.btn_MemberAdd.UseVisualStyleBackColor = true;
+            this.btn_MemberAdd.UseVisualStyleBackColor = false;
             this.btn_MemberAdd.Click += new System.EventHandler(this.btn_MemberAdd_Click);
             // 
             // btn_Lend
             // 
-            this.btn_Lend.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Lend.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_Lend.Font = new System.Drawing.Font("Meiryo UI", 21.75F, System.Drawing.FontStyle.Bold);
             this.btn_Lend.Location = new System.Drawing.Point(12, 208);
             this.btn_Lend.Name = "btn_Lend";
             this.btn_Lend.Size = new System.Drawing.Size(245, 110);
             this.btn_Lend.TabIndex = 52;
             this.btn_Lend.Text = "貸出処理";
-            this.btn_Lend.UseVisualStyleBackColor = true;
+            this.btn_Lend.UseVisualStyleBackColor = false;
             this.btn_Lend.Click += new System.EventHandler(this.btn_Lend_Click);
             // 
             // btn_ItemAdd
             // 
-            this.btn_ItemAdd.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_ItemAdd.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_ItemAdd.Font = new System.Drawing.Font("Meiryo UI", 21.75F, System.Drawing.FontStyle.Bold);
             this.btn_ItemAdd.Location = new System.Drawing.Point(12, 788);
             this.btn_ItemAdd.Name = "btn_ItemAdd";
             this.btn_ItemAdd.Size = new System.Drawing.Size(245, 110);
             this.btn_ItemAdd.TabIndex = 56;
             this.btn_ItemAdd.Text = "商品登録";
-            this.btn_ItemAdd.UseVisualStyleBackColor = true;
+            this.btn_ItemAdd.UseVisualStyleBackColor = false;
             this.btn_ItemAdd.Click += new System.EventHandler(this.btn_ItemAdd_Click);
             // 
             // btn_Return
             // 
-            this.btn_Return.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Return.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_Return.Font = new System.Drawing.Font("Meiryo UI", 21.75F, System.Drawing.FontStyle.Bold);
             this.btn_Return.Location = new System.Drawing.Point(12, 324);
             this.btn_Return.Name = "btn_Return";
             this.btn_Return.Size = new System.Drawing.Size(245, 110);
             this.btn_Return.TabIndex = 53;
             this.btn_Return.Text = "返却処理";
-            this.btn_Return.UseVisualStyleBackColor = true;
+            this.btn_Return.UseVisualStyleBackColor = false;
             this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
             // 
             // btn_PriceList
             // 
-            this.btn_PriceList.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_PriceList.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_PriceList.Font = new System.Drawing.Font("Meiryo UI", 21.75F, System.Drawing.FontStyle.Bold);
             this.btn_PriceList.Location = new System.Drawing.Point(12, 556);
             this.btn_PriceList.Name = "btn_PriceList";
             this.btn_PriceList.Size = new System.Drawing.Size(245, 110);
             this.btn_PriceList.TabIndex = 55;
             this.btn_PriceList.Text = "料金表";
-            this.btn_PriceList.UseVisualStyleBackColor = true;
+            this.btn_PriceList.UseVisualStyleBackColor = false;
             this.btn_PriceList.Click += new System.EventHandler(this.btn_PriceList_Click);
             // 
             // btn_ItemInfo
             // 
-            this.btn_ItemInfo.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_ItemInfo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_ItemInfo.Font = new System.Drawing.Font("Meiryo UI", 21.75F, System.Drawing.FontStyle.Bold);
             this.btn_ItemInfo.Location = new System.Drawing.Point(12, 440);
             this.btn_ItemInfo.Name = "btn_ItemInfo";
             this.btn_ItemInfo.Size = new System.Drawing.Size(245, 110);
             this.btn_ItemInfo.TabIndex = 54;
             this.btn_ItemInfo.Text = "商品情報";
-            this.btn_ItemInfo.UseVisualStyleBackColor = true;
+            this.btn_ItemInfo.UseVisualStyleBackColor = false;
             this.btn_ItemInfo.Click += new System.EventHandler(this.btn_ItemInfo_Click);
             // 
             // panel
@@ -135,13 +142,14 @@
             // 
             // btn_Title
             // 
-            this.btn_Title.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btn_Title.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_Title.Font = new System.Drawing.Font("Meiryo UI", 21.75F, System.Drawing.FontStyle.Bold);
             this.btn_Title.Location = new System.Drawing.Point(12, 672);
             this.btn_Title.Name = "btn_Title";
             this.btn_Title.Size = new System.Drawing.Size(245, 110);
             this.btn_Title.TabIndex = 262;
             this.btn_Title.Text = "タイトル登録";
-            this.btn_Title.UseVisualStyleBackColor = true;
+            this.btn_Title.UseVisualStyleBackColor = false;
             this.btn_Title.Click += new System.EventHandler(this.btn_Title_Click);
             // 
             // RegisterHome
@@ -149,6 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1042);
+            this.ControlBox = false;
             this.Controls.Add(this.btn_Top);
             this.Controls.Add(this.btn_Title);
             this.Controls.Add(this.btn_Return);
@@ -162,7 +171,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RegisterHome";
-            this.Text = "Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.TestForm_Load);
             this.ResumeLayout(false);
 

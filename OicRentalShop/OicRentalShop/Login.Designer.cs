@@ -116,6 +116,7 @@
             this.label3.Size = new System.Drawing.Size(254, 12);
             this.label3.TabIndex = 7;
             this.label3.Text = "パスワードは一旦、店長の電話番号2222001111で。";
+            this.label3.Visible = false;
             // 
             // Msg
             // 

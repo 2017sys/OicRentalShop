@@ -41,13 +41,13 @@ namespace OicRentalShop.Manage.PriceList
             for (int i = 0; i <= 3; i++)
             {
                 //列の長さを133に設定
-                dgv_PriceInfo.Columns[i].MinimumWidth = 133;
+                dgv_PriceInfo.Columns[i].MinimumWidth = 220;
                 //DatagridView(PriceInfo)のヘッダーを中央揃え
                 dgv_PriceInfo.Columns[i].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 //DatagridView(PriceInfo)の内容を中央揃え
                 dgv_PriceInfo.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
-            dgv_PriceInfo.RowTemplate.Height = 60;
+            dgv_PriceInfo.RowTemplate.Height = 105;
         }
 
         private void selectfunc_e(string str)
@@ -77,6 +77,7 @@ namespace OicRentalShop.Manage.PriceList
 
             selectfunc_e("SELECT ev.EVENT_NAME AS イベント名, ev.EVENT_PRICE AS イベント料金, tp.TYPE_NAME AS 商品タイプ, ev.EVENT_NUM AS 枚数 FROM TBL_EVENT ev, TBL_TYPE tp WHERE ev.TYPE_ID = tp.TYPE_ID");
         }
+
 
 
 

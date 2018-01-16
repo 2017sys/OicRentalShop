@@ -101,6 +101,7 @@
             // 
             // txt_TitleName
             // 
+            this.txt_TitleName.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.txt_TitleName.Location = new System.Drawing.Point(151, 241);
             this.txt_TitleName.Multiline = true;
             this.txt_TitleName.Name = "txt_TitleName";
@@ -119,6 +120,7 @@
             // 
             // txt_TitleID
             // 
+            this.txt_TitleID.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.txt_TitleID.Location = new System.Drawing.Point(443, 242);
             this.txt_TitleID.Multiline = true;
             this.txt_TitleID.Name = "txt_TitleID";
@@ -137,6 +139,7 @@
             // 
             // txt_ItemID
             // 
+            this.txt_ItemID.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.txt_ItemID.Location = new System.Drawing.Point(741, 247);
             this.txt_ItemID.Multiline = true;
             this.txt_ItemID.Name = "txt_ItemID";
@@ -155,19 +158,21 @@
             // 
             // cmb_Type
             // 
+            this.cmb_Type.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.cmb_Type.FormattingEnabled = true;
             this.cmb_Type.Items.AddRange(new object[] {
             "CD",
             "DVD"});
-            this.cmb_Type.Location = new System.Drawing.Point(1049, 251);
+            this.cmb_Type.Location = new System.Drawing.Point(1049, 248);
             this.cmb_Type.Name = "cmb_Type";
-            this.cmb_Type.Size = new System.Drawing.Size(76, 20);
+            this.cmb_Type.Size = new System.Drawing.Size(76, 32);
             this.cmb_Type.TabIndex = 73;
             this.cmb_Type.Text = "CD";
             this.cmb_Type.SelectedIndexChanged += new System.EventHandler(this.cmb_Type_SelectedIndexChanged);
             // 
             // txt_Artist
             // 
+            this.txt_Artist.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.txt_Artist.Location = new System.Drawing.Point(443, 318);
             this.txt_Artist.Multiline = true;
             this.txt_Artist.Name = "txt_Artist";
@@ -186,22 +191,24 @@
             // 
             // cmb_Genre
             // 
+            this.cmb_Genre.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.cmb_Genre.FormattingEnabled = true;
-            this.cmb_Genre.Location = new System.Drawing.Point(741, 325);
+            this.cmb_Genre.Location = new System.Drawing.Point(741, 313);
             this.cmb_Genre.Name = "cmb_Genre";
-            this.cmb_Genre.Size = new System.Drawing.Size(80, 20);
+            this.cmb_Genre.Size = new System.Drawing.Size(180, 32);
             this.cmb_Genre.TabIndex = 77;
             this.cmb_Genre.Text = "全ジャンル";
             // 
             // cmb_Old_New
             // 
+            this.cmb_Old_New.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.cmb_Old_New.FormattingEnabled = true;
             this.cmb_Old_New.Items.AddRange(new object[] {
             "新作",
             "旧作"});
-            this.cmb_Old_New.Location = new System.Drawing.Point(164, 325);
+            this.cmb_Old_New.Location = new System.Drawing.Point(164, 316);
             this.cmb_Old_New.Name = "cmb_Old_New";
-            this.cmb_Old_New.Size = new System.Drawing.Size(77, 20);
+            this.cmb_Old_New.Size = new System.Drawing.Size(77, 32);
             this.cmb_Old_New.TabIndex = 76;
             // 
             // lbl_Genre
@@ -244,6 +251,7 @@
             this.btn_Add.TabIndex = 83;
             this.btn_Add.Text = "追加";
             this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Search
             // 
