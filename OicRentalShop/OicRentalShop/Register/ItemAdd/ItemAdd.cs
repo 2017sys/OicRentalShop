@@ -74,8 +74,9 @@ namespace OicRentalShop.Manage.ItemAdd
 
         private void txt_TitleID_TextChanged(object sender, EventArgs e)
         {
-            if(txt_TitleID.Text.Length==8)
+            if(txt_TitleID.Text.Length==13)
             {
+                txt_TitleID.Text.Remove(12);
                 int ID = int.Parse(SetInfo("SELECT MAX(ITEM_ID) FROM TBL_ITEM")) + 1+count;
 
                 lbl_UniqueIDInfo.Text = ID.ToString();

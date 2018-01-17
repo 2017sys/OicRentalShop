@@ -76,11 +76,11 @@
             this.txt_PassWord.Location = new System.Drawing.Point(851, 457);
             this.txt_PassWord.Multiline = true;
             this.txt_PassWord.Name = "txt_PassWord";
+            this.txt_PassWord.PasswordChar = '*';
             this.txt_PassWord.Size = new System.Drawing.Size(528, 50);
             this.txt_PassWord.TabIndex = 3;
             this.txt_PassWord.Text = "2222001111";
             this.txt_PassWord.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txt_PassWord.UseSystemPasswordChar = true;
             // 
             // btn_Login
             // 
