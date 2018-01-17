@@ -58,7 +58,7 @@ namespace OicRentalShop.Manage.Item
                 dt.Clear();
                 dt = new DataTable();
                 //da = new OleDbDataAdapter("SELECT t.TITLE_NAME,ar.ARTIST_NAME,t.TITLE_RELEASE FROM TBL_TITLE t,TBL_ARTIST ar,TBL_GENRE gn WHERE t.ARTIST_ID = ar.ARTIST_ID AND t.GENRE_ID=gn.GENRE_ID AND t.TITLE_ID = '" + ZeroCut(txt_TitleID.Text) + "'", cn);
-                da = new OleDbDataAdapter("SELECT t.TITLE_NAME, a.ARTIST_NAME, ty.TYPE_NAME, o.OLD_NAME, g.GENRE_NAME FROM TBL_TITLE t,TBL_ARTIST a,TBL_TYPE ty,TBL_OLD o,TBL_GENRE g WHERE t.ARTIST_ID = a.ARTIST_ID AND t.TYPE_ID = ty.TYPE_ID AND t.OLD_ID = o.OLD_ID AND t.GENRE_ID = g.GENRE_ID AND t.TITLE_ID = '" + ZeroCut(txt_TitleID.Text) + "'", cn);
+                da = new OleDbDataAdapter("SELECT t.TITLE_NAME, a.ARTIST_NAME, ty.TYPE_NAME, o.OLD_NAME, g.GENRE_NAME FROM TBL_TITLE t,TBL_ARTIST a,TBL_TYPE ty,TBL_OLD o,TBL_GENRE g WHERE t.ARTIST_ID = a.ARTIST_ID AND t.TYPE_ID = ty.TYPE_ID AND t.OLD_ID = o.OLD_ID AND t.GENRE_ID = g.GENRE_ID AND t.TITLE_ID = '" + txt_TitleID.Text + "'", cn);
                 da.Fill(dt);
 
                 if (dt.Rows.Count == 1)

@@ -72,6 +72,12 @@ namespace OicRentalShop.Manage.Title
             dgv_ItemRe.AutoResizeColumns();
         }
 
+        private string ZeroCut(string Num)
+        {
+            string ZeroCutNum = int.Parse(Num).ToString();
+            return ZeroCutNum;
+        }
+
         private void btn_Add_Click(object sender, EventArgs e)
         {
             if (DialogResult.Yes == MessageBox.Show("仮登録データを全て登録しますか？", "確認",

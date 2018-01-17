@@ -84,7 +84,7 @@ namespace OicRentalShop.Manage.ItemAdd
               
                 dt.Clear();
                 dt = new DataTable();
-                da = new OleDbDataAdapter("SELECT t.TITLE_NAME,ar.ARTIST_NAME,gn.GENRE_NAME,t.TITLE_RELEASE FROM TBL_TITLE t,TBL_ARTIST ar,TBL_GENRE gn WHERE t.ARTIST_ID = ar.ARTIST_ID AND t.GENRE_ID=gn.GENRE_ID AND t.TITLE_ID = '" + ZeroCut(txt_TitleID.Text) + "'", cn);
+                da = new OleDbDataAdapter("SELECT t.TITLE_NAME,ar.ARTIST_NAME,gn.GENRE_NAME,t.TITLE_RELEASE FROM TBL_TITLE t,TBL_ARTIST ar,TBL_GENRE gn WHERE t.ARTIST_ID = ar.ARTIST_ID AND t.GENRE_ID=gn.GENRE_ID AND t.TITLE_ID = '" + txt_TitleID.Text + "'", cn);
                 da.Fill(dt);
 
                 if (dt.Rows.Count == 1)
@@ -115,6 +115,22 @@ namespace OicRentalShop.Manage.ItemAdd
         {
             this.dgv_ItemRe.Rows.Add(lbl_UniqueIDInfo.Text,txt_TitleID.Text, lbl_TitleNameInfo.Text, lbl_ArtistInfo.Text, lbl_GenreInfo.Text, lbl_ReleaseDateInfo.Text);
             count++;
+            txt_TitleID.Text = "";
+            txt_TitleID.Focus();
+            lbl_UniqueIDInfo.Text = "";
+            lbl_ArtistInfo.Text = "";
+            lbl_GenreInfo.Text = "";
+            lbl_ReleaseDateInfo.Text = "";
+            lbl_TitleNameInfo.Text = "";
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show("仮登録データを全て削除しますか？", "確認",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question))
+            {
+                dgv_ItemRe.Rows.Clear();
+            }
         }
 
 

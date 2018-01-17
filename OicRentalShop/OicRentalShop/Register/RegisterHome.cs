@@ -27,6 +27,11 @@ namespace OicRentalShop.Manage
 
 
 
+        OleDbConnection cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\..\..\DB\Database1.accdb;");
+        OleDbDataAdapter da = new OleDbDataAdapter();
+        DataTable dt = new DataTable();
+         
+
         public RegisterHome()
         {
             InitializeComponent();
@@ -175,7 +180,7 @@ namespace OicRentalShop.Manage
             Cmd.Connection = cn;
             cn.Open();
 
-            int staffid = int.Parse(lbl_staffid.Text);
+            int staffid = int.Parse(txt_staffid.Text);
             
             String sql = "INSERT INTO TBL_LOG(STAFF_ID, LOG_NAME, LOG_TABLE_NAME, LOG_DATE_TIME, LOG_NOTE) VALUES (";
             sql += staffid + ",";
@@ -187,6 +192,32 @@ namespace OicRentalShop.Manage
             Cmd.CommandText = sql;
             Cmd.ExecuteNonQuery();
             cn.Close();
+        }
+
+        private string ZeroCut(string Num)
+        {
+            string ZeroCutNum = int.Parse(Num).ToString();
+            return ZeroCutNum;
+        }
+
+        private string SetInfo(string cmdstr)
+        {
+            dt.Clear();
+            dt = new DataTable();
+            da = new OleDbDataAdapter(cmdstr, cn);
+            da.Fill(dt);
+            return dt.Rows[0][0].ToString();
+        }
+
+        private void txt_staffid_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txt_staffid.TextLength == 6)
+                {
+                    lbl_staffname.Text = SetInfo("SELECT STAFF_NAME FROM TBL_STAFF WHERE STAFF_ID=" + ZeroCut(txt_staffid.Text));
+                }
+            }
         }
 
 

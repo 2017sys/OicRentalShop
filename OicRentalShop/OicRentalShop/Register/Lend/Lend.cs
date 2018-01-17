@@ -377,7 +377,7 @@ namespace OicRentalShop.Manage.Lend
                 CmdFunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
                 txt_money.Text = SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID=" + slipID);
 
-                selectfunc("SELECT t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
+                selectfunc("SELECT i.ITEM_ID,t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
             }
             else
             {
@@ -397,7 +397,7 @@ namespace OicRentalShop.Manage.Lend
                 CmdFunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
                 txt_money.Text = SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID=" + slipID);
 
-                selectfunc("SELECT t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
+                selectfunc("SELECT i.ITEM_ID,t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
             }
             else
             {
@@ -417,7 +417,7 @@ namespace OicRentalShop.Manage.Lend
                 CmdFunc("UPDATE TBL_SLIP SET SLIP_PRICE=" + slipprice + " WHERE SLIP_ID=" + slipID);
                 txt_money.Text = SetInfo("SELECT SUM(LS_PRICE) FROM TBL_LINESLIP GROUP BY SLIP_ID HAVING SLIP_ID=" + slipID);
 
-                selectfunc("SELECT t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
+                selectfunc("SELECT i.ITEM_ID,t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
             }
             else
             {
