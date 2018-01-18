@@ -99,17 +99,16 @@ namespace OicRentalShop.Manage
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-            ia = new ItemAdd.ItemAdd();
+           
             ii = new ItemInfo.ItemInfo();
-            ll = new Lend.Lend(this);
-            lc = new Lend.LendConf(this,ll);//this
-            mm = new MemberAdd.MemberAdd();
+
+           
             pp = new PriceList.PriceList();
             rr = new Return.Return(this,rc);
             rc = new Return.ReturnConf(this,rr);
-            ma = new MemberAdd.MemberAddConfirmation();
+          
             ic = new ItemAdd.ItemAddConfirmation();
-            ta = new Title.TitleAdd();
+           
             
             
         }
@@ -121,7 +120,8 @@ namespace OicRentalShop.Manage
 
         private void btn_Lend_Click(object sender, EventArgs e)
         {
-            
+            ll = new Lend.Lend(this);
+            lc = new Lend.LendConf(this, ll);//this
             panel.Controls.Clear();
             panel.Controls.Add(ll);
             ll.Visible = true;
@@ -151,6 +151,7 @@ namespace OicRentalShop.Manage
 
         private void btn_ItemAdd_Click(object sender, EventArgs e)
         {
+            ia = new ItemAdd.ItemAdd(this);
             panel.Controls.Clear();
             panel.Controls.Add(ia);
             panel.Controls.Add(ic);
@@ -159,6 +160,8 @@ namespace OicRentalShop.Manage
 
         private void btn_MemberAdd_Click(object sender, EventArgs e)
         {
+            ma = new MemberAdd.MemberAddConfirmation();
+            mm = new MemberAdd.MemberAdd();
             panel.Controls.Clear();
             panel.Controls.Add(mm);
             panel.Controls.Add(ma);
@@ -167,10 +170,13 @@ namespace OicRentalShop.Manage
 
         private void btn_Title_Click(object sender, EventArgs e)
         {
+            ta = new Title.TitleAdd();
             panel.Controls.Clear();
             panel.Controls.Add(ta);
             ta.Visible = true;
         }
+
+
 
         public void add_Log(String operation, String table, String text)
         {
@@ -180,10 +186,10 @@ namespace OicRentalShop.Manage
             Cmd.Connection = cn;
             cn.Open();
 
-            int staffid = int.Parse(txt_staffid.Text);
+            //int staffid = int.Parse(txt_staffid.Text);
             
             String sql = "INSERT INTO TBL_LOG(STAFF_ID, LOG_NAME, LOG_TABLE_NAME, LOG_DATE_TIME, LOG_NOTE) VALUES (";
-            sql += staffid + ",";
+            sql += lbl_LoginID.Text + ",";
             sql += "'" + operation + "',";
             sql += "'" + table + "',";
             sql += "'" + System.DateTime.Now + "',";
@@ -216,6 +222,8 @@ namespace OicRentalShop.Manage
                 if (txt_staffid.TextLength == 6)
                 {
                     lbl_staffname.Text = SetInfo("SELECT STAFF_NAME FROM TBL_STAFF WHERE STAFF_ID=" + ZeroCut(txt_staffid.Text));
+                    lbl_LoginID.Text = ZeroCut(txt_staffid.Text);
+                    txt_staffid.Text = "";
                 }
             }
         }

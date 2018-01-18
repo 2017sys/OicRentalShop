@@ -18,14 +18,17 @@ namespace OicRentalShop.Manage.ItemAdd
         OleDbDataAdapter da = new OleDbDataAdapter();
         DataTable dt = new DataTable();
         int count = 0;
-        public ItemAdd()
+        RegisterHome rh;
+        public ItemAdd(RegisterHome fm)
         {
             InitializeComponent();
+            rh = fm;
         }
 
         private void ItemAdd_Load(object sender, EventArgs e)
         {
             cn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;" + @"Data Source=.\..\..\DB\Database1.accdb;");
+            
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -46,7 +49,7 @@ namespace OicRentalShop.Manage.ItemAdd
                 for (int i = 0; i < dgv_ItemRe.Rows.Count - 1; i++)
                 {
 
-                    Cmd.CommandText = "INSERT INTO TBL_ITEM VALUES(" + dgv_ItemRe.Rows[i].Cells[0].Value + ",false,'" + ZeroCut(dgv_ItemRe.Rows[i].Cells[1].Value.ToString()) + "',false)";
+                    Cmd.CommandText = "INSERT INTO TBL_ITEM VALUES(" + dgv_ItemRe.Rows[i].Cells[0].Value + ",true,'" + dgv_ItemRe.Rows[i].Cells[1].Value.ToString() + "',false)";
                     Cmd.ExecuteNonQuery();
 
                     text += "[" + dgv_ItemRe.Rows[i].Cells[0].Value + "] ";
@@ -56,8 +59,8 @@ namespace OicRentalShop.Manage.ItemAdd
 
                 //ログ登録
                 text += "を追加";
-                RegisterHome registerHome = new RegisterHome();
-                registerHome.add_Log("追加", "商品", text);
+                
+                rh.add_Log("追加", "商品", text);
 
                 MessageBox.Show("登録が完了しました");
                 dgv_ItemRe.Rows.Clear();

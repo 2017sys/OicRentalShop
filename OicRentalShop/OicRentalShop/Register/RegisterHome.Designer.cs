@@ -42,25 +42,24 @@
             this.lbl_id = new System.Windows.Forms.Label();
             this.lbl_staffname = new System.Windows.Forms.Label();
             this.txt_staffid = new System.Windows.Forms.TextBox();
+            this.lbl_LoginID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(359, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(269, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1, 1302);
+            this.label1.Size = new System.Drawing.Size(1, 1042);
             this.label1.TabIndex = 261;
             this.label1.Text = "label1";
             // 
             // btn_Top
             // 
             this.btn_Top.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Top.Location = new System.Drawing.Point(16, 115);
-            this.btn_Top.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Top.Location = new System.Drawing.Point(12, 92);
             this.btn_Top.Name = "btn_Top";
-            this.btn_Top.Size = new System.Drawing.Size(327, 138);
+            this.btn_Top.Size = new System.Drawing.Size(245, 110);
             this.btn_Top.TabIndex = 51;
             this.btn_Top.Text = "TOP";
             this.btn_Top.UseVisualStyleBackColor = true;
@@ -69,10 +68,9 @@
             // btn_MemberAdd
             // 
             this.btn_MemberAdd.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_MemberAdd.Location = new System.Drawing.Point(16, 1130);
-            this.btn_MemberAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_MemberAdd.Location = new System.Drawing.Point(12, 904);
             this.btn_MemberAdd.Name = "btn_MemberAdd";
-            this.btn_MemberAdd.Size = new System.Drawing.Size(327, 138);
+            this.btn_MemberAdd.Size = new System.Drawing.Size(245, 110);
             this.btn_MemberAdd.TabIndex = 57;
             this.btn_MemberAdd.Text = "会員登録";
             this.btn_MemberAdd.UseVisualStyleBackColor = true;
@@ -81,10 +79,9 @@
             // btn_Lend
             // 
             this.btn_Lend.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Lend.Location = new System.Drawing.Point(16, 260);
-            this.btn_Lend.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Lend.Location = new System.Drawing.Point(12, 208);
             this.btn_Lend.Name = "btn_Lend";
-            this.btn_Lend.Size = new System.Drawing.Size(327, 138);
+            this.btn_Lend.Size = new System.Drawing.Size(245, 110);
             this.btn_Lend.TabIndex = 52;
             this.btn_Lend.Text = "貸出処理";
             this.btn_Lend.UseVisualStyleBackColor = true;
@@ -93,10 +90,9 @@
             // btn_ItemAdd
             // 
             this.btn_ItemAdd.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_ItemAdd.Location = new System.Drawing.Point(16, 985);
-            this.btn_ItemAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ItemAdd.Location = new System.Drawing.Point(12, 788);
             this.btn_ItemAdd.Name = "btn_ItemAdd";
-            this.btn_ItemAdd.Size = new System.Drawing.Size(327, 138);
+            this.btn_ItemAdd.Size = new System.Drawing.Size(245, 110);
             this.btn_ItemAdd.TabIndex = 56;
             this.btn_ItemAdd.Text = "商品登録";
             this.btn_ItemAdd.UseVisualStyleBackColor = true;
@@ -105,10 +101,9 @@
             // btn_Return
             // 
             this.btn_Return.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Return.Location = new System.Drawing.Point(16, 405);
-            this.btn_Return.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Return.Location = new System.Drawing.Point(12, 324);
             this.btn_Return.Name = "btn_Return";
-            this.btn_Return.Size = new System.Drawing.Size(327, 138);
+            this.btn_Return.Size = new System.Drawing.Size(245, 110);
             this.btn_Return.TabIndex = 53;
             this.btn_Return.Text = "返却処理";
             this.btn_Return.UseVisualStyleBackColor = true;
@@ -117,10 +112,9 @@
             // btn_PriceList
             // 
             this.btn_PriceList.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_PriceList.Location = new System.Drawing.Point(16, 695);
-            this.btn_PriceList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_PriceList.Location = new System.Drawing.Point(12, 556);
             this.btn_PriceList.Name = "btn_PriceList";
-            this.btn_PriceList.Size = new System.Drawing.Size(327, 138);
+            this.btn_PriceList.Size = new System.Drawing.Size(245, 110);
             this.btn_PriceList.TabIndex = 55;
             this.btn_PriceList.Text = "料金表";
             this.btn_PriceList.UseVisualStyleBackColor = true;
@@ -129,10 +123,9 @@
             // btn_ItemInfo
             // 
             this.btn_ItemInfo.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_ItemInfo.Location = new System.Drawing.Point(16, 550);
-            this.btn_ItemInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ItemInfo.Location = new System.Drawing.Point(12, 440);
             this.btn_ItemInfo.Name = "btn_ItemInfo";
-            this.btn_ItemInfo.Size = new System.Drawing.Size(327, 138);
+            this.btn_ItemInfo.Size = new System.Drawing.Size(245, 110);
             this.btn_ItemInfo.TabIndex = 54;
             this.btn_ItemInfo.Text = "商品情報";
             this.btn_ItemInfo.UseVisualStyleBackColor = true;
@@ -140,19 +133,17 @@
             // 
             // panel
             // 
-            this.panel.Location = new System.Drawing.Point(361, 0);
-            this.panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel.Location = new System.Drawing.Point(271, 0);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(2176, 1302);
+            this.panel.Size = new System.Drawing.Size(1632, 1042);
             this.panel.TabIndex = 1;
             // 
             // btn_Title
             // 
             this.btn_Title.Font = new System.Drawing.Font("ＭＳ ゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Title.Location = new System.Drawing.Point(16, 840);
-            this.btn_Title.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Title.Location = new System.Drawing.Point(12, 672);
             this.btn_Title.Name = "btn_Title";
-            this.btn_Title.Size = new System.Drawing.Size(327, 138);
+            this.btn_Title.Size = new System.Drawing.Size(245, 110);
             this.btn_Title.TabIndex = 262;
             this.btn_Title.Text = "タイトル登録";
             this.btn_Title.UseVisualStyleBackColor = true;
@@ -161,46 +152,54 @@
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
-            this.lbl_name.Location = new System.Drawing.Point(57, 36);
-            this.lbl_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_name.Location = new System.Drawing.Point(25, 9);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(45, 15);
+            this.lbl_name.Size = new System.Drawing.Size(35, 12);
             this.lbl_name.TabIndex = 263;
             this.lbl_name.Text = "名前 :";
             // 
             // lbl_id
             // 
             this.lbl_id.AutoSize = true;
-            this.lbl_id.Location = new System.Drawing.Point(75, 74);
-            this.lbl_id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_id.Location = new System.Drawing.Point(38, 39);
             this.lbl_id.Name = "lbl_id";
-            this.lbl_id.Size = new System.Drawing.Size(29, 15);
+            this.lbl_id.Size = new System.Drawing.Size(22, 12);
             this.lbl_id.TabIndex = 264;
             this.lbl_id.Text = "ID :";
             // 
             // lbl_staffname
             // 
             this.lbl_staffname.AutoSize = true;
-            this.lbl_staffname.Location = new System.Drawing.Point(112, 36);
-            this.lbl_staffname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_staffname.Location = new System.Drawing.Point(75, 9);
             this.lbl_staffname.Name = "lbl_staffname";
-            this.lbl_staffname.Size = new System.Drawing.Size(0, 15);
+            this.lbl_staffname.Size = new System.Drawing.Size(0, 12);
             this.lbl_staffname.TabIndex = 265;
             // 
             // txt_staffid
             // 
-            this.txt_staffid.Location = new System.Drawing.Point(115, 74);
+            this.txt_staffid.Location = new System.Drawing.Point(77, 65);
+            this.txt_staffid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_staffid.Name = "txt_staffid";
-            this.txt_staffid.Size = new System.Drawing.Size(100, 22);
+            this.txt_staffid.PasswordChar = '*';
+            this.txt_staffid.Size = new System.Drawing.Size(76, 19);
             this.txt_staffid.TabIndex = 267;
             this.txt_staffid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_staffid_KeyDown);
             // 
+            // lbl_LoginID
+            // 
+            this.lbl_LoginID.AutoSize = true;
+            this.lbl_LoginID.Location = new System.Drawing.Point(75, 39);
+            this.lbl_LoginID.Name = "lbl_LoginID";
+            this.lbl_LoginID.Size = new System.Drawing.Size(0, 12);
+            this.lbl_LoginID.TabIndex = 268;
+            // 
             // RegisterHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2539, 1302);
+            this.ClientSize = new System.Drawing.Size(1455, 880);
             this.ControlBox = false;
+            this.Controls.Add(this.lbl_LoginID);
             this.Controls.Add(this.txt_staffid);
             this.Controls.Add(this.lbl_staffname);
             this.Controls.Add(this.lbl_id);
@@ -216,7 +215,6 @@
             this.Controls.Add(this.btn_PriceList);
             this.Controls.Add(this.btn_Lend);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RegisterHome";
@@ -244,5 +242,6 @@
         private System.Windows.Forms.Label lbl_id;
         private System.Windows.Forms.Label lbl_staffname;
         private System.Windows.Forms.TextBox txt_staffid;
+        private System.Windows.Forms.Label lbl_LoginID;
     }
 }
