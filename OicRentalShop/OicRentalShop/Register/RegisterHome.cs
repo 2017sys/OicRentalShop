@@ -97,6 +97,25 @@ namespace OicRentalShop.Manage
             }
         }
 
+        public void CommitLend()
+        {
+            ll = new Lend.Lend(this);
+            lc = new Lend.LendConf(this, ll);//this
+            panel.Controls.Clear();
+            panel.Controls.Add(ll);
+            ll.Visible = true;
+        }
+
+        public void CommitReturn()
+        {
+            rr = new Return.Return(this, rc);
+            rc = new Return.ReturnConf(this, rr);
+            panel.Controls.Clear();
+            panel.Controls.Add(rr);
+            rr.Visible = true;
+        }
+
+
         private void TestForm_Load(object sender, EventArgs e)
         {
            
@@ -104,8 +123,7 @@ namespace OicRentalShop.Manage
 
            
             pp = new PriceList.PriceList();
-            rr = new Return.Return(this,rc);
-            rc = new Return.ReturnConf(this,rr);
+   
           
             ic = new ItemAdd.ItemAddConfirmation();
            
@@ -130,6 +148,8 @@ namespace OicRentalShop.Manage
 
         private void btn_Return_Click(object sender, EventArgs e)
         {
+            rr = new Return.Return(this, rc);
+            rc = new Return.ReturnConf(this, rr);
             panel.Controls.Clear();
             panel.Controls.Add(rr);
             rr.Visible = true;
@@ -160,7 +180,7 @@ namespace OicRentalShop.Manage
 
         private void btn_MemberAdd_Click(object sender, EventArgs e)
         {
-            ma = new MemberAdd.MemberAddConfirmation();
+            ma = new MemberAdd.MemberAddConfirmation(this);
             mm = new MemberAdd.MemberAdd();
             panel.Controls.Clear();
             panel.Controls.Add(mm);

@@ -201,9 +201,17 @@ namespace OicRentalShop.Manage.Lend
                 int memberpoint = int.Parse(SetInfo("SELECT MEMBER_POINT FROM TBL_MEMBER WHERE MEMBER_ID=" + ll.txt_MemberID.Text)) - usedpoint+(int.Parse(txt_TotalMoney.Text)-usedpoint)/100;
                 CmdFunc("UPDATE TBL_MEMBER SET MEMBER_POINT = " + memberpoint + " WHERE MEMBER_ID=" + ll.txt_MemberID.Text);
                 ll.Commit();
-                rh.panel.Controls.Clear();
+                //rh.panel.Controls.Clear();
                 txt_Point.ReadOnly = false;
                 txt_PayMoney.ReadOnly = false;
+                rh.CommitLend();
+                string text = "貸出";
+
+                text += "を追加";
+
+                rh.add_Log("追加", "伝票/伝票明細", "貸出伝票を追加");
+                rh.add_Log("編集", "商品", "貸出可能状態を変更");
+
             }
             else
             {

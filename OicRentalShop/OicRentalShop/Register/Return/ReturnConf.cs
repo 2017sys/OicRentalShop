@@ -118,7 +118,11 @@ namespace OicRentalShop.Manage.Return
                 int memberpoint = int.Parse(SetInfo("SELECT MEMBER_POINT FROM TBL_MEMBER WHERE MEMBER_ID=" + rr.txt_MemberID.Text)) - usedpoint;
                 CmdFunc("UPDATE TBL_MEMBER SET MEMBER_POINT = " + memberpoint + " WHERE MEMBER_ID=" + rr.txt_MemberID.Text);
                 rr.Commit();
-                rh.panel.Controls.Clear();
+                rh.CommitReturn();
+
+                rh.add_Log("追加", "伝票/伝票明細", "返却伝票を追加");
+                rh.add_Log("編集", "商品", "貸出可能状態を変更");
+
             }
             else
             {

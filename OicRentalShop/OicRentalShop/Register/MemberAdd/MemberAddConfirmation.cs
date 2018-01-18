@@ -36,9 +36,11 @@ namespace OicRentalShop.Manage.MemberAdd
             public string AD2;
 
         }
-        public MemberAddConfirmation()
+        RegisterHome rh;
+        public MemberAddConfirmation(RegisterHome fm)
         {
             InitializeComponent();
+            rh = fm;
         }
 
 
@@ -111,14 +113,14 @@ namespace OicRentalShop.Manage.MemberAdd
 
             Cmd.ExecuteNonQuery();
             cn.Close();
+            string text = "会員ID "+lbl_MemberIDInfo.Text;
 
             //ログ保存
-            String text = "'" +mi.FName + mi.GName + "'さんを登録";
+            text += "を追加";
 
-            RegisterHome registerHome = new RegisterHome();
-            registerHome.add_Log("追加","ユーザー",text);
+            rh.add_Log("追加", "会員", text);
 
-            lbl_Message.Text = "登録しました";
+            MessageBox.Show("登録が完了しました");
 
         }
     }
