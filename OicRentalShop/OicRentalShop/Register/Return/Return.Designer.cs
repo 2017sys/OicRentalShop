@@ -68,10 +68,6 @@
             this.txt_InProductID = new System.Windows.Forms.TextBox();
             this.Btn_ClearMID = new System.Windows.Forms.Button();
             this.Btn_ClearPID = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ReturnItem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -452,54 +448,10 @@
             this.Btn_ClearPID.UseVisualStyleBackColor = true;
             this.Btn_ClearPID.Click += new System.EventHandler(this.Btn_ClearPID_Click);
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(1267, 426);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 230);
-            this.button1.TabIndex = 230;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.Location = new System.Drawing.Point(1236, 180);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(265, 70);
-            this.button2.TabIndex = 231;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(913, 64);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 232;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(834, 61);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 233;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // Return
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.Btn_ClearPID);
             this.Controls.Add(this.Btn_ClearMID);
             this.Controls.Add(this.txt_InProductID);
@@ -589,12 +541,8 @@
         private System.Windows.Forms.TextBox txt_InProductID;
         private System.Windows.Forms.Button Btn_ClearMID;
         private System.Windows.Forms.Button Btn_ClearPID;
-        private System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox txt_MemberID;
-        private System.Windows.Forms.Button button2;
         public System.Windows.Forms.TextBox txt_money;
-        private System.Windows.Forms.Button button3;
         public System.Windows.Forms.DataGridView dgv_ReturnItem;
-        private System.Windows.Forms.Button button4;
     }
 }
