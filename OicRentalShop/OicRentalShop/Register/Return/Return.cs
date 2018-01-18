@@ -45,7 +45,7 @@ namespace OicRentalShop.Manage.Return
             dt.Clear();
 
             dts = ds.Tables.Add("Product");
-
+            dts.Columns.Add("商品ID");
             dts.Columns.Add("タイトル");
             dts.Columns.Add("CD DVD");
             dts.Columns.Add("返却予定日");
@@ -141,6 +141,19 @@ namespace OicRentalShop.Manage.Return
 
             CmdFunc("INSERT INTO TBL_LINESLIP VALUES(" + lineslipID + "," + slipID + "," + int.Parse(txt_InProductID.Text) + ",4," + int.Parse(typeid) + "," + int.Parse(Price) + ")");
         }
+
+         private Boolean AlreadyReadId(string ID)
+         {
+             Boolean flag = true;
+             for (int i = 0; i < dgv_ReturnItem.Rows.Count - 1; i++)
+             {
+                 if (ZeroCut(ID) == dgv_ReturnItem.Rows[i].Cells[0].Value.ToString())
+                 {
+                     flag = false;
+                 }
+             }
+             return flag;
+         }
 
         private void txt_MemberID_TextChanged(object sender, EventArgs e)
         {
@@ -269,7 +282,7 @@ namespace OicRentalShop.Manage.Return
                     txt_InProductID.Text = txt_InProductID.Text.Remove(12);
                     if (dtCheck("SELECT * FROM TBL_ITEM WHERE ITEM_ID=" + txt_InProductID.Text) == 1)
                     {
-                        if ("False" == SetInfo("SELECT ITEM_STATE FROM TBL_ITEM WHERE ITEM_ID=" + ZeroCut(txt_InProductID.Text)))
+                        if ("False" == SetInfo("SELECT ITEM_STATE FROM TBL_ITEM WHERE ITEM_ID=" + ZeroCut(txt_InProductID.Text))&&AlreadyReadId(txt_InProductID.Text)==true)
                         {
                             if (SlipFlag == 0)
                             {
@@ -399,6 +412,7 @@ namespace OicRentalShop.Manage.Return
                 if (ndflag == 0)
                 {
                     dr = dts.NewRow();
+                    dr["商品ID"] = ZeroCut(txt_ProductID.Text);
                     dr["タイトル"] = txt_title.Text;
                     dr["CD DVD"] = txt_type.Text;
                     dr["返却予定日"] = txt_ReturnDay.Text;
