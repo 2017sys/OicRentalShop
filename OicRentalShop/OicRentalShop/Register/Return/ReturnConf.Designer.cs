@@ -53,22 +53,22 @@
             // 
             // txt_Point
             // 
-            this.txt_Point.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_Point.Location = new System.Drawing.Point(1022, 456);
+            this.txt_Point.Font = new System.Drawing.Font("MS UI Gothic", 18F);
+            this.txt_Point.Location = new System.Drawing.Point(1022, 519);
             this.txt_Point.Name = "txt_Point";
-            this.txt_Point.Size = new System.Drawing.Size(386, 34);
+            this.txt_Point.Size = new System.Drawing.Size(386, 31);
             this.txt_Point.TabIndex = 162;
             this.txt_Point.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_Point_KeyUp);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(863, 460);
+            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(793, 520);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(153, 27);
+            this.label6.Size = new System.Drawing.Size(198, 33);
             this.label6.TabIndex = 161;
-            this.label6.Text = "利用ポイント";
+            this.label6.Text = "利用ポイント：";
             // 
             // label5
             // 
@@ -88,38 +88,44 @@
             // 
             // btn_Redo
             // 
-            this.btn_Redo.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Redo.Location = new System.Drawing.Point(962, 659);
+            this.btn_Redo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_Redo.Font = new System.Drawing.Font("Meiryo UI", 21.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Redo.Location = new System.Drawing.Point(962, 809);
             this.btn_Redo.Name = "btn_Redo";
             this.btn_Redo.Size = new System.Drawing.Size(156, 94);
             this.btn_Redo.TabIndex = 158;
             this.btn_Redo.Text = "戻る";
-            this.btn_Redo.UseVisualStyleBackColor = true;
+            this.btn_Redo.UseVisualStyleBackColor = false;
             this.btn_Redo.Click += new System.EventHandler(this.btn_Redo_Click);
             // 
             // lbl_MemberID
             // 
             this.lbl_MemberID.AutoSize = true;
-            this.lbl_MemberID.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Bold);
-            this.lbl_MemberID.Location = new System.Drawing.Point(1019, 368);
+
+            this.lbl_MemberID.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
+            this.lbl_MemberID.Location = new System.Drawing.Point(1018, 350);
+
             this.lbl_MemberID.Name = "lbl_MemberID";
-            this.lbl_MemberID.Size = new System.Drawing.Size(0, 21);
+            this.lbl_MemberID.Size = new System.Drawing.Size(177, 33);
             this.lbl_MemberID.TabIndex = 157;
+            this.lbl_MemberID.Text = "ああああああ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(843, 363);
+
+            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(827, 350);
+
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 27);
+            this.label4.Size = new System.Drawing.Size(164, 33);
             this.label4.TabIndex = 156;
             this.label4.Text = "会員番号：";
             // 
             // txt_ReturnMoney
             // 
-            this.txt_ReturnMoney.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_ReturnMoney.Location = new System.Drawing.Point(1023, 552);
+            this.txt_ReturnMoney.Font = new System.Drawing.Font("MS UI Gothic", 18F);
+            this.txt_ReturnMoney.Location = new System.Drawing.Point(1024, 683);
             this.txt_ReturnMoney.Multiline = true;
             this.txt_ReturnMoney.Name = "txt_ReturnMoney";
             this.txt_ReturnMoney.ReadOnly = true;
@@ -128,17 +134,19 @@
             // 
             // txt_PayMoney
             // 
-            this.txt_PayMoney.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_PayMoney.Location = new System.Drawing.Point(1023, 509);
+            this.txt_PayMoney.Font = new System.Drawing.Font("MS UI Gothic", 18F);
+            this.txt_PayMoney.Location = new System.Drawing.Point(1024, 604);
             this.txt_PayMoney.Name = "txt_PayMoney";
-            this.txt_PayMoney.Size = new System.Drawing.Size(386, 34);
+            this.txt_PayMoney.Size = new System.Drawing.Size(386, 31);
             this.txt_PayMoney.TabIndex = 154;
             this.txt_PayMoney.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_PayMoney_KeyPress);
             // 
             // txt_TotalMoney
             // 
-            this.txt_TotalMoney.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_TotalMoney.Location = new System.Drawing.Point(1020, 401);
+
+            this.txt_TotalMoney.Font = new System.Drawing.Font("MS UI Gothic", 18F);
+            this.txt_TotalMoney.Location = new System.Drawing.Point(1024, 428);
+
             this.txt_TotalMoney.Multiline = true;
             this.txt_TotalMoney.Name = "txt_TotalMoney";
             this.txt_TotalMoney.ReadOnly = true;
@@ -147,13 +155,14 @@
             // 
             // btn_Pay
             // 
-            this.btn_Pay.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Pay.Location = new System.Drawing.Point(1124, 659);
+            this.btn_Pay.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_Pay.Font = new System.Drawing.Font("Meiryo UI", 21.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Pay.Location = new System.Drawing.Point(1196, 809);
             this.btn_Pay.Name = "btn_Pay";
             this.btn_Pay.Size = new System.Drawing.Size(156, 94);
             this.btn_Pay.TabIndex = 152;
             this.btn_Pay.Text = "会計";
-            this.btn_Pay.UseVisualStyleBackColor = true;
+            this.btn_Pay.UseVisualStyleBackColor = false;
             this.btn_Pay.Click += new System.EventHandler(this.btn_Pay_Click);
             // 
             // label9
@@ -167,10 +176,10 @@
             // lbl_TopTitle
             // 
             this.lbl_TopTitle.AutoSize = true;
-            this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_TopTitle.Location = new System.Drawing.Point(635, 26);
+            this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 65.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_TopTitle.Location = new System.Drawing.Point(710, 26);
             this.lbl_TopTitle.Name = "lbl_TopTitle";
-            this.lbl_TopTitle.Size = new System.Drawing.Size(236, 97);
+            this.lbl_TopTitle.Size = new System.Drawing.Size(213, 87);
             this.lbl_TopTitle.TabIndex = 150;
             this.lbl_TopTitle.Text = "返却";
             // 
@@ -198,32 +207,34 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(881, 566);
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(885, 690);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 27);
+            this.label3.Size = new System.Drawing.Size(106, 33);
             this.label3.TabIndex = 147;
-            this.label3.Text = "おつり";
+            this.label3.Text = "おつり：";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(881, 513);
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(872, 605);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 27);
+            this.label2.Size = new System.Drawing.Size(119, 33);
             this.label2.TabIndex = 146;
-            this.label2.Text = "預り金";
+            this.label2.Text = "預り金：";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(885, 404);
+
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(893, 435);
+
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 27);
+            this.label1.Size = new System.Drawing.Size(98, 33);
             this.label1.TabIndex = 145;
-            this.label1.Text = "合計";
+            this.label1.Text = "合計：";
             // 
             // button1
             // 

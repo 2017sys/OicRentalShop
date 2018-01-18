@@ -51,131 +51,140 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(3, 86);
+            this.label4.Location = new System.Drawing.Point(-2, 131);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(945, 1);
+            this.label4.Size = new System.Drawing.Size(1660, 1);
             this.label4.TabIndex = 4;
             this.label4.Text = "label4";
             // 
             // lbl_TopTitle
             // 
             this.lbl_TopTitle.AutoSize = true;
-            this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 48F);
-            this.lbl_TopTitle.Location = new System.Drawing.Point(301, 11);
+            this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 65.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_TopTitle.Location = new System.Drawing.Point(577, 26);
             this.lbl_TopTitle.Name = "lbl_TopTitle";
-            this.lbl_TopTitle.Size = new System.Drawing.Size(347, 64);
+            this.lbl_TopTitle.Size = new System.Drawing.Size(478, 87);
             this.lbl_TopTitle.TabIndex = 5;
-            this.lbl_TopTitle.Text = "イベント管理";
+            this.lbl_TopTitle.Text = "イベント登録";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(251, 102);
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Location = new System.Drawing.Point(543, 202);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 27);
+            this.label2.Size = new System.Drawing.Size(160, 35);
             this.label2.TabIndex = 7;
             this.label2.Text = "イベント名";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(251, 154);
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.Location = new System.Drawing.Point(543, 280);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 27);
+            this.label3.Size = new System.Drawing.Size(87, 35);
             this.label3.TabIndex = 8;
             this.label3.Text = "料金";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(251, 206);
+            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.Location = new System.Drawing.Point(543, 358);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(130, 27);
+            this.label5.Size = new System.Drawing.Size(165, 35);
             this.label5.TabIndex = 9;
             this.label5.Text = "商品タイプ";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(251, 311);
+            this.label6.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label6.Location = new System.Drawing.Point(543, 514);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 27);
+            this.label6.Size = new System.Drawing.Size(87, 35);
             this.label6.TabIndex = 10;
             this.label6.Text = "枚数";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(251, 363);
+            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label7.Location = new System.Drawing.Point(543, 592);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 27);
+            this.label7.Size = new System.Drawing.Size(123, 35);
             this.label7.TabIndex = 11;
             this.label7.Text = "開始日";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(251, 415);
+            this.label8.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label8.Location = new System.Drawing.Point(543, 670);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 27);
+            this.label8.Size = new System.Drawing.Size(123, 35);
             this.label8.TabIndex = 12;
             this.label8.Text = "終了日";
             // 
             // txt_EventName
             // 
-            this.txt_EventName.Location = new System.Drawing.Point(455, 110);
+            this.txt_EventName.Font = new System.Drawing.Font("MS UI Gothic", 18F);
+            this.txt_EventName.Location = new System.Drawing.Point(801, 202);
+            this.txt_EventName.Multiline = true;
             this.txt_EventName.Name = "txt_EventName";
-            this.txt_EventName.Size = new System.Drawing.Size(211, 19);
+            this.txt_EventName.Size = new System.Drawing.Size(282, 35);
             this.txt_EventName.TabIndex = 14;
             // 
             // txt_EventPrice
             // 
-            this.txt_EventPrice.Location = new System.Drawing.Point(455, 162);
+            this.txt_EventPrice.Font = new System.Drawing.Font("MS UI Gothic", 18F);
+            this.txt_EventPrice.Location = new System.Drawing.Point(801, 280);
+            this.txt_EventPrice.Multiline = true;
             this.txt_EventPrice.Name = "txt_EventPrice";
-            this.txt_EventPrice.Size = new System.Drawing.Size(211, 19);
+            this.txt_EventPrice.Size = new System.Drawing.Size(282, 35);
             this.txt_EventPrice.TabIndex = 15;
             // 
             // txt_ItemType
             // 
-            this.txt_ItemType.Location = new System.Drawing.Point(455, 214);
+            this.txt_ItemType.Font = new System.Drawing.Font("MS UI Gothic", 18F);
+            this.txt_ItemType.Location = new System.Drawing.Point(801, 358);
+            this.txt_ItemType.Multiline = true;
             this.txt_ItemType.Name = "txt_ItemType";
-            this.txt_ItemType.Size = new System.Drawing.Size(211, 19);
+            this.txt_ItemType.Size = new System.Drawing.Size(282, 35);
             this.txt_ItemType.TabIndex = 16;
             // 
             // txt_ItemNum
             // 
-            this.txt_ItemNum.Location = new System.Drawing.Point(455, 319);
+            this.txt_ItemNum.Font = new System.Drawing.Font("MS UI Gothic", 18F);
+            this.txt_ItemNum.Location = new System.Drawing.Point(801, 514);
+            this.txt_ItemNum.Multiline = true;
             this.txt_ItemNum.Name = "txt_ItemNum";
-            this.txt_ItemNum.Size = new System.Drawing.Size(211, 19);
+            this.txt_ItemNum.Size = new System.Drawing.Size(282, 35);
             this.txt_ItemNum.TabIndex = 17;
             // 
             // date_Start
             // 
-            this.date_Start.Location = new System.Drawing.Point(455, 371);
+            this.date_Start.CalendarFont = new System.Drawing.Font("MS UI Gothic", 9F);
+            this.date_Start.Location = new System.Drawing.Point(801, 600);
             this.date_Start.Name = "date_Start";
-            this.date_Start.Size = new System.Drawing.Size(211, 19);
+            this.date_Start.Size = new System.Drawing.Size(282, 19);
             this.date_Start.TabIndex = 20;
             // 
             // date_End
             // 
-            this.date_End.Location = new System.Drawing.Point(455, 423);
+            this.date_End.Location = new System.Drawing.Point(801, 679);
             this.date_End.Name = "date_End";
-            this.date_End.Size = new System.Drawing.Size(211, 19);
+            this.date_End.Size = new System.Drawing.Size(282, 19);
             this.date_End.TabIndex = 21;
             // 
             // btn_Add
             // 
             this.btn_Add.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_Add.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Add.Location = new System.Drawing.Point(516, 498);
+            this.btn_Add.Font = new System.Drawing.Font("Meiryo UI", 21.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Add.Location = new System.Drawing.Point(909, 761);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(131, 58);
+            this.btn_Add.Size = new System.Drawing.Size(174, 85);
             this.btn_Add.TabIndex = 22;
             this.btn_Add.Text = "追 加";
             this.btn_Add.UseVisualStyleBackColor = false;
@@ -184,10 +193,10 @@
             // btn_Redo
             // 
             this.btn_Redo.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_Redo.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btn_Redo.Location = new System.Drawing.Point(300, 499);
+            this.btn_Redo.Font = new System.Drawing.Font("Meiryo UI", 21.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Redo.Location = new System.Drawing.Point(549, 761);
             this.btn_Redo.Name = "btn_Redo";
-            this.btn_Redo.Size = new System.Drawing.Size(131, 58);
+            this.btn_Redo.Size = new System.Drawing.Size(174, 85);
             this.btn_Redo.TabIndex = 23;
             this.btn_Redo.Text = "キャンセル";
             this.btn_Redo.UseVisualStyleBackColor = false;
@@ -196,23 +205,24 @@
             // lbl_Old
             // 
             this.lbl_Old.AutoSize = true;
-            this.lbl_Old.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_Old.Location = new System.Drawing.Point(251, 258);
+            this.lbl_Old.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_Old.Location = new System.Drawing.Point(543, 436);
             this.lbl_Old.Name = "lbl_Old";
-            this.lbl_Old.Size = new System.Drawing.Size(139, 27);
+            this.lbl_Old.Size = new System.Drawing.Size(178, 35);
             this.lbl_Old.TabIndex = 24;
             this.lbl_Old.Text = "旧作/新作";
             // 
             // cmb_Old
             // 
+            this.cmb_Old.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.cmb_Old.FormattingEnabled = true;
             this.cmb_Old.Items.AddRange(new object[] {
             "すべて",
             "旧作",
             "新作"});
-            this.cmb_Old.Location = new System.Drawing.Point(455, 266);
+            this.cmb_Old.Location = new System.Drawing.Point(801, 439);
             this.cmb_Old.Name = "cmb_Old";
-            this.cmb_Old.Size = new System.Drawing.Size(211, 20);
+            this.cmb_Old.Size = new System.Drawing.Size(282, 32);
             this.cmb_Old.TabIndex = 25;
             this.cmb_Old.Text = "すべて";
             // 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Top = new System.Windows.Forms.Button();
             this.btn_MemberAdd = new System.Windows.Forms.Button();
@@ -223,6 +224,7 @@
             this.Load += new System.EventHandler(this.TestForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
+
 
         }
 

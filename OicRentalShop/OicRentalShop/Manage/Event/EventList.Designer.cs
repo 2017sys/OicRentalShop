@@ -42,20 +42,20 @@
             // lbl_TopTitle
             // 
             this.lbl_TopTitle.AutoSize = true;
-            this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 48F);
-            this.lbl_TopTitle.Location = new System.Drawing.Point(301, 11);
+            this.lbl_TopTitle.Font = new System.Drawing.Font("MS UI Gothic", 65.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_TopTitle.Location = new System.Drawing.Point(577, 26);
             this.lbl_TopTitle.Name = "lbl_TopTitle";
-            this.lbl_TopTitle.Size = new System.Drawing.Size(347, 64);
+            this.lbl_TopTitle.Size = new System.Drawing.Size(478, 87);
             this.lbl_TopTitle.TabIndex = 0;
             this.lbl_TopTitle.Text = "イベント管理";
             // 
             // lbl_SecTitle
             // 
             this.lbl_SecTitle.AutoSize = true;
-            this.lbl_SecTitle.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbl_SecTitle.Location = new System.Drawing.Point(329, 100);
+            this.lbl_SecTitle.Font = new System.Drawing.Font("MS UI Gothic", 26.25F, System.Drawing.FontStyle.Bold);
+            this.lbl_SecTitle.Location = new System.Drawing.Point(566, 152);
             this.lbl_SecTitle.Name = "lbl_SecTitle";
-            this.lbl_SecTitle.Size = new System.Drawing.Size(82, 24);
+            this.lbl_SecTitle.Size = new System.Drawing.Size(124, 35);
             this.lbl_SecTitle.TabIndex = 1;
             this.lbl_SecTitle.Text = "イベント";
             // 
@@ -70,37 +70,37 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(3, 86);
+            this.label4.Location = new System.Drawing.Point(-2, 131);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(945, 1);
+            this.label4.Size = new System.Drawing.Size(1660, 1);
             this.label4.TabIndex = 3;
             this.label4.Text = "label4";
             // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(-2, 134);
+            this.label5.Location = new System.Drawing.Point(-2, 201);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(950, 1);
+            this.label5.Size = new System.Drawing.Size(1660, 1);
             this.label5.TabIndex = 4;
             this.label5.Text = "label5";
             // 
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(798, 87);
+            this.label6.Location = new System.Drawing.Point(1352, 132);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(1, 505);
+            this.label6.Size = new System.Drawing.Size(1, 1000);
             this.label6.TabIndex = 5;
             this.label6.Text = "label6";
             // 
             // btn_Add
             // 
             this.btn_Add.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_Add.Font = new System.Drawing.Font("Meiryo UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btn_Add.Location = new System.Drawing.Point(805, 510);
+            this.btn_Add.Font = new System.Drawing.Font("Meiryo UI", 21.75F, System.Drawing.FontStyle.Bold);
+            this.btn_Add.Location = new System.Drawing.Point(1418, 926);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(140, 60);
+            this.btn_Add.Size = new System.Drawing.Size(174, 85);
             this.btn_Add.TabIndex = 11;
             this.btn_Add.Text = "追 加";
             this.btn_Add.UseVisualStyleBackColor = false;
@@ -110,10 +110,10 @@
             // 
             this.dgv_EventInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_EventInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_EventInfo.Location = new System.Drawing.Point(15, 147);
+            this.dgv_EventInfo.Location = new System.Drawing.Point(16, 238);
             this.dgv_EventInfo.Name = "dgv_EventInfo";
             this.dgv_EventInfo.RowTemplate.Height = 21;
-            this.dgv_EventInfo.Size = new System.Drawing.Size(777, 430);
+            this.dgv_EventInfo.Size = new System.Drawing.Size(1317, 773);
             this.dgv_EventInfo.TabIndex = 14;
             this.dgv_EventInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_EventInfo_CellContentClick);
             // 

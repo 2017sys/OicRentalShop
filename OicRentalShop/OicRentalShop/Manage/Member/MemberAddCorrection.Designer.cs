@@ -72,7 +72,7 @@
             // 
             // txt_TelePhoneNumber
             // 
-            this.txt_TelePhoneNumber.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_TelePhoneNumber.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.txt_TelePhoneNumber.Location = new System.Drawing.Point(529, 544);
             this.txt_TelePhoneNumber.Multiline = true;
             this.txt_TelePhoneNumber.Name = "txt_TelePhoneNumber";
@@ -241,7 +241,7 @@
             // 
             // txt_Birtyday
             // 
-            this.txt_Birtyday.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_Birtyday.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.txt_Birtyday.Location = new System.Drawing.Point(1197, 459);
             this.txt_Birtyday.Multiline = true;
             this.txt_Birtyday.Name = "txt_Birtyday";
@@ -250,7 +250,7 @@
             // 
             // txt_GivenNameKANA
             // 
-            this.txt_GivenNameKANA.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_GivenNameKANA.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.txt_GivenNameKANA.Location = new System.Drawing.Point(1197, 374);
             this.txt_GivenNameKANA.Multiline = true;
             this.txt_GivenNameKANA.Name = "txt_GivenNameKANA";
@@ -259,7 +259,7 @@
             // 
             // txt_FamilyNameKANA
             // 
-            this.txt_FamilyNameKANA.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_FamilyNameKANA.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.txt_FamilyNameKANA.Location = new System.Drawing.Point(1197, 278);
             this.txt_FamilyNameKANA.Multiline = true;
             this.txt_FamilyNameKANA.Name = "txt_FamilyNameKANA";
@@ -268,7 +268,7 @@
             // 
             // txt_Address2
             // 
-            this.txt_Address2.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_Address2.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.txt_Address2.Location = new System.Drawing.Point(529, 884);
             this.txt_Address2.Multiline = true;
             this.txt_Address2.Name = "txt_Address2";
@@ -277,7 +277,7 @@
             // 
             // txt_Address1
             // 
-            this.txt_Address1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_Address1.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.txt_Address1.Location = new System.Drawing.Point(529, 799);
             this.txt_Address1.Multiline = true;
             this.txt_Address1.Name = "txt_Address1";
@@ -286,7 +286,7 @@
             // 
             // txt_PostalCode
             // 
-            this.txt_PostalCode.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_PostalCode.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.txt_PostalCode.Location = new System.Drawing.Point(529, 714);
             this.txt_PostalCode.Multiline = true;
             this.txt_PostalCode.Name = "txt_PostalCode";
@@ -295,7 +295,7 @@
             // 
             // txt_PhoneNumber
             // 
-            this.txt_PhoneNumber.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_PhoneNumber.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.txt_PhoneNumber.Location = new System.Drawing.Point(529, 629);
             this.txt_PhoneNumber.Multiline = true;
             this.txt_PhoneNumber.Name = "txt_PhoneNumber";
@@ -304,7 +304,7 @@
             // 
             // txt_GivenName
             // 
-            this.txt_GivenName.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_GivenName.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.txt_GivenName.Location = new System.Drawing.Point(529, 374);
             this.txt_GivenName.Multiline = true;
             this.txt_GivenName.Name = "txt_GivenName";
@@ -313,7 +313,7 @@
             // 
             // txt_FamilyName
             // 
-            this.txt_FamilyName.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_FamilyName.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.txt_FamilyName.Location = new System.Drawing.Point(529, 289);
             this.txt_FamilyName.Multiline = true;
             this.txt_FamilyName.Name = "txt_FamilyName";
@@ -322,7 +322,7 @@
             // 
             // txt_ID
             // 
-            this.txt_ID.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txt_ID.Font = new System.Drawing.Font("MS UI Gothic", 18F);
             this.txt_ID.Location = new System.Drawing.Point(529, 204);
             this.txt_ID.Multiline = true;
             this.txt_ID.Name = "txt_ID";
