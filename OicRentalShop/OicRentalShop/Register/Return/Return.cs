@@ -117,6 +117,7 @@ namespace OicRentalShop.Manage.Return
             txt_MemberID.ReadOnly = false;
             txt_ProductID.Clear();
             txt_money.Clear();
+            dgv_ReturnItem.DataSource = null;
             dtp.Clear();
             CmdFunc("DELETE FROM TBL_LINESLIP WHERE SLIP_ID=" + slipID);
             CmdFunc("DELETE FROM TBL_SLIP WHERE SLIP_ID=" + slipID);
