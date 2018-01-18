@@ -75,7 +75,7 @@ namespace OicRentalShop.Manage.PriceList
 
             selectfunc_p("SELECT ol.OLD_NAME AS 新作・旧作, pr.PRICE_12 AS 1泊2日, pr.PRICE_23 AS 2泊3日, pr.PRICE_78 AS 7泊8日 FROM TBL_PRICE pr, TBL_TYPE tp, TBL_OLD ol WHERE pr.TYPE_ID = tp.TYPE_ID AND pr.OLD_ID = ol.OLD_ID AND pr.PRICE_DELETE <> true order by pr.TYPE_ID ASC, pr.OLD_ID ASC");
 
-            selectfunc_e("SELECT ev.EVENT_NAME AS イベント名, ev.EVENT_PRICE AS イベント料金, tp.TYPE_NAME AS 商品タイプ, ev.EVENT_NUM AS 枚数 FROM TBL_EVENT ev, TBL_TYPE tp WHERE ev.TYPE_ID = tp.TYPE_ID");
+            selectfunc_e("SELECT ev.EVENT_NAME AS イベント名, ev.EVENT_PRICE AS イベント料金, tp.TYPE_NAME AS 商品タイプ, ev.EVENT_NUM AS 枚数 FROM TBL_EVENT ev, TBL_TYPE tp WHERE ev.TYPE_ID = tp.TYPE_ID AND ev.EVENT_DELETE=false");
         }
 
 

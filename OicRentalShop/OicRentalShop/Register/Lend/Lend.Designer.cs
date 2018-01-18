@@ -109,7 +109,7 @@
             // txt_MemberPoint
             // 
             this.txt_MemberPoint.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_MemberPoint.Location = new System.Drawing.Point(263, 243);
+            this.txt_MemberPoint.Location = new System.Drawing.Point(629, 242);
             this.txt_MemberPoint.Multiline = true;
             this.txt_MemberPoint.Name = "txt_MemberPoint";
             this.txt_MemberPoint.ReadOnly = true;
@@ -119,7 +119,7 @@
             // txt_MemberID
             // 
             this.txt_MemberID.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txt_MemberID.Location = new System.Drawing.Point(629, 243);
+            this.txt_MemberID.Location = new System.Drawing.Point(263, 242);
             this.txt_MemberID.Multiline = true;
             this.txt_MemberID.Name = "txt_MemberID";
             this.txt_MemberID.Size = new System.Drawing.Size(156, 27);

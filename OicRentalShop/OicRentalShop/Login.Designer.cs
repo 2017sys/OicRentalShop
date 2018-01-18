@@ -79,7 +79,7 @@
             this.txt_PassWord.PasswordChar = '*';
             this.txt_PassWord.Size = new System.Drawing.Size(528, 50);
             this.txt_PassWord.TabIndex = 3;
-            this.txt_PassWord.Text = "2222001111";
+            this.txt_PassWord.Text = "0736626743";
             this.txt_PassWord.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btn_Login

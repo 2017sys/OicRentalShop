@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
             this.dgv_ItemRe = new System.Windows.Forms.DataGridView();
@@ -81,6 +80,7 @@
             // 
             // dgv_ItemRe
             // 
+            this.dgv_ItemRe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ItemRe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ItemRe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -297,7 +297,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ItemRe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
 
         }
 

@@ -77,6 +77,7 @@
             // 
             // dgv_TitleInfo
             // 
+            this.dgv_TitleInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_TitleInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_TitleInfo.Location = new System.Drawing.Point(16, 390);
             this.dgv_TitleInfo.Name = "dgv_TitleInfo";

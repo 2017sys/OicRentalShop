@@ -294,6 +294,7 @@
             // 
             // dgv_ItemInfo
             // 
+            this.dgv_ItemInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_ItemInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_ItemInfo.Location = new System.Drawing.Point(27, 390);
             this.dgv_ItemInfo.Name = "dgv_ItemInfo";

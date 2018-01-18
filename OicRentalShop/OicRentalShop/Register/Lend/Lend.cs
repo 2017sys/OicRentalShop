@@ -163,7 +163,7 @@ namespace OicRentalShop.Manage.Lend
                     {
                         txt_MemberID.Text = txt_MemberID.Text.Remove(12);
                         txt_MemberPoint.Text = SetInfo("SELECT MEMBER_POINT FROM TBL_MEMBER WHERE MEMBER_ID=" + ZeroCut(txt_MemberID.Text));
-                        txt_MemberName.Text = SetInfo("SELECT MEMBER_NAME FROM TBL_MEMBER WHERE MEMBER_ID=" + ZeroCut(txt_MemberID.Text));
+                        txt_MemberName.Text = SetInfo("SELECT MEMBER_KANA FROM TBL_MEMBER WHERE MEMBER_ID=" + ZeroCut(txt_MemberID.Text));
                         txt_InProductID.Focus();
                         selectfunc("SELECT t.TITLE_NAME,ty.TYPE_NAME,l.LEND_PRERIOD,ls.LS_Price FROM TBL_TITLE t,TBL_TYPE ty,TBL_LEND l,TBL_LINESLIP ls,TBL_ITEM i WHERE ls.LEND_ID=l.LEND_ID AND ls.ITEM_ID=i.ITEM_ID AND i.TITLE_ID =t.TITLE_ID  AND t.TYPE_ID=ty.TYPE_ID AND ls.SLIP_ID=" + slipID);
                     }
